@@ -2,3 +2,10 @@
 .settings-link[aria-current="page"]{color:var(--green)}
 .empty code{font-size:13px;background:var(--soft);padding:2px 6px;border-radius:6px}
 .content-error{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:22px;color:#995b3e;font-size:14px}
+.field-label{font-size:12px;font-weight:600}
+.settings-saved{min-height:1.75em;margin:-8px 0 14px;font-size:13px;color:var(--green)}
+.settings-records{margin-top:30px}
+.storage-warning{color:#995b3e!important}
+.storage-alert{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:0 0 26px;padding:16px 20px;border:1px solid #e4c9b8;border-radius:12px;background:#fbf1ea;color:#7c4a33}
+.storage-alert p{margin:0;font-size:14px;line-height:1.7}
+.storage-alert strong{color:#995b3e}

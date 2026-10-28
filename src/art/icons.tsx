@@ -10,6 +10,7 @@ const markup = {
   arrow:'<path d="M4 12h15m-6-6 6 6-6 6"/>',
   leaf:'<path d="M20 3C9 2 3 8 5 14s13 7 15-11ZM4 21 16 9"/>',
   sun:'<circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/>',
+  sound:'<path d="M11 4 6 8H2v8h4l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>',
   search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
 } as const;
 

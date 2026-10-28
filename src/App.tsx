@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Home } from './pages/Home';
 import { NotFound, Planned } from './pages/Planned';
+import { Settings } from './pages/Settings';
 import { parseHash, useHash, type Route } from './router';
 import { AppShell } from './shell/AppShell';
 
@@ -26,8 +27,7 @@ function Page({ route }: { route: Route }) {
       return <Planned eyebrow="WORDS TO KEEP" heading="다시 만나고 싶은 단어." icon="star" step="3-1"
         lead="카드와 단어장에서 별을 눌러 나만의 단어장을 만들어요." prototypeHash="#/favorites" />;
     case 'settings':
-      return <Planned eyebrow="AT YOUR OWN PACE" heading="나에게 맞는 학습 설정." icon="settings" step="2-3"
-        lead="꾸준히 이어 갈 수 있는 속도를 찾아보세요." prototypeHash="#/settings" />;
+      return <Settings />;
     case 'not-found':
       return <NotFound path={route.path} />;
   }

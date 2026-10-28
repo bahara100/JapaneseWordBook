@@ -87,12 +87,15 @@ export interface ContentManifest {
   contentVersion: string;
   levels: Record<Level, LevelSummary>;
 }
+export type DailyTarget = 10 | 15 | 20;
+export type SpeechRate = 0.7 | 0.85 | 1;
 export interface Settings {
   level: Level;
-  dailyTarget: 10 | 15 | 20;
+  dailyTarget: DailyTarget;
+  /** IANA name, or 'auto' to follow the device (falls back to Asia/Seoul). */
   timeZone: string;
   showRomaji: boolean;
-  speechRate: number;
+  speechRate: SpeechRate;
 }
 export interface Favorite { wordId: string; createdAt: ISODateTime }
 export type Outcome = 'correct' | 'incorrect' | 'revealed' | 'unrecognized';

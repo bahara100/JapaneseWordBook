@@ -1,7 +1,8 @@
 import { Icon } from '../art/icons';
 import { loadManifest, mediaUrl } from '../content/loader';
 import { useLoaded } from '../content/useContent';
-import { DEFAULT_SETTINGS, LEVELS } from '../levels';
+import { LEVELS } from '../levels';
+import { useStorage } from '../storage/StorageProvider';
 import type { Level } from '../content/types';
 import { PageTitle } from './PageTitle';
 
@@ -67,7 +68,7 @@ function Availability({ level }: { level: Level }) {
 }
 
 export function Home() {
-  const { level, dailyTarget } = DEFAULT_SETTINGS;
+  const { level, dailyTarget } = useStorage().settings;
   const levelLabel = LEVELS.find(l => l.id === level)?.label;
   return (
     <>

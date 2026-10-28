@@ -7,6 +7,3 @@ export const LEVELS: { id: Level; label: string; description: string }[] = [
   { id: 'N2', label: '중상급', description: '다양한 맥락 이해하기' },
   { id: 'N1', label: '고급', description: '섬세한 의미 알아가기' },
 ];
-
-/** Product defaults until settings are stored on the device (backlog 2-3). */
-export const DEFAULT_SETTINGS = { level: 'N5' as Level, dailyTarget: 15 };

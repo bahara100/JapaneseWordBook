@@ -1,6 +1,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import { Icon, type IconName } from '../art/icons';
 import { routeKey, type Route, type Section } from '../router';
+import { useStorage, useStorageProblem } from '../storage/StorageProvider';
 
 const NAV: { id: Section; icon: IconName; label: string; short: string }[] = [
   { id: 'home', icon: 'home', label: '홈', short: '홈' },
@@ -27,6 +28,20 @@ function NavLinks({ active, short }: { active: Route['name']; short?: boolean })
       {short ? item.short : item.label}
     </a>
   ));
+}
+
+/** Shown on every screen while changes cannot be kept on this device. */
+function StorageAlert() {
+  const problem = useStorageProblem();
+  const { retryStorage } = useStorage();
+  if (!problem) return null;
+  return (
+    <div className="storage-alert" role="alert">
+      <p><strong>이 기기에 기록을 저장하지 못했어요.</strong> 지금 바꾼 설정과 기록은 창을 닫으면 사라져요.
+        브라우저의 사생활 보호 모드나 저장 공간을 확인해 주세요.</p>
+      <button className="btn" type="button" onClick={retryStorage}>다시 시도</button>
+    </div>
+  );
 }
 
 export function AppShell({ route, children }: { route: Route; children: ReactNode }) {
@@ -74,7 +89,7 @@ export function AppShell({ route, children }: { route: Route; children: ReactNod
               <Icon name="settings" /><span>설정</span>
             </a>
           </header>
-          <main id="main" ref={main} tabIndex={-1}>{children}</main>
+          <main id="main" ref={main} tabIndex={-1}><StorageAlert />{children}</main>
           <footer className="page-foot">
             <span className="footer-brand">하루일본어</span>
             <span>매일 조금씩, 나의 속도로.</span>
