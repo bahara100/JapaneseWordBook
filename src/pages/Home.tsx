@@ -3,6 +3,7 @@ import { loadManifest, mediaUrl } from '../content/loader';
 import { useLoaded } from '../content/useContent';
 import { LEVELS } from '../levels';
 import { useStorage } from '../storage/StorageProvider';
+import { useDailySession } from '../study/useDailySession';
 import type { Level } from '../content/types';
 import { PageTitle } from './PageTitle';
 
@@ -38,7 +39,25 @@ function HomeArtwork() {
 /** What the chosen level has ready, so the start button never promises cards that don't exist. */
 function Availability({ level }: { level: Level }) {
   const manifest = useLoaded(loadManifest, []);
-  if (manifest.status === 'loading') return <span className="hero-sample-note" role="status">학습 자료를 확인하는 중이에요…</span>;
+  const { daily } = useDailySession();
+  if (daily.status === 'active') {
+    const { session } = daily;
+    return (
+      <>
+        <a className="btn primary hero-start" href="#/study">이어서 학습<Icon name="arrow" /></a>
+        <span className="hero-sample-note">{session.level} · {session.currentIndex} / {session.cards.length}장 확인 · 멈춘 카드부터 이어서 해요.</span>
+      </>
+    );
+  }
+  if (daily.status === 'done') {
+    return (
+      <>
+        <a className="btn hero-start" href="#/study">오늘의 결과 보기<Icon name="arrow" /></a>
+        <span className="hero-sample-note">오늘의 학습을 마쳤어요. 내일 새 카드로 만나요.</span>
+      </>
+    );
+  }
+  if (manifest.status === 'loading' || daily.status === 'loading') return <span className="hero-sample-note" role="status">학습 자료를 확인하는 중이에요…</span>;
   if (manifest.status === 'error') {
     return (
       <div className="content-error" role="alert">

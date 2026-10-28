@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Home } from './pages/Home';
 import { NotFound, Planned } from './pages/Planned';
 import { Settings } from './pages/Settings';
+import { Study } from './pages/Study';
 import { parseHash, useHash, type Route } from './router';
 import { AppShell } from './shell/AppShell';
 
@@ -15,8 +16,7 @@ function Page({ route }: { route: Route }) {
     case 'home':
       return <Home />;
     case 'study':
-      return <Planned eyebrow="DAILY PRACTICE" heading="오늘의 그림카드" icon="cards" step="2-4"
-        lead="그림을 보고 일본어 읽기를 떠올려요." prototypeHash="#/study" />;
+      return <Study />;
     case 'words':
       return <Planned eyebrow="YOUR WORD LIBRARY" heading="궁금한 단어를 찾아보세요." icon="book" step="3-1"
         lead="단어와 읽기, 한국어 뜻으로 검색할 수 있어요." prototypeHash="#/words" detailId={route.id} />;
