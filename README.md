@@ -16,6 +16,23 @@ N5부터 N1까지, 그림과 소리로 매일 배우는 한국어 사용자를 �
 - [클릭형 화면 시안](prototype/index.html): 홈·학습·단어장·문법·즐겨찾기·설정
 - [바로 열어보는 시안](design/preview.html): 파일을 브라우저로 열면 서버 없이 동작하는 단일 파일
 
+## 실제 앱 (구현 중)
+
+React + TypeScript + Vite 앱이 저장소 최상위(`src/`)에 있습니다. 지금은 백로그 2-1까지 구현했습니다: 공통 화면틀(PC 왼쪽 메뉴·모바일 하단 탭·상단 설정), 해시 경로(`#/words`, `#/words/<id>`, `#/grammar/<id>` 등 직접 진입), 홈 화면. 나머지 화면은 "만드는 중" 안내와 디자인 시안 링크를 보여 줍니다.
+
+- 배포 주소: https://bahara100.github.io/JapaneseWordBook/ (시안은 `/prototype/`)
+- `main`에 올리면 GitHub Actions가 단위 테스트 → 빌드 → 화면 테스트(PC Chrome, iPhone WebKit) 후 Pages에 배포합니다.
+
+```powershell
+npm install
+npm run dev        # 개발 서버
+npm test           # 단위 테스트(Vitest)
+npm run build      # 타입 검사 + 빌드(dist/, 시안 포함)
+npm run test:e2e   # 빌드 결과로 화면 테스트(Playwright)
+```
+
+화면 테스트를 처음 돌릴 때는 `npx playwright install chromium webkit`이 필요합니다. 내 컴퓨터에서는 브라우저를 하나씩만 띄웁니다.
+
 ## 화면 시안 실행
 
 가장 간단한 방법은 `design/preview.html`을 브라우저로 여는 것입니다. 인터넷이나 패키지 설치 없이 동작합니다. 원본을 수정한 뒤에는 `node tools/export-preview.mjs`로 다시 생성합니다.
@@ -52,4 +69,4 @@ node tools/preview.mjs
 - [브라우저 음성 인식](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
 - [기기별 합성 음성 조회](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices)
 
-문서 작성: 2026-10-28. Git 저장소 생성·원격 연결·커밋·게시 작업은 아직 진행하지 않았습니다.
+문서 작성: 2026-10-28. 저장소: https://github.com/bahara100/JapaneseWordBook (공개, GitHub Pages 배포).
