@@ -72,6 +72,7 @@ test('unfinished screens link to the design prototype', async ({ page }) => {
 test('home art and styles load under the project path', async ({ page }, info) => {
   await page.goto('#/home');
   await expect(page.getByRole('img', { name: '편안하게 앉아 있는 동물' })).toBeVisible();
+  await expect(page.getByRole('link', { name: '오늘의 학습 시작' })).toBeVisible();
   const background = await page.evaluate(() => getComputedStyle(document.querySelector('.hero-start')!).backgroundColor);
   expect(background).not.toBe('rgba(0, 0, 0, 0)');
   await page.screenshot({ path: info.outputPath('home.png'), fullPage: true });

@@ -18,14 +18,17 @@ N5부터 N1까지, 그림과 소리로 매일 배우는 한국어 사용자를 �
 
 ## 실제 앱 (구현 중)
 
-React + TypeScript + Vite 앱이 저장소 최상위(`src/`)에 있습니다. 지금은 백로그 2-1까지 구현했습니다: 공통 화면틀(PC 왼쪽 메뉴·모바일 하단 탭·상단 설정), 해시 경로(`#/words`, `#/words/<id>`, `#/grammar/<id>` 등 직접 진입), 홈 화면. 나머지 화면은 "만드는 중" 안내와 디자인 시안 링크를 보여 줍니다.
+React + TypeScript + Vite 앱이 저장소 최상위(`src/`)에 있습니다. 지금은 백로그 2-2까지 구현했습니다: 공통 화면틀(PC 왼쪽 메뉴·모바일 하단 탭·상단 설정), 해시 경로(`#/words`, `#/words/<id>`, `#/grammar/<id>` 등 직접 진입), 홈 화면, 콘텐츠 원본·검증·불러오기. 나머지 화면은 "만드는 중" 안내와 디자인 시안 링크를 보여 줍니다.
+
+단어·문법은 `content/`에서 고칩니다. 형식과 검사 규칙은 [content/README.md](content/README.md)를 봅니다.
 
 - 배포 주소: https://bahara100.github.io/JapaneseWordBook/ (시안은 `/prototype/`)
 - `main`에 올리면 GitHub Actions가 단위 테스트 → 빌드 → 화면 테스트(PC Chrome, iPhone WebKit) 후 Pages에 배포합니다.
 
 ```powershell
 npm install
-npm run dev        # 개발 서버
+npm run dev        # 개발 서버 (콘텐츠 검사 먼저)
+npm run content    # 콘텐츠만 검사하고 public/content/ 만들기
 npm test           # 단위 테스트(Vitest)
 npm run build      # 타입 검사 + 빌드(dist/, 시안 포함)
 npm run test:e2e   # 빌드 결과로 화면 테스트(Playwright)

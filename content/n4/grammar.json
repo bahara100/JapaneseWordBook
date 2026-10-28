@@ -1,0 +1,35 @@
+{
+  "level": "N4",
+  "grammar": [
+    {
+      "id": "g002",
+      "level": "N4",
+      "expression": "〜ながら",
+      "koreanMeaning": "~하면서",
+      "connection": "동사 ます형에서 ます를 뺀 형태 + ながら",
+      "explanation": "한 사람이 두 동작을 동시에 할 때 사용합니다. 뒤 문장에 중심이 되는 동작을 둡니다.",
+      "cautions": [
+        "여기서는 동시 동작의 용법입니다. 두 동작의 주어는 같습니다."
+      ],
+      "examples": [
+        {
+          "id": "g002-e1",
+          "japanese": "音楽を聞きながら、勉強します。",
+          "reading": "おんがくをききながら、べんきょうします。",
+          "korean": "음악을 들으면서 공부합니다.",
+          "provenance": {
+            "author": "하루일본어 편집부(초안)",
+            "usageTerms": "프로젝트 자체 작성",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ]
+}

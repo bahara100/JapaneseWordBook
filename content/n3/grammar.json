@@ -1,0 +1,35 @@
+{
+  "level": "N3",
+  "grammar": [
+    {
+      "id": "g003",
+      "level": "N3",
+      "expression": "〜ようにする",
+      "koreanMeaning": "~하도록 하다",
+      "connection": "동사 기본형 / ない형 + ようにする",
+      "explanation": "어떤 행동을 실천하거나 피하려고 의식적으로 노력한다는 뜻입니다.",
+      "cautions": [
+        "능력이나 상황의 변화를 나타내는 ようになる와 구별합니다."
+      ],
+      "examples": [
+        {
+          "id": "g003-e1",
+          "japanese": "毎日、日本語を読むようにしています。",
+          "reading": "まいにち、にほんごをよむようにしています。",
+          "korean": "매일 일본어를 읽으려고 노력하고 있습니다.",
+          "provenance": {
+            "author": "하루일본어 편집부(초안)",
+            "usageTerms": "프로젝트 자체 작성",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ]
+}

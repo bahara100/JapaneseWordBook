@@ -1,0 +1,213 @@
+{
+  "level": "N5",
+  "words": [
+    {
+      "id": "w001",
+      "level": "N5",
+      "curriculumOrder": 1,
+      "written": "猫",
+      "readings": [
+        {
+          "id": "w001-r1",
+          "kana": "ねこ",
+          "romaji": "neko"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w001-s1",
+          "korean": [
+            "고양이"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w001-r1"
+          ],
+          "examples": [
+            {
+              "id": "w001-s1-e1",
+              "japanese": "猫が寝ています。",
+              "reading": "ねこがねています。",
+              "korean": "고양이가 자고 있어요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w002",
+      "level": "N5",
+      "curriculumOrder": 2,
+      "written": "学校",
+      "readings": [
+        {
+          "id": "w002-r1",
+          "kana": "がっこう",
+          "romaji": "gakkō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w002-s1",
+          "korean": [
+            "학교"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w002-r1"
+          ],
+          "examples": [
+            {
+              "id": "w002-s1-e1",
+              "japanese": "毎日、学校へ行きます。",
+              "reading": "まいにち、がっこうへいきます。",
+              "korean": "매일 학교에 갑니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w003",
+      "level": "N5",
+      "curriculumOrder": 3,
+      "written": "りんご",
+      "readings": [
+        {
+          "id": "w003-r1",
+          "kana": "りんご",
+          "romaji": "ringo"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w003-s1",
+          "korean": [
+            "사과"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w003-r1"
+          ],
+          "examples": [
+            {
+              "id": "w003-s1-e1",
+              "japanese": "りんごを一つ食べます。",
+              "reading": "りんごをひとつたべます。",
+              "korean": "사과를 하나 먹습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "w001-p1",
+      "wordId": "w001",
+      "senseId": "w001-s1",
+      "readingId": "w001-r1",
+      "imageAssetId": "img-cat",
+      "acceptedWrittenForms": [
+        "猫"
+      ],
+      "acceptedKanaForms": [
+        "ねこ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w002-p1",
+      "wordId": "w002",
+      "senseId": "w002-s1",
+      "readingId": "w002-r1",
+      "imageAssetId": "img-school",
+      "acceptedWrittenForms": [
+        "学校"
+      ],
+      "acceptedKanaForms": [
+        "がっこう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w003-p1",
+      "wordId": "w003",
+      "senseId": "w003-s1",
+      "readingId": "w003-r1",
+      "imageAssetId": "img-apple",
+      "acceptedWrittenForms": [
+        "りんご"
+      ],
+      "acceptedKanaForms": [
+        "りんご"
+      ],
+      "status": "draft"
+    }
+  ],
+  "media": [
+    {
+      "id": "img-cat",
+      "kind": "image",
+      "path": "media/images/cat.svg",
+      "description": "편안하게 앉아 있는 동물",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-school",
+      "kind": "image",
+      "path": "media/images/school.svg",
+      "description": "시계가 있는 교실 건물",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-apple",
+      "kind": "image",
+      "path": "media/images/apple.svg",
+      "description": "잎이 달린 붉은 과일",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    }
+  ]
+}

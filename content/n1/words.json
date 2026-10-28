@@ -1,0 +1,214 @@
+{
+  "level": "N1",
+  "words": [
+    {
+      "id": "w013",
+      "level": "N1",
+      "curriculumOrder": 1,
+      "written": "葛藤",
+      "readings": [
+        {
+          "id": "w013-r1",
+          "kana": "かっとう",
+          "romaji": "kattō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w013-s1",
+          "korean": [
+            "갈등"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w013-r1"
+          ],
+          "examples": [
+            {
+              "id": "w013-s1-e1",
+              "japanese": "理想と現実の間で葛藤しています。",
+              "reading": "りそうとげんじつのあいだでかっとうしています。",
+              "korean": "이상과 현실 사이에서 갈등하고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w014",
+      "level": "N1",
+      "curriculumOrder": 2,
+      "written": "配慮",
+      "readings": [
+        {
+          "id": "w014-r1",
+          "kana": "はいりょ",
+          "romaji": "hairyo"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w014-s1",
+          "korean": [
+            "배려"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w014-r1"
+          ],
+          "examples": [
+            {
+              "id": "w014-s1-e1",
+              "japanese": "周りの人への配慮を忘れないでください。",
+              "reading": "まわりのひとへのはいりょをわすれないでください。",
+              "korean": "주변 사람에 대한 배려를 잊지 마세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w015",
+      "level": "N1",
+      "curriculumOrder": 3,
+      "written": "打開",
+      "readings": [
+        {
+          "id": "w015-r1",
+          "kana": "だかい",
+          "romaji": "dakai"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w015-s1",
+          "korean": [
+            "타개",
+            "해결의 실마리를 엶"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w015-r1"
+          ],
+          "examples": [
+            {
+              "id": "w015-s1-e1",
+              "japanese": "新しい方法で状況を打開しました。",
+              "reading": "あたらしいほうほうでじょうきょうをだかいしました。",
+              "korean": "새로운 방법으로 상황을 타개했습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "w013-p1",
+      "wordId": "w013",
+      "senseId": "w013-s1",
+      "readingId": "w013-r1",
+      "imageAssetId": "img-conflict",
+      "acceptedWrittenForms": [
+        "葛藤"
+      ],
+      "acceptedKanaForms": [
+        "かっとう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w014-p1",
+      "wordId": "w014",
+      "senseId": "w014-s1",
+      "readingId": "w014-r1",
+      "imageAssetId": "img-consideration",
+      "acceptedWrittenForms": [
+        "配慮"
+      ],
+      "acceptedKanaForms": [
+        "はいりょ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w015-p1",
+      "wordId": "w015",
+      "senseId": "w015-s1",
+      "readingId": "w015-r1",
+      "imageAssetId": "img-breakthrough",
+      "acceptedWrittenForms": [
+        "打開"
+      ],
+      "acceptedKanaForms": [
+        "だかい"
+      ],
+      "status": "draft"
+    }
+  ],
+  "media": [
+    {
+      "id": "img-conflict",
+      "kind": "image",
+      "path": "media/images/conflict.svg",
+      "description": "두 갈래로 갈라진 길",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-consideration",
+      "kind": "image",
+      "path": "media/images/consideration.svg",
+      "description": "다른 사람에게 우산을 씌워 주는 모습",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-breakthrough",
+      "kind": "image",
+      "path": "media/images/breakthrough.svg",
+      "description": "열린 문을 통과하는 화살표",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    }
+  ]
+}

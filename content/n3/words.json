@@ -1,0 +1,213 @@
+{
+  "level": "N3",
+  "words": [
+    {
+      "id": "w007",
+      "level": "N3",
+      "curriculumOrder": 1,
+      "written": "環境",
+      "readings": [
+        {
+          "id": "w007-r1",
+          "kana": "かんきょう",
+          "romaji": "kankyō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w007-s1",
+          "korean": [
+            "환경"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w007-r1"
+          ],
+          "examples": [
+            {
+              "id": "w007-s1-e1",
+              "japanese": "環境を守ることが大切です。",
+              "reading": "かんきょうをまもることがたいせつです。",
+              "korean": "환경을 지키는 것이 중요합니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w008",
+      "level": "N3",
+      "curriculumOrder": 2,
+      "written": "努力",
+      "readings": [
+        {
+          "id": "w008-r1",
+          "kana": "どりょく",
+          "romaji": "doryoku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w008-s1",
+          "korean": [
+            "노력"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w008-r1"
+          ],
+          "examples": [
+            {
+              "id": "w008-s1-e1",
+              "japanese": "毎日の努力が実を結びました。",
+              "reading": "まいにちのどりょくがみをむすびました。",
+              "korean": "매일의 노력이 결실을 맺었습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w009",
+      "level": "N3",
+      "curriculumOrder": 3,
+      "written": "確認",
+      "readings": [
+        {
+          "id": "w009-r1",
+          "kana": "かくにん",
+          "romaji": "kakunin"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w009-s1",
+          "korean": [
+            "확인"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w009-r1"
+          ],
+          "examples": [
+            {
+              "id": "w009-s1-e1",
+              "japanese": "出発の時間を確認してください。",
+              "reading": "しゅっぱつのじかんをかくにんしてください。",
+              "korean": "출발 시간을 확인해 주세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "w007-p1",
+      "wordId": "w007",
+      "senseId": "w007-s1",
+      "readingId": "w007-r1",
+      "imageAssetId": "img-environment",
+      "acceptedWrittenForms": [
+        "環境"
+      ],
+      "acceptedKanaForms": [
+        "かんきょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w008-p1",
+      "wordId": "w008",
+      "senseId": "w008-s1",
+      "readingId": "w008-r1",
+      "imageAssetId": "img-effort",
+      "acceptedWrittenForms": [
+        "努力"
+      ],
+      "acceptedKanaForms": [
+        "どりょく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w009-p1",
+      "wordId": "w009",
+      "senseId": "w009-s1",
+      "readingId": "w009-r1",
+      "imageAssetId": "img-confirm",
+      "acceptedWrittenForms": [
+        "確認"
+      ],
+      "acceptedKanaForms": [
+        "かくにん"
+      ],
+      "status": "draft"
+    }
+  ],
+  "media": [
+    {
+      "id": "img-environment",
+      "kind": "image",
+      "path": "media/images/environment.svg",
+      "description": "나무와 푸른 지구",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-effort",
+      "kind": "image",
+      "path": "media/images/effort.svg",
+      "description": "산의 정상을 향해 이어지는 길",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-confirm",
+      "kind": "image",
+      "path": "media/images/confirm.svg",
+      "description": "항목에 체크 표시를 하는 종이",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    }
+  ]
+}

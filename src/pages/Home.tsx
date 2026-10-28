@@ -1,6 +1,8 @@
 import { Icon } from '../art/icons';
-import { illustration } from '../art/illustrations';
+import { loadManifest, mediaUrl } from '../content/loader';
+import { useLoaded } from '../content/useContent';
 import { DEFAULT_SETTINGS, LEVELS } from '../levels';
+import type { Level } from '../content/types';
 import { PageTitle } from './PageTitle';
 
 function HomeArtwork() {
@@ -14,8 +16,10 @@ function HomeArtwork() {
         <div className="stack-paper paper-middle" aria-hidden="true" />
         <div className="preview-paper">
           <div className="preview-paper-top"><span>DAILY WORD CARD</span><Icon name="leaf" /></div>
-          {/* Our own static SVG, ported from the prototype. */}
-          <div className="preview-picture" dangerouslySetInnerHTML={{ __html: illustration('cat') }} />
+          {/* A fixed sample card; it does not follow the chosen level. */}
+          <div className="preview-picture">
+            <img className="illustration" src={mediaUrl('media/images/cat.svg')} alt="편안하게 앉아 있는 동물" />
+          </div>
           <div className="preview-paper-bottom">
             <span lang="ja">ねこ</span><span>고양이</span>
             <span className="preview-paper-dot" aria-hidden="true" />
@@ -27,6 +31,38 @@ function HomeArtwork() {
       <span className="art-kana kana-two" lang="ja" aria-hidden="true">日</span>
       <div className="art-note">A little Japanese,<br />every day.</div>
     </div>
+  );
+}
+
+/** What the chosen level has ready, so the start button never promises cards that don't exist. */
+function Availability({ level }: { level: Level }) {
+  const manifest = useLoaded(loadManifest, []);
+  if (manifest.status === 'loading') return <span className="hero-sample-note" role="status">학습 자료를 확인하는 중이에요…</span>;
+  if (manifest.status === 'error') {
+    return (
+      <div className="content-error" role="alert">
+        <span>{manifest.message}</span>
+        <button className="text-button" type="button" onClick={manifest.retry}>다시 시도</button>
+      </div>
+    );
+  }
+  const { promptCount, reviewedPromptCount } = manifest.data.levels[level];
+  if (!promptCount) {
+    return (
+      <>
+        <span className="hero-sample-note">{level} 카드는 아직 준비 중이에요.</span>
+        <a className="btn hero-start" href="#/settings">설정에서 수준 바꾸기<Icon name="arrow" /></a>
+      </>
+    );
+  }
+  return (
+    <>
+      <a className="btn primary hero-start" href="#/study">오늘의 학습 시작<Icon name="arrow" /></a>
+      <span className="hero-sample-note">
+        준비된 {level} 카드 {promptCount}장
+        {reviewedPromptCount < promptCount ? ` · 검수 전 초안 ${promptCount - reviewedPromptCount}장 포함` : ''}
+      </span>
+    </>
   );
 }
 
@@ -47,8 +83,7 @@ export function Home() {
             <span className="hero-meta-divider" />
             <span>하루 {dailyTarget}장</span>
           </div>
-          <a className="btn primary hero-start" href="#/study">오늘의 학습 시작<Icon name="arrow" /></a>
-          <span className="hero-sample-note">학습 카드는 다음 단계에서 연결해요.</span>
+          <Availability level={level} />
         </div>
         <div className="hero-art"><HomeArtwork /></div>
       </section>

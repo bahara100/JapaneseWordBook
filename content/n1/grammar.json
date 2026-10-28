@@ -1,0 +1,35 @@
+{
+  "level": "N1",
+  "grammar": [
+    {
+      "id": "g005",
+      "level": "N1",
+      "expression": "〜を余儀なくされる",
+      "koreanMeaning": "어쩔 수 없이 ~하게 되다",
+      "connection": "행동을 나타내는 명사 + を余儀なくされる",
+      "explanation": "외부 사정 때문에 원하지 않는 행동이나 결정을 하게 되었음을 나타내는 격식 있는 표현입니다.",
+      "cautions": [
+        "스스로 원해서 결정한 행동에는 어울리지 않습니다."
+      ],
+      "examples": [
+        {
+          "id": "g005-e1",
+          "japanese": "台風で計画の変更を余儀なくされました。",
+          "reading": "たいふうでけいかくのへんこうをよぎなくされました。",
+          "korean": "태풍 때문에 어쩔 수 없이 계획을 변경하게 되었습니다.",
+          "provenance": {
+            "author": "하루일본어 편집부(초안)",
+            "usageTerms": "프로젝트 자체 작성",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ]
+}

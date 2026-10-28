@@ -1,0 +1,35 @@
+{
+  "level": "N2",
+  "grammar": [
+    {
+      "id": "g004",
+      "level": "N2",
+      "expression": "〜にかかわらず",
+      "koreanMeaning": "~에 관계없이",
+      "connection": "명사 + にかかわらず",
+      "explanation": "앞의 조건과 상관없이 뒤의 내용이 성립함을 나타냅니다.",
+      "cautions": [
+        "여기서는 명사에 연결되는 기본 용법을 제시했습니다. 다른 접속 형태는 별도 예문으로 확장합니다."
+      ],
+      "examples": [
+        {
+          "id": "g004-e1",
+          "japanese": "経験にかかわらず、応募できます。",
+          "reading": "けいけんにかかわらず、おうぼできます。",
+          "korean": "경험에 관계없이 지원할 수 있습니다.",
+          "provenance": {
+            "author": "하루일본어 편집부(초안)",
+            "usageTerms": "프로젝트 자체 작성",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ]
+}

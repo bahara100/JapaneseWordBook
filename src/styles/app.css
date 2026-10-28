@@ -1,3 +1,4 @@
 /* Additions for the React app on top of the prototype styles (base.css, polish.css). */
 .settings-link[aria-current="page"]{color:var(--green)}
 .empty code{font-size:13px;background:var(--soft);padding:2px 6px;border-radius:6px}
+.content-error{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:22px;color:#995b3e;font-size:14px}

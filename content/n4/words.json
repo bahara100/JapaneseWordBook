@@ -1,0 +1,213 @@
+{
+  "level": "N4",
+  "words": [
+    {
+      "id": "w004",
+      "level": "N4",
+      "curriculumOrder": 1,
+      "written": "約束",
+      "readings": [
+        {
+          "id": "w004-r1",
+          "kana": "やくそく",
+          "romaji": "yakusoku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w004-s1",
+          "korean": [
+            "약속"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w004-r1"
+          ],
+          "examples": [
+            {
+              "id": "w004-s1-e1",
+              "japanese": "友達と約束をしました。",
+              "reading": "ともだちとやくそくをしました。",
+              "korean": "친구와 약속을 했습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w005",
+      "level": "N4",
+      "curriculumOrder": 2,
+      "written": "準備",
+      "readings": [
+        {
+          "id": "w005-r1",
+          "kana": "じゅんび",
+          "romaji": "junbi"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w005-s1",
+          "korean": [
+            "준비"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w005-r1"
+          ],
+          "examples": [
+            {
+              "id": "w005-s1-e1",
+              "japanese": "旅行の準備をしています。",
+              "reading": "りょこうのじゅんびをしています。",
+              "korean": "여행 준비를 하고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w006",
+      "level": "N4",
+      "curriculumOrder": 3,
+      "written": "運転",
+      "readings": [
+        {
+          "id": "w006-r1",
+          "kana": "うんてん",
+          "romaji": "unten"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w006-s1",
+          "korean": [
+            "운전"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w006-r1"
+          ],
+          "examples": [
+            {
+              "id": "w006-s1-e1",
+              "japanese": "父は毎日車を運転します。",
+              "reading": "ちちはまいにちくるまをうんてんします。",
+              "korean": "아버지는 매일 차를 운전합니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "w004-p1",
+      "wordId": "w004",
+      "senseId": "w004-s1",
+      "readingId": "w004-r1",
+      "imageAssetId": "img-promise",
+      "acceptedWrittenForms": [
+        "約束"
+      ],
+      "acceptedKanaForms": [
+        "やくそく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w005-p1",
+      "wordId": "w005",
+      "senseId": "w005-s1",
+      "readingId": "w005-r1",
+      "imageAssetId": "img-prepare",
+      "acceptedWrittenForms": [
+        "準備"
+      ],
+      "acceptedKanaForms": [
+        "じゅんび"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w006-p1",
+      "wordId": "w006",
+      "senseId": "w006-s1",
+      "readingId": "w006-r1",
+      "imageAssetId": "img-drive",
+      "acceptedWrittenForms": [
+        "運転"
+      ],
+      "acceptedKanaForms": [
+        "うんてん"
+      ],
+      "status": "draft"
+    }
+  ],
+  "media": [
+    {
+      "id": "img-promise",
+      "kind": "image",
+      "path": "media/images/promise.svg",
+      "description": "두 사람이 손을 맞잡는 모습",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-prepare",
+      "kind": "image",
+      "path": "media/images/prepare.svg",
+      "description": "짐을 챙긴 여행 가방",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-drive",
+      "kind": "image",
+      "path": "media/images/drive.svg",
+      "description": "도로 위의 자동차",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    }
+  ]
+}

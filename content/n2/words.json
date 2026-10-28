@@ -1,0 +1,214 @@
+{
+  "level": "N2",
+  "words": [
+    {
+      "id": "w010",
+      "level": "N2",
+      "curriculumOrder": 1,
+      "written": "貢献",
+      "readings": [
+        {
+          "id": "w010-r1",
+          "kana": "こうけん",
+          "romaji": "kōken"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w010-s1",
+          "korean": [
+            "공헌",
+            "기여"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w010-r1"
+          ],
+          "examples": [
+            {
+              "id": "w010-s1-e1",
+              "japanese": "地域の発展に貢献したいです。",
+              "reading": "ちいきのはってんにこうけんしたいです。",
+              "korean": "지역 발전에 기여하고 싶습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w011",
+      "level": "N2",
+      "curriculumOrder": 2,
+      "written": "傾向",
+      "readings": [
+        {
+          "id": "w011-r1",
+          "kana": "けいこう",
+          "romaji": "keikō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w011-s1",
+          "korean": [
+            "경향"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w011-r1"
+          ],
+          "examples": [
+            {
+              "id": "w011-s1-e1",
+              "japanese": "最近は価格が上がる傾向にあります。",
+              "reading": "さいきんはかかくがあがるけいこうにあります。",
+              "korean": "최근에는 가격이 오르는 경향이 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w012",
+      "level": "N2",
+      "curriculumOrder": 3,
+      "written": "改善",
+      "readings": [
+        {
+          "id": "w012-r1",
+          "kana": "かいぜん",
+          "romaji": "kaizen"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w012-s1",
+          "korean": [
+            "개선"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w012-r1"
+          ],
+          "examples": [
+            {
+              "id": "w012-s1-e1",
+              "japanese": "働く環境を改善しました。",
+              "reading": "はたらくかんきょうをかいぜんしました。",
+              "korean": "일하는 환경을 개선했습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ],
+  "prompts": [
+    {
+      "id": "w010-p1",
+      "wordId": "w010",
+      "senseId": "w010-s1",
+      "readingId": "w010-r1",
+      "imageAssetId": "img-contribute",
+      "acceptedWrittenForms": [
+        "貢献"
+      ],
+      "acceptedKanaForms": [
+        "こうけん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w011-p1",
+      "wordId": "w011",
+      "senseId": "w011-s1",
+      "readingId": "w011-r1",
+      "imageAssetId": "img-trend",
+      "acceptedWrittenForms": [
+        "傾向"
+      ],
+      "acceptedKanaForms": [
+        "けいこう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w012-p1",
+      "wordId": "w012",
+      "senseId": "w012-s1",
+      "readingId": "w012-r1",
+      "imageAssetId": "img-improve",
+      "acceptedWrittenForms": [
+        "改善"
+      ],
+      "acceptedKanaForms": [
+        "かいぜん"
+      ],
+      "status": "draft"
+    }
+  ],
+  "media": [
+    {
+      "id": "img-contribute",
+      "kind": "image",
+      "path": "media/images/contribute.svg",
+      "description": "함께 가꾸는 마을의 집",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-trend",
+      "kind": "image",
+      "path": "media/images/trend.svg",
+      "description": "일정한 방향으로 움직이는 선",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-improve",
+      "kind": "image",
+      "path": "media/images/improve.svg",
+      "description": "점차 높아지는 계단",
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성 SVG",
+        "status": "draft"
+      }
+    }
+  ]
+}

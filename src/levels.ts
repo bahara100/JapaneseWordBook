@@ -1,4 +1,4 @@
-export type Level = 'N5' | 'N4' | 'N3' | 'N2' | 'N1';
+import type { Level } from './content/types';
 
 export const LEVELS: { id: Level; label: string; description: string }[] = [
   { id: 'N5', label: '입문', description: '일상의 첫 단어부터' },

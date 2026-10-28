@@ -1,0 +1,35 @@
+{
+  "level": "N5",
+  "grammar": [
+    {
+      "id": "g001",
+      "level": "N5",
+      "expression": "〜があります",
+      "koreanMeaning": "~이/가 있습니다",
+      "connection": "명사 + が あります",
+      "explanation": "사물이나 식물 등이 존재함을 나타냅니다. 사람이나 동물처럼 움직이는 생물에는 보통 います를 사용합니다.",
+      "cautions": [
+        "존재하는 장소는 に로 표시합니다. は와 が의 선택은 문맥에 따라 달라집니다."
+      ],
+      "examples": [
+        {
+          "id": "g001-e1",
+          "japanese": "机の上に本があります。",
+          "reading": "つくえのうえにほんがあります。",
+          "korean": "책상 위에 책이 있습니다.",
+          "provenance": {
+            "author": "하루일본어 편집부(초안)",
+            "usageTerms": "프로젝트 자체 작성",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    }
+  ]
+}
