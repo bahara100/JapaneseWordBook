@@ -1,24 +1,16 @@
-import { useEffect, useId, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Icon } from '../art/icons';
 import { mediaUrl } from '../content/loader';
 import type { Level, Word } from '../content/types';
 import { LEVELS } from '../levels';
 import { searchWords } from '../library/search';
+import { useIsPhone } from '../library/useIsPhone';
 import { useLibrary, type Library } from '../library/useLibrary';
 import { useStorage } from '../storage/StorageProvider';
 import { useFavorites } from '../storage/useFavorites';
 import { cardForWord } from '../study/selection';
 import { useDailySession } from '../study/useDailySession';
 import { PageTitle } from './PageTitle';
-
-const PHONE = '(max-width: 719px)';
-function useIsPhone(): boolean {
-  return useSyncExternalStore(
-    notify => { const m = window.matchMedia(PHONE); m.addEventListener('change', notify); return () => m.removeEventListener('change', notify); },
-    () => window.matchMedia(PHONE).matches,
-    () => false,
-  );
-}
 
 type Favorites = ReturnType<typeof useFavorites>;
 

@@ -51,8 +51,8 @@ test('detail paths open directly', async ({ page }) => {
   await page.goto('#/words/w001');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('궁금한 단어를 찾아보세요.');
   await expect(page.getByRole('region', { name: '선택한 단어 상세' }).getByRole('heading', { name: '猫' })).toBeVisible();
-  await page.goto('#/grammar/g001');
-  await expect(page.getByText('g001')).toBeVisible();
+  await page.goto('#/grammar/g002');
+  await expect(page.getByRole('region', { name: '선택한 문법 상세' }).getByRole('heading', { name: '〜ながら' })).toBeVisible();
 });
 
 test('unknown paths show a way home', async ({ page }) => {
@@ -60,13 +60,6 @@ test('unknown paths show a way home', async ({ page }) => {
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('찾는 화면이 없어요.');
   await page.getByRole('link', { name: '홈으로 가기' }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('오늘도, 일본어 한 장.');
-});
-
-test('unfinished screens link to the design prototype', async ({ page }) => {
-  await page.goto('#/grammar');
-  await page.getByRole('link', { name: '디자인 시안에서 보기' }).click();
-  await expect(page).toHaveURL(/\/JapaneseWordBook\/prototype\/#\/grammar$/);
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('문법도, 문장 속에서.');
 });
 
 test('home art and styles load under the project path', async ({ page }, info) => {

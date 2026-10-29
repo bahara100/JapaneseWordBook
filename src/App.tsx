@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Home } from './pages/Home';
-import { NotFound, Planned } from './pages/Planned';
+import { Grammar } from './pages/Grammar';
+import { NotFound } from './pages/NotFound';
 import { Settings } from './pages/Settings';
 import { Study } from './pages/Study';
 import { WordLibrary } from './pages/Words';
@@ -21,8 +22,7 @@ function Page({ route }: { route: Route }) {
     case 'words':
       return <WordLibrary mode="words" routeId={route.id} />;
     case 'grammar':
-      return <Planned eyebrow="GRAMMAR, IN CONTEXT" heading="문법도, 문장 속에서." icon="grammar" step="3-2"
-        lead="접속 방법부터 예문까지, 표현이 쓰이는 맥락을 살펴보세요." prototypeHash="#/grammar" detailId={route.id} />;
+      return <Grammar routeId={route.id} />;
     case 'favorites':
       return <WordLibrary key="favorites" mode="favorites" />;
     case 'settings':

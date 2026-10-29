@@ -6,7 +6,7 @@ import { buildIndex, type SearchEntry } from './search';
 
 export interface Library {
   words: Word[];
-  index: SearchEntry[];
+  index: SearchEntry<Word>[];
   /** The level file each word came from, for its cards and pictures. */
   contentOf: Map<string, LevelWords>;
 }

@@ -39,3 +39,8 @@ a.word-select{display:block;color:inherit}
 .back-link{display:inline-flex;align-items:center;margin:-4px 0 12px}
 .sense + .sense{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
 .sense-number{color:var(--muted)}
+a.grammar-row{color:inherit}
+.grammar-detail h3{margin:26px 0 10px;font-size:15px}
+.grammar-example + .grammar-example{margin-top:10px}
+.cautions,.related-grammar{margin:0;padding-left:1.2em;font-size:14px;line-height:1.9}
+.related-grammar a{color:var(--green);text-decoration:underline}
