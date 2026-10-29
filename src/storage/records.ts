@@ -39,15 +39,23 @@ export interface RecordStore {
   getSession(id: string): Promise<StudySession | undefined>;
   /** The daily session with the latest study date, finished or not. */
   latestDailySession(): Promise<StudySession | undefined>;
+  /** The newest unfinished practice session, if any. */
+  activePractice(): Promise<StudySession | undefined>;
   /**
-   * Saves a session and, in the same transaction, the attempt that changed it. The stored copy must
-   * be exactly one revision older (or absent for revision 0); otherwise nothing is written and a
-   * ConflictError says another tab got there first.
+   * Saves a session and, in the same transaction, the attempt that changed it and the word's new
+   * review schedule (computed from the stored progress). The stored session must be exactly one
+   * revision older (or absent for revision 0); otherwise nothing is written and a ConflictError
+   * says another tab got there first.
    */
-  saveSession(session: StudySession, attempt?: AnswerAttempt): Promise<void>;
+  saveSession(session: StudySession, change?: SessionChange): Promise<void>;
   listAttempts(sessionId: string): Promise<AnswerAttempt[]>;
   listProgress(level: Level): Promise<WordProgress[]>;
   close(): void;
+}
+
+export interface SessionChange {
+  attempt?: AnswerAttempt;
+  progress?: { promptId: string; next: (previous: WordProgress | undefined) => WordProgress };
 }
 
 function checkRevision(stored: StudySession | undefined, next: StudySession) {
@@ -57,6 +65,8 @@ function checkRevision(stored: StudySession | undefined, next: StudySession) {
 
 const latestDaily = (sessions: StudySession[]) =>
   sessions.filter(s => s.type === 'daily').sort((a, b) => b.studyDate.localeCompare(a.studyDate))[0];
+const newestPractice = (sessions: StudySession[]) =>
+  sessions.filter(s => s.type === 'practice' && s.status === 'active').sort((a, b) => b.startedAt.localeCompare(a.startedAt))[0];
 
 function request<T>(req: IDBRequest<T>): Promise<T> {
   return new Promise((resolve, reject) => {
@@ -130,12 +140,17 @@ class IndexedDbStore implements RecordStore {
     return latestDaily(await request(index.getAll('daily') as IDBRequest<StudySession[]>));
   }
 
-  saveSession(session: StudySession, attempt?: AnswerAttempt): Promise<void> {
+  async activePractice(): Promise<StudySession | undefined> {
+    const index = this.db.transaction('studySessions').objectStore('studySessions').index('type');
+    return newestPractice(await request(index.getAll('practice') as IDBRequest<StudySession[]>));
+  }
+
+  saveSession(session: StudySession, change: SessionChange = {}): Promise<void> {
     return new Promise((resolve, reject) => {
       let tx: IDBTransaction;
       let conflict: ConflictError | undefined;
       try {
-        tx = this.db.transaction(['studySessions', 'answerAttempts'], 'readwrite');
+        tx = this.db.transaction(['studySessions', 'answerAttempts', 'wordProgress'], 'readwrite');
         const sessions = tx.objectStore('studySessions');
         const read = sessions.get(session.id);
         read.onsuccess = () => {
@@ -147,7 +162,13 @@ class IndexedDbStore implements RecordStore {
             return;
           }
           sessions.put(session);
-          if (attempt) tx.objectStore('answerAttempts').put(attempt);
+          if (change.attempt) tx.objectStore('answerAttempts').put(change.attempt);
+          const progress = change.progress;
+          if (progress) {
+            const store = tx.objectStore('wordProgress');
+            const previous = store.get(progress.promptId);
+            previous.onsuccess = () => { store.put(progress.next(previous.result)); };
+          }
         };
       } catch {
         reject(new StorageError(SAVE_FAILED));
@@ -196,10 +217,18 @@ export class MemoryStore implements RecordStore {
     return structuredClone(latestDaily([...this.sessions.values()]));
   }
 
-  async saveSession(session: StudySession, attempt?: AnswerAttempt) {
+  async activePractice() {
+    return structuredClone(newestPractice([...this.sessions.values()]));
+  }
+
+  async saveSession(session: StudySession, change: SessionChange = {}) {
     checkRevision(this.sessions.get(session.id), session);
     this.sessions.set(session.id, structuredClone(session));
-    if (attempt) this.attempts.push(structuredClone(attempt));
+    if (change.attempt) this.attempts.push(structuredClone(change.attempt));
+    if (change.progress) {
+      const { promptId, next } = change.progress;
+      this.progress.set(promptId, next(this.progress.get(promptId)));
+    }
   }
 
   async listAttempts(sessionId: string) {

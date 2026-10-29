@@ -5,7 +5,7 @@ import type { LevelWords, StudySession, WordProgress } from '../content/types';
 import { dailySessionId, studyDate } from './dates';
 import { gradeTyped, normalizeAnswer } from './grading';
 import { REVIEW_CAP, selectDailyCards } from './selection';
-import { answerCard, createDailySession, nextCard, retryCard, summarize } from './session';
+import { answerCard, createDailySession, createPracticeSession, endSession, missedCards, nextCard, retryCard, summarize } from './session';
 
 const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
 
@@ -125,6 +125,38 @@ describe('session rules', () => {
     const moved = nextCard(s, 0, now)!;
     expect(nextCard(moved, 0, now)).toBeNull(); // double click on 다음
     expect(nextCard(start(), 0, now)).toBeNull(); // answer not shown yet
+  });
+
+  it('marks only the first evaluation as the one that moves the schedule', () => {
+    const first = answer(start(), 0, 'incorrect')!;
+    expect(first.firstEvaluation).toEqual({ outcome: 'incorrect', hintUsed: false });
+    const again = answer(retryCard(first.session, 0)!, 0, 'correct', 2)!;
+    expect(again.firstEvaluation).toBeUndefined();
+    expect(answer(start(), 0, 'unrecognized')!.firstEvaluation).toBeUndefined();
+  });
+
+  it('practices the missed cards without their first evaluations', () => {
+    let s = start();
+    (['correct', 'incorrect', 'revealed'] as const).forEach((o, i) => {
+      s = answer(s, i, o, i)!.session;
+      if (o === 'incorrect') s = answer(s, i, 'revealed', 10 + i)!.session;
+      s = nextCard(s, i, now)!;
+    });
+    expect(missedCards(s).map(c => c.wordSnapshot.id)).toEqual(['w002', 'w003']);
+    const practice = createPracticeSession(s, now, 'practice:x')!;
+    expect(practice).toMatchObject({ id: 'practice:x', type: 'practice', status: 'active', currentIndex: 0, revision: 0, target: 2 });
+    expect(practice.cards.every(c => c.state === 'question' && c.firstEvaluation === undefined)).toBe(true);
+    expect(s.cards[1].firstEvaluation).toBeDefined(); // the day's record is untouched
+
+    const ended = endSession(practice, now)!;
+    expect(ended).toMatchObject({ status: 'complete', revision: 1 });
+    expect(endSession(ended, now)).toBeNull();
+  });
+
+  it('has nothing to practice after a perfect day', () => {
+    let s = start();
+    for (let i = 0; i < 3; i++) s = nextCard(answer(s, i, 'correct', i)!.session, i, now)!;
+    expect(createPracticeSession(s, now, 'practice:y')).toBeNull();
   });
 
   it('completes after the last card and summarizes', () => {

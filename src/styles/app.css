@@ -15,3 +15,10 @@
 .card-back-top{display:flex;justify-content:space-between;align-items:center}
 .input-message{margin:4px 0 0;color:#995b3e;font-size:13px}
 .study-card .illustration{margin-left:auto;margin-right:auto}
+.missed{margin-top:26px;text-align:left}
+.missed h2{font-size:18px;margin-bottom:12px}
+.missed-list{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px}
+.missed-list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.missed-word{font-family:var(--serif);font-size:22px}
+.missed-tag{margin-left:auto;color:#995b3e;font-weight:600}
+.practice-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px}

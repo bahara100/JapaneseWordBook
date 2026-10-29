@@ -1,14 +1,15 @@
-// Today's session for the screens: reads it from device records, and saves every step before
-// showing it. If a save fails, the screen stays where it was and says so (docs/03 §4).
+// Today's session (and an optional practice round) for the screens. Every step is saved before it
+// is shown; if a save fails, the screen stays where it was and says so (docs/03 §4).
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { loadLevel } from '../content/loader';
 import type { AnswerAttempt, Outcome, StudySession } from '../content/types';
-import { ConflictError, requestPersistence, type RecordStore } from '../storage/records';
+import { ConflictError, requestPersistence, type RecordStore, type SessionChange } from '../storage/records';
 import { effectiveTimeZone } from '../storage/settings';
 import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from './dates';
+import { scheduleReview } from './schedule';
 import { selectDailyCards } from './selection';
-import { answerCard, createDailySession, nextCard, retryCard } from './session';
+import { answerCard, createDailySession, createPracticeSession, endSession, nextCard, retryCard } from './session';
 
 export type Daily =
   | { status: 'loading' }
@@ -16,8 +17,8 @@ export type Daily =
   | { status: 'active'; session: StudySession }
   | { status: 'done'; session: StudySession };
 
-export interface DailyActions {
-  start(): Promise<void>;
+/** Actions on whichever session is on screen: the practice round if one is open, else today's. */
+export interface SessionActions {
   answer(outcome: Outcome, method: AnswerAttempt['method'], inputText?: string): Promise<void>;
   retry(): Promise<void>;
   next(): Promise<void>;
@@ -33,7 +34,8 @@ export function useDailySession() {
   const { settings, records } = useStorage();
   const store: RecordStore | undefined = records.status === 'ready' ? records.store : undefined;
   const timeZone = effectiveTimeZone(settings);
-  const [session, setSession] = useState<StudySession | undefined>();
+  const [daily, setDaily] = useState<StudySession | undefined>();
+  const [practice, setPractice] = useState<StudySession | undefined>();
   const [loaded, setLoaded] = useState(false);
   const [busy, setBusy] = useState(false);
   // A ref, not only state: two clicks in the same frame must not both get through.
@@ -43,7 +45,9 @@ export function useDailySession() {
 
   const reload = useCallback(async () => {
     if (!store) return;
-    setSession(await store.latestDailySession());
+    const [d, p] = await Promise.all([store.latestDailySession(), store.activePractice()]);
+    setDaily(d);
+    setPractice(p);
     setLoaded(true);
   }, [store]);
 
@@ -53,15 +57,16 @@ export function useDailySession() {
   }, [reload]);
 
   /** Saves `next`; shows it only once stored. A conflict adopts what the other tab saved. */
-  const commit = useCallback(async (next: StudySession | null, attempt?: AnswerAttempt) => {
+  const commit = useCallback(async (next: StudySession | null, change?: SessionChange) => {
     if (!store || !next || busyRef.current) return;
     busyRef.current = true;
     setBusy(true);
     setProblem('');
     setNotice('');
     try {
-      await store.saveSession(next, attempt);
-      setSession(next);
+      await store.saveSession(next, change);
+      if (next.type === 'practice') setPractice(next.status === 'active' ? next : undefined);
+      else setDaily(next);
     } catch (e) {
       if (e instanceof ConflictError) {
         await reload();
@@ -75,48 +80,71 @@ export function useDailySession() {
     }
   }, [store, reload]);
 
-  const actions: DailyActions = {
-    async start() {
-      if (!store || busyRef.current) return;
-      busyRef.current = true;
-      setBusy(true);
-      setProblem('');
-      let created: StudySession | undefined;
-      try {
-        const now = new Date();
-        const content = await loadLevel(settings.level);
-        const progress = await store.listProgress(settings.level);
-        const cards = selectDailyCards({ target: settings.dailyTarget, content: content.words, progress, now });
-        if (!cards.length) setProblem(`${settings.level} 수준에는 아직 학습할 카드가 없어요.`);
-        else created = createDailySession({
-          cards, level: settings.level, target: settings.dailyTarget, timeZone,
-          date: studyDate(now, timeZone), contentVersion: content.manifest.contentVersion, now,
-        });
-      } catch (e) {
-        setProblem(e instanceof Error ? e.message : '학습을 시작하지 못했어요.');
-      } finally {
-        busyRef.current = false;
-        setBusy(false);
-      }
-      if (!created) return;
-      await commit(created);
-      // Now there is something worth keeping, ask the browser not to clear it.
-      void requestPersistence();
-    },
+  const current = practice ?? (daily?.status === 'active' ? daily : undefined);
+
+  const actions: SessionActions = {
     async answer(outcome, method, inputText) {
-      if (!session) return;
-      const result = answerCard(session, session.currentIndex, { outcome, method, inputText, now: new Date(), attemptId: crypto.randomUUID() });
-      if (result) await commit(result.session, result.attempt);
+      if (!current) return;
+      const now = new Date();
+      const result = answerCard(current, current.currentIndex, { outcome, method, inputText, now, attemptId: crypto.randomUUID() });
+      if (!result) return;
+      const first = result.firstEvaluation;
+      const card = current.cards[current.currentIndex];
+      // Only today's first answers move the review schedule; practice never does.
+      const progress = current.type === 'daily' && first ? {
+        promptId: card.promptSnapshot.id,
+        next: (previous: Parameters<typeof scheduleReview>[0]) => scheduleReview(previous, {
+          promptId: card.promptSnapshot.id, level: current.level, outcome: first.outcome, hintUsed: first.hintUsed, now, timeZone: current.timeZone,
+        }),
+      } : undefined;
+      await commit(result.session, { attempt: result.attempt, progress });
     },
     async retry() {
-      if (session) await commit(retryCard(session, session.currentIndex));
+      if (current) await commit(retryCard(current, current.currentIndex));
     },
     async next() {
-      if (session) await commit(nextCard(session, session.currentIndex, new Date()));
+      if (current) await commit(nextCard(current, current.currentIndex, new Date()));
     },
   };
 
+  const start = async () => {
+    if (!store || busyRef.current) return;
+    busyRef.current = true;
+    setBusy(true);
+    setProblem('');
+    let created: StudySession | undefined;
+    try {
+      const now = new Date();
+      const content = await loadLevel(settings.level);
+      const progress = await store.listProgress(settings.level);
+      const cards = selectDailyCards({ target: settings.dailyTarget, content: content.words, progress, now });
+      if (!cards.length) setProblem(`${settings.level} 수준에는 아직 학습할 카드가 없어요.`);
+      else created = createDailySession({
+        cards, level: settings.level, target: settings.dailyTarget, timeZone,
+        date: studyDate(now, timeZone), contentVersion: content.manifest.contentVersion, now,
+      });
+    } catch (e) {
+      setProblem(e instanceof Error ? e.message : '학습을 시작하지 못했어요.');
+    } finally {
+      busyRef.current = false;
+      setBusy(false);
+    }
+    if (!created) return;
+    await commit(created);
+    // Now there is something worth keeping, ask the browser not to clear it.
+    void requestPersistence();
+  };
+
+  const practiceMissed = async () => {
+    if (!daily) return;
+    await commit(createPracticeSession(daily, new Date(), `practice:${crypto.randomUUID()}`));
+  };
+
+  const leavePractice = async () => {
+    if (practice) await commit(endSession(practice, new Date()));
+  };
+
   const today = studyDate(new Date(), timeZone);
-  const daily: Daily = !store || !loaded ? { status: 'loading' } : classify(session, today);
-  return { daily, actions, busy, problem, notice, today };
+  const state: Daily = !store || !loaded ? { status: 'loading' } : classify(daily, today);
+  return { daily: state, practice, actions, start, practiceMissed, leavePractice, busy, problem, notice, today };
 }

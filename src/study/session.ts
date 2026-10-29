@@ -22,12 +22,13 @@ export function currentCard(session: StudySession): SessionCard | undefined {
  */
 export function answerCard(session: StudySession, cardIndex: number, answer: {
   outcome: Outcome; method: AnswerAttempt['method']; inputText?: string; hintUsed?: boolean; now: Date; attemptId: string;
-}): { session: StudySession; attempt: AnswerAttempt } | null {
+}): { session: StudySession; attempt: AnswerAttempt; firstEvaluation: SessionCard['firstEvaluation'] } | null {
   const card = currentCard(session);
   if (!card || cardIndex !== session.currentIndex || card.state === 'revealed' || card.state === 'complete') return null;
   const hintUsed = answer.hintUsed ?? false;
   const next: SessionCard = { ...card };
-  if (!next.firstEvaluation && answer.outcome !== 'unrecognized') next.firstEvaluation = { outcome: answer.outcome, hintUsed };
+  const isFirst = !next.firstEvaluation && answer.outcome !== 'unrecognized';
+  if (isFirst) next.firstEvaluation = { outcome: answer.outcome as Exclude<Outcome, 'unrecognized'>, hintUsed };
   next.state = answer.outcome === 'correct' || answer.outcome === 'revealed' ? 'revealed' : 'feedback';
   const cards = session.cards.slice();
   cards[cardIndex] = next;
@@ -36,7 +37,11 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
     ...(answer.inputText !== undefined ? { inputText: answer.inputText } : {}),
     outcome: answer.outcome, hintUsed, attemptedAt: answer.now.toISOString(),
   };
-  return { session: { ...session, cards, revision: session.revision + 1 }, attempt };
+  return {
+    session: { ...session, cards, revision: session.revision + 1 }, attempt,
+    // Set only when this answer is the card's first evaluation, so the schedule moves once.
+    firstEvaluation: isFirst ? next.firstEvaluation : undefined,
+  };
 }
 
 /** After a wrong answer, go back to answering the same card. */
@@ -81,4 +86,29 @@ export function summarize(session: StudySession): SessionSummary {
     completed: done.length, correct, retried, revealedOrHinted: done.length - correct - retried,
     accuracy: done.length ? correct / done.length : null,
   };
+}
+
+/** Cards to look at again: anything not answered right on the first try without a hint. */
+export function missedCards(session: StudySession): SessionCard[] {
+  return session.cards.filter(c => c.state === 'complete' && c.firstEvaluation
+    && !(c.firstEvaluation.outcome === 'correct' && !c.firstEvaluation.hintUsed));
+}
+
+/**
+ * A separate practice round over the missed cards of a session (docs/01 §6). It records attempts
+ * but never changes the review schedule or the day's first evaluations.
+ */
+export function createPracticeSession(from: StudySession, now: Date, id: string): StudySession | null {
+  const cards = missedCards(from).map(({ firstEvaluation: _, ...card }) => ({ ...card, state: 'question' as const }));
+  if (!cards.length) return null;
+  return {
+    id, type: 'practice', studyDate: from.studyDate, timeZone: from.timeZone, level: from.level, target: cards.length,
+    contentVersion: from.contentVersion, cards, currentIndex: 0, status: 'active', revision: 0, startedAt: now.toISOString(),
+  };
+}
+
+/** Stops a session before its last card (used to leave practice). */
+export function endSession(session: StudySession, now: Date): StudySession | null {
+  if (session.status !== 'active') return null;
+  return { ...session, status: 'complete', completedAt: now.toISOString(), revision: session.revision + 1 };
 }

@@ -131,10 +131,16 @@ test('a session started before midnight can be finished, then a new day starts',
     await card(page).getByRole('button', { name: '카드 뒤집어 정답 보기' }).click();
     await card(page).getByRole('button', { name: /다음 카드 →|오늘의 결과 보기 →/ }).click();
   }
-  // Yesterday's session is done, so today offers a fresh start rather than its results.
-  await expect(page.getByRole('button', { name: '오늘의 학습 시작 →' })).toBeVisible();
+  // Yesterday's session is done, so today shows a start screen rather than its results. All three
+  // cards were answered after midnight, so their first reviews come the day after.
+  const startPanel = page.getByRole('region', { name: '오늘의 학습 시작' });
+  await expect(startPanel).toContainText('준비된 N5 카드를 모두 학습했고, 오늘 돌아올 복습은 없어요.');
+  await expect(startPanel).toContainText('다음 복습은 10월 30일에 시작돼요.');
+
+  await page.clock.setSystemTime(new Date('2026-10-29T15:20:00Z')); // 00:20 on 10-30
+  await page.reload();
   await page.getByRole('button', { name: '오늘의 학습 시작 →' }).click();
-  await expect(page.getByText('2026-10-29 · 새 카드')).toBeVisible();
+  await expect(page.getByText('2026-10-30 · 복습 카드')).toBeVisible();
 });
 
 test('romaji input handles っ and ん and can be corrected', async ({ page }) => {
