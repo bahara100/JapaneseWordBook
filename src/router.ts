@@ -8,11 +8,13 @@ export type Route =
   | { name: 'grammar'; id?: string }
   | { name: 'favorites' }
   | { name: 'settings' }
+  /** "이 기기 확인": what this device supports, for device checks (not in the menu). */
+  | { name: 'check' }
   | { name: 'not-found'; path: string };
 
 export type Section = Exclude<Route['name'], 'not-found'>;
 
-const SECTIONS: Section[] = ['home', 'study', 'words', 'grammar', 'favorites', 'settings'];
+const SECTIONS: Section[] = ['home', 'study', 'words', 'grammar', 'favorites', 'settings', 'check'];
 const WITH_DETAIL: Section[] = ['words', 'grammar'];
 
 export function parseHash(hash: string): Route {

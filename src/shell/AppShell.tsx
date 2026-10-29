@@ -18,6 +18,7 @@ const CONTEXT: Record<Section, string> = {
   grammar: '문법 노트',
   favorites: '나의 보관함',
   settings: '학습 설정',
+  check: '이 기기 확인',
 };
 
 function NavLinks({ active, short }: { active: Route['name']; short?: boolean }) {

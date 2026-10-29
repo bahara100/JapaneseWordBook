@@ -71,3 +71,15 @@ a.grammar-row{color:inherit}
 .mode-option span{font-size:13px;color:var(--muted);line-height:1.6}
 .mode-option:hover{background:var(--soft)}
 @media (max-width:719px){.practice-modes .mode-list{grid-template-columns:1fr}}
+.check-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.check-group h2{font-size:17px;margin-bottom:10px}
+.check-group dl{margin:0}
+.check-row{display:grid;grid-template-columns:7.5em 1fr;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.check-row dt{color:var(--muted)}
+.check-row dd{margin:0;overflow-wrap:anywhere}
+.check-mark{display:inline-block;margin-right:8px;padding:0 8px;border-radius:999px;font-size:12px;font-weight:600}
+.mark-ok .check-mark{background:#e4efe2;color:var(--green)}
+.mark-warn .check-mark{background:#f6ecd9;color:#8a6420}
+.mark-no .check-mark{background:#fbe6dc;color:#995b3e}
+.check-report{width:100%;margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:10px;font:12px/1.6 ui-monospace,monospace;background:#fbfbf7;resize:vertical}
+@media (max-width:719px){.check-groups{grid-template-columns:1fr}.check-row{grid-template-columns:6.5em 1fr}}

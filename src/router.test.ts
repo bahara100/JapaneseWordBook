@@ -9,7 +9,7 @@ describe('parseHash', () => {
   });
 
   it('reads each menu section', () => {
-    for (const name of ['home', 'study', 'words', 'grammar', 'favorites', 'settings']) {
+    for (const name of ['home', 'study', 'words', 'grammar', 'favorites', 'settings', 'check']) {
       expect(parseHash(`#/${name}`)).toEqual({ name });
     }
   });

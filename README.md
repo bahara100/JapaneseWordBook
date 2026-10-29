@@ -11,6 +11,7 @@ N5부터 N1까지, 그림과 소리로 매일 배우는 한국어 사용자를 �
 - [데이터·기술 설계](docs/03-data-architecture.md): 콘텐츠와 개인 기록 분리, 저장·검색·배포·음성 계획
 - [구현 백로그](docs/04-implementation-plan.md): 다음 구현 순서와 검수 항목
 - [설계 시안 검증 기록](docs/05-design-qa.md): 이번 단계에서 확인한 동작과 검증 범위
+- [실제 기기 검수 목록](docs/07-device-check.md): 사람이 기기에서 확인할 것과 결과 보내는 법(앱의 `#/check` 화면 포함)
 - [프로젝트 도구 현황](docs/06-project-tools.md): MCP·플러그인의 설치/연결 상태와 무료 범위
 - [데이터 타입 초안](design/content-model.ts): 구현 시 사용할 타입 계약
 - [클릭형 화면 시안](prototype/index.html): 홈·학습·단어장·문법·즐겨찾기·설정

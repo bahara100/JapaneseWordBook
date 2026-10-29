@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Home } from './pages/Home';
+import { DeviceCheck } from './pages/DeviceCheck';
 import { Grammar } from './pages/Grammar';
 import { NotFound } from './pages/NotFound';
 import { Settings } from './pages/Settings';
@@ -10,7 +11,7 @@ import { AppShell } from './shell/AppShell';
 
 const TITLES: Record<Route['name'], string> = {
   home: '홈', study: '오늘의 학습', words: '단어장', grammar: '문법',
-  favorites: '즐겨찾기', settings: '설정', 'not-found': '없는 화면',
+  favorites: '즐겨찾기', settings: '설정', check: '이 기기 확인', 'not-found': '없는 화면',
 };
 
 function Page({ route }: { route: Route }) {
@@ -27,6 +28,8 @@ function Page({ route }: { route: Route }) {
       return <WordLibrary key="favorites" mode="favorites" />;
     case 'settings':
       return <Settings />;
+    case 'check':
+      return <DeviceCheck />;
     case 'not-found':
       return <NotFound path={route.path} />;
   }

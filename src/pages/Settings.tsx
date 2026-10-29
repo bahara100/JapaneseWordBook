@@ -113,6 +113,7 @@ export function Settings() {
           <RecordsStatus />
           <p>기록은 기기마다 따로 저장돼요. PC와 휴대폰의 기록이 자동으로 합쳐지지는 않아요.</p>
           <BackupPanel />
+          <p className="check-link"><a className="text-button" href="#/check">이 기기에서 저장·듣기·말하기가 되는지 확인하기 →</a></p>
         </section>
       </div>
     </>
