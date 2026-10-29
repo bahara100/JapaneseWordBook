@@ -150,7 +150,7 @@ function CardBack({ card, session, actions, busy }: { card: SessionCard; session
       <div className="card-back">
         <Feedback card={card} />
         <div className="card-back-top">
-          <span className="pill">{session.level}{card.kind === 'review' ? ' · 복습' : ''}</span>
+          <span className="pill">{word.level}{session.type === 'daily' && card.kind === 'review' ? ' · 복습' : ''}</span>
           <button className="star" type="button" aria-pressed={favorite} onClick={() => void favorites.toggle(word.id)}
             aria-label={`${word.written} 즐겨찾기 ${favorite ? '해제' : '추가'}`}><Icon name="star" /></button>
         </div>
@@ -170,7 +170,7 @@ function CardBack({ card, session, actions, busy }: { card: SessionCard; session
       </div>
       <div className="card-actions">
         <button className="btn primary wide" type="button" disabled={busy} onClick={() => void actions.next()}>
-          {!last ? '다음 카드' : session.type === 'practice' ? '연습 마치기' : '오늘의 결과 보기'} →
+          {!last ? '다음 카드' : session.type !== 'daily' ? '연습 마치기' : '오늘의 결과 보기'} →
         </button>
       </div>
     </>
@@ -197,7 +197,7 @@ function StudyCard({ session, actions, busy }: { session: StudySession; actions:
     <div className="study-layout">
       <section aria-label="그림카드">
         <div className="study-topline">
-          <span>{session.type === 'practice' ? '틀린 단어 다시 보기' : `${session.studyDate} · ${card.kind === 'review' ? '복습 카드' : '새 카드'}`}</span>
+          <span>{session.type === 'practice' ? '틀린 단어 다시 보기' : session.type === 'favorites' ? '모아 보는 그림카드' : `${session.studyDate} · ${card.kind === 'review' ? '복습 카드' : '새 카드'}`}</span>
           <span>{index + 1} / {session.cards.length}장</span>
         </div>
         <div className="progress" role="progressbar" aria-label="카드 진행률" aria-valuemin={0}
@@ -285,9 +285,10 @@ export function Study() {
   const shown = practice ?? active;
   return (
     <>
-      <PageTitle eyebrow={practice ? 'ONE MORE TIME' : 'DAILY PRACTICE'} heading={practice ? '틀린 단어 다시 보기' : '오늘의 그림카드'}
-        lead={practice ? '오늘 놓친 단어를 한 번 더 떠올려 봐요.' : '한 장씩 떠올리고, 뒤집어서 확인해 보세요.'}
-        extra={shown && <span className="pill">{shown.level}</span>} />
+      <PageTitle eyebrow={practice ? (practice.type === 'favorites' ? 'MY WORDS, ONE MORE TIME' : 'ONE MORE TIME') : 'DAILY PRACTICE'}
+        heading={practice ? (practice.type === 'favorites' ? '모아 보는 그림카드' : '틀린 단어 다시 보기') : '오늘의 그림카드'}
+        lead={practice ? (practice.type === 'favorites' ? '보관한 단어를 그림으로 다시 떠올려 봐요.' : '오늘 놓친 단어를 한 번 더 떠올려 봐요.') : '한 장씩 떠올리고, 뒤집어서 확인해 보세요.'}
+        extra={shown && shown.type !== 'favorites' && <span className="pill">{shown.level}</span>} />
       {notice && <p className="study-notice" role="status">{notice}</p>}
       <Problem text={problem} />
       {daily.status === 'loading' && <p className="subtle" role="status">학습 기록을 불러오는 중이에요…</p>}

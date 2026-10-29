@@ -4,8 +4,8 @@ import { describe, expect, it } from 'vitest';
 import type { LevelWords, StudySession, WordProgress } from '../content/types';
 import { dailySessionId, studyDate } from './dates';
 import { gradeTyped, normalizeAnswer } from './grading';
-import { REVIEW_CAP, selectDailyCards } from './selection';
-import { answerCard, createDailySession, createPracticeSession, endSession, missedCards, nextCard, retryCard, summarize } from './session';
+import { cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, missedCards, nextCard, retryCard, summarize } from './session';
 
 const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
 
@@ -171,5 +171,17 @@ describe('session rules', () => {
     expect(s.completedAt).toBe(now.toISOString());
     expect(summarize(s)).toEqual({ completed: 3, correct: 1, retried: 1, revealedOrHinted: 1, accuracy: 1 / 3 });
     expect(summarize(start()).accuracy).toBeNull();
+  });
+});
+
+describe('favorites study', () => {
+  it('makes one picture card per word, apart from the daily session', () => {
+    const cards = ['w003', 'w001'].map(id => cardForWord(n5, id)!);
+    expect(cards.map(c => c.promptSnapshot.id)).toEqual(['w003-p1', 'w001-p1']);
+    expect(cards[0].mediaSnapshots[0].id).toBe('img-apple');
+    expect(cardForWord(n5, 'w999')).toBeUndefined();
+    const s = createFavoritesSession(cards, '2026-10-29', 'Asia/Seoul', now, 'favorites:x')!;
+    expect(s).toMatchObject({ id: 'favorites:x', type: 'favorites', target: 2, status: 'active', revision: 0 });
+    expect(createFavoritesSession([], '2026-10-29', 'Asia/Seoul', now, 'favorites:y')).toBeNull();
   });
 });

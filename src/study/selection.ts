@@ -52,3 +52,12 @@ export function selectDailyCards({ target, content, progress, now, includeDrafts
     return { promptSnapshot: prompt, wordSnapshot: words.get(prompt.wordId)!, mediaSnapshots, kind, mode: 'picture', state: 'question' };
   });
 }
+
+/** A study card for one word: its first prompt, with the picture. Used for favorites practice. */
+export function cardForWord(content: LevelWords, wordId: string): SessionCard | undefined {
+  const word = content.words.find(w => w.id === wordId);
+  const prompt = content.prompts.find(p => p.wordId === wordId);
+  const image = prompt && content.media.find(m => m.id === prompt.imageAssetId);
+  if (!word || !prompt || !image) return undefined;
+  return { promptSnapshot: prompt, wordSnapshot: word, mediaSnapshots: [image], kind: 'review', mode: 'picture', state: 'question' };
+}

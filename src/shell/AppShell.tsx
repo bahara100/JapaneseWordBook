@@ -47,7 +47,8 @@ function StorageAlert() {
 export function AppShell({ route, children }: { route: Route; children: ReactNode }) {
   const main = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
-  const key = routeKey(route);
+  // Opening a word or grammar detail is not a new page: the screen handles its own focus.
+  const key = route.name === 'words' || route.name === 'grammar' ? route.name : routeKey(route);
 
   // After a navigation, start at the top and move focus to the page title.
   useEffect(() => {

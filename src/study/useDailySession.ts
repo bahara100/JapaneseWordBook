@@ -2,14 +2,14 @@
 // is shown; if a save fails, the screen stays where it was and says so (docs/03 §4).
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { loadLevel } from '../content/loader';
-import type { AnswerAttempt, Outcome, StudySession } from '../content/types';
+import type { AnswerAttempt, Outcome, SessionCard, StudySession } from '../content/types';
 import { ConflictError, requestPersistence, type RecordStore, type SessionChange } from '../storage/records';
 import { effectiveTimeZone } from '../storage/settings';
 import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from './dates';
 import { scheduleReview } from './schedule';
 import { selectDailyCards } from './selection';
-import { answerCard, createDailySession, createPracticeSession, endSession, nextCard, retryCard } from './session';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, nextCard, retryCard } from './session';
 
 export type Daily =
   | { status: 'loading' }
@@ -65,7 +65,7 @@ export function useDailySession() {
     setNotice('');
     try {
       await store.saveSession(next, change);
-      if (next.type === 'practice') setPractice(next.status === 'active' ? next : undefined);
+      if (next.type !== 'daily') setPractice(next.status === 'active' ? next : undefined);
       else setDaily(next);
     } catch (e) {
       if (e instanceof ConflictError) {
@@ -140,11 +140,23 @@ export function useDailySession() {
     await commit(createPracticeSession(daily, new Date(), `practice:${crypto.randomUUID()}`));
   };
 
+  /** Starts studying chosen cards; an open practice round is closed first. Returns whether it started. */
+  const studyFavorites = async (cards: SessionCard[]) => {
+    if (!store) return false;
+    const open = await store.activePractice();
+    if (open) await commit(endSession(open, new Date()));
+    const now = new Date();
+    const session = createFavoritesSession(cards, studyDate(now, timeZone), timeZone, now, `favorites:${crypto.randomUUID()}`);
+    if (!session) return false;
+    await commit(session);
+    return (await store.getSession(session.id)) !== undefined;
+  };
+
   const leavePractice = async () => {
     if (practice) await commit(endSession(practice, new Date()));
   };
 
   const today = studyDate(new Date(), timeZone);
   const state: Daily = !store || !loaded ? { status: 'loading' } : classify(daily, today);
-  return { daily: state, practice, actions, start, practiceMissed, leavePractice, busy, problem, notice, today };
+  return { daily: state, practice, actions, start, practiceMissed, studyFavorites, leavePractice, busy, problem, notice, today };
 }

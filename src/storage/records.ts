@@ -39,7 +39,7 @@ export interface RecordStore {
   getSession(id: string): Promise<StudySession | undefined>;
   /** The daily session with the latest study date, finished or not. */
   latestDailySession(): Promise<StudySession | undefined>;
-  /** The newest unfinished practice session, if any. */
+  /** The newest unfinished practice or favorites session, if any. */
   activePractice(): Promise<StudySession | undefined>;
   /**
    * Saves a session and, in the same transaction, the attempt that changed it and the word's new
@@ -66,7 +66,7 @@ function checkRevision(stored: StudySession | undefined, next: StudySession) {
 const latestDaily = (sessions: StudySession[]) =>
   sessions.filter(s => s.type === 'daily').sort((a, b) => b.studyDate.localeCompare(a.studyDate))[0];
 const newestPractice = (sessions: StudySession[]) =>
-  sessions.filter(s => s.type === 'practice' && s.status === 'active').sort((a, b) => b.startedAt.localeCompare(a.startedAt))[0];
+  sessions.filter(s => (s.type === 'practice' || s.type === 'favorites') && s.status === 'active').sort((a, b) => b.startedAt.localeCompare(a.startedAt))[0];
 
 function request<T>(req: IDBRequest<T>): Promise<T> {
   return new Promise((resolve, reject) => {
@@ -141,8 +141,8 @@ class IndexedDbStore implements RecordStore {
   }
 
   async activePractice(): Promise<StudySession | undefined> {
-    const index = this.db.transaction('studySessions').objectStore('studySessions').index('type');
-    return newestPractice(await request(index.getAll('practice') as IDBRequest<StudySession[]>));
+    const index = this.db.transaction('studySessions').objectStore('studySessions').index('status');
+    return newestPractice(await request(index.getAll('active') as IDBRequest<StudySession[]>));
   }
 
   saveSession(session: StudySession, change: SessionChange = {}): Promise<void> {

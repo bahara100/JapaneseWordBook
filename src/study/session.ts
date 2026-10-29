@@ -112,3 +112,12 @@ export function endSession(session: StudySession, now: Date): StudySession | nul
   if (session.status !== 'active') return null;
   return { ...session, status: 'complete', completedAt: now.toISOString(), revision: session.revision + 1 };
 }
+
+/** Studying chosen favorites: kept apart from the day's goal and never moves the schedule. */
+export function createFavoritesSession(cards: SessionCard[], studyDate: string, timeZone: string, now: Date, id: string): StudySession | null {
+  if (!cards.length) return null;
+  return {
+    id, type: 'favorites', studyDate, timeZone, level: cards[0].wordSnapshot.level, target: cards.length,
+    contentVersion: 'favorites', cards, currentIndex: 0, status: 'active', revision: 0, startedAt: now.toISOString(),
+  };
+}

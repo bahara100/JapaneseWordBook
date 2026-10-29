@@ -34,3 +34,8 @@
   .study-card:has(.practice-input) .card-front > .illustration{block-size:130px}
   .detail-panel > img.illustration{block-size:180px}
 }
+ul.word-list{list-style:none;margin:0;padding:0}
+a.word-select{display:block;color:inherit}
+.back-link{display:inline-flex;align-items:center;margin:-4px 0 12px}
+.sense + .sense{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.sense-number{color:var(--muted)}
