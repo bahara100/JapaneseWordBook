@@ -10,6 +10,7 @@ import { studyDate } from '../study/dates';
 import { useFavorites } from '../storage/useFavorites';
 import { gradeTyped } from '../study/grading';
 import { KanaAnswer } from '../study/KanaAnswer';
+import { SpeakAnswer } from '../study/SpeakAnswer';
 import { INCLUDE_DRAFTS, selectDailyCards } from '../study/selection';
 import { missedCards, summarize } from '../study/session';
 import { useDailySession, type SessionActions } from '../study/useDailySession';
@@ -80,24 +81,30 @@ function StartPanel({ start, busy }: { start: () => void; busy: boolean }) {
 }
 
 function Feedback({ card }: { card: SessionCard }) {
-  const first = card.firstEvaluation?.outcome;
-  if (first === 'correct' && card.firstEvaluation?.hintUsed) return <div className="feedback" role="status">힌트를 듣고 맞혔어요.</div>;
-  if (first === 'correct') return <div className="feedback" role="status">정답이에요.</div>;
-  if (first === 'incorrect') return <div className="feedback retry" role="status">다시 연습할 단어로 기록했어요.</div>;
-  return <div className="feedback" role="status">정답을 확인했어요.</div>;
+  const first = card.firstEvaluation;
+  const spoken = first?.method === 'speech';
+  const said = first?.inputText && (
+    <p className="submitted-answer">{spoken ? '들은 말' : '내가 입력한 답'} <span lang="ja">{first.inputText}</span></p>
+  );
+  // Speech is described as recognising the right word, never as a pronunciation score (docs/01 §5).
+  const text = first?.outcome === 'correct'
+    ? (first.hintUsed ? '힌트를 듣고 맞혔어요.' : spoken ? '정답 단어로 인식했어요.' : '정답이에요.')
+    : first?.outcome === 'incorrect' ? '다시 연습할 단어로 기록했어요.' : '정답을 확인했어요.';
+  return <><div className={`feedback ${first?.outcome === 'incorrect' ? 'retry' : ''}`} role="status">{text}</div>{said}</>;
 }
 
 function CardFront({ card, actions, busy }: { card: SessionCard; actions: SessionActions; busy: boolean }) {
   const [typing, setTyping] = useState(card.state === 'answering');
-  const [lastAnswer, setLastAnswer] = useState('');
-  const [speechNote, setSpeechNote] = useState(false);
+  // What was last typed or heard on this card; after a reload, the saved first answer.
+  const [lastAnswer, setLastAnswer] = useState<{ text: string; spoken: boolean } | undefined>(
+    card.firstEvaluation?.inputText ? { text: card.firstEvaluation.inputText, spoken: card.firstEvaluation.method === 'speech' } : undefined);
   const image = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.imageAssetId)!;
   const audio = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.audioAssetId);
   const reading = card.wordSnapshot.readings.find(r => r.id === card.promptSnapshot.readingId)!;
   const wrong = card.state === 'feedback';
 
   const submit = (text: string) => {
-    setLastAnswer(text);
+    setLastAnswer({ text, spoken: false });
     void actions.answer(gradeTyped(text, card.promptSnapshot), 'typing', text);
   };
 
@@ -110,7 +117,7 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
         {wrong ? (
           <>
             <div className="feedback retry" role="status">읽기를 다시 확인해 볼까요?</div>
-            {lastAnswer && <p className="submitted-answer">내가 입력한 답 <span lang="ja">{lastAnswer}</span></p>}
+            {lastAnswer && <p className="submitted-answer">{lastAnswer.spoken ? '들은 말' : '내가 입력한 답'} <span lang="ja">{lastAnswer.text}</span></p>}
             <div className="button-row">
               <button className="btn primary" type="button" disabled={busy} onClick={() => { setTyping(true); void actions.retry(); }}>다시 시도</button>
             </div>
@@ -119,14 +126,12 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
           <>
             <p>그림을 보고 일본어 읽기를 떠올려 보세요.</p>
             <div className="button-row">
-              <button className="btn" type="button" onClick={() => { setSpeechNote(true); setTyping(true); }}>
-                <Icon name="mic" />말하기
-              </button>
+              <SpeakAnswer actions={actions} busy={busy} openTyping={() => setTyping(true)}
+                onHeard={text => setLastAnswer({ text, spoken: true })} />
               <button className="btn" type="button" aria-expanded={typing} onClick={() => setTyping(t => !t)}>
                 <Icon name="keyboard" />직접 입력
               </button>
             </div>
-            {speechNote && <p className="subtle" role="status">말하기는 아직 준비 중이에요. 직접 입력으로 답해 주세요.</p>}
             <div className="hint-row">
               <SpeakButton id={`hint:${card.promptSnapshot.id}`} reading={reading.kana} audioPath={audio?.path}
                 label="듣기 힌트" className="text-button" onPlay={() => { if (!card.hintUsed) void actions.hint(); }} />

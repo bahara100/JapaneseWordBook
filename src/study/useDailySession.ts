@@ -9,7 +9,8 @@ import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from './dates';
 import { scheduleReview } from './schedule';
 import { selectDailyCards } from './selection';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, markHint, nextCard, retryCard } from './session';
+import { matchSpoken } from './grading';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, hearDifferent, markHint, nextCard, retryCard } from './session';
 
 export type Daily =
   | { status: 'loading' }
@@ -20,6 +21,8 @@ export type Daily =
 /** Actions on whichever session is on screen: the practice round if one is open, else today's. */
 export interface SessionActions {
   answer(outcome: Outcome, method: AnswerAttempt['method'], inputText?: string): Promise<void>;
+  /** Grades what the recognizer heard: right, asked to say it again once, or wrong. */
+  spoken(alternatives: string[]): Promise<'correct' | 'again' | 'incorrect' | 'ignored'>;
   retry(): Promise<void>;
   next(): Promise<void>;
   /** The listening hint was played: the card's first answer will count as hinted. */
@@ -84,22 +87,41 @@ export function useDailySession() {
 
   const current = practice ?? (daily?.status === 'active' ? daily : undefined);
 
+  /** Saves an answer; only today's first answers move the review schedule, practice never does. */
+  const commitAnswer = async (session: StudySession, result: NonNullable<ReturnType<typeof answerCard>>, now: Date) => {
+    const first = result.firstEvaluation;
+    const card = session.cards[session.currentIndex];
+    const progress = session.type === 'daily' && first ? {
+      promptId: card.promptSnapshot.id,
+      next: (previous: Parameters<typeof scheduleReview>[0]) => scheduleReview(previous, {
+        promptId: card.promptSnapshot.id, level: session.level, outcome: first.outcome, hintUsed: first.hintUsed, now, timeZone: session.timeZone,
+      }),
+    } : undefined;
+    await commit(result.session, { attempt: result.attempt, progress });
+  };
+
   const actions: SessionActions = {
     async answer(outcome, method, inputText) {
       if (!current) return;
       const now = new Date();
       const result = answerCard(current, current.currentIndex, { outcome, method, inputText, now, attemptId: crypto.randomUUID() });
-      if (!result) return;
-      const first = result.firstEvaluation;
+      if (result) await commitAnswer(current, result, now);
+    },
+    async spoken(alternatives) {
+      if (!current) return 'ignored';
       const card = current.cards[current.currentIndex];
-      // Only today's first answers move the review schedule; practice never does.
-      const progress = current.type === 'daily' && first ? {
-        promptId: card.promptSnapshot.id,
-        next: (previous: Parameters<typeof scheduleReview>[0]) => scheduleReview(previous, {
-          promptId: card.promptSnapshot.id, level: current.level, outcome: first.outcome, hintUsed: first.hintUsed, now, timeZone: current.timeZone,
-        }),
-      } : undefined;
-      await commit(result.session, { attempt: result.attempt, progress });
+      const now = new Date();
+      const match = matchSpoken(alternatives, card.promptSnapshot);
+      if (match) {
+        const result = answerCard(current, current.currentIndex, { outcome: 'correct', method: 'speech', inputText: match, now, attemptId: crypto.randomUUID() });
+        if (!result) return 'ignored';
+        await commitAnswer(current, result, now);
+        return 'correct';
+      }
+      const result = hearDifferent(current, current.currentIndex, alternatives[0], now, crypto.randomUUID());
+      if (!result) return 'ignored';
+      await commitAnswer(current, result, now);
+      return result.askedAgain ? 'again' : 'incorrect';
     },
     async retry() {
       if (current) await commit(retryCard(current, current.currentIndex));

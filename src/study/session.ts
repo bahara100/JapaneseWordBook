@@ -28,8 +28,12 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
   const hintUsed = answer.hintUsed ?? card.hintUsed ?? false;
   const next: SessionCard = { ...card };
   const isFirst = !next.firstEvaluation && answer.outcome !== 'unrecognized';
-  if (isFirst) next.firstEvaluation = { outcome: answer.outcome as Exclude<Outcome, 'unrecognized'>, hintUsed };
-  next.state = answer.outcome === 'correct' || answer.outcome === 'revealed' ? 'revealed' : 'feedback';
+  if (isFirst) next.firstEvaluation = {
+    outcome: answer.outcome as Exclude<Outcome, 'unrecognized'>, hintUsed, method: answer.method,
+    ...(answer.inputText !== undefined ? { inputText: answer.inputText } : {}),
+  };
+  // A technical failure leaves the card as it was: the learner just tries again or types.
+  if (answer.outcome !== 'unrecognized') next.state = answer.outcome === 'correct' || answer.outcome === 'revealed' ? 'revealed' : 'feedback';
   const cards = session.cards.slice();
   cards[cardIndex] = next;
   const attempt: AnswerAttempt = {
@@ -42,6 +46,22 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
     // Set only when this answer is the card's first evaluation, so the schedule moves once.
     firstEvaluation: isFirst ? next.firstEvaluation : undefined,
   };
+}
+
+/**
+ * A spoken answer that was heard as some other word. The first time, the card asks again without
+ * an evaluation (recognition may simply have misheard, docs/01 §5); after that it counts as wrong,
+ * so saying it over and over cannot hide a mistake.
+ */
+export function hearDifferent(session: StudySession, cardIndex: number, heard: string, now: Date, attemptId: string) {
+  const card = currentCard(session);
+  if (!card || cardIndex !== session.currentIndex || card.state === 'revealed' || card.state === 'complete') return null;
+  if (card.firstEvaluation || (card.speechMismatches ?? 0) >= 1)
+    return { ...answerCard(session, cardIndex, { outcome: 'incorrect', method: 'speech', inputText: heard, now, attemptId })!, askedAgain: false };
+  const result = answerCard(session, cardIndex, { outcome: 'unrecognized', method: 'speech', inputText: heard, now, attemptId })!;
+  const cards = result.session.cards.slice();
+  cards[cardIndex] = { ...cards[cardIndex], speechMismatches: 1 };
+  return { ...result, session: { ...result.session, cards }, askedAgain: true };
 }
 
 /** Records that the listening hint was played on the current card, before its first answer. */
@@ -108,7 +128,7 @@ export function missedCards(session: StudySession): SessionCard[] {
  * but never changes the review schedule or the day's first evaluations.
  */
 export function createPracticeSession(from: StudySession, now: Date, id: string): StudySession | null {
-  const cards = missedCards(from).map(({ firstEvaluation: _, hintUsed: __, ...card }) => ({ ...card, state: 'question' as const }));
+  const cards = missedCards(from).map(({ firstEvaluation: _, hintUsed: __, speechMismatches: ___, ...card }) => ({ ...card, state: 'question' as const }));
   if (!cards.length) return null;
   return {
     id, type: 'practice', studyDate: from.studyDate, timeZone: from.timeZone, level: from.level, target: cards.length,

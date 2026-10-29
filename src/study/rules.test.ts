@@ -5,7 +5,7 @@ import type { LevelWords, StudySession, WordProgress } from '../content/types';
 import { dailySessionId, studyDate } from './dates';
 import { gradeTyped, normalizeAnswer } from './grading';
 import { cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, markHint, missedCards, nextCard, retryCard, summarize } from './session';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, hearDifferent, markHint, missedCards, nextCard, retryCard, summarize } from './session';
 
 const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
 
@@ -119,12 +119,30 @@ describe('session rules', () => {
     expect(hinted.cards[0].hintUsed).toBe(true);
     expect(markHint(hinted, 0)).toBeNull(); // once is enough
     const answered = answer(hinted, 0, 'correct')!;
-    expect(answered.firstEvaluation).toEqual({ outcome: 'correct', hintUsed: true });
+    expect(answered.firstEvaluation).toMatchObject({ outcome: 'correct', hintUsed: true });
     expect(markHint(answered.session, 0)).toBeNull(); // too late after the answer
     const done = nextCard(answered.session, 0, now)!;
     expect(summarize(done)).toMatchObject({ correct: 0, revealedOrHinted: 1 });
     expect(missedCards(done)).toHaveLength(1);
     expect(createPracticeSession(done, now, 'p')!.cards[0].hintUsed).toBeUndefined();
+  });
+
+  it('asks again the first time speech is heard as another word, then counts it wrong', () => {
+    const first = hearDifferent(start(), 0, '寝子', now, 's1')!;
+    expect(first.askedAgain).toBe(true);
+    expect(first.firstEvaluation).toBeUndefined();
+    expect(first.attempt).toMatchObject({ method: 'speech', outcome: 'unrecognized', inputText: '寝子' });
+    expect(first.session.cards[0]).toMatchObject({ state: 'question', speechMismatches: 1 });
+    const second = hearDifferent(first.session, 0, 'ねっこ', now, 's2')!;
+    expect(second.askedAgain).toBe(false);
+    expect(second.firstEvaluation).toEqual({ outcome: 'incorrect', hintUsed: false, method: 'speech', inputText: 'ねっこ' });
+    expect(second.session.cards[0].state).toBe('feedback');
+  });
+
+  it('keeps the card as it was after a technical failure', () => {
+    const s = answer(start(), 0, 'unrecognized')!.session;
+    expect(s.cards[0].state).toBe('question');
+    expect(s.revision).toBe(1);
   });
 
   it('does not count a technical failure', () => {
@@ -142,7 +160,7 @@ describe('session rules', () => {
 
   it('marks only the first evaluation as the one that moves the schedule', () => {
     const first = answer(start(), 0, 'incorrect')!;
-    expect(first.firstEvaluation).toEqual({ outcome: 'incorrect', hintUsed: false });
+    expect(first.firstEvaluation).toEqual({ outcome: 'incorrect', hintUsed: false, method: 'typing' });
     const again = answer(retryCard(first.session, 0)!, 0, 'correct', 2)!;
     expect(again.firstEvaluation).toBeUndefined();
     expect(answer(start(), 0, 'unrecognized')!.firstEvaluation).toBeUndefined();

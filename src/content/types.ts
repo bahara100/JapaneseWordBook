@@ -127,7 +127,15 @@ export interface SessionCard {
   state: 'question' | 'answering' | 'feedback' | 'revealed' | 'complete';
   /** The listening hint was played before the first answer. */
   hintUsed?: boolean;
-  firstEvaluation?: { outcome: Exclude<Outcome, 'unrecognized'>; hintUsed: boolean };
+  /** Spoken answers heard as some other word before the first evaluation. */
+  speechMismatches?: number;
+  firstEvaluation?: {
+    outcome: Exclude<Outcome, 'unrecognized'>;
+    hintUsed: boolean;
+    /** How it was answered, and what was typed or heard, to show on the answer side. */
+    method?: AnswerAttempt['method'];
+    inputText?: string;
+  };
 }
 export interface StudySession {
   id: string;
