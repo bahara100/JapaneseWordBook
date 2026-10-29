@@ -5,7 +5,7 @@ import type { LevelWords, StudySession, WordProgress } from '../content/types';
 import { dailySessionId, studyDate } from './dates';
 import { gradeTyped, normalizeAnswer } from './grading';
 import { cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, missedCards, nextCard, retryCard, summarize } from './session';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, markHint, missedCards, nextCard, retryCard, summarize } from './session';
 
 const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
 
@@ -112,6 +112,19 @@ describe('session rules', () => {
     expect(second.session.cards[0].firstEvaluation!.outcome).toBe('incorrect');
     expect(second.attempt).toMatchObject({ outcome: 'correct', cardIndex: 0, sessionId: 'daily:2026-10-28' });
     expect(second.session.revision).toBe(3);
+  });
+
+  it('counts a right answer after the listening hint as hinted', () => {
+    const hinted = markHint(start(), 0)!;
+    expect(hinted.cards[0].hintUsed).toBe(true);
+    expect(markHint(hinted, 0)).toBeNull(); // once is enough
+    const answered = answer(hinted, 0, 'correct')!;
+    expect(answered.firstEvaluation).toEqual({ outcome: 'correct', hintUsed: true });
+    expect(markHint(answered.session, 0)).toBeNull(); // too late after the answer
+    const done = nextCard(answered.session, 0, now)!;
+    expect(summarize(done)).toMatchObject({ correct: 0, revealedOrHinted: 1 });
+    expect(missedCards(done)).toHaveLength(1);
+    expect(createPracticeSession(done, now, 'p')!.cards[0].hintUsed).toBeUndefined();
   });
 
   it('does not count a technical failure', () => {

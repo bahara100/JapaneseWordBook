@@ -9,7 +9,7 @@ import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from './dates';
 import { scheduleReview } from './schedule';
 import { selectDailyCards } from './selection';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, nextCard, retryCard } from './session';
+import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, markHint, nextCard, retryCard } from './session';
 
 export type Daily =
   | { status: 'loading' }
@@ -22,6 +22,8 @@ export interface SessionActions {
   answer(outcome: Outcome, method: AnswerAttempt['method'], inputText?: string): Promise<void>;
   retry(): Promise<void>;
   next(): Promise<void>;
+  /** The listening hint was played: the card's first answer will count as hinted. */
+  hint(): Promise<void>;
 }
 
 function classify(session: StudySession | undefined, today: string): Daily {
@@ -104,6 +106,9 @@ export function useDailySession() {
     },
     async next() {
       if (current) await commit(nextCard(current, current.currentIndex, new Date()));
+    },
+    async hint() {
+      if (current) await commit(markHint(current, current.currentIndex));
     },
   };
 

@@ -25,7 +25,7 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
 }): { session: StudySession; attempt: AnswerAttempt; firstEvaluation: SessionCard['firstEvaluation'] } | null {
   const card = currentCard(session);
   if (!card || cardIndex !== session.currentIndex || card.state === 'revealed' || card.state === 'complete') return null;
-  const hintUsed = answer.hintUsed ?? false;
+  const hintUsed = answer.hintUsed ?? card.hintUsed ?? false;
   const next: SessionCard = { ...card };
   const isFirst = !next.firstEvaluation && answer.outcome !== 'unrecognized';
   if (isFirst) next.firstEvaluation = { outcome: answer.outcome as Exclude<Outcome, 'unrecognized'>, hintUsed };
@@ -42,6 +42,15 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
     // Set only when this answer is the card's first evaluation, so the schedule moves once.
     firstEvaluation: isFirst ? next.firstEvaluation : undefined,
   };
+}
+
+/** Records that the listening hint was played on the current card, before its first answer. */
+export function markHint(session: StudySession, cardIndex: number): StudySession | null {
+  const card = currentCard(session);
+  if (!card || cardIndex !== session.currentIndex || card.hintUsed || card.firstEvaluation) return null;
+  const cards = session.cards.slice();
+  cards[cardIndex] = { ...card, hintUsed: true };
+  return { ...session, cards, revision: session.revision + 1 };
 }
 
 /** After a wrong answer, go back to answering the same card. */
@@ -99,7 +108,7 @@ export function missedCards(session: StudySession): SessionCard[] {
  * but never changes the review schedule or the day's first evaluations.
  */
 export function createPracticeSession(from: StudySession, now: Date, id: string): StudySession | null {
-  const cards = missedCards(from).map(({ firstEvaluation: _, ...card }) => ({ ...card, state: 'question' as const }));
+  const cards = missedCards(from).map(({ firstEvaluation: _, hintUsed: __, ...card }) => ({ ...card, state: 'question' as const }));
   if (!cards.length) return null;
   return {
     id, type: 'practice', studyDate: from.studyDate, timeZone: from.timeZone, level: from.level, target: cards.length,

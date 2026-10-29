@@ -53,3 +53,7 @@ a.grammar-row{color:inherit}
 .backup-preview table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
 .backup-preview th,.backup-preview td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
 .backup-preview thead th{color:var(--muted);font-weight:600}
+.speak-note{margin:6px 0 0;font-size:13px;color:#995b3e}
+.example .text-button{display:inline-flex;align-items:center;gap:6px;margin-top:6px;min-height:36px}
+.hint-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 12px;margin-top:10px}
+.hint-row .text-button{display:inline-flex;align-items:center;gap:6px}

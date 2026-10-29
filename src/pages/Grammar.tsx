@@ -6,6 +6,7 @@ import { useLoaded } from '../content/useContent';
 import { LEVELS } from '../levels';
 import { buildGrammarIndex, search } from '../library/search';
 import { useIsPhone } from '../library/useIsPhone';
+import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
 
 async function loadGrammar() {
@@ -35,6 +36,7 @@ function GrammarDetail({ point, all, headingRef }: {
           <p lang="ja">{example.japanese}</p>
           <p className="example-reading" lang="ja">{example.reading}</p>
           <small>{example.korean}</small>
+          <SpeakButton id={`example:${example.id}`} reading={example.reading} className="text-button" label="예문 듣기" />
         </div>
       ))}
       {point.cautions.length > 0 && (

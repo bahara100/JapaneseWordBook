@@ -107,7 +107,7 @@ export function Settings() {
               {SPEECH_RATES.map(r => <option key={r} value={r}>{RATE_LABELS[r]}</option>)}
             </select>
           </div>
-          <p>발음 듣기는 다음 단계에서 연결해요. 고른 속도는 미리 저장해 둬요.</p>
+          <p>발음 듣기·예문 듣기·듣기 힌트에 쓰여요. 소리는 기기의 일본어 음성으로 나와요. 일본어 음성이 없으면 기기 설정에서 일본어 언어 팩을 추가해 주세요.</p>
 
           <h2 className="settings-records">내 학습 기록</h2>
           <RecordsStatus />

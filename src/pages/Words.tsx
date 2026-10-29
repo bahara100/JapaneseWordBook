@@ -10,6 +10,7 @@ import { useStorage } from '../storage/StorageProvider';
 import { useFavorites } from '../storage/useFavorites';
 import { cardForWord } from '../study/selection';
 import { useDailySession } from '../study/useDailySession';
+import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
 
 type Favorites = ReturnType<typeof useFavorites>;
@@ -30,6 +31,7 @@ function WordDetail({ word, library, favorites, headingRef }: {
   const prompt = content.prompts.find(p => p.wordId === word.id);
   const image = prompt && content.media.find(m => m.id === prompt.imageAssetId);
   const many = word.readings.length > 1;
+  const audioOf = (id?: string) => id ? content.media.find(m => m.id === id)?.path : undefined;
   return (
     <>
       <div className="detail-title"><span className="pill">{word.level}</span><Star word={word} favorites={favorites} /></div>
@@ -48,12 +50,20 @@ function WordDetail({ word, library, favorites, headingRef }: {
             {word.senses.length > 1 && <span className="sense-number">{i + 1}. </span>}
             {sense.korean.join(', ')} <small className="subtle">{sense.partOfSpeech}</small>
           </p>
+          {sense.readingIds.map(id => {
+            const reading = word.readings.find(r => r.id === id)!;
+            const audio = audioOf(content.prompts.find(p => p.readingId === id && p.senseId === sense.id)?.audioAssetId);
+            return <SpeakButton key={id} id={`word:${word.id}:${sense.id}:${id}`} reading={reading.kana} audioPath={audio}
+              label={many ? `${reading.kana} 듣기` : '발음 듣기'} />;
+          })}
           {sense.examples.map(example => (
             <div key={example.id} className="example">
               <span className="example-label">EXAMPLE SENTENCE</span>
               <p lang="ja">{example.japanese}</p>
               <p className="example-reading" lang="ja">{example.reading}</p>
               <small>{example.korean}</small>
+              <SpeakButton id={`example:${example.id}`} reading={example.reading} audioPath={audioOf(example.audioAssetId)}
+                className="text-button" label="예문 듣기" />
             </div>
           ))}
         </div>

@@ -13,6 +13,7 @@ import { KanaAnswer } from '../study/KanaAnswer';
 import { INCLUDE_DRAFTS, selectDailyCards } from '../study/selection';
 import { missedCards, summarize } from '../study/session';
 import { useDailySession, type SessionActions } from '../study/useDailySession';
+import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
 
 function Problem({ text }: { text: string }) {
@@ -80,6 +81,7 @@ function StartPanel({ start, busy }: { start: () => void; busy: boolean }) {
 
 function Feedback({ card }: { card: SessionCard }) {
   const first = card.firstEvaluation?.outcome;
+  if (first === 'correct' && card.firstEvaluation?.hintUsed) return <div className="feedback" role="status">힌트를 듣고 맞혔어요.</div>;
   if (first === 'correct') return <div className="feedback" role="status">정답이에요.</div>;
   if (first === 'incorrect') return <div className="feedback retry" role="status">다시 연습할 단어로 기록했어요.</div>;
   return <div className="feedback" role="status">정답을 확인했어요.</div>;
@@ -90,6 +92,8 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
   const [lastAnswer, setLastAnswer] = useState('');
   const [speechNote, setSpeechNote] = useState(false);
   const image = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.imageAssetId)!;
+  const audio = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.audioAssetId);
+  const reading = card.wordSnapshot.readings.find(r => r.id === card.promptSnapshot.readingId)!;
   const wrong = card.state === 'feedback';
 
   const submit = (text: string) => {
@@ -123,6 +127,11 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
               </button>
             </div>
             {speechNote && <p className="subtle" role="status">말하기는 아직 준비 중이에요. 직접 입력으로 답해 주세요.</p>}
+            <div className="hint-row">
+              <SpeakButton id={`hint:${card.promptSnapshot.id}`} reading={reading.kana} audioPath={audio?.path}
+                label="듣기 힌트" className="text-button" onPlay={() => { if (!card.hintUsed) void actions.hint(); }} />
+              {card.hintUsed && <small className="subtle">힌트를 들었어요. 맞혀도 ‘힌트 사용’으로 기록돼요.</small>}
+            </div>
             {typing && <KanaAnswer onSubmit={submit} disabled={busy} />}
           </>
         )}
@@ -159,12 +168,15 @@ function CardBack({ card, session, actions, busy }: { card: SessionCard; session
         <div className="kana" lang="ja">{reading.kana}</div>
         {settings.showRomaji && reading.romaji && <div className="romaji">{reading.romaji}</div>}
         <div className="meaning">{sense.korean.join(', ')}</div>
+        <SpeakButton id={`word:${card.promptSnapshot.id}`} reading={reading.kana}
+          audioPath={card.mediaSnapshots.find(m => m.id === card.promptSnapshot.audioAssetId)?.path} label="발음 듣기" />
         {example && (
           <div className="example">
             <span className="example-label">EXAMPLE SENTENCE</span>
             <p lang="ja">{example.japanese}</p>
             <small className="example-reading" lang="ja">{example.reading}</small>
             <small>{example.korean}</small>
+            <SpeakButton id={`example:${example.id}`} reading={example.reading} className="text-button" label="예문 듣기" />
           </div>
         )}
       </div>

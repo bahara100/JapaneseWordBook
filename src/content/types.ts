@@ -125,6 +125,8 @@ export interface SessionCard {
   kind: 'new' | 'review';
   mode: 'picture' | 'listening' | 'repeat';
   state: 'question' | 'answering' | 'feedback' | 'revealed' | 'complete';
+  /** The listening hint was played before the first answer. */
+  hintUsed?: boolean;
   firstEvaluation?: { outcome: Exclude<Outcome, 'unrecognized'>; hintUsed: boolean };
 }
 export interface StudySession {

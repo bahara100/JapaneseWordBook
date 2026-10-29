@@ -40,9 +40,9 @@ test('detail reads meaning, connection, use, examples and cautions in order', as
   await expect(panel).toContainText('音楽を聞きながら、勉強します。');
   await expect(panel).toContainText('おんがくをききながら、べんきょうします。');
   await expect(panel).toContainText('두 동작의 주어는 같습니다.');
-  // No related grammar is in the data yet, so none is shown; no audio button pretends to play.
+  // No related grammar is in the data yet, so none is shown.
   await expect(panel.getByRole('heading', { name: '함께 보면 좋은 문법' })).toHaveCount(0);
-  await expect(panel.getByRole('button', { name: /듣기/ })).toHaveCount(0);
+  await expect(panel.getByRole('button', { name: '예문 듣기' })).toBeVisible();
   await page.screenshot({ path: info.outputPath('grammar.png'), fullPage: !isPhone(page) });
 
   if (isPhone(page)) {
