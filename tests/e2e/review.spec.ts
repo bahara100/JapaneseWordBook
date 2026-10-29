@@ -64,7 +64,7 @@ test('first answers set the review schedule; practice does not; misses return to
   await summary.getByRole('button', { name: '틀린 단어 다시 보기 (2장) →' }).click();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('틀린 단어 다시 보기');
   await expect(page.getByText('1 / 2장')).toBeVisible();
-  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계가 있는 교실 건물');
+  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계와 여러 교실 창문이 있는 건물');
   await type(page, 'gakkou');
   await expect(card(page).getByText('정답이에요.')).toBeVisible();
   await next(page);
@@ -84,7 +84,7 @@ test('first answers set the review schedule; practice does not; misses return to
   await expect(page.getByText('2026-10-30 · 복습 카드')).toBeVisible();
   await expect(page.getByText('1 / 3장')).toBeVisible();
   // Reviews come oldest-due first, then most-missed: 学校 and りんご (1 miss) before 猫.
-  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계가 있는 교실 건물');
+  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계와 여러 교실 창문이 있는 건물');
   await type(page, 'gakkou');
   expect((await progress(page))['w002-p1']).toEqual({ reviewStep: 2, dueAt: '2026-11-01T15:00:00.000Z', incorrectCount: 1 });
 });

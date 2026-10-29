@@ -1,0 +1,25 @@
+/* Design reference only. Importing or merging is the development owner's task. */
+:root {
+  --haru-paper: #f7f6f1;
+  --haru-surface: #fffefa;
+  --haru-ink: #253a30;
+  --haru-muted: #667268;
+  --haru-primary: #285b45;
+  --haru-primary-hover: #1d4534;
+  --haru-soft: #eaf0e4;
+  --haru-art-backdrop: #f1f2e8;
+  --haru-peach: #f3dfc9;
+  --haru-border: #e3e5da;
+  --haru-warning: #995b3e;
+  --haru-space-1: 4px;
+  --haru-space-2: 8px;
+  --haru-space-3: 12px;
+  --haru-space-4: 16px;
+  --haru-space-5: 20px;
+  --haru-space-6: 24px;
+  --haru-space-8: 32px;
+  --haru-radius-control: 11px;
+  --haru-radius-row: 12px;
+  --haru-radius-panel: 18px;
+  --haru-radius-card: 22px;
+}

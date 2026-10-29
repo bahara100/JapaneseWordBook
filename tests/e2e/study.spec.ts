@@ -27,7 +27,7 @@ test('a full day: typed answers, a retry, a reveal and the results', async ({ pa
 
   // The front never shows the answer.
   await expect(card(page)).not.toContainText('ねこ');
-  await expect(card(page).getByRole('img')).toHaveAccessibleName('편안하게 앉아 있는 동물');
+  await expect(card(page).getByRole('img')).toHaveAccessibleName('주황색과 크림색 털을 가진 앉아 있는 동물');
 
   await type(page, 'neko');
   await expect(card(page).getByText('정답이에요.')).toBeVisible();
@@ -80,7 +80,7 @@ test('reload keeps the same card, and settings changes wait for the next day', a
   await page.goto('#/study');
   await expect(page.getByText('2 / 3장')).toBeVisible();
   await expect(heading(page).locator('..').getByText('N5')).toBeVisible();
-  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계가 있는 교실 건물');
+  await expect(card(page).getByRole('img')).toHaveAccessibleName('시계와 여러 교실 창문이 있는 건물');
 });
 
 test('the answer side and favorites come back after a reload', async ({ page }) => {

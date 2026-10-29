@@ -20,7 +20,7 @@ function HomeArtwork() {
           <div className="preview-paper-top"><span>DAILY WORD CARD</span><Icon name="leaf" /></div>
           {/* A fixed sample card; it does not follow the chosen level. */}
           <div className="preview-picture">
-            <img className="illustration" src={mediaUrl('media/images/cat.svg')} alt="편안하게 앉아 있는 동물" />
+            <img className="illustration" src={mediaUrl('media/images/card-cat-v2.webp')} alt="주황색과 크림색 털을 가진 앉아 있는 동물" />
           </div>
           <div className="preview-paper-bottom">
             <span lang="ja">ねこ</span><span>고양이</span>

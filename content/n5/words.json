@@ -179,33 +179,33 @@
     {
       "id": "img-cat",
       "kind": "image",
-      "path": "media/images/cat.svg",
-      "description": "편안하게 앉아 있는 동물",
+      "path": "media/images/card-cat-v2.webp",
+      "description": "주황색과 크림색 털을 가진 앉아 있는 동물",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-school",
       "kind": "image",
-      "path": "media/images/school.svg",
-      "description": "시계가 있는 교실 건물",
+      "path": "media/images/card-school-v2.webp",
+      "description": "시계와 여러 교실 창문이 있는 건물",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-apple",
       "kind": "image",
-      "path": "media/images/apple.svg",
-      "description": "잎이 달린 붉은 과일",
+      "path": "media/images/card-apple-v2.webp",
+      "description": "잎과 줄기가 있는 붉은 과일",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     }

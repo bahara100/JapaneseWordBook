@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafbf8">
+  <title>하루일본어 · 깔끔한 화면 디자인</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./polish.css">
+  <link rel="stylesheet" href="./clean-ui.css?v=2">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="주요 메뉴">
+      <a class="brand" href="#/home"><span class="brand-symbol" lang="ja">日</span><span>하루일본어</span></a>
+      <nav id="desktop-nav"></nav>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <a href="#/home" class="mobile-brand"><span lang="ja">日</span> 하루일본어</a>
+        <span class="topbar-context" id="topbar-context"></span>
+        <span class="prototype-label">화면 디자인 시안</span>
+        <button class="settings-link" id="topbar-settings" data-route="settings" aria-label="설정">설정</button>
+      </header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-foot"><span class="footer-brand">하루일본어</span><small>샘플 데이터 · 실제 학습 기록과 별개</small></footer>
+    </div>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="모바일 주요 메뉴"></nav>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="./app.js?v=2"></script>
+</body>
+</html>

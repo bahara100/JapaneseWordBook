@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-29",
+  "status": "design handoff; not integrated into app",
+  "assets": [
+    {
+      "subject": "cat",
+      "wordId": "w001",
+      "mediaId": "img-cat",
+      "file": "assets/card-cat-v2.png",
+      "originalPublicPath": "media/images/cat.svg",
+      "proposedPublicPath": "media/images/card-cat-v2.png",
+      "descriptionForQuestion": "주황색과 크림색 털을 가진 앉아 있는 동물",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 638081,
+      "sha256": "21d6bab77de53ee12660c5f59de82fa20c7736866a41898e63e610bfff147a8c",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    },
+    {
+      "subject": "school",
+      "wordId": "w002",
+      "mediaId": "img-school",
+      "file": "assets/card-school-v2.png",
+      "originalPublicPath": "media/images/school.svg",
+      "proposedPublicPath": "media/images/card-school-v2.png",
+      "descriptionForQuestion": "시계와 여러 교실 창문이 있는 건물",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 988151,
+      "sha256": "eacec372d414e228d9f3647f5dd388c73cf923b73c59370581e3bd10e90eeea6",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    },
+    {
+      "subject": "apple",
+      "wordId": "w003",
+      "mediaId": "img-apple",
+      "file": "assets/card-apple-v2.png",
+      "originalPublicPath": "media/images/apple.svg",
+      "proposedPublicPath": "media/images/card-apple-v2.png",
+      "descriptionForQuestion": "잎과 줄기가 있는 붉은 과일",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 703485,
+      "sha256": "c8de87ef13e673d99477b69f780d08b80ab7962ec20c409fba13c93ff498a402",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    }
+  ],
+  "styleVersion": "v2-lightweight-2d",
+  "previousManifest": "asset-manifest-v1.json"
+}

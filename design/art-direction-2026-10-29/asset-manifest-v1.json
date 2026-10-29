@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-29",
+  "status": "design handoff; not integrated into app",
+  "assets": [
+    {
+      "subject": "cat",
+      "wordId": "w001",
+      "mediaId": "img-cat",
+      "file": "assets/card-cat-v1.png",
+      "originalPublicPath": "media/images/cat.svg",
+      "proposedPublicPath": "media/images/card-cat-v1.png",
+      "descriptionForQuestion": "주황색과 크림색 털을 가진 앉아 있는 동물",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 1217144,
+      "sha256": "a6749914149e5fc330e5d0d61660fc09e6965aabc775426fd8fe38c86870f006",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    },
+    {
+      "subject": "school",
+      "wordId": "w002",
+      "mediaId": "img-school",
+      "file": "assets/card-school-v1.png",
+      "originalPublicPath": "media/images/school.svg",
+      "proposedPublicPath": "media/images/card-school-v1.png",
+      "descriptionForQuestion": "시계와 여러 교실 창문이 있는 건물",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 1934257,
+      "sha256": "fb1594bd8c7b48c07a47e2087748afcc24616b87c7c781f4510fd3784aedd198",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    },
+    {
+      "subject": "apple",
+      "wordId": "w003",
+      "mediaId": "img-apple",
+      "file": "assets/card-apple-v1.png",
+      "originalPublicPath": "media/images/apple.svg",
+      "proposedPublicPath": "media/images/card-apple-v1.png",
+      "descriptionForQuestion": "잎과 줄기가 있는 붉은 과일",
+      "width": 1448,
+      "height": 1086,
+      "format": "PNG",
+      "mode": "RGBA",
+      "hasTransparency": true,
+      "bytes": 1450111,
+      "sha256": "d8e6f5fa6563de25c5d5abe759a9a13ce433514852af32fdfe6dcf41339a4bc6",
+      "generationMode": "built-in image_gen",
+      "reviewStatus": "design-reviewed; curriculum review pending"
+    }
+  ]
+}
