@@ -121,7 +121,7 @@ export function WordLibrary({ mode, routeId }: { mode: 'words' | 'favorites'; ro
 
   const title = favoritesMode
     ? <PageTitle eyebrow="WORDS TO KEEP" heading="다시 만나고 싶은 단어." lead="카드와 단어장에서 별을 눌러 나만의 단어장을 만들어요."
-        extra={<span className="pill">{favorites.ids.size}개 보관</span>} />
+        extra={favorites.loaded && <span className="pill">{favorites.ids.size}개 보관</span>} />
     : <PageTitle eyebrow="YOUR WORD LIBRARY" heading="궁금한 단어를 찾아보세요." lead="단어와 읽기, 한국어 뜻으로 검색할 수 있어요. 영문으로 쳐도 돼요." />;
 
   // On a phone, a word chosen from the library opens on its own page with a way back.
@@ -163,7 +163,7 @@ export function WordLibrary({ mode, routeId }: { mode: 'words' | 'favorites'; ro
 
       {library.status === 'loading' && <p className="subtle" role="status">단어를 불러오는 중이에요…</p>}
       {library.status === 'error' && <LoadError message={library.message} retry={library.retry} />}
-      {library.status === 'ready' && (results.length === 0 ? (
+      {library.status === 'ready' && (!favoritesMode || favorites.loaded) && (results.length === 0 ? (
         favoritesMode && favorites.ids.size === 0 ? (
           <div className="empty">
             <div className="empty-mark" aria-hidden="true"><Icon name="star" /></div>

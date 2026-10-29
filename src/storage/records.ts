@@ -2,6 +2,7 @@
 // so a server sync can replace it later. When IndexedDB cannot open, a memory store keeps the visit
 // working and the app says plainly that nothing is being kept.
 import type { AnswerAttempt, Favorite, Level, StudySession, WordProgress } from '../content/types';
+import type { DeviceRecords } from './backup';
 
 export const DB_NAME = 'haru-japanese';
 export const DB_VERSION = 1;
@@ -50,8 +51,16 @@ export interface RecordStore {
   saveSession(session: StudySession, change?: SessionChange): Promise<void>;
   listAttempts(sessionId: string): Promise<AnswerAttempt[]>;
   listProgress(level: Level): Promise<WordProgress[]>;
+  /** Every personal record, for a backup. */
+  exportRecords(): Promise<DeviceRecords>;
+  /** Replaces every personal record in one transaction: all of `records`, or nothing changes. */
+  replaceRecords(records: DeviceRecords): Promise<void>;
+  getMeta(key: string): Promise<unknown>;
+  setMeta(key: string, value: unknown): Promise<void>;
   close(): void;
 }
+
+const RECORD_STORES = ['favorites', 'wordProgress', 'studySessions', 'answerAttempts'] as const;
 
 export interface SessionChange {
   attempt?: AnswerAttempt;
@@ -190,6 +199,49 @@ class IndexedDbStore implements RecordStore {
     return request(index.getAll(level) as IDBRequest<WordProgress[]>);
   }
 
+  async exportRecords(): Promise<DeviceRecords> {
+    const tx = this.db.transaction([...RECORD_STORES]);
+    const all = <T,>(name: string) => request(tx.objectStore(name).getAll() as IDBRequest<T[]>);
+    const [favorites, progress, sessions, attempts] = await Promise.all([
+      all<Favorite>('favorites'), all<WordProgress>('wordProgress'), all<StudySession>('studySessions'), all<AnswerAttempt>('answerAttempts'),
+    ]);
+    return { favorites, progress, sessions, attempts };
+  }
+
+  replaceRecords(records: DeviceRecords): Promise<void> {
+    return new Promise((resolve, reject) => {
+      let tx: IDBTransaction;
+      try {
+        tx = this.db.transaction([...RECORD_STORES], 'readwrite');
+        const fill = (name: string, items: unknown[]) => {
+          const store = tx.objectStore(name);
+          store.clear();
+          for (const item of items) store.put(item);
+        };
+        fill('favorites', records.favorites);
+        fill('wordProgress', records.progress);
+        fill('studySessions', records.sessions);
+        fill('answerAttempts', records.attempts);
+      } catch {
+        // A bad record throws before commit; abort so the clears above are undone too.
+        try { tx!.abort(); } catch { /* already finished */ }
+        reject(new StorageError(SAVE_FAILED));
+        return;
+      }
+      tx.oncomplete = () => resolve();
+      tx.onerror = tx.onabort = () => reject(new StorageError(SAVE_FAILED));
+    });
+  }
+
+  async getMeta(key: string): Promise<unknown> {
+    const row = await request(this.db.transaction('metadata').objectStore('metadata').get(key) as IDBRequest<{ value: unknown } | undefined>);
+    return row?.value;
+  }
+
+  setMeta(key: string, value: unknown): Promise<void> {
+    return this.write('metadata', s => s.put({ key, value }));
+  }
+
   close() { this.db.close(); }
 }
 
@@ -199,6 +251,7 @@ export class MemoryStore implements RecordStore {
   private sessions = new Map<string, StudySession>();
   private attempts: AnswerAttempt[] = [];
   private progress = new Map<string, WordProgress>();
+  private meta = new Map<string, unknown>();
 
   async listFavorites() {
     return [...this.favorites.values()].sort((a, b) => a.createdAt.localeCompare(b.createdAt));
@@ -238,6 +291,24 @@ export class MemoryStore implements RecordStore {
   async listProgress(level: Level) {
     return [...this.progress.values()].filter(p => p.level === level);
   }
+
+  async exportRecords(): Promise<DeviceRecords> {
+    return structuredClone({
+      favorites: [...this.favorites.values()], progress: [...this.progress.values()],
+      sessions: [...this.sessions.values()], attempts: this.attempts,
+    });
+  }
+
+  async replaceRecords(records: DeviceRecords) {
+    const copy = structuredClone(records);
+    this.favorites = new Map(copy.favorites.map(f => [f.wordId, f]));
+    this.progress = new Map(copy.progress.map(p => [p.promptId, p]));
+    this.sessions = new Map(copy.sessions.map(s => [s.id, s]));
+    this.attempts = copy.attempts;
+  }
+
+  async getMeta(key: string) { return this.meta.get(key); }
+  async setMeta(key: string, value: unknown) { this.meta.set(key, value); }
 
   close() {}
 }

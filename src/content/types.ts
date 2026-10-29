@@ -143,6 +143,8 @@ export interface StudySession {
   completedAt?: ISODateTime;
 }
 export interface Backup {
+  /** Always 'haru-japanese-backup', so other JSON files are recognised as not ours. */
+  format: 'haru-japanese-backup';
   schemaVersion: number;
   exportedAt: ISODateTime;
   settings: Settings;

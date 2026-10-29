@@ -4,6 +4,7 @@ import { type DailyTarget, type Level, type Settings as SettingsValue, type Spee
 import { LEVELS } from '../levels';
 import { useStorage } from '../storage/StorageProvider';
 import { DAILY_TARGETS, deviceTimeZone, SPEECH_RATES } from '../storage/settings';
+import { BackupPanel } from './Backup';
 import { PageTitle } from './PageTitle';
 
 const RATE_LABELS: Record<SpeechRate, string> = { 0.7: '천천히', 0.85: '조금 천천히', 1: '기본 속도' };
@@ -29,7 +30,7 @@ function RecordsStatus() {
       <p>
         {records.persistence === 'granted'
           ? '브라우저가 저장 공간이 부족해도 기록을 지우지 않도록 보호하고 있어요.'
-          : '저장 공간이 부족하거나, iPhone Safari처럼 오래 방문하지 않으면 브라우저가 기록을 지울 수 있어요. 기록을 파일로 따로 보관하는 백업은 준비 중이에요.'}
+          : '저장 공간이 부족하거나, iPhone Safari처럼 오래 방문하지 않으면 브라우저가 기록을 지울 수 있어요. 아래의 백업 파일로 따로 보관해 두세요.'}
       </p>
     </>
   );
@@ -111,6 +112,7 @@ export function Settings() {
           <h2 className="settings-records">내 학습 기록</h2>
           <RecordsStatus />
           <p>기록은 기기마다 따로 저장돼요. PC와 휴대폰의 기록이 자동으로 합쳐지지는 않아요.</p>
+          <BackupPanel />
         </section>
       </div>
     </>

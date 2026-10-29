@@ -9,12 +9,14 @@ export function useFavorites() {
   /** Most recently saved first. */
   const [order, setOrder] = useState<string[]>([]);
   const [problem, setProblem] = useState('');
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (!store) return;
     store.listFavorites().then(list => {
       setIds(new Set(list.map(f => f.wordId)));
       setOrder(list.map(f => f.wordId).reverse());
+      setLoaded(true);
     }, () => setProblem('즐겨찾기를 읽지 못했어요.'));
   }, [store]);
 
@@ -35,5 +37,5 @@ export function useFavorites() {
     }
   }, [store, ids]);
 
-  return { ids, order, toggle, problem };
+  return { ids, order, toggle, problem, loaded };
 }

@@ -44,3 +44,12 @@ a.grammar-row{color:inherit}
 .grammar-example + .grammar-example{margin-top:10px}
 .cautions,.related-grammar{margin:0;padding-left:1.2em;font-size:14px;line-height:1.9}
 .related-grammar a{color:var(--green);text-decoration:underline}
+.backup{margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.backup h3{font-size:15px;margin-bottom:8px}
+.backup-actions{margin-top:12px}
+.backup-errors{margin:8px 0 0;padding-left:1.2em;font-size:13px}
+.backup-preview{margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.backup-preview:focus{outline:3px solid #bd744e;outline-offset:3px}
+.backup-preview table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.backup-preview th,.backup-preview td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
+.backup-preview thead th{color:var(--muted);font-weight:600}
