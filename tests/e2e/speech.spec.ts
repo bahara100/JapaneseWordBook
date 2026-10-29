@@ -1,34 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
+import { fakeSpeech, spoken } from './fakes';
 
-/** Replaces the browser's speech with a recorder; `voices` decides which voices the "device" has. */
-async function fakeSpeech(page: Page, voices: { name: string; lang: string }[] | 'none') {
-  await page.addInitScript(list => {
-    const w = window as unknown as Record<string, unknown>;
-    if (list === 'none') {
-      Object.defineProperty(window, 'speechSynthesis', { value: undefined, configurable: true });
-      Object.defineProperty(window, 'SpeechSynthesisUtterance', { value: undefined, configurable: true });
-      return;
-    }
-    const spoken: unknown[] = [];
-    w.__spoken = spoken;
-    class FakeUtterance {
-      lang = ''; rate = 1; voice: { name: string } | null = null; onend: (() => void) | null = null; onerror: (() => void) | null = null;
-      constructor(public text: string) {}
-    }
-    Object.defineProperty(window, 'SpeechSynthesisUtterance', { value: FakeUtterance, configurable: true, writable: true });
-    Object.defineProperty(window, 'speechSynthesis', {
-      configurable: true,
-      value: {
-        getVoices: () => list.map(v => ({ ...v, localService: true, default: false, voiceURI: v.name })),
-        speak: (u: FakeUtterance) => { spoken.push({ text: u.text, lang: u.lang, rate: u.rate, voice: u.voice?.name }); w.__last = u; },
-        cancel: () => { (w.__last as FakeUtterance | undefined)?.onend?.(); },
-        addEventListener() {}, removeEventListener() {},
-      },
-    });
-    w.__finish = () => (w.__last as FakeUtterance | undefined)?.onend?.();
-  }, voices);
-}
-const spoken = (page: Page) => page.evaluate(() => (window as unknown as { __spoken: unknown[] }).__spoken);
 const card = (page: Page) => page.getByRole('article');
 const JAPANESE = [{ name: 'Korean voice', lang: 'ko-KR' }, { name: 'Test 日本語', lang: 'ja-JP' }];
 

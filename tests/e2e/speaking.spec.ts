@@ -1,41 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
-
-type Reply = { heard: string[] } | { error: string } | 'hang';
-
-/**
- * Replaces browser speech recognition with a scripted one: each listen takes the next reply.
- * `none` removes recognition, as in browsers without it.
- */
-async function fakeRecognition(page: Page, replies: Reply[] | 'none') {
-  await page.addInitScript(list => {
-    const w = window as unknown as Record<string, unknown>;
-    if (list === 'none') {
-      Object.defineProperty(window, 'SpeechRecognition', { value: undefined, configurable: true });
-      Object.defineProperty(window, 'webkitSpeechRecognition', { value: undefined, configurable: true });
-      return;
-    }
-    const queue = [...list];
-    const started: unknown[] = [];
-    w.__started = started;
-    class Fake {
-      lang = ''; maxAlternatives = 1; interimResults = true; continuous = true;
-      onresult: ((e: unknown) => void) | null = null; onerror: ((e: unknown) => void) | null = null; onend: (() => void) | null = null;
-      start() {
-        started.push({ lang: this.lang, maxAlternatives: this.maxAlternatives });
-        const reply = queue.shift();
-        if (reply === 'hang') return;
-        setTimeout(() => {
-          if (reply && 'error' in reply) this.onerror?.({ error: reply.error });
-          else if (reply) this.onresult?.({ results: [reply.heard.map(transcript => ({ transcript }))] });
-          this.onend?.();
-        }, 30);
-      }
-      abort() { setTimeout(() => { this.onerror?.({ error: 'aborted' }); this.onend?.(); }, 10); }
-    }
-    Object.defineProperty(window, 'SpeechRecognition', { value: undefined, configurable: true });
-    Object.defineProperty(window, 'webkitSpeechRecognition', { value: Fake, configurable: true });
-  }, replies);
-}
+import { fakeRecognition } from './fakes';
 
 const card = (page: Page) => page.getByRole('article');
 const speak = (page: Page) => card(page).getByRole('button', { name: /말하기|듣는 중/ }).click();

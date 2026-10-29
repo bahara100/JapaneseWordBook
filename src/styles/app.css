@@ -59,3 +59,15 @@ a.grammar-row{color:inherit}
 .hint-row .text-button{display:inline-flex;align-items:center;gap:6px}
 .speak-status{flex-basis:100%;margin:8px 0 0;font-size:13px;color:var(--green);text-align:center}
 .btn.listening{background:#fbf1ea;border-color:#e4c9b8;color:#995b3e}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px;width:100%;max-width:420px;margin-inline:auto}
+.choice{min-height:52px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:15px}
+.choice:hover{background:var(--soft)}
+.listening-front{padding-top:8px}
+.repeat-card .repeat-picture{max-inline-size:220px;margin-inline:auto;padding:8px}
+.practice-modes{margin-top:26px}
+.practice-modes .mode-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.mode-option{display:block;text-align:left;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.mode-option strong{display:block;font-size:16px;margin-bottom:4px}
+.mode-option span{font-size:13px;color:var(--muted);line-height:1.6}
+.mode-option:hover{background:var(--soft)}
+@media (max-width:719px){.practice-modes .mode-list{grid-template-columns:1fr}}

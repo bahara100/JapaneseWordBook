@@ -1,6 +1,6 @@
 // Picks today's cards (docs/01 §4): due reviews first, up to about a third of the target, then new
 // words in curriculum order, then more due reviews if new words run out. Never the same word twice.
-import type { DailyTarget, LevelWords, MediaAsset, SessionCard, WordProgress } from '../content/types';
+import type { DailyTarget, LevelWords, MediaAsset, SessionCard, Word, WordProgress } from '../content/types';
 
 export const REVIEW_CAP: Record<DailyTarget, number> = { 10: 3, 15: 5, 20: 7 };
 
@@ -60,4 +60,23 @@ export function cardForWord(content: LevelWords, wordId: string): SessionCard | 
   const image = prompt && content.media.find(m => m.id === prompt.imageAssetId);
   if (!word || !prompt || !image) return undefined;
   return { promptSnapshot: prompt, wordSnapshot: word, mediaSnapshots: [image], kind: 'review', mode: 'picture', state: 'question' };
+}
+
+/**
+ * Up to `count` Korean meanings for listening mode: the card's own and others from the same level,
+ * shuffled. Meanings identical to the answer are skipped so two options can never both be right.
+ */
+export function buildChoices(card: SessionCard, pool: Word[], count = 4, random = Math.random): { wordId: string; label: string }[] {
+  const label = (w: Word, senseId?: string) => (w.senses.find(s => s.id === senseId) ?? w.senses[0]).korean.join(', ');
+  const answer = { wordId: card.wordSnapshot.id, label: label(card.wordSnapshot, card.promptSnapshot.senseId) };
+  const others = pool
+    .filter(w => w.id !== answer.wordId)
+    .map(w => ({ wordId: w.id, label: label(w) }))
+    .filter((c, i, all) => c.label !== answer.label && all.findIndex(x => x.label === c.label) === i);
+  const shuffle = <T,>(items: T[]) => {
+    const copy = items.slice();
+    for (let i = copy.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [copy[i], copy[j]] = [copy[j], copy[i]]; }
+    return copy;
+  };
+  return shuffle([answer, ...shuffle(others).slice(0, count - 1)]);
 }

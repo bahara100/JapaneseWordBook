@@ -4,8 +4,8 @@ import { describe, expect, it } from 'vitest';
 import type { LevelWords, StudySession, WordProgress } from '../content/types';
 import { dailySessionId, studyDate } from './dates';
 import { gradeTyped, normalizeAnswer } from './grading';
-import { cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, hearDifferent, markHint, missedCards, nextCard, retryCard, summarize } from './session';
+import { buildChoices, cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
+import { answerCard, createDailySession, createFavoritesSession, createModeSession, createPracticeSession, endSession, hearDifferent, markHint, missedCards, nextCard, recordTry, retryCard, summarize } from './session';
 
 const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
 
@@ -214,5 +214,37 @@ describe('favorites study', () => {
     const s = createFavoritesSession(cards, '2026-10-29', 'Asia/Seoul', now, 'favorites:x')!;
     expect(s).toMatchObject({ id: 'favorites:x', type: 'favorites', target: 2, status: 'active', revision: 0 });
     expect(createFavoritesSession([], '2026-10-29', 'Asia/Seoul', now, 'favorites:y')).toBeNull();
+  });
+});
+
+describe('other practice modes', () => {
+  const cards = n5.words.map(w => cardForWord(n5, w.id)!);
+
+  it('offers the right meaning among others from the level, with no duplicate labels', () => {
+    let seed = 0.42;
+    const random = () => (seed = (seed * 9301 + 49297) % 233280 / 233280);
+    const pool = [...n5.words, { ...n5.words[1], id: 'twin' }]; // same meaning as 学校
+    const choices = buildChoices(cards[1], pool, 4, random);
+    expect(choices.map(c => c.label).sort()).toEqual(['고양이', '사과', '학교']);
+    expect(choices.filter(c => c.label === '학교')).toEqual([{ wordId: 'w002', label: '학교' }]);
+  });
+
+  it('starts listening rounds on the question side and repeat rounds on the answer side', () => {
+    const listening = createModeSession(cards, 'listening', 'N5', '2026-10-29', 'Asia/Seoul', now, 'practice:l')!;
+    expect(listening).toMatchObject({ type: 'practice', target: 3 });
+    expect(listening.cards.every(c => c.mode === 'listening' && c.state === 'question')).toBe(true);
+    const repeat = createModeSession(cards, 'repeat', 'N5', '2026-10-29', 'Asia/Seoul', now, 'practice:r')!;
+    expect(repeat.cards.every(c => c.mode === 'repeat' && c.state === 'revealed')).toBe(true);
+    expect(createModeSession([], 'repeat', 'N5', '2026-10-29', 'Asia/Seoul', now, 'x')).toBeNull();
+  });
+
+  it('keeps repeat tries as attempts only, and moves on freely', () => {
+    const repeat = createModeSession(cards, 'repeat', 'N5', '2026-10-29', 'Asia/Seoul', now, 'practice:r')!;
+    const tried = recordTry(repeat, 0, { outcome: 'incorrect', inputText: 'ねっこ', now, attemptId: 't1' })!;
+    expect(tried.attempt).toMatchObject({ method: 'speech', outcome: 'incorrect', inputText: 'ねっこ', sessionId: 'practice:r' });
+    expect(tried.session.cards[0].firstEvaluation).toBeUndefined();
+    expect(nextCard(tried.session, 0, now)!.currentIndex).toBe(1);
+    const listening = createModeSession(cards, 'listening', 'N5', '2026-10-29', 'Asia/Seoul', now, 'practice:l')!;
+    expect(recordTry(listening, 0, { outcome: 'correct', now, attemptId: 't2' })).toBeNull();
   });
 });

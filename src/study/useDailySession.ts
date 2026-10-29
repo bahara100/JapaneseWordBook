@@ -8,9 +8,9 @@ import { effectiveTimeZone } from '../storage/settings';
 import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from './dates';
 import { scheduleReview } from './schedule';
-import { selectDailyCards } from './selection';
+import { buildChoices, cardForWord, INCLUDE_DRAFTS, selectDailyCards } from './selection';
 import { matchSpoken } from './grading';
-import { answerCard, createDailySession, createFavoritesSession, createPracticeSession, endSession, hearDifferent, markHint, nextCard, retryCard } from './session';
+import { answerCard, createDailySession, createFavoritesSession, createModeSession, createPracticeSession, endSession, hearDifferent, markHint, nextCard, recordTry, retryCard, type PracticeMode } from './session';
 
 export type Daily =
   | { status: 'loading' }
@@ -41,6 +41,8 @@ export function useDailySession() {
   const timeZone = effectiveTimeZone(settings);
   const [daily, setDaily] = useState<StudySession | undefined>();
   const [practice, setPractice] = useState<StudySession | undefined>();
+  /** The practice round that just ended, for a short result. */
+  const [finished, setFinished] = useState<StudySession | undefined>();
   const [loaded, setLoaded] = useState(false);
   const [busy, setBusy] = useState(false);
   // A ref, not only state: two clicks in the same frame must not both get through.
@@ -70,7 +72,10 @@ export function useDailySession() {
     setNotice('');
     try {
       await store.saveSession(next, change);
-      if (next.type !== 'daily') setPractice(next.status === 'active' ? next : undefined);
+      if (next.type !== 'daily') {
+        setPractice(next.status === 'active' ? next : undefined);
+        setFinished(next.status === 'complete' && next.currentIndex >= next.cards.length ? next : undefined);
+      }
       else setDaily(next);
     } catch (e) {
       if (e instanceof ConflictError) {
@@ -179,11 +184,47 @@ export function useDailySession() {
     return (await store.getSession(session.id)) !== undefined;
   };
 
+  /** Starts a listening or repeat round over the chosen level's cards (up to 10, course order). */
+  const startMode = async (mode: PracticeMode) => {
+    if (!store) return;
+    setProblem('');
+    setFinished(undefined);
+    try {
+      const content = (await loadLevel(settings.level)).words;
+      const order = new Map(content.words.map(w => [w.id, w.curriculumOrder]));
+      const wordIds = [...new Set(content.prompts.filter(p => INCLUDE_DRAFTS || p.status === 'reviewed').map(p => p.wordId))]
+        .sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0)).slice(0, 10);
+      let cards = wordIds.map(id => cardForWord(content, id)).filter(c => c !== undefined);
+      if (mode === 'listening') {
+        cards = cards.map(c => ({ ...c, choices: buildChoices(c, content.words) }));
+        if (cards.some(c => (c.choices?.length ?? 0) < 2)) { setProblem('듣고 맞히기에는 뜻이 다른 단어가 2개 이상 필요해요.'); return; }
+      }
+      if (!cards.length) { setProblem(`${settings.level} 수준에는 아직 연습할 카드가 없어요.`); return; }
+      const open = await store.activePractice();
+      if (open) await commit(endSession(open, new Date()));
+      const now = new Date();
+      await commit(createModeSession(cards, mode, settings.level, studyDate(now, timeZone), timeZone, now, `practice:${crypto.randomUUID()}`));
+    } catch (e) {
+      setProblem(e instanceof Error ? e.message : '연습을 시작하지 못했어요.');
+    }
+  };
+
+  /** Repeat mode: checks what was heard (or that nothing was) and keeps it as an attempt. */
+  const tryRepeat = async (alternatives: string[] | null) => {
+    if (!current) return false;
+    const card = current.cards[current.currentIndex];
+    const match = alternatives ? matchSpoken(alternatives, card.promptSnapshot) : undefined;
+    const outcome = !alternatives ? 'unrecognized' : match ? 'correct' : 'incorrect';
+    const result = recordTry(current, current.currentIndex, { outcome, inputText: match ?? alternatives?.[0], now: new Date(), attemptId: crypto.randomUUID() });
+    if (result) await commit(result.session, { attempt: result.attempt });
+    return !!match;
+  };
+
   const leavePractice = async () => {
     if (practice) await commit(endSession(practice, new Date()));
   };
 
   const today = studyDate(new Date(), timeZone);
   const state: Daily = !store || !loaded ? { status: 'loading' } : classify(daily, today);
-  return { daily: state, practice, actions, start, practiceMissed, studyFavorites, leavePractice, busy, problem, notice, today };
+  return { daily: state, practice, finished, actions, start, practiceMissed, studyFavorites, startMode, tryRepeat, leavePractice, busy, problem, notice, today };
 }

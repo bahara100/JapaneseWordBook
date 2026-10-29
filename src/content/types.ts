@@ -129,6 +129,8 @@ export interface SessionCard {
   hintUsed?: boolean;
   /** Spoken answers heard as some other word before the first evaluation. */
   speechMismatches?: number;
+  /** Listening mode: the Korean meanings offered, fixed when the round starts. */
+  choices?: { wordId: string; label: string }[];
   firstEvaluation?: {
     outcome: Exclude<Outcome, 'unrecognized'>;
     hintUsed: boolean;

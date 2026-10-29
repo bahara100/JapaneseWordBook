@@ -33,7 +33,9 @@ export function answerCard(session: StudySession, cardIndex: number, answer: {
     ...(answer.inputText !== undefined ? { inputText: answer.inputText } : {}),
   };
   // A technical failure leaves the card as it was: the learner just tries again or types.
-  if (answer.outcome !== 'unrecognized') next.state = answer.outcome === 'correct' || answer.outcome === 'revealed' ? 'revealed' : 'feedback';
+  // In listening mode any choice turns the card: there is nothing to retype.
+  if (answer.outcome !== 'unrecognized')
+    next.state = answer.outcome === 'correct' || answer.outcome === 'revealed' || card.mode === 'listening' ? 'revealed' : 'feedback';
   const cards = session.cards.slice();
   cards[cardIndex] = next;
   const attempt: AnswerAttempt = {
@@ -148,5 +150,36 @@ export function createFavoritesSession(cards: SessionCard[], studyDate: string, 
   return {
     id, type: 'favorites', studyDate, timeZone, level: cards[0].wordSnapshot.level, target: cards.length,
     contentVersion: 'favorites', cards, currentIndex: 0, status: 'active', revision: 0, startedAt: now.toISOString(),
+  };
+}
+
+export type PracticeMode = 'listening' | 'repeat';
+
+/**
+ * A practice round in another mode (docs/01 §5): listening (hear it, pick the meaning) or repeat
+ * (answer and sound shown, say it along). Kept apart from the day's evaluation and the schedule.
+ */
+export function createModeSession(cards: SessionCard[], mode: PracticeMode, level: Level, studyDate: string, timeZone: string, now: Date, id: string): StudySession | null {
+  if (!cards.length) return null;
+  return {
+    id, type: 'practice', studyDate, timeZone, level, target: cards.length, contentVersion: mode, currentIndex: 0,
+    status: 'active', revision: 0, startedAt: now.toISOString(),
+    // In repeat mode the answer is shown from the start.
+    cards: cards.map(c => ({ ...c, mode, state: mode === 'repeat' ? 'revealed' : 'question' })),
+  };
+}
+
+/** A try in repeat mode: kept as an attempt, never as an evaluation. */
+export function recordTry(session: StudySession, cardIndex: number, tried: {
+  outcome: Outcome; inputText?: string; now: Date; attemptId: string;
+}): { session: StudySession; attempt: AnswerAttempt } | null {
+  const card = currentCard(session);
+  if (!card || cardIndex !== session.currentIndex || card.mode !== 'repeat') return null;
+  return {
+    session: { ...session, revision: session.revision + 1 },
+    attempt: {
+      id: tried.attemptId, sessionId: session.id, cardIndex, method: 'speech', outcome: tried.outcome, hintUsed: false,
+      attemptedAt: tried.now.toISOString(), ...(tried.inputText !== undefined ? { inputText: tried.inputText } : {}),
+    },
   };
 }

@@ -11,8 +11,9 @@ import { useFavorites } from '../storage/useFavorites';
 import { gradeTyped } from '../study/grading';
 import { KanaAnswer } from '../study/KanaAnswer';
 import { SpeakAnswer } from '../study/SpeakAnswer';
+import { ListeningFront, RepeatCard } from '../study/PracticeCards';
 import { INCLUDE_DRAFTS, selectDailyCards } from '../study/selection';
-import { missedCards, summarize } from '../study/session';
+import { missedCards, summarize, type PracticeMode } from '../study/session';
 import { useDailySession, type SessionActions } from '../study/useDailySession';
 import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
@@ -80,16 +81,16 @@ function StartPanel({ start, busy }: { start: () => void; busy: boolean }) {
   );
 }
 
-function Feedback({ card }: { card: SessionCard }) {
+function Feedback({ card, daily }: { card: SessionCard; daily: boolean }) {
   const first = card.firstEvaluation;
   const spoken = first?.method === 'speech';
   const said = first?.inputText && (
-    <p className="submitted-answer">{spoken ? '들은 말' : '내가 입력한 답'} <span lang="ja">{first.inputText}</span></p>
+    <p className="submitted-answer">{spoken ? '들은 말' : first.method === 'choice' ? '내가 고른 뜻' : '내가 입력한 답'} <span lang={first.method === 'choice' ? 'ko' : 'ja'}>{first.inputText}</span></p>
   );
   // Speech is described as recognising the right word, never as a pronunciation score (docs/01 §5).
   const text = first?.outcome === 'correct'
     ? (first.hintUsed ? '힌트를 듣고 맞혔어요.' : spoken ? '정답 단어로 인식했어요.' : '정답이에요.')
-    : first?.outcome === 'incorrect' ? '다시 연습할 단어로 기록했어요.' : '정답을 확인했어요.';
+    : first?.outcome === 'incorrect' ? (daily ? '다시 연습할 단어로 기록했어요.' : '아쉬워요. 정답을 확인해 보세요.') : '정답을 확인했어요.';
   return <><div className={`feedback ${first?.outcome === 'incorrect' ? 'retry' : ''}`} role="status">{text}</div>{said}</>;
 }
 
@@ -162,7 +163,7 @@ function CardBack({ card, session, actions, busy }: { card: SessionCard; session
   return (
     <>
       <div className="card-back">
-        <Feedback card={card} />
+        <Feedback card={card} daily={session.type === 'daily'} />
         <div className="card-back-top">
           <span className="pill">{word.level}{session.type === 'daily' && card.kind === 'review' ? ' · 복습' : ''}</span>
           <button className="star" type="button" aria-pressed={favorite} onClick={() => void favorites.toggle(word.id)}
@@ -194,7 +195,24 @@ function CardBack({ card, session, actions, busy }: { card: SessionCard; session
   );
 }
 
-function StudyCard({ session, actions, busy }: { session: StudySession; actions: SessionActions; busy: boolean }) {
+/** What kind of round a session is, for titles and labels. */
+function roundOf(session: StudySession): 'daily' | 'missed' | 'favorites' | 'listening' | 'repeat' {
+  if (session.type === 'daily') return 'daily';
+  if (session.type === 'favorites') return 'favorites';
+  const mode = session.cards[0]?.mode;
+  return mode === 'listening' || mode === 'repeat' ? mode : 'missed';
+}
+
+const ROUND_TEXT = {
+  missed: { eyebrow: 'ONE MORE TIME', heading: '틀린 단어 다시 보기', lead: '오늘 놓친 단어를 한 번 더 떠올려 봐요.' },
+  favorites: { eyebrow: 'MY WORDS, ONE MORE TIME', heading: '모아 보는 그림카드', lead: '보관한 단어를 그림으로 다시 떠올려 봐요.' },
+  listening: { eyebrow: 'LISTEN AND CHOOSE', heading: '듣고 맞히기', lead: '소리만 듣고 뜻을 골라요.' },
+  repeat: { eyebrow: 'SAY IT ALONG', heading: '따라 말하기', lead: '보고 듣고, 소리 내어 따라 해요.' },
+} as const;
+
+function StudyCard({ session, actions, tryRepeat, busy }: {
+  session: StudySession; actions: SessionActions; tryRepeat: (heard: string[] | null) => Promise<boolean>; busy: boolean;
+}) {
   const index = session.currentIndex;
   const card = session.cards[index];
   const shown = card.state === 'revealed';
@@ -214,7 +232,7 @@ function StudyCard({ session, actions, busy }: { session: StudySession; actions:
     <div className="study-layout">
       <section aria-label="그림카드">
         <div className="study-topline">
-          <span>{session.type === 'practice' ? '틀린 단어 다시 보기' : session.type === 'favorites' ? '모아 보는 그림카드' : `${session.studyDate} · ${card.kind === 'review' ? '복습 카드' : '새 카드'}`}</span>
+          <span>{roundOf(session) === 'daily' ? `${session.studyDate} · ${card.kind === 'review' ? '복습 카드' : '새 카드'}` : ROUND_TEXT[roundOf(session) as Exclude<ReturnType<typeof roundOf>, 'daily'>].heading}</span>
           <span>{index + 1} / {session.cards.length}장</span>
         </div>
         <div className="progress" role="progressbar" aria-label="카드 진행률" aria-valuemin={0}
@@ -222,25 +240,41 @@ function StudyCard({ session, actions, busy }: { session: StudySession; actions:
           <span style={{ width: `${(index / session.cards.length) * 100}%` }} />
         </div>
         <article ref={article} className="study-card" aria-label={shown ? '정답 카드' : '문제 카드'}>
-          {shown
-            ? <CardBack card={card} session={session} actions={actions} busy={busy} />
-            : <CardFront key={index} card={card} actions={actions} busy={busy} />}
+          {card.mode === 'repeat'
+            ? <RepeatCard key={index} card={card} session={session} actions={actions} tryRepeat={tryRepeat} busy={busy} />
+            : shown
+              ? <CardBack card={card} session={session} actions={actions} busy={busy} />
+              : card.mode === 'listening'
+                ? <ListeningFront key={index} card={card} actions={actions} busy={busy} />
+                : <CardFront key={index} card={card} actions={actions} busy={busy} />}
         </article>
       </section>
       <aside className="study-side">
-        <section className="study-note">
-          <span className="eyebrow">ONE CARD, THREE STEPS</span>
-          <h3>천천히, 나의 속도로.</h3>
-          <ol className="learning-steps">
-            <li><span>01</span><div>그림으로 떠올려요<small>어떤 단어인지 생각해 보세요.</small></div></li>
-            <li><span>02</span><div>나의 말로 답해요<small>영문으로 입력하면 가나로 바뀌어요.</small></div></li>
-            <li><span>03</span><div>뒤집어서 확인해요<small>읽기와 뜻, 예문을 익혀요.</small></div></li>
-          </ol>
-        </section>
-        <section className="study-note">
-          <h3>처음 답이 기록돼요.</h3>
-          <p>카드마다 처음 낸 답(또는 정답 보기)이 결과에 남아요. 다시 시도한 답은 연습 기록으로만 남겨요.</p>
-        </section>
+        {card.mode === 'listening' || card.mode === 'repeat' ? (
+          <section className="study-note">
+            <span className="eyebrow">{card.mode === 'listening' ? 'LISTEN · CHOOSE' : 'LISTEN · SAY'}</span>
+            <h3>{card.mode === 'listening' ? '귀로 먼저 익혀요.' : '입으로 읽으면, 더 오래.'}</h3>
+            <p>{card.mode === 'listening'
+              ? '소리를 여러 번 들어도 괜찮아요. 고른 답은 연습 기록에만 남아요.'
+              : '발음을 듣고 소리 내어 따라 해 보세요. 말하기 확인은 정답 단어로 들렸는지만 알려 줘요.'}</p>
+          </section>
+        ) : (
+          <>
+            <section className="study-note">
+              <span className="eyebrow">ONE CARD, THREE STEPS</span>
+              <h3>천천히, 나의 속도로.</h3>
+              <ol className="learning-steps">
+                <li><span>01</span><div>그림으로 떠올려요<small>어떤 단어인지 생각해 보세요.</small></div></li>
+                <li><span>02</span><div>나의 말로 답해요<small>영문으로 입력하면 가나로 바뀌어요.</small></div></li>
+                <li><span>03</span><div>뒤집어서 확인해요<small>읽기와 뜻, 예문을 익혀요.</small></div></li>
+              </ol>
+            </section>
+            <section className="study-note">
+              <h3>처음 답이 기록돼요.</h3>
+              <p>카드마다 처음 낸 답(또는 정답 보기)이 결과에 남아요. 다시 시도한 답은 연습 기록으로만 남겨요.</p>
+            </section>
+          </>
+        )}
         <a className="text-button study-home" href="#/home">홈으로 돌아가기 ↗</a>
       </aside>
     </div>
@@ -296,15 +330,46 @@ function Summary({ session, practice, busy }: { session: StudySession; practice:
   );
 }
 
+/** Other ways to practice the chosen level; never part of the day's results or the schedule. */
+function PracticeModes({ startMode, busy }: { startMode: (mode: PracticeMode) => void; busy: boolean }) {
+  const { settings } = useStorage();
+  return (
+    <section className="practice-modes" aria-labelledby="practice-modes-title">
+      <h2 id="practice-modes-title">다른 방법으로 연습하기</h2>
+      <p className="subtle">{settings.level} 단어로 연습해요. 연습은 오늘의 결과와 복습 일정에 들어가지 않아요.</p>
+      <div className="mode-list">
+        <button className="mode-option" type="button" disabled={busy} onClick={() => startMode('listening')}>
+          <strong>듣고 맞히기</strong><span>소리만 듣고 한국어 뜻을 골라요.</span>
+        </button>
+        <button className="mode-option" type="button" disabled={busy} onClick={() => startMode('repeat')}>
+          <strong>따라 말하기</strong><span>그림·읽기·소리를 보고 들으며 소리 내어 따라 해요.</span>
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function FinishedRound({ session }: { session: StudySession }) {
+  const round = roundOf(session);
+  if (round === 'daily') return null;
+  const s = summarize(session);
+  return (
+    <p className="study-notice" role="status">
+      {ROUND_TEXT[round].heading} 연습을 마쳤어요.
+      {round === 'listening' ? ` ${session.cards.length}장 중 ${s.correct}장을 바로 맞혔어요.` : round === 'repeat' ? ` ${session.cards.length}장을 따라 했어요.` : ''}
+    </p>
+  );
+}
+
 export function Study() {
-  const { daily, practice, actions, start, practiceMissed, leavePractice, busy, problem, notice, today } = useDailySession();
+  const { daily, practice, finished, actions, start, practiceMissed, startMode, tryRepeat, leavePractice, busy, problem, notice, today } = useDailySession();
   const active = daily.status === 'active' ? daily.session : undefined;
   const shown = practice ?? active;
+  const text = practice && roundOf(practice) !== 'daily' ? ROUND_TEXT[roundOf(practice) as Exclude<ReturnType<typeof roundOf>, 'daily'>]
+    : { eyebrow: 'DAILY PRACTICE', heading: '오늘의 그림카드', lead: '한 장씩 떠올리고, 뒤집어서 확인해 보세요.' };
   return (
     <>
-      <PageTitle eyebrow={practice ? (practice.type === 'favorites' ? 'MY WORDS, ONE MORE TIME' : 'ONE MORE TIME') : 'DAILY PRACTICE'}
-        heading={practice ? (practice.type === 'favorites' ? '모아 보는 그림카드' : '틀린 단어 다시 보기') : '오늘의 그림카드'}
-        lead={practice ? (practice.type === 'favorites' ? '보관한 단어를 그림으로 다시 떠올려 봐요.' : '오늘 놓친 단어를 한 번 더 떠올려 봐요.') : '한 장씩 떠올리고, 뒤집어서 확인해 보세요.'}
+      <PageTitle eyebrow={text.eyebrow} heading={text.heading} lead={text.lead}
         extra={shown && shown.type !== 'favorites' && <span className="pill">{shown.level}</span>} />
       {notice && <p className="study-notice" role="status">{notice}</p>}
       <Problem text={problem} />
@@ -315,20 +380,22 @@ export function Study() {
             <span>연습한 답은 기록만 남고, 오늘의 결과와 복습 일정은 바뀌지 않아요.</span>
             <button className="text-button" type="button" disabled={busy} onClick={() => void leavePractice()}>연습 그만하기</button>
           </div>
-          <StudyCard key={practice.id} session={practice} actions={actions} busy={busy} />
+          <StudyCard key={practice.id} session={practice} actions={actions} tryRepeat={tryRepeat} busy={busy} />
         </>
       ) : (
         <>
+          {finished && <FinishedRound session={finished} />}
           {daily.status === 'none' && <StartPanel start={() => void start()} busy={busy} />}
           {active && (
             <>
               {active.studyDate < today && (
                 <p className="study-notice">{active.studyDate}에 시작한 학습이에요. 마저 마치면 새 학습을 시작할 수 있어요.</p>
               )}
-              <StudyCard key={active.id} session={active} actions={actions} busy={busy} />
+              <StudyCard key={active.id} session={active} actions={actions} tryRepeat={tryRepeat} busy={busy} />
             </>
           )}
           {daily.status === 'done' && <Summary session={daily.session} practice={() => void practiceMissed()} busy={busy} />}
+          {daily.status !== 'loading' && !active && <PracticeModes startMode={mode => void startMode(mode)} busy={busy} />}
         </>
       )}
     </>
