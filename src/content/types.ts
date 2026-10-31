@@ -50,7 +50,9 @@ export interface CardPrompt {
   wordId: string;
   senseId: string;
   readingId: string;
-  imageAssetId: string;
+  /** The picture for the question side. Without one, the card shows the written word (or, for a
+   *  word written only in kana, its Korean meaning) and asks for the reading. */
+  imageAssetId?: string;
   audioAssetId?: string;
   situationHint?: string;
   acceptedWrittenForms: string[];

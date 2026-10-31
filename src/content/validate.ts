@@ -176,7 +176,7 @@ export function validateContent(files: ContentFiles, mediaExists: (path: string)
         if (writtenForms.some(f => !isText(f))) error(where, 'acceptedWrittenForms에 빈 값이 있어요.');
         const checkAsset = (key: 'imageAssetId' | 'audioAssetId', kind: 'image' | 'audio') => {
           const id = p[key];
-          if (id === undefined && key === 'audioAssetId') return;
+          if (id === undefined) return; // both are optional: no picture means a reading card
           const asset = typeof id === 'string' ? media.get(id) : undefined;
           if (!asset) { error(where, `${key} "${String(id)}"가 이 파일의 media에 없어요.`); return; }
           if (asset.kind !== kind) error(where, `${key} "${id}"는 ${kind}가 아니에요.`);

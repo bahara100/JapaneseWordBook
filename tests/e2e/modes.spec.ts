@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 import { fakeRecognition, fakeSpeech, spoken } from './fakes';
 
 // N5 sample cards in course order: 猫 ねこ 고양이, 学校 がっこう 학교, りんご りんご 사과.

@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './test';
 import { fakeRecognition, fakeSpeech, spoken } from './fakes';
 
 test('the device check reports support and runs the sound and speaking tests', async ({ page }, info) => {

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-31",
+  "mode": "built-in image_gen",
+  "styleReference": "../art-direction-2026-10-29/assets/card-cat-v2.png",
+  "transparentBackground": true,
+  "sharedPrompt": "Use case: illustration-story. Create a Japanese-learning vocabulary flashcard spot illustration. Match the supplied image's lightweight 2D Japanese stationery illustration style: broad smooth matte color shapes, softly rounded silhouettes, minimal soft shading, warm cream, sage green, forest-green details, muted terracotta/apricot accents. Clear at a 96px thumbnail; enough polish to match the reference, NOT photorealistic, not 3D, not sketchy. Use the reference ONLY for its visual style; replace the cat completely. Simple adult proportions for human figures, small calm facial features, no chibi heads. One coherent compact centered vignette with all subjects fully visible, generous transparent margins, 4:3 landscape 1448x1086 if possible. Truly transparent alpha background. No scenery backdrop, no panel, no enclosing circle, no sticker outline, no decorative confetti, no labels, no readable letters, no words, no numerals, no watermark. Do not include a cat. ",
+  "jobs": [
+    {
+      "key": "promise",
+      "id": "w004",
+      "level": "N4",
+      "written": "約束",
+      "meaning": "약속",
+      "scene": "Two adult hands linking their little fingers in a clear pinky promise gesture, with the other fingers naturally curled. One sleeve soft terracotta, the other sage green. Clean anatomically plausible hands, exactly five fingers on each hand, linked pinkies clearly readable. No faces or bodies are necessary. The promise gesture is the entire subject.",
+      "alt": "두 손의 새끼손가락을 서로 걸고 있는 모습"
+    },
+    {
+      "key": "prepare",
+      "id": "w005",
+      "level": "N4",
+      "written": "準備",
+      "meaning": "준비",
+      "scene": "A young adult kneeling beside an open small sage-green travel suitcase, carefully putting a folded cream shirt inside. A second neatly folded terracotta garment beside the case. Obvious packing-before-a-trip action. Full figure, simple rounded clothing, minimal facial details. No tickets, no writing, no extra travel backdrop.",
+      "alt": "열린 여행 가방에 옷을 차곡차곡 넣는 사람"
+    },
+    {
+      "key": "drive",
+      "id": "w006",
+      "level": "N4",
+      "written": "運転",
+      "meaning": "운전",
+      "scene": "A compact sage-green car in clear front three-quarter view. One adult driver visible through the broad windshield, looking ahead and holding a dark steering wheel with both hands. The driver action must be obvious, not an empty parked car. Simple terracotta top. Full car and wheels visible, no road backdrop, no license characters, no logo.",
+      "alt": "자동차 안에서 두 손으로 핸들을 잡은 사람"
+    },
+    {
+      "key": "environment",
+      "id": "w007",
+      "level": "N3",
+      "written": "環境",
+      "meaning": "환경",
+      "scene": "Two gently cupped adult hands supporting a simple small blue-and-sage Earth globe with broad recognizable land shapes and one fresh two-leaf sprout emerging at its top. A compact environmental-care vignette. No orbit rings, no sky, no background, no infographic labels.",
+      "alt": "새싹이 돋은 작은 지구를 두 손으로 감싼 모습"
+    },
+    {
+      "key": "effort",
+      "id": "w008",
+      "level": "N3",
+      "written": "努力",
+      "meaning": "노력",
+      "scene": "One adult steadily climbing three large simple rounded stone steps while carrying a small cream book under one arm. Determined calm expression and forward-leaning active climbing pose, full body visible. Only three steps forming a compact uphill obstacle. Sage steps, terracotta top, cream trousers. No trophy, no arrows, no mountain scenery.",
+      "alt": "책을 안고 계단을 한 걸음씩 오르는 사람"
+    },
+    {
+      "key": "confirm",
+      "id": "w009",
+      "level": "N3",
+      "written": "確認",
+      "meaning": "확인",
+      "scene": "A plain cream clipboard with exactly three simple outlined checkboxes, two carrying small green check marks, and an adult hand holding a magnifying glass over the final checkbox to inspect it. A second hand steadies the clipboard if necessary. No lines of writing, no alphabet, no numbers. Check marks are the only permitted marks.",
+      "alt": "체크 항목이 있는 종이를 돋보기로 살펴보는 손"
+    },
+    {
+      "key": "contribute",
+      "id": "w010",
+      "level": "N2",
+      "written": "貢献",
+      "meaning": "공헌, 기여",
+      "scene": "Two adults cooperating to assemble one small simple wooden park bench. One adult holds a seat plank in place, the other carefully attaches the other end using a small hand tool. Their shared contribution to building something useful is visually clear. Only two people, one bench and one tool. Warm cream wood, sage and terracotta clothing, no park backdrop.",
+      "alt": "두 사람이 함께 나무 벤치에 판자를 올리는 모습"
+    },
+    {
+      "key": "trend",
+      "id": "w011",
+      "level": "N2",
+      "written": "傾向",
+      "meaning": "경향",
+      "scene": "Five simple rounded sage-green bars, progressively taller from left to right, with one soft terracotta curved arrow above following their overall upward direction. A clean three-dimensional-free flat statistical tendency symbol, not a realistic chart. No axes, no ticks, no numbers, no text, no grid, no panel. Balanced compact grouping.",
+      "alt": "점점 높아지는 막대와 위로 이어지는 화살표"
+    },
+    {
+      "key": "improve",
+      "id": "w012",
+      "level": "N2",
+      "written": "改善",
+      "meaning": "개선",
+      "scene": "A simple before-and-after comparison of the SAME wooden chair: a slightly crooked wobbly muted-beige chair on the left and a well-aligned sturdy sage-and-cream chair on the right, connected by one small soft terracotta right-pointing arrow. A small spanner beside the improved chair implies a constructive change. Exactly two chairs, same design and same viewing angle. No frames, no dividing line, no labels, no letters. No people.",
+      "alt": "기울어진 의자에서 반듯한 의자로 이어지는 화살표"
+    },
+    {
+      "key": "conflict",
+      "id": "w013",
+      "level": "N1",
+      "written": "葛藤",
+      "meaning": "갈등",
+      "scene": "One adult standing thoughtfully with a gently worried expression, one hand near their chin. Two simple curved arrows, one sage and one terracotta, point away in opposite directions to either side at shoulder level, showing an inner conflict between alternatives. Full body and both arrows fully visible. No signs, no thought-bubble text, no symbols or scenery.",
+      "alt": "서로 다른 방향의 화살표 사이에서 고민하는 사람"
+    },
+    {
+      "key": "consideration",
+      "id": "w014",
+      "level": "N1",
+      "written": "配慮",
+      "meaning": "배려",
+      "scene": "A younger adult has stood up from a simple two-seat public bench and kindly gestures with an open palm toward the now-empty seat for an older adult holding a walking cane. The older adult is approaching with a small appreciative expression. Exactly two people, one bench, one cane. Show the respectful seat-offering gesture clearly, no busy bus interior or backdrop.",
+      "alt": "지팡이를 짚은 사람에게 빈자리를 권하는 사람"
+    },
+    {
+      "key": "breakthrough",
+      "id": "w015",
+      "level": "N1",
+      "written": "打開",
+      "meaning": "타개, 해결의 실마리를 엶",
+      "scene": "One adult taking a confident step through a newly opened gap in a low barrier made of a few large rounded cream-and-sage blocks. One displaced block sits neatly beside the opening, leaving an obvious path through the former obstacle. A short soft green path strip passes through the gap. Full figure and whole compact barrier visible, no rubble, no destruction, no full landscape, no text.",
+      "alt": "막힌 벽의 열린 틈을 지나 앞으로 나아가는 사람"
+    }
+  ]
+}

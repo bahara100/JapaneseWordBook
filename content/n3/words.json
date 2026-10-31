@@ -129,6 +129,2040 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w110",
+      "level": "N3",
+      "curriculumOrder": 4,
+      "written": "影響",
+      "readings": [
+        {
+          "id": "w110-r1",
+          "kana": "えいきょう",
+          "romaji": "eikyō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w110-s1",
+          "korean": [
+            "영향"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w110-r1"
+          ],
+          "examples": [
+            {
+              "id": "w110-s1-e1",
+              "japanese": "天気は気分に影響します。",
+              "reading": "てんきはきぶんにえいきょうします。",
+              "korean": "날씨는 기분에 영향을 줍니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w111",
+      "level": "N3",
+      "curriculumOrder": 5,
+      "written": "関係",
+      "readings": [
+        {
+          "id": "w111-r1",
+          "kana": "かんけい",
+          "romaji": "kankei"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w111-s1",
+          "korean": [
+            "관계"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w111-r1"
+          ],
+          "examples": [
+            {
+              "id": "w111-s1-e1",
+              "japanese": "二人はどんな関係ですか。",
+              "reading": "ふたりはどんなかんけいですか。",
+              "korean": "두 사람은 어떤 관계인가요?",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w112",
+      "level": "N3",
+      "curriculumOrder": 6,
+      "written": "経済",
+      "readings": [
+        {
+          "id": "w112-r1",
+          "kana": "けいざい",
+          "romaji": "keizai"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w112-s1",
+          "korean": [
+            "경제"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w112-r1"
+          ],
+          "examples": [
+            {
+              "id": "w112-s1-e1",
+              "japanese": "経済のニュースを毎日読みます。",
+              "reading": "けいざいのニュースをまいにちよみます。",
+              "korean": "경제 뉴스를 매일 읽습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w113",
+      "level": "N3",
+      "curriculumOrder": 7,
+      "written": "政治",
+      "readings": [
+        {
+          "id": "w113-r1",
+          "kana": "せいじ",
+          "romaji": "seiji"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w113-s1",
+          "korean": [
+            "정치"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w113-r1"
+          ],
+          "examples": [
+            {
+              "id": "w113-s1-e1",
+              "japanese": "若者の政治への関心が高まっている。",
+              "reading": "わかもののせいじへのかんしんがたかまっている。",
+              "korean": "젊은이들의 정치에 대한 관심이 높아지고 있다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w114",
+      "level": "N3",
+      "curriculumOrder": 8,
+      "written": "状況",
+      "readings": [
+        {
+          "id": "w114-r1",
+          "kana": "じょうきょう",
+          "romaji": "jōkyō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w114-s1",
+          "korean": [
+            "상황"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w114-r1"
+          ],
+          "examples": [
+            {
+              "id": "w114-s1-e1",
+              "japanese": "今の状況を詳しく教えてください。",
+              "reading": "いまのじょうきょうをくわしくおしえてください。",
+              "korean": "지금 상황을 자세히 알려 주세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w115",
+      "level": "N3",
+      "curriculumOrder": 9,
+      "written": "方法",
+      "readings": [
+        {
+          "id": "w115-r1",
+          "kana": "ほうほう",
+          "romaji": "hōhō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w115-s1",
+          "korean": [
+            "방법"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w115-r1"
+          ],
+          "examples": [
+            {
+              "id": "w115-s1-e1",
+              "japanese": "もっと簡単な方法があります。",
+              "reading": "もっとかんたんなほうほうがあります。",
+              "korean": "더 간단한 방법이 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w116",
+      "level": "N3",
+      "curriculumOrder": 10,
+      "written": "目的",
+      "readings": [
+        {
+          "id": "w116-r1",
+          "kana": "もくてき",
+          "romaji": "mokuteki"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w116-s1",
+          "korean": [
+            "목적"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w116-r1"
+          ],
+          "examples": [
+            {
+              "id": "w116-s1-e1",
+              "japanese": "旅行の目的は何ですか。",
+              "reading": "りょこうのもくてきはなんですか。",
+              "korean": "여행의 목적은 무엇입니까?",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w117",
+      "level": "N3",
+      "curriculumOrder": 11,
+      "written": "結果",
+      "readings": [
+        {
+          "id": "w117-r1",
+          "kana": "けっか",
+          "romaji": "kekka"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w117-s1",
+          "korean": [
+            "결과"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w117-r1"
+          ],
+          "examples": [
+            {
+              "id": "w117-s1-e1",
+              "japanese": "試験の結果が出ました。",
+              "reading": "しけんのけっかがでました。",
+              "korean": "시험 결과가 나왔습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w118",
+      "level": "N3",
+      "curriculumOrder": 12,
+      "written": "原因",
+      "readings": [
+        {
+          "id": "w118-r1",
+          "kana": "げんいん",
+          "romaji": "gen'in"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w118-s1",
+          "korean": [
+            "원인"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w118-r1"
+          ],
+          "examples": [
+            {
+              "id": "w118-s1-e1",
+              "japanese": "事故の原因を調べています。",
+              "reading": "じこのげんいんをしらべています。",
+              "korean": "사고 원인을 조사하고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w119",
+      "level": "N3",
+      "curriculumOrder": 13,
+      "written": "判断",
+      "readings": [
+        {
+          "id": "w119-r1",
+          "kana": "はんだん",
+          "romaji": "handan"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w119-s1",
+          "korean": [
+            "판단"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w119-r1"
+          ],
+          "examples": [
+            {
+              "id": "w119-s1-e1",
+              "japanese": "自分で判断するのは難しい。",
+              "reading": "じぶんではんだんするのはむずかしい。",
+              "korean": "스스로 판단하는 것은 어렵다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w120",
+      "level": "N3",
+      "curriculumOrder": 14,
+      "written": "情報",
+      "readings": [
+        {
+          "id": "w120-r1",
+          "kana": "じょうほう",
+          "romaji": "jōhō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w120-s1",
+          "korean": [
+            "정보"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w120-r1"
+          ],
+          "examples": [
+            {
+              "id": "w120-s1-e1",
+              "japanese": "インターネットで情報を集めます。",
+              "reading": "インターネットでじょうほうをあつめます。",
+              "korean": "인터넷으로 정보를 모읍니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w121",
+      "level": "N3",
+      "curriculumOrder": 15,
+      "written": "技術",
+      "readings": [
+        {
+          "id": "w121-r1",
+          "kana": "ぎじゅつ",
+          "romaji": "gijutsu"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w121-s1",
+          "korean": [
+            "기술"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w121-r1"
+          ],
+          "examples": [
+            {
+              "id": "w121-s1-e1",
+              "japanese": "新しい技術を学んでいます。",
+              "reading": "あたらしいぎじゅつをまなんでいます。",
+              "korean": "새로운 기술을 배우고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w122",
+      "level": "N3",
+      "curriculumOrder": 16,
+      "written": "自然",
+      "readings": [
+        {
+          "id": "w122-r1",
+          "kana": "しぜん",
+          "romaji": "shizen"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w122-s1",
+          "korean": [
+            "자연"
+          ],
+          "partOfSpeech": "명사·な형용사",
+          "readingIds": [
+            "w122-r1"
+          ],
+          "examples": [
+            {
+              "id": "w122-s1-e1",
+              "japanese": "田舎は自然が豊かです。",
+              "reading": "いなかはしぜんがゆたかです。",
+              "korean": "시골은 자연이 풍부합니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w123",
+      "level": "N3",
+      "curriculumOrder": 17,
+      "written": "習慣",
+      "readings": [
+        {
+          "id": "w123-r1",
+          "kana": "しゅうかん",
+          "romaji": "shūkan"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w123-s1",
+          "korean": [
+            "습관"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w123-r1"
+          ],
+          "examples": [
+            {
+              "id": "w123-s1-e1",
+              "japanese": "早起きは良い習慣です。",
+              "reading": "はやおきはよいしゅうかんです。",
+              "korean": "일찍 일어나는 것은 좋은 습관입니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w124",
+      "level": "N3",
+      "curriculumOrder": 18,
+      "written": "記憶",
+      "readings": [
+        {
+          "id": "w124-r1",
+          "kana": "きおく",
+          "romaji": "kioku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w124-s1",
+          "korean": [
+            "기억"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w124-r1"
+          ],
+          "examples": [
+            {
+              "id": "w124-s1-e1",
+              "japanese": "子どもの頃の記憶はあまりありません。",
+              "reading": "こどものころのきおくはあまりありません。",
+              "korean": "어린 시절 기억은 별로 없습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w125",
+      "level": "N3",
+      "curriculumOrder": 19,
+      "written": "感情",
+      "readings": [
+        {
+          "id": "w125-r1",
+          "kana": "かんじょう",
+          "romaji": "kanjō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w125-s1",
+          "korean": [
+            "감정"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w125-r1"
+          ],
+          "examples": [
+            {
+              "id": "w125-s1-e1",
+              "japanese": "感情を言葉にするのは難しい。",
+              "reading": "かんじょうをことばにするのはむずかしい。",
+              "korean": "감정을 말로 표현하기는 어렵다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w126",
+      "level": "N3",
+      "curriculumOrder": 20,
+      "written": "態度",
+      "readings": [
+        {
+          "id": "w126-r1",
+          "kana": "たいど",
+          "romaji": "taido"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w126-s1",
+          "korean": [
+            "태도"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w126-r1"
+          ],
+          "examples": [
+            {
+              "id": "w126-s1-e1",
+              "japanese": "彼の態度は失礼だった。",
+              "reading": "かれのたいどはしつれいだった。",
+              "korean": "그의 태도는 무례했다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w127",
+      "level": "N3",
+      "curriculumOrder": 21,
+      "written": "期待",
+      "readings": [
+        {
+          "id": "w127-r1",
+          "kana": "きたい",
+          "romaji": "kitai"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w127-s1",
+          "korean": [
+            "기대"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w127-r1"
+          ],
+          "examples": [
+            {
+              "id": "w127-s1-e1",
+              "japanese": "新しい店に期待しています。",
+              "reading": "あたらしいみせにきたいしています。",
+              "korean": "새 가게에 기대하고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w128",
+      "level": "N3",
+      "curriculumOrder": 22,
+      "written": "我慢",
+      "readings": [
+        {
+          "id": "w128-r1",
+          "kana": "がまん",
+          "romaji": "gaman"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w128-s1",
+          "korean": [
+            "참음",
+            "인내"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w128-r1"
+          ],
+          "examples": [
+            {
+              "id": "w128-s1-e1",
+              "japanese": "痛みを我慢しないでください。",
+              "reading": "いたみをがまんしないでください。",
+              "korean": "아픔을 참지 마세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w129",
+      "level": "N3",
+      "curriculumOrder": 23,
+      "written": "遠慮",
+      "readings": [
+        {
+          "id": "w129-r1",
+          "kana": "えんりょ",
+          "romaji": "enryo"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w129-s1",
+          "korean": [
+            "사양",
+            "조심"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w129-r1"
+          ],
+          "examples": [
+            {
+              "id": "w129-s1-e1",
+              "japanese": "遠慮しないで食べてください。",
+              "reading": "えんりょしないでたべてください。",
+              "korean": "사양하지 말고 드세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w130",
+      "level": "N3",
+      "curriculumOrder": 24,
+      "written": "参加",
+      "readings": [
+        {
+          "id": "w130-r1",
+          "kana": "さんか",
+          "romaji": "sanka"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w130-s1",
+          "korean": [
+            "참가"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w130-r1"
+          ],
+          "examples": [
+            {
+              "id": "w130-s1-e1",
+              "japanese": "来週のイベントに参加します。",
+              "reading": "らいしゅうのイベントにさんかします。",
+              "korean": "다음 주 이벤트에 참가합니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w131",
+      "level": "N3",
+      "curriculumOrder": 25,
+      "written": "連絡",
+      "readings": [
+        {
+          "id": "w131-r1",
+          "kana": "れんらく",
+          "romaji": "renraku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w131-s1",
+          "korean": [
+            "연락"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w131-r1"
+          ],
+          "examples": [
+            {
+              "id": "w131-s1-e1",
+              "japanese": "着いたら連絡してください。",
+              "reading": "ついたられんらくしてください。",
+              "korean": "도착하면 연락해 주세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w132",
+      "level": "N3",
+      "curriculumOrder": 26,
+      "written": "相談",
+      "readings": [
+        {
+          "id": "w132-r1",
+          "kana": "そうだん",
+          "romaji": "sōdan"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w132-s1",
+          "korean": [
+            "상담",
+            "의논"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w132-r1"
+          ],
+          "examples": [
+            {
+              "id": "w132-s1-e1",
+              "japanese": "進路について先生に相談しました。",
+              "reading": "しんろについてせんせいにそうだんしました。",
+              "korean": "진로에 대해 선생님과 상담했습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w133",
+      "level": "N3",
+      "curriculumOrder": 27,
+      "written": "発表",
+      "readings": [
+        {
+          "id": "w133-r1",
+          "kana": "はっぴょう",
+          "romaji": "happyō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w133-s1",
+          "korean": [
+            "발표"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w133-r1"
+          ],
+          "examples": [
+            {
+              "id": "w133-s1-e1",
+              "japanese": "明日、研究の結果を発表します。",
+              "reading": "あした、けんきゅうのけっかをはっぴょうします。",
+              "korean": "내일 연구 결과를 발표합니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w134",
+      "level": "N3",
+      "curriculumOrder": 28,
+      "written": "成功",
+      "readings": [
+        {
+          "id": "w134-r1",
+          "kana": "せいこう",
+          "romaji": "seikō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w134-s1",
+          "korean": [
+            "성공"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w134-r1"
+          ],
+          "examples": [
+            {
+              "id": "w134-s1-e1",
+              "japanese": "計画は成功しました。",
+              "reading": "けいかくはせいこうしました。",
+              "korean": "계획은 성공했습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w135",
+      "level": "N3",
+      "curriculumOrder": 29,
+      "written": "失敗",
+      "readings": [
+        {
+          "id": "w135-r1",
+          "kana": "しっぱい",
+          "romaji": "shippai"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w135-s1",
+          "korean": [
+            "실패"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w135-r1"
+          ],
+          "examples": [
+            {
+              "id": "w135-s1-e1",
+              "japanese": "失敗から多くを学びました。",
+              "reading": "しっぱいからおおくをまなびました。",
+              "korean": "실패에서 많은 것을 배웠습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w136",
+      "level": "N3",
+      "curriculumOrder": 30,
+      "written": "増加",
+      "readings": [
+        {
+          "id": "w136-r1",
+          "kana": "ぞうか",
+          "romaji": "zōka"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w136-s1",
+          "korean": [
+            "증가"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w136-r1"
+          ],
+          "examples": [
+            {
+              "id": "w136-s1-e1",
+              "japanese": "この町の人口が増加しています。",
+              "reading": "このまちのじんこうがぞうかしています。",
+              "korean": "이 도시의 인구가 증가하고 있습니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w137",
+      "level": "N3",
+      "curriculumOrder": 31,
+      "written": "減少",
+      "readings": [
+        {
+          "id": "w137-r1",
+          "kana": "げんしょう",
+          "romaji": "genshō"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w137-s1",
+          "korean": [
+            "감소"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w137-r1"
+          ],
+          "examples": [
+            {
+              "id": "w137-s1-e1",
+              "japanese": "子どもの数が減少している。",
+              "reading": "こどものかずがげんしょうしている。",
+              "korean": "아이 수가 감소하고 있다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w138",
+      "level": "N3",
+      "curriculumOrder": 32,
+      "written": "解決",
+      "readings": [
+        {
+          "id": "w138-r1",
+          "kana": "かいけつ",
+          "romaji": "kaiketsu"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w138-s1",
+          "korean": [
+            "해결"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w138-r1"
+          ],
+          "examples": [
+            {
+              "id": "w138-s1-e1",
+              "japanese": "問題はすぐに解決した。",
+              "reading": "もんだいはすぐにかいけつした。",
+              "korean": "문제는 곧 해결되었다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w139",
+      "level": "N3",
+      "curriculumOrder": 33,
+      "written": "比較",
+      "readings": [
+        {
+          "id": "w139-r1",
+          "kana": "ひかく",
+          "romaji": "hikaku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w139-s1",
+          "korean": [
+            "비교"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w139-r1"
+          ],
+          "examples": [
+            {
+              "id": "w139-s1-e1",
+              "japanese": "去年と比較すると売り上げが伸びた。",
+              "reading": "きょねんとひかくするとうりあげがのびた。",
+              "korean": "작년과 비교하면 매출이 늘었다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w140",
+      "level": "N3",
+      "curriculumOrder": 34,
+      "written": "表現",
+      "readings": [
+        {
+          "id": "w140-r1",
+          "kana": "ひょうげん",
+          "romaji": "hyōgen"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w140-s1",
+          "korean": [
+            "표현"
+          ],
+          "partOfSpeech": "명사·する동사",
+          "readingIds": [
+            "w140-r1"
+          ],
+          "examples": [
+            {
+              "id": "w140-s1-e1",
+              "japanese": "気持ちを言葉で表現する。",
+              "reading": "きもちをことばでひょうげんする。",
+              "korean": "기분을 말로 표현한다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w141",
+      "level": "N3",
+      "curriculumOrder": 35,
+      "written": "確か",
+      "readings": [
+        {
+          "id": "w141-r1",
+          "kana": "たしか",
+          "romaji": "tashika"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w141-s1",
+          "korean": [
+            "확실함"
+          ],
+          "partOfSpeech": "な형용사",
+          "readingIds": [
+            "w141-r1"
+          ],
+          "examples": [
+            {
+              "id": "w141-s1-e1",
+              "japanese": "確かな情報だけを伝えてください。",
+              "reading": "たしかなじょうほうだけをつたえてください。",
+              "korean": "확실한 정보만 전해 주세요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w142",
+      "level": "N3",
+      "curriculumOrder": 36,
+      "written": "正直",
+      "readings": [
+        {
+          "id": "w142-r1",
+          "kana": "しょうじき",
+          "romaji": "shōjiki"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w142-s1",
+          "korean": [
+            "정직함",
+            "솔직함"
+          ],
+          "partOfSpeech": "な형용사",
+          "readingIds": [
+            "w142-r1"
+          ],
+          "examples": [
+            {
+              "id": "w142-s1-e1",
+              "japanese": "正直に話してくれてありがとう。",
+              "reading": "しょうじきにはなしてくれてありがとう。",
+              "korean": "솔직하게 말해 줘서 고마워.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w143",
+      "level": "N3",
+      "curriculumOrder": 37,
+      "written": "豊か",
+      "readings": [
+        {
+          "id": "w143-r1",
+          "kana": "ゆたか",
+          "romaji": "yutaka"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w143-s1",
+          "korean": [
+            "풍부함",
+            "풍요로움"
+          ],
+          "partOfSpeech": "な형용사",
+          "readingIds": [
+            "w143-r1"
+          ],
+          "examples": [
+            {
+              "id": "w143-s1-e1",
+              "japanese": "この国は資源が豊かだ。",
+              "reading": "このくにはしげんがゆたかだ。",
+              "korean": "이 나라는 자원이 풍부하다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w144",
+      "level": "N3",
+      "curriculumOrder": 38,
+      "written": "深い",
+      "readings": [
+        {
+          "id": "w144-r1",
+          "kana": "ふかい",
+          "romaji": "fukai"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w144-s1",
+          "korean": [
+            "깊다"
+          ],
+          "partOfSpeech": "い형용사",
+          "readingIds": [
+            "w144-r1"
+          ],
+          "examples": [
+            {
+              "id": "w144-s1-e1",
+              "japanese": "この湖はとても深い。",
+              "reading": "このみずうみはとてもふかい。",
+              "korean": "이 호수는 매우 깊다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w145",
+      "level": "N3",
+      "curriculumOrder": 39,
+      "written": "珍しい",
+      "readings": [
+        {
+          "id": "w145-r1",
+          "kana": "めずらしい",
+          "romaji": "mezurashii"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w145-s1",
+          "korean": [
+            "드물다",
+            "희귀하다"
+          ],
+          "partOfSpeech": "い형용사",
+          "readingIds": [
+            "w145-r1"
+          ],
+          "examples": [
+            {
+              "id": "w145-s1-e1",
+              "japanese": "この地方で雪が降るのは珍しい。",
+              "reading": "このちほうでゆきがふるのはめずらしい。",
+              "korean": "이 지방에서 눈이 오는 것은 드물다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w146",
+      "level": "N3",
+      "curriculumOrder": 40,
+      "written": "詳しい",
+      "readings": [
+        {
+          "id": "w146-r1",
+          "kana": "くわしい",
+          "romaji": "kuwashii"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w146-s1",
+          "korean": [
+            "자세하다",
+            "잘 알다"
+          ],
+          "partOfSpeech": "い형용사",
+          "readingIds": [
+            "w146-r1"
+          ],
+          "examples": [
+            {
+              "id": "w146-s1-e1",
+              "japanese": "彼は歴史に詳しい。",
+              "reading": "かれはれきしにくわしい。",
+              "korean": "그는 역사를 잘 안다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w147",
+      "level": "N3",
+      "curriculumOrder": 41,
+      "written": "厳しい",
+      "readings": [
+        {
+          "id": "w147-r1",
+          "kana": "きびしい",
+          "romaji": "kibishii"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w147-s1",
+          "korean": [
+            "엄하다",
+            "혹독하다"
+          ],
+          "partOfSpeech": "い형용사",
+          "readingIds": [
+            "w147-r1"
+          ],
+          "examples": [
+            {
+              "id": "w147-s1-e1",
+              "japanese": "父はとても厳しい人です。",
+              "reading": "ちちはとてもきびしいひとです。",
+              "korean": "아버지는 매우 엄한 분입니다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w148",
+      "level": "N3",
+      "curriculumOrder": 42,
+      "written": "伝える",
+      "readings": [
+        {
+          "id": "w148-r1",
+          "kana": "つたえる",
+          "romaji": "tsutaeru"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w148-s1",
+          "korean": [
+            "전하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w148-r1"
+          ],
+          "examples": [
+            {
+              "id": "w148-s1-e1",
+              "japanese": "大切なことは直接伝える。",
+              "reading": "たいせつなことはちょくせつつたえる。",
+              "korean": "중요한 일은 직접 전한다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w149",
+      "level": "N3",
+      "curriculumOrder": 43,
+      "written": "守る",
+      "readings": [
+        {
+          "id": "w149-r1",
+          "kana": "まもる",
+          "romaji": "mamoru"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w149-s1",
+          "korean": [
+            "지키다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w149-r1"
+          ],
+          "examples": [
+            {
+              "id": "w149-s1-e1",
+              "japanese": "約束は必ず守る。",
+              "reading": "やくそくはかならずまもる。",
+              "korean": "약속은 반드시 지킨다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w150",
+      "level": "N3",
+      "curriculumOrder": 44,
+      "written": "認める",
+      "readings": [
+        {
+          "id": "w150-r1",
+          "kana": "みとめる",
+          "romaji": "mitomeru"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w150-s1",
+          "korean": [
+            "인정하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w150-r1"
+          ],
+          "examples": [
+            {
+              "id": "w150-s1-e1",
+              "japanese": "彼は自分の間違いを認める人だ。",
+              "reading": "かれはじぶんのまちがいをみとめるひとだ。",
+              "korean": "그는 자신의 실수를 인정하는 사람이다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w151",
+      "level": "N3",
+      "curriculumOrder": 45,
+      "written": "与える",
+      "readings": [
+        {
+          "id": "w151-r1",
+          "kana": "あたえる",
+          "romaji": "ataeru"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w151-s1",
+          "korean": [
+            "주다",
+            "부여하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w151-r1"
+          ],
+          "examples": [
+            {
+              "id": "w151-s1-e1",
+              "japanese": "植物に水を与える。",
+              "reading": "しょくぶつにみずをあたえる。",
+              "korean": "식물에 물을 준다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w152",
+      "level": "N3",
+      "curriculumOrder": 46,
+      "written": "支える",
+      "readings": [
+        {
+          "id": "w152-r1",
+          "kana": "ささえる",
+          "romaji": "sasaeru"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w152-s1",
+          "korean": [
+            "지탱하다",
+            "지지하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w152-r1"
+          ],
+          "examples": [
+            {
+              "id": "w152-s1-e1",
+              "japanese": "家族の生活を支える。",
+              "reading": "かぞくのせいかつをささえる。",
+              "korean": "가족의 생활을 지탱한다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w153",
+      "level": "N3",
+      "curriculumOrder": 47,
+      "written": "迷う",
+      "readings": [
+        {
+          "id": "w153-r1",
+          "kana": "まよう",
+          "romaji": "mayou"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w153-s1",
+          "korean": [
+            "헤매다",
+            "망설이다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w153-r1"
+          ],
+          "examples": [
+            {
+              "id": "w153-s1-e1",
+              "japanese": "どちらを買うか迷う。",
+              "reading": "どちらをかうかまよう。",
+              "korean": "어느 쪽을 살지 망설인다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w154",
+      "level": "N3",
+      "curriculumOrder": 48,
+      "written": "疑う",
+      "readings": [
+        {
+          "id": "w154-r1",
+          "kana": "うたがう",
+          "romaji": "utagau"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w154-s1",
+          "korean": [
+            "의심하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w154-r1"
+          ],
+          "examples": [
+            {
+              "id": "w154-s1-e1",
+              "japanese": "人の話をすぐに疑うのはよくない。",
+              "reading": "ひとのはなしをすぐにうたがうのはよくない。",
+              "korean": "남의 말을 바로 의심하는 것은 좋지 않다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w155",
+      "level": "N3",
+      "curriculumOrder": 49,
+      "written": "なかなか",
+      "readings": [
+        {
+          "id": "w155-r1",
+          "kana": "なかなか",
+          "romaji": "nakanaka"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w155-s1",
+          "korean": [
+            "좀처럼",
+            "꽤"
+          ],
+          "partOfSpeech": "부사",
+          "readingIds": [
+            "w155-r1"
+          ],
+          "examples": [
+            {
+              "id": "w155-s1-e1",
+              "japanese": "バスがなかなか来ない。",
+              "reading": "バスがなかなかこない。",
+              "korean": "버스가 좀처럼 오지 않는다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w156",
+      "level": "N3",
+      "curriculumOrder": 50,
+      "written": "ようやく",
+      "readings": [
+        {
+          "id": "w156-r1",
+          "kana": "ようやく",
+          "romaji": "yōyaku"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w156-s1",
+          "korean": [
+            "겨우",
+            "마침내"
+          ],
+          "partOfSpeech": "부사",
+          "readingIds": [
+            "w156-r1"
+          ],
+          "examples": [
+            {
+              "id": "w156-s1-e1",
+              "japanese": "ようやく仕事が終わった。",
+              "reading": "ようやくしごとがおわった。",
+              "korean": "겨우 일이 끝났다.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "하루일본어 편집부(초안)",
+        "usageTerms": "프로젝트 자체 작성",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -171,6 +2205,617 @@
       ],
       "acceptedKanaForms": [
         "かくにん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w110-p1",
+      "wordId": "w110",
+      "senseId": "w110-s1",
+      "readingId": "w110-r1",
+      "acceptedWrittenForms": [
+        "影響"
+      ],
+      "acceptedKanaForms": [
+        "えいきょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w111-p1",
+      "wordId": "w111",
+      "senseId": "w111-s1",
+      "readingId": "w111-r1",
+      "acceptedWrittenForms": [
+        "関係"
+      ],
+      "acceptedKanaForms": [
+        "かんけい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w112-p1",
+      "wordId": "w112",
+      "senseId": "w112-s1",
+      "readingId": "w112-r1",
+      "acceptedWrittenForms": [
+        "経済"
+      ],
+      "acceptedKanaForms": [
+        "けいざい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w113-p1",
+      "wordId": "w113",
+      "senseId": "w113-s1",
+      "readingId": "w113-r1",
+      "acceptedWrittenForms": [
+        "政治"
+      ],
+      "acceptedKanaForms": [
+        "せいじ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w114-p1",
+      "wordId": "w114",
+      "senseId": "w114-s1",
+      "readingId": "w114-r1",
+      "acceptedWrittenForms": [
+        "状況"
+      ],
+      "acceptedKanaForms": [
+        "じょうきょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w115-p1",
+      "wordId": "w115",
+      "senseId": "w115-s1",
+      "readingId": "w115-r1",
+      "acceptedWrittenForms": [
+        "方法"
+      ],
+      "acceptedKanaForms": [
+        "ほうほう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w116-p1",
+      "wordId": "w116",
+      "senseId": "w116-s1",
+      "readingId": "w116-r1",
+      "acceptedWrittenForms": [
+        "目的"
+      ],
+      "acceptedKanaForms": [
+        "もくてき"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w117-p1",
+      "wordId": "w117",
+      "senseId": "w117-s1",
+      "readingId": "w117-r1",
+      "acceptedWrittenForms": [
+        "結果"
+      ],
+      "acceptedKanaForms": [
+        "けっか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w118-p1",
+      "wordId": "w118",
+      "senseId": "w118-s1",
+      "readingId": "w118-r1",
+      "acceptedWrittenForms": [
+        "原因"
+      ],
+      "acceptedKanaForms": [
+        "げんいん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w119-p1",
+      "wordId": "w119",
+      "senseId": "w119-s1",
+      "readingId": "w119-r1",
+      "acceptedWrittenForms": [
+        "判断"
+      ],
+      "acceptedKanaForms": [
+        "はんだん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w120-p1",
+      "wordId": "w120",
+      "senseId": "w120-s1",
+      "readingId": "w120-r1",
+      "acceptedWrittenForms": [
+        "情報"
+      ],
+      "acceptedKanaForms": [
+        "じょうほう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w121-p1",
+      "wordId": "w121",
+      "senseId": "w121-s1",
+      "readingId": "w121-r1",
+      "acceptedWrittenForms": [
+        "技術"
+      ],
+      "acceptedKanaForms": [
+        "ぎじゅつ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w122-p1",
+      "wordId": "w122",
+      "senseId": "w122-s1",
+      "readingId": "w122-r1",
+      "acceptedWrittenForms": [
+        "自然"
+      ],
+      "acceptedKanaForms": [
+        "しぜん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w123-p1",
+      "wordId": "w123",
+      "senseId": "w123-s1",
+      "readingId": "w123-r1",
+      "acceptedWrittenForms": [
+        "習慣"
+      ],
+      "acceptedKanaForms": [
+        "しゅうかん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w124-p1",
+      "wordId": "w124",
+      "senseId": "w124-s1",
+      "readingId": "w124-r1",
+      "acceptedWrittenForms": [
+        "記憶"
+      ],
+      "acceptedKanaForms": [
+        "きおく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w125-p1",
+      "wordId": "w125",
+      "senseId": "w125-s1",
+      "readingId": "w125-r1",
+      "acceptedWrittenForms": [
+        "感情"
+      ],
+      "acceptedKanaForms": [
+        "かんじょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w126-p1",
+      "wordId": "w126",
+      "senseId": "w126-s1",
+      "readingId": "w126-r1",
+      "acceptedWrittenForms": [
+        "態度"
+      ],
+      "acceptedKanaForms": [
+        "たいど"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w127-p1",
+      "wordId": "w127",
+      "senseId": "w127-s1",
+      "readingId": "w127-r1",
+      "acceptedWrittenForms": [
+        "期待"
+      ],
+      "acceptedKanaForms": [
+        "きたい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w128-p1",
+      "wordId": "w128",
+      "senseId": "w128-s1",
+      "readingId": "w128-r1",
+      "acceptedWrittenForms": [
+        "我慢"
+      ],
+      "acceptedKanaForms": [
+        "がまん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w129-p1",
+      "wordId": "w129",
+      "senseId": "w129-s1",
+      "readingId": "w129-r1",
+      "acceptedWrittenForms": [
+        "遠慮"
+      ],
+      "acceptedKanaForms": [
+        "えんりょ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w130-p1",
+      "wordId": "w130",
+      "senseId": "w130-s1",
+      "readingId": "w130-r1",
+      "acceptedWrittenForms": [
+        "参加"
+      ],
+      "acceptedKanaForms": [
+        "さんか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w131-p1",
+      "wordId": "w131",
+      "senseId": "w131-s1",
+      "readingId": "w131-r1",
+      "acceptedWrittenForms": [
+        "連絡"
+      ],
+      "acceptedKanaForms": [
+        "れんらく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w132-p1",
+      "wordId": "w132",
+      "senseId": "w132-s1",
+      "readingId": "w132-r1",
+      "acceptedWrittenForms": [
+        "相談"
+      ],
+      "acceptedKanaForms": [
+        "そうだん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w133-p1",
+      "wordId": "w133",
+      "senseId": "w133-s1",
+      "readingId": "w133-r1",
+      "acceptedWrittenForms": [
+        "発表"
+      ],
+      "acceptedKanaForms": [
+        "はっぴょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w134-p1",
+      "wordId": "w134",
+      "senseId": "w134-s1",
+      "readingId": "w134-r1",
+      "acceptedWrittenForms": [
+        "成功"
+      ],
+      "acceptedKanaForms": [
+        "せいこう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w135-p1",
+      "wordId": "w135",
+      "senseId": "w135-s1",
+      "readingId": "w135-r1",
+      "acceptedWrittenForms": [
+        "失敗"
+      ],
+      "acceptedKanaForms": [
+        "しっぱい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w136-p1",
+      "wordId": "w136",
+      "senseId": "w136-s1",
+      "readingId": "w136-r1",
+      "acceptedWrittenForms": [
+        "増加"
+      ],
+      "acceptedKanaForms": [
+        "ぞうか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w137-p1",
+      "wordId": "w137",
+      "senseId": "w137-s1",
+      "readingId": "w137-r1",
+      "acceptedWrittenForms": [
+        "減少"
+      ],
+      "acceptedKanaForms": [
+        "げんしょう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w138-p1",
+      "wordId": "w138",
+      "senseId": "w138-s1",
+      "readingId": "w138-r1",
+      "acceptedWrittenForms": [
+        "解決"
+      ],
+      "acceptedKanaForms": [
+        "かいけつ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w139-p1",
+      "wordId": "w139",
+      "senseId": "w139-s1",
+      "readingId": "w139-r1",
+      "acceptedWrittenForms": [
+        "比較"
+      ],
+      "acceptedKanaForms": [
+        "ひかく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w140-p1",
+      "wordId": "w140",
+      "senseId": "w140-s1",
+      "readingId": "w140-r1",
+      "acceptedWrittenForms": [
+        "表現"
+      ],
+      "acceptedKanaForms": [
+        "ひょうげん"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w141-p1",
+      "wordId": "w141",
+      "senseId": "w141-s1",
+      "readingId": "w141-r1",
+      "acceptedWrittenForms": [
+        "確か"
+      ],
+      "acceptedKanaForms": [
+        "たしか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w142-p1",
+      "wordId": "w142",
+      "senseId": "w142-s1",
+      "readingId": "w142-r1",
+      "acceptedWrittenForms": [
+        "正直"
+      ],
+      "acceptedKanaForms": [
+        "しょうじき"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w143-p1",
+      "wordId": "w143",
+      "senseId": "w143-s1",
+      "readingId": "w143-r1",
+      "acceptedWrittenForms": [
+        "豊か"
+      ],
+      "acceptedKanaForms": [
+        "ゆたか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w144-p1",
+      "wordId": "w144",
+      "senseId": "w144-s1",
+      "readingId": "w144-r1",
+      "acceptedWrittenForms": [
+        "深い"
+      ],
+      "acceptedKanaForms": [
+        "ふかい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w145-p1",
+      "wordId": "w145",
+      "senseId": "w145-s1",
+      "readingId": "w145-r1",
+      "acceptedWrittenForms": [
+        "珍しい"
+      ],
+      "acceptedKanaForms": [
+        "めずらしい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w146-p1",
+      "wordId": "w146",
+      "senseId": "w146-s1",
+      "readingId": "w146-r1",
+      "acceptedWrittenForms": [
+        "詳しい"
+      ],
+      "acceptedKanaForms": [
+        "くわしい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w147-p1",
+      "wordId": "w147",
+      "senseId": "w147-s1",
+      "readingId": "w147-r1",
+      "acceptedWrittenForms": [
+        "厳しい"
+      ],
+      "acceptedKanaForms": [
+        "きびしい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w148-p1",
+      "wordId": "w148",
+      "senseId": "w148-s1",
+      "readingId": "w148-r1",
+      "acceptedWrittenForms": [
+        "伝える"
+      ],
+      "acceptedKanaForms": [
+        "つたえる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w149-p1",
+      "wordId": "w149",
+      "senseId": "w149-s1",
+      "readingId": "w149-r1",
+      "acceptedWrittenForms": [
+        "守る"
+      ],
+      "acceptedKanaForms": [
+        "まもる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w150-p1",
+      "wordId": "w150",
+      "senseId": "w150-s1",
+      "readingId": "w150-r1",
+      "acceptedWrittenForms": [
+        "認める"
+      ],
+      "acceptedKanaForms": [
+        "みとめる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w151-p1",
+      "wordId": "w151",
+      "senseId": "w151-s1",
+      "readingId": "w151-r1",
+      "acceptedWrittenForms": [
+        "与える"
+      ],
+      "acceptedKanaForms": [
+        "あたえる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w152-p1",
+      "wordId": "w152",
+      "senseId": "w152-s1",
+      "readingId": "w152-r1",
+      "acceptedWrittenForms": [
+        "支える"
+      ],
+      "acceptedKanaForms": [
+        "ささえる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w153-p1",
+      "wordId": "w153",
+      "senseId": "w153-s1",
+      "readingId": "w153-r1",
+      "acceptedWrittenForms": [
+        "迷う"
+      ],
+      "acceptedKanaForms": [
+        "まよう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w154-p1",
+      "wordId": "w154",
+      "senseId": "w154-s1",
+      "readingId": "w154-r1",
+      "acceptedWrittenForms": [
+        "疑う"
+      ],
+      "acceptedKanaForms": [
+        "うたがう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w155-p1",
+      "wordId": "w155",
+      "senseId": "w155-s1",
+      "readingId": "w155-r1",
+      "acceptedWrittenForms": [
+        "なかなか"
+      ],
+      "acceptedKanaForms": [
+        "なかなか"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w156-p1",
+      "wordId": "w156",
+      "senseId": "w156-s1",
+      "readingId": "w156-r1",
+      "acceptedWrittenForms": [
+        "ようやく"
+      ],
+      "acceptedKanaForms": [
+        "ようやく"
       ],
       "status": "draft"
     }

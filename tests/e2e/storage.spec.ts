@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './test';
 
 test('settings survive a reload and drive the home screen', async ({ page }, info) => {
   await page.goto('#/settings');

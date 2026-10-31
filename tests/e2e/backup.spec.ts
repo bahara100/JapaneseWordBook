@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 
 const list = (page: Page) => page.getByRole('list', { name: '단어 목록' });
 

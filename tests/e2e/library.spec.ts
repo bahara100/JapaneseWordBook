@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 
 const isPhone = (page: Page) => (page.viewportSize()?.width ?? 0) < 720;
 const list = (page: Page) => page.getByRole('list', { name: '단어 목록' });

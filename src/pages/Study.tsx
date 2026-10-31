@@ -9,6 +9,7 @@ import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from '../study/dates';
 import { useFavorites } from '../storage/useFavorites';
 import { gradeTyped } from '../study/grading';
+import { frontStyle, typedAnswerForms } from '../study/cardFront';
 import { KanaAnswer } from '../study/KanaAnswer';
 import { SpeakAnswer } from '../study/SpeakAnswer';
 import { ListeningFront, RepeatCard } from '../study/PracticeCards';
@@ -99,22 +100,28 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
   // What was last typed or heard on this card; after a reload, the saved first answer.
   const [lastAnswer, setLastAnswer] = useState<{ text: string; spoken: boolean } | undefined>(
     card.firstEvaluation?.inputText ? { text: card.firstEvaluation.inputText, spoken: card.firstEvaluation.method === 'speech' } : undefined);
-  const image = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.imageAssetId)!;
+  const style = frontStyle(card);
+  const image = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.imageAssetId);
   const audio = card.mediaSnapshots.find(m => m.id === card.promptSnapshot.audioAssetId);
+  const sense = card.wordSnapshot.senses.find(s => s.id === card.promptSnapshot.senseId)!;
   const reading = card.wordSnapshot.readings.find(r => r.id === card.promptSnapshot.readingId)!;
   const wrong = card.state === 'feedback';
 
   const submit = (text: string) => {
     setLastAnswer({ text, spoken: false });
-    void actions.answer(gradeTyped(text, card.promptSnapshot), 'typing', text);
+    void actions.answer(gradeTyped(text, typedAnswerForms(card)), 'typing', text);
   };
 
   return (
     <>
       <div className="card-front">
-        <span className="caption">LOOK · THINK · SAY</span>
-        <img className="illustration" src={mediaUrl(image.path)} alt={image.description} />
-        <h2 className="card-question" tabIndex={-1}>일본어로 무엇일까요?</h2>
+        <span className="caption">{style === 'picture' ? 'LOOK · THINK · SAY' : style === 'reading' ? 'READ · THINK · SAY' : 'MEANING · THINK · SAY'}</span>
+        {style === 'picture' && image && <img className="illustration" src={mediaUrl(image.path)} alt={image.description} />}
+        {style === 'reading' && <p className="front-word" lang="ja">{card.wordSnapshot.written}</p>}
+        {style === 'meaning' && <p className="front-meaning">{sense.korean.join(', ')}<small>{sense.partOfSpeech}</small></p>}
+        <h2 className="card-question" tabIndex={-1}>
+          {style === 'picture' ? '일본어로 무엇일까요?' : style === 'reading' ? '어떻게 읽을까요?' : '일본어로 뭐라고 할까요?'}
+        </h2>
         {wrong ? (
           <>
             <div className="feedback retry" role="status">읽기를 다시 확인해 볼까요?</div>
@@ -125,7 +132,9 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
           </>
         ) : (
           <>
-            <p>그림을 보고 일본어 읽기를 떠올려 보세요.</p>
+            <p>{style === 'picture' ? '그림을 보고 일본어 읽기를 떠올려 보세요.'
+              : style === 'reading' ? '한자의 읽는 법을 히라가나로 답해 보세요.'
+              : '뜻에 맞는 일본어를 떠올려 보세요.'}</p>
             <div className="button-row">
               <SpeakAnswer actions={actions} busy={busy} openTyping={() => setTyping(true)}
                 onHeard={text => setLastAnswer({ text, spoken: true })} />
@@ -264,7 +273,7 @@ function StudyCard({ session, actions, tryRepeat, busy }: {
               <span className="eyebrow">ONE CARD, THREE STEPS</span>
               <h3>천천히, 나의 속도로.</h3>
               <ol className="learning-steps">
-                <li><span>01</span><div>그림으로 떠올려요<small>어떤 단어인지 생각해 보세요.</small></div></li>
+                <li><span>01</span><div>보고 떠올려요<small>그림·한자·뜻을 보고 단어를 생각해 보세요.</small></div></li>
                 <li><span>02</span><div>나의 말로 답해요<small>영문으로 입력하면 가나로 바뀌어요.</small></div></li>
                 <li><span>03</span><div>뒤집어서 확인해요<small>읽기와 뜻, 예문을 익혀요.</small></div></li>
               </ol>

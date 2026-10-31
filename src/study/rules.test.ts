@@ -7,7 +7,13 @@ import { gradeTyped, normalizeAnswer } from './grading';
 import { buildChoices, cardForWord, REVIEW_CAP, selectDailyCards } from './selection';
 import { answerCard, createDailySession, createFavoritesSession, createModeSession, createPracticeSession, endSession, hearDifferent, markHint, missedCards, nextCard, recordTry, retryCard, summarize } from './session';
 
-const n5: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
+const n5Full: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n5/words.json'), 'utf8'));
+/** The original three N5 sample words (猫, 学校, りんご): small, fixed scenarios. */
+const n5: LevelWords = (() => {
+  const words = n5Full.words.filter(w => w.curriculumOrder <= 3);
+  const ids = new Set(words.map(w => w.id));
+  return { ...n5Full, words, prompts: n5Full.prompts.filter(p => ids.has(p.wordId)) };
+})();
 
 /** A level with `count` words, all drafts, in curriculum order x{count}..x1. */
 function level(count: number): LevelWords {
@@ -84,6 +90,13 @@ describe('selectDailyCards', () => {
     const cards = selectDailyCards({ target: 10, content, progress: due, now });
     expect(cards.filter(c => c.kind === 'review')).toHaveLength(8);
     expect(cards).toHaveLength(10);
+  });
+
+  it('fills the whole target from the real level, one card per word', () => {
+    const cards = selectDailyCards({ target: 20, content: n5Full, progress: [], now });
+    expect(cards).toHaveLength(20);
+    expect(new Set(cards.map(c => c.wordSnapshot.id)).size).toBe(20);
+    expect(cards.slice(0, 3).map(c => c.wordSnapshot.written)).toEqual(['猫', '学校', 'りんご']);
   });
 
   it('gives only what exists when there is not enough, without repeats', () => {

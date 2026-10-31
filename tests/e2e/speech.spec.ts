@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 import { fakeSpeech, spoken } from './fakes';
 
 const card = (page: Page) => page.getByRole('article');

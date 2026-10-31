@@ -4,8 +4,10 @@ import { describe, expect, it } from 'vitest';
 import { LEVEL_IDS, type LevelWords } from '../content/types';
 import { buildIndex, normalizeQuery, searchWords } from './search';
 
-const words = LEVEL_IDS.flatMap(level =>
+const allWords = LEVEL_IDS.flatMap(level =>
   (JSON.parse(readFileSync(path.resolve(__dirname, `../../content/${level.toLowerCase()}/words.json`), 'utf8')) as LevelWords).words);
+// Ranking cases below are written against the first three sample words of each level.
+const words = allWords.filter(w => w.curriculumOrder <= 3);
 const index = buildIndex(words);
 const ids = (query: string, level?: Parameters<typeof searchWords>[2]) => searchWords(index, query, level).map(w => w.id);
 
@@ -42,6 +44,14 @@ describe('word search', () => {
   it('applies the level filter together with the query', () => {
     expect(ids('고양이', 'N4')).toEqual([]);
     expect(ids('약속', 'N4')).toEqual(['w004']);
+  });
+
+  it('searches the full word list too', () => {
+    const full = buildIndex(allWords);
+    expect(allWords).toHaveLength(250);
+    expect(searchWords(full, 'taberu').map(w => w.written)).toEqual(['食べる']);
+    expect(searchWords(full, '공항').map(w => w.written)).toEqual(['空港']);
+    expect(searchWords(full, '', 'N1')).toHaveLength(50);
   });
 
   it('returns nothing for no match', () => {

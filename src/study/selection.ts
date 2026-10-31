@@ -20,7 +20,7 @@ export function selectDailyCards({ target, content, progress, now, includeDrafts
   const words = new Map(content.words.map(w => [w.id, w]));
   const media = new Map(content.media.map(m => [m.id, m]));
   const eligible = content.prompts
-    .filter(p => (includeDrafts || p.status === 'reviewed') && words.has(p.wordId) && media.has(p.imageAssetId))
+    .filter(p => (includeDrafts || p.status === 'reviewed') && words.has(p.wordId) && (!p.imageAssetId || media.has(p.imageAssetId)))
     .sort((a, b) => words.get(a.wordId)!.curriculumOrder - words.get(b.wordId)!.curriculumOrder || a.id.localeCompare(b.id));
   const byId = new Map(eligible.map(p => [p.id, p]));
   const seen = new Map(progress.map(p => [p.promptId, p]));
@@ -47,19 +47,20 @@ export function selectDailyCards({ target, content, progress, now, includeDrafts
 
   return picked.map(({ promptId, kind }) => {
     const prompt = byId.get(promptId)!;
-    const mediaSnapshots: MediaAsset[] = [media.get(prompt.imageAssetId)!];
+    const mediaSnapshots: MediaAsset[] = prompt.imageAssetId ? [media.get(prompt.imageAssetId)!] : [];
     if (prompt.audioAssetId && media.has(prompt.audioAssetId)) mediaSnapshots.push(media.get(prompt.audioAssetId)!);
     return { promptSnapshot: prompt, wordSnapshot: words.get(prompt.wordId)!, mediaSnapshots, kind, mode: 'picture', state: 'question' };
   });
 }
 
-/** A study card for one word: its first prompt, with the picture. Used for favorites practice. */
+/** A study card for one word: its first prompt, with its picture if it has one. Used for practice. */
 export function cardForWord(content: LevelWords, wordId: string): SessionCard | undefined {
   const word = content.words.find(w => w.id === wordId);
   const prompt = content.prompts.find(p => p.wordId === wordId);
-  const image = prompt && content.media.find(m => m.id === prompt.imageAssetId);
-  if (!word || !prompt || !image) return undefined;
-  return { promptSnapshot: prompt, wordSnapshot: word, mediaSnapshots: [image], kind: 'review', mode: 'picture', state: 'question' };
+  if (!word || !prompt) return undefined;
+  const image = prompt.imageAssetId ? content.media.find(m => m.id === prompt.imageAssetId) : undefined;
+  if (prompt.imageAssetId && !image) return undefined;
+  return { promptSnapshot: prompt, wordSnapshot: word, mediaSnapshots: image ? [image] : [], kind: 'review', mode: 'picture', state: 'question' };
 }
 
 /**

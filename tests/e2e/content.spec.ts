@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Route } from './test';
 
 test('home shows what the level has ready, from the built content', async ({ page }) => {
   await page.goto('#/home');
@@ -24,11 +24,12 @@ test('content files and pictures are served under the project path', async ({ pa
 });
 
 test('a failed content load says so and can be retried', async ({ page }) => {
-  await page.route('**/content/manifest.json', route => route.abort());
+  const offline = (route: Route) => route.abort();
+  await page.route('**/content/manifest.json', offline);
   await page.goto('#/home');
   await expect(page.getByRole('alert')).toContainText('인터넷 연결을 확인한 뒤 다시 시도해 주세요.');
   await expect(page.getByRole('link', { name: '오늘의 학습 시작' })).toHaveCount(0);
-  await page.unroute('**/content/manifest.json');
+  await page.unroute('**/content/manifest.json', offline);
   await page.getByRole('button', { name: '다시 시도' }).click();
   await expect(page.getByText('준비된 N5 카드 3장 · 검수 전 초안 3장 포함')).toBeVisible();
 });

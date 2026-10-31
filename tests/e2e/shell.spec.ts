@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 
 const SECTIONS = [
   { hash: '#/home', heading: '오늘도, 일본어 한 장.', menu: '홈' },

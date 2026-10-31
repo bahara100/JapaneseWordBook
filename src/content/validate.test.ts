@@ -84,7 +84,7 @@ describe('validateContent', () => {
     (files.words.N5 as Json).prompts.shift();
     const { errors, warnings } = validateContent(files, onDisk);
     expect(errors).toEqual([]);
-    expect(warnings.map(w => `${w.where}: ${w.message}`)).toEqual([
+    expect(warnings.filter(w => w.where === 'w001' || w.where === 'img-cat').map(w => `${w.where}: ${w.message}`)).toEqual([
       'w001: 학습 카드(prompts)가 없는 단어예요.',
       'img-cat: 어떤 카드도 쓰지 않는 매체예요.',
     ]);

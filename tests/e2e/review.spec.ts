@@ -1,4 +1,4 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Page } from './test';
 
 // N5 sample cards in curriculum order: 猫 ねこ, 学校 がっこう, りんご りんご. Study day in Seoul.
 const card = (page: Page) => page.getByRole('article');
