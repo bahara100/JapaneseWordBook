@@ -2824,33 +2824,33 @@
     {
       "id": "img-environment",
       "kind": "image",
-      "path": "media/images/environment.svg",
-      "description": "나무와 푸른 지구",
+      "path": "media/images/card-environment-v1.webp",
+      "description": "새싹이 돋은 작은 지구를 두 손으로 감싼 모습",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-effort",
       "kind": "image",
-      "path": "media/images/effort.svg",
-      "description": "산의 정상을 향해 이어지는 길",
+      "path": "media/images/card-effort-v1.webp",
+      "description": "책을 안고 계단을 한 걸음씩 오르는 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-confirm",
       "kind": "image",
-      "path": "media/images/confirm.svg",
-      "description": "항목에 체크 표시를 하는 종이",
+      "path": "media/images/card-confirm-v1.webp",
+      "description": "체크 항목이 있는 종이를 돋보기로 살펴보는 손",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     }

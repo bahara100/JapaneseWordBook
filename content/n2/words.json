@@ -2818,33 +2818,33 @@
     {
       "id": "img-contribute",
       "kind": "image",
-      "path": "media/images/contribute.svg",
-      "description": "함께 가꾸는 마을의 집",
+      "path": "media/images/card-contribute-v1.webp",
+      "description": "두 사람이 함께 나무 벤치에 판자를 올리는 모습",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-trend",
       "kind": "image",
-      "path": "media/images/trend.svg",
-      "description": "일정한 방향으로 움직이는 선",
+      "path": "media/images/card-trend-v1.webp",
+      "description": "점점 높아지는 막대와 위로 이어지는 화살표",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-improve",
       "kind": "image",
-      "path": "media/images/improve.svg",
-      "description": "점차 높아지는 계단",
+      "path": "media/images/card-improve-v1.webp",
+      "description": "기울어진 의자에서 반듯한 의자로 이어지는 화살표",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     }

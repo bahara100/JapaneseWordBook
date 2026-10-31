@@ -2825,33 +2825,33 @@
     {
       "id": "img-conflict",
       "kind": "image",
-      "path": "media/images/conflict.svg",
-      "description": "두 갈래로 갈라진 길",
+      "path": "media/images/card-conflict-v1.webp",
+      "description": "서로 다른 방향의 화살표 사이에서 고민하는 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-consideration",
       "kind": "image",
-      "path": "media/images/consideration.svg",
-      "description": "다른 사람에게 우산을 씌워 주는 모습",
+      "path": "media/images/card-consideration-v1.webp",
+      "description": "지팡이를 짚은 사람에게 빈자리를 권하는 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-breakthrough",
       "kind": "image",
-      "path": "media/images/breakthrough.svg",
-      "description": "열린 문을 통과하는 화살표",
+      "path": "media/images/card-breakthrough-v1.webp",
+      "description": "막힌 벽의 열린 틈을 지나 앞으로 나아가는 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     }

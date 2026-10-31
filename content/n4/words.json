@@ -2817,33 +2817,33 @@
     {
       "id": "img-promise",
       "kind": "image",
-      "path": "media/images/promise.svg",
-      "description": "두 사람이 손을 맞잡는 모습",
+      "path": "media/images/card-promise-v1.webp",
+      "description": "두 손의 새끼손가락을 서로 걸고 있는 모습",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-prepare",
       "kind": "image",
-      "path": "media/images/prepare.svg",
-      "description": "짐을 챙긴 여행 가방",
+      "path": "media/images/card-prepare-v1.webp",
+      "description": "열린 여행 가방에 옷을 차곡차곡 넣는 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     },
     {
       "id": "img-drive",
       "kind": "image",
-      "path": "media/images/drive.svg",
-      "description": "도로 위의 자동차",
+      "path": "media/images/card-drive-v1.webp",
+      "description": "자동차 안에서 두 손으로 핸들을 잡은 사람",
       "provenance": {
-        "author": "하루일본어 편집부(초안)",
-        "usageTerms": "프로젝트 자체 작성 SVG",
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
         "status": "draft"
       }
     }
