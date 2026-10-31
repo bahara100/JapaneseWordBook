@@ -1,0 +1,15 @@
+{
+  "key": "room",
+  "id": "w030",
+  "level": "N5",
+  "written": "部屋",
+  "kana": "へや",
+  "meaning": "방",
+  "scene": "One compact cutaway view of a simple cozy room corner with two cream interior walls and a small pale wood floor base. Include one sage-covered single bed, a small cream desk with an unmarked closed book, a simple chair and one window with terracotta curtains. Minimal furnishings, clear room interior, lightly angled flat 2D perspective, no realistic 3D rendering, no wall text, pictures or outside scenery. The whole cutaway vignette is isolated on transparency.",
+  "alt": "침대와 책상, 창문이 놓인 아늑한 실내 공간",
+  "file": "../art-direction-2026-10-29/assets/card-room-v1.png",
+  "proposedMediaId": "img-room",
+  "proposedPublicPath": "media/images/card-room-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-81adbd86-1672-440d-a346-f45254cef030.png",
+  "generationMode": "built-in image_gen"
+}

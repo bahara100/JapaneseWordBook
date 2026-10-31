@@ -1,0 +1,15 @@
+{
+  "key": "book",
+  "id": "w017",
+  "level": "N5",
+  "written": "本",
+  "kana": "ほん",
+  "meaning": "책",
+  "scene": "One closed, slightly thick hardcover book in a gentle three-quarter view. Warm terracotta blank cover, cream paper edges, small sage ribbon bookmark peeking out. Clean recognizable book silhouette, no title, no lines, no letters, no other objects.",
+  "alt": "책갈피가 살짝 보이는 한 권의 책",
+  "file": "../art-direction-2026-10-29/assets/card-book-v1.png",
+  "proposedMediaId": "img-book",
+  "proposedPublicPath": "media/images/card-book-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-a599c4e8-89c7-4676-b8c1-ea6b4ca16ab6.png",
+  "generationMode": "built-in image_gen"
+}

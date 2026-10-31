@@ -1,0 +1,2031 @@
+{
+  "date": "2026-10-31",
+  "sourceWordCount": 250,
+  "readyCount": 45,
+  "pendingCount": 205,
+  "note": "Design image readiness; production integration is separate.",
+  "levels": {
+    "N5": {
+      "ready": 33,
+      "pending": 17
+    },
+    "N4": {
+      "ready": 3,
+      "pending": 47
+    },
+    "N3": {
+      "ready": 3,
+      "pending": 47
+    },
+    "N2": {
+      "ready": 3,
+      "pending": 47
+    },
+    "N1": {
+      "ready": 3,
+      "pending": 47
+    }
+  },
+  "words": [
+    {
+      "wordId": "w001",
+      "level": "N5",
+      "written": "猫",
+      "kana": "ねこ",
+      "meaning": "고양이",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w002",
+      "level": "N5",
+      "written": "学校",
+      "kana": "がっこう",
+      "meaning": "학교",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w003",
+      "level": "N5",
+      "written": "りんご",
+      "kana": "りんご",
+      "meaning": "사과",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w016",
+      "level": "N5",
+      "written": "水",
+      "kana": "みず",
+      "meaning": "물",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w017",
+      "level": "N5",
+      "written": "本",
+      "kana": "ほん",
+      "meaning": "책",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w018",
+      "level": "N5",
+      "written": "友達",
+      "kana": "ともだち",
+      "meaning": "친구",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w019",
+      "level": "N5",
+      "written": "先生",
+      "kana": "せんせい",
+      "meaning": "선생님",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w020",
+      "level": "N5",
+      "written": "学生",
+      "kana": "がくせい",
+      "meaning": "학생",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w021",
+      "level": "N5",
+      "written": "電車",
+      "kana": "でんしゃ",
+      "meaning": "전철",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w022",
+      "level": "N5",
+      "written": "駅",
+      "kana": "えき",
+      "meaning": "역",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w023",
+      "level": "N5",
+      "written": "時間",
+      "kana": "じかん",
+      "meaning": "시간",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w024",
+      "level": "N5",
+      "written": "天気",
+      "kana": "てんき",
+      "meaning": "날씨",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w025",
+      "level": "N5",
+      "written": "雨",
+      "kana": "あめ",
+      "meaning": "비",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w026",
+      "level": "N5",
+      "written": "犬",
+      "kana": "いぬ",
+      "meaning": "개",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w027",
+      "level": "N5",
+      "written": "魚",
+      "kana": "さかな",
+      "meaning": "생선 / 물고기",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w028",
+      "level": "N5",
+      "written": "肉",
+      "kana": "にく",
+      "meaning": "고기",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w029",
+      "level": "N5",
+      "written": "家",
+      "kana": "いえ",
+      "meaning": "집",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w030",
+      "level": "N5",
+      "written": "部屋",
+      "kana": "へや",
+      "meaning": "방",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w031",
+      "level": "N5",
+      "written": "名前",
+      "kana": "なまえ",
+      "meaning": "이름",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w032",
+      "level": "N5",
+      "written": "電話",
+      "kana": "でんわ",
+      "meaning": "전화",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w033",
+      "level": "N5",
+      "written": "お金",
+      "kana": "おかね",
+      "meaning": "돈",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w034",
+      "level": "N5",
+      "written": "車",
+      "kana": "くるま",
+      "meaning": "자동차 / 차",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w035",
+      "level": "N5",
+      "written": "道",
+      "kana": "みち",
+      "meaning": "길",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w036",
+      "level": "N5",
+      "written": "朝",
+      "kana": "あさ",
+      "meaning": "아침",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w037",
+      "level": "N5",
+      "written": "夜",
+      "kana": "よる",
+      "meaning": "밤",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w038",
+      "level": "N5",
+      "written": "今日",
+      "kana": "きょう",
+      "meaning": "오늘",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w039",
+      "level": "N5",
+      "written": "明日",
+      "kana": "あした",
+      "meaning": "내일",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w040",
+      "level": "N5",
+      "written": "食べる",
+      "kana": "たべる",
+      "meaning": "먹다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w041",
+      "level": "N5",
+      "written": "飲む",
+      "kana": "のむ",
+      "meaning": "마시다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w042",
+      "level": "N5",
+      "written": "行く",
+      "kana": "いく",
+      "meaning": "가다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w043",
+      "level": "N5",
+      "written": "来る",
+      "kana": "くる",
+      "meaning": "오다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w044",
+      "level": "N5",
+      "written": "見る",
+      "kana": "みる",
+      "meaning": "보다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w045",
+      "level": "N5",
+      "written": "聞く",
+      "kana": "きく",
+      "meaning": "듣다 / 묻다",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w046",
+      "level": "N5",
+      "written": "読む",
+      "kana": "よむ",
+      "meaning": "읽다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w047",
+      "level": "N5",
+      "written": "書く",
+      "kana": "かく",
+      "meaning": "쓰다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w048",
+      "level": "N5",
+      "written": "話す",
+      "kana": "はなす",
+      "meaning": "말하다 / 이야기하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w049",
+      "level": "N5",
+      "written": "買う",
+      "kana": "かう",
+      "meaning": "사다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w050",
+      "level": "N5",
+      "written": "起きる",
+      "kana": "おきる",
+      "meaning": "일어나다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w051",
+      "level": "N5",
+      "written": "寝る",
+      "kana": "ねる",
+      "meaning": "자다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w052",
+      "level": "N5",
+      "written": "大きい",
+      "kana": "おおきい",
+      "meaning": "크다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w053",
+      "level": "N5",
+      "written": "小さい",
+      "kana": "ちいさい",
+      "meaning": "작다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w054",
+      "level": "N5",
+      "written": "新しい",
+      "kana": "あたらしい",
+      "meaning": "새롭다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w055",
+      "level": "N5",
+      "written": "高い",
+      "kana": "たかい",
+      "meaning": "비싸다 / 높다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w056",
+      "level": "N5",
+      "written": "安い",
+      "kana": "やすい",
+      "meaning": "싸다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w057",
+      "level": "N5",
+      "written": "暑い",
+      "kana": "あつい",
+      "meaning": "덥다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w058",
+      "level": "N5",
+      "written": "寒い",
+      "kana": "さむい",
+      "meaning": "춥다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w059",
+      "level": "N5",
+      "written": "好き",
+      "kana": "すき",
+      "meaning": "좋아함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w060",
+      "level": "N5",
+      "written": "元気",
+      "kana": "げんき",
+      "meaning": "건강함 / 활기참",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w061",
+      "level": "N5",
+      "written": "静か",
+      "kana": "しずか",
+      "meaning": "조용함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w062",
+      "level": "N5",
+      "written": "テレビ",
+      "kana": "テレビ",
+      "meaning": "텔레비전",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w004",
+      "level": "N4",
+      "written": "約束",
+      "kana": "やくそく",
+      "meaning": "약속",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w005",
+      "level": "N4",
+      "written": "準備",
+      "kana": "じゅんび",
+      "meaning": "준비",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w006",
+      "level": "N4",
+      "written": "運転",
+      "kana": "うんてん",
+      "meaning": "운전",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w063",
+      "level": "N4",
+      "written": "経験",
+      "kana": "けいけん",
+      "meaning": "경험",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w064",
+      "level": "N4",
+      "written": "説明",
+      "kana": "せつめい",
+      "meaning": "설명",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w065",
+      "level": "N4",
+      "written": "予定",
+      "kana": "よてい",
+      "meaning": "예정",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w066",
+      "level": "N4",
+      "written": "旅行",
+      "kana": "りょこう",
+      "meaning": "여행",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w067",
+      "level": "N4",
+      "written": "会議",
+      "kana": "かいぎ",
+      "meaning": "회의",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w068",
+      "level": "N4",
+      "written": "趣味",
+      "kana": "しゅみ",
+      "meaning": "취미",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w069",
+      "level": "N4",
+      "written": "興味",
+      "kana": "きょうみ",
+      "meaning": "흥미 / 관심",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w070",
+      "level": "N4",
+      "written": "意見",
+      "kana": "いけん",
+      "meaning": "의견",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w071",
+      "level": "N4",
+      "written": "理由",
+      "kana": "りゆう",
+      "meaning": "이유",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w072",
+      "level": "N4",
+      "written": "文化",
+      "kana": "ぶんか",
+      "meaning": "문화",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w073",
+      "level": "N4",
+      "written": "社会",
+      "kana": "しゃかい",
+      "meaning": "사회",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w074",
+      "level": "N4",
+      "written": "安全",
+      "kana": "あんぜん",
+      "meaning": "안전",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w075",
+      "level": "N4",
+      "written": "危険",
+      "kana": "きけん",
+      "meaning": "위험",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w076",
+      "level": "N4",
+      "written": "必要",
+      "kana": "ひつよう",
+      "meaning": "필요",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w077",
+      "level": "N4",
+      "written": "特別",
+      "kana": "とくべつ",
+      "meaning": "특별",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w078",
+      "level": "N4",
+      "written": "簡単",
+      "kana": "かんたん",
+      "meaning": "간단",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w079",
+      "level": "N4",
+      "written": "複雑",
+      "kana": "ふくざつ",
+      "meaning": "복잡",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w080",
+      "level": "N4",
+      "written": "丁寧",
+      "kana": "ていねい",
+      "meaning": "정중함 / 꼼꼼함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w081",
+      "level": "N4",
+      "written": "熱心",
+      "kana": "ねっしん",
+      "meaning": "열심",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w082",
+      "level": "N4",
+      "written": "便利",
+      "kana": "べんり",
+      "meaning": "편리",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w083",
+      "level": "N4",
+      "written": "集める",
+      "kana": "あつめる",
+      "meaning": "모으다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w084",
+      "level": "N4",
+      "written": "届ける",
+      "kana": "とどける",
+      "meaning": "가져다주다 / 신고하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w085",
+      "level": "N4",
+      "written": "調べる",
+      "kana": "しらべる",
+      "meaning": "조사하다 / 찾아보다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w086",
+      "level": "N4",
+      "written": "間に合う",
+      "kana": "まにあう",
+      "meaning": "시간에 맞추다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w087",
+      "level": "N4",
+      "written": "決める",
+      "kana": "きめる",
+      "meaning": "정하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w088",
+      "level": "N4",
+      "written": "続ける",
+      "kana": "つづける",
+      "meaning": "계속하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w089",
+      "level": "N4",
+      "written": "増える",
+      "kana": "ふえる",
+      "meaning": "늘다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w090",
+      "level": "N4",
+      "written": "減る",
+      "kana": "へる",
+      "meaning": "줄다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w091",
+      "level": "N4",
+      "written": "壊れる",
+      "kana": "こわれる",
+      "meaning": "부서지다 / 고장 나다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w092",
+      "level": "N4",
+      "written": "謝る",
+      "kana": "あやまる",
+      "meaning": "사과하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w093",
+      "level": "N4",
+      "written": "褒める",
+      "kana": "ほめる",
+      "meaning": "칭찬하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w094",
+      "level": "N4",
+      "written": "選ぶ",
+      "kana": "えらぶ",
+      "meaning": "고르다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w095",
+      "level": "N4",
+      "written": "比べる",
+      "kana": "くらべる",
+      "meaning": "비교하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w096",
+      "level": "N4",
+      "written": "慣れる",
+      "kana": "なれる",
+      "meaning": "익숙해지다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w097",
+      "level": "N4",
+      "written": "楽しみ",
+      "kana": "たのしみ",
+      "meaning": "기대 / 즐거움",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w098",
+      "level": "N4",
+      "written": "景色",
+      "kana": "けしき",
+      "meaning": "경치",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w099",
+      "level": "N4",
+      "written": "季節",
+      "kana": "きせつ",
+      "meaning": "계절",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w100",
+      "level": "N4",
+      "written": "空港",
+      "kana": "くうこう",
+      "meaning": "공항",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w101",
+      "level": "N4",
+      "written": "病院",
+      "kana": "びょういん",
+      "meaning": "병원",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w102",
+      "level": "N4",
+      "written": "薬",
+      "kana": "くすり",
+      "meaning": "약",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w103",
+      "level": "N4",
+      "written": "地図",
+      "kana": "ちず",
+      "meaning": "지도",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w104",
+      "level": "N4",
+      "written": "財布",
+      "kana": "さいふ",
+      "meaning": "지갑",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w105",
+      "level": "N4",
+      "written": "荷物",
+      "kana": "にもつ",
+      "meaning": "짐",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w106",
+      "level": "N4",
+      "written": "留守",
+      "kana": "るす",
+      "meaning": "부재중",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w107",
+      "level": "N4",
+      "written": "将来",
+      "kana": "しょうらい",
+      "meaning": "장래",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w108",
+      "level": "N4",
+      "written": "機会",
+      "kana": "きかい",
+      "meaning": "기회",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w109",
+      "level": "N4",
+      "written": "ほとんど",
+      "kana": "ほとんど",
+      "meaning": "거의",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w007",
+      "level": "N3",
+      "written": "環境",
+      "kana": "かんきょう",
+      "meaning": "환경",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w008",
+      "level": "N3",
+      "written": "努力",
+      "kana": "どりょく",
+      "meaning": "노력",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w009",
+      "level": "N3",
+      "written": "確認",
+      "kana": "かくにん",
+      "meaning": "확인",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w110",
+      "level": "N3",
+      "written": "影響",
+      "kana": "えいきょう",
+      "meaning": "영향",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w111",
+      "level": "N3",
+      "written": "関係",
+      "kana": "かんけい",
+      "meaning": "관계",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w112",
+      "level": "N3",
+      "written": "経済",
+      "kana": "けいざい",
+      "meaning": "경제",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w113",
+      "level": "N3",
+      "written": "政治",
+      "kana": "せいじ",
+      "meaning": "정치",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w114",
+      "level": "N3",
+      "written": "状況",
+      "kana": "じょうきょう",
+      "meaning": "상황",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w115",
+      "level": "N3",
+      "written": "方法",
+      "kana": "ほうほう",
+      "meaning": "방법",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w116",
+      "level": "N3",
+      "written": "目的",
+      "kana": "もくてき",
+      "meaning": "목적",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w117",
+      "level": "N3",
+      "written": "結果",
+      "kana": "けっか",
+      "meaning": "결과",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w118",
+      "level": "N3",
+      "written": "原因",
+      "kana": "げんいん",
+      "meaning": "원인",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w119",
+      "level": "N3",
+      "written": "判断",
+      "kana": "はんだん",
+      "meaning": "판단",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w120",
+      "level": "N3",
+      "written": "情報",
+      "kana": "じょうほう",
+      "meaning": "정보",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w121",
+      "level": "N3",
+      "written": "技術",
+      "kana": "ぎじゅつ",
+      "meaning": "기술",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w122",
+      "level": "N3",
+      "written": "自然",
+      "kana": "しぜん",
+      "meaning": "자연",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w123",
+      "level": "N3",
+      "written": "習慣",
+      "kana": "しゅうかん",
+      "meaning": "습관",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w124",
+      "level": "N3",
+      "written": "記憶",
+      "kana": "きおく",
+      "meaning": "기억",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w125",
+      "level": "N3",
+      "written": "感情",
+      "kana": "かんじょう",
+      "meaning": "감정",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w126",
+      "level": "N3",
+      "written": "態度",
+      "kana": "たいど",
+      "meaning": "태도",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w127",
+      "level": "N3",
+      "written": "期待",
+      "kana": "きたい",
+      "meaning": "기대",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w128",
+      "level": "N3",
+      "written": "我慢",
+      "kana": "がまん",
+      "meaning": "참음 / 인내",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w129",
+      "level": "N3",
+      "written": "遠慮",
+      "kana": "えんりょ",
+      "meaning": "사양 / 조심",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w130",
+      "level": "N3",
+      "written": "参加",
+      "kana": "さんか",
+      "meaning": "참가",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w131",
+      "level": "N3",
+      "written": "連絡",
+      "kana": "れんらく",
+      "meaning": "연락",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w132",
+      "level": "N3",
+      "written": "相談",
+      "kana": "そうだん",
+      "meaning": "상담 / 의논",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w133",
+      "level": "N3",
+      "written": "発表",
+      "kana": "はっぴょう",
+      "meaning": "발표",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w134",
+      "level": "N3",
+      "written": "成功",
+      "kana": "せいこう",
+      "meaning": "성공",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w135",
+      "level": "N3",
+      "written": "失敗",
+      "kana": "しっぱい",
+      "meaning": "실패",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w136",
+      "level": "N3",
+      "written": "増加",
+      "kana": "ぞうか",
+      "meaning": "증가",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w137",
+      "level": "N3",
+      "written": "減少",
+      "kana": "げんしょう",
+      "meaning": "감소",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w138",
+      "level": "N3",
+      "written": "解決",
+      "kana": "かいけつ",
+      "meaning": "해결",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w139",
+      "level": "N3",
+      "written": "比較",
+      "kana": "ひかく",
+      "meaning": "비교",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w140",
+      "level": "N3",
+      "written": "表現",
+      "kana": "ひょうげん",
+      "meaning": "표현",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w141",
+      "level": "N3",
+      "written": "確か",
+      "kana": "たしか",
+      "meaning": "확실함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w142",
+      "level": "N3",
+      "written": "正直",
+      "kana": "しょうじき",
+      "meaning": "정직함 / 솔직함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w143",
+      "level": "N3",
+      "written": "豊か",
+      "kana": "ゆたか",
+      "meaning": "풍부함 / 풍요로움",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w144",
+      "level": "N3",
+      "written": "深い",
+      "kana": "ふかい",
+      "meaning": "깊다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w145",
+      "level": "N3",
+      "written": "珍しい",
+      "kana": "めずらしい",
+      "meaning": "드물다 / 희귀하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w146",
+      "level": "N3",
+      "written": "詳しい",
+      "kana": "くわしい",
+      "meaning": "자세하다 / 잘 알다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w147",
+      "level": "N3",
+      "written": "厳しい",
+      "kana": "きびしい",
+      "meaning": "엄하다 / 혹독하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w148",
+      "level": "N3",
+      "written": "伝える",
+      "kana": "つたえる",
+      "meaning": "전하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w149",
+      "level": "N3",
+      "written": "守る",
+      "kana": "まもる",
+      "meaning": "지키다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w150",
+      "level": "N3",
+      "written": "認める",
+      "kana": "みとめる",
+      "meaning": "인정하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w151",
+      "level": "N3",
+      "written": "与える",
+      "kana": "あたえる",
+      "meaning": "주다 / 부여하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w152",
+      "level": "N3",
+      "written": "支える",
+      "kana": "ささえる",
+      "meaning": "지탱하다 / 지지하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w153",
+      "level": "N3",
+      "written": "迷う",
+      "kana": "まよう",
+      "meaning": "헤매다 / 망설이다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w154",
+      "level": "N3",
+      "written": "疑う",
+      "kana": "うたがう",
+      "meaning": "의심하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w155",
+      "level": "N3",
+      "written": "なかなか",
+      "kana": "なかなか",
+      "meaning": "좀처럼 / 꽤",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w156",
+      "level": "N3",
+      "written": "ようやく",
+      "kana": "ようやく",
+      "meaning": "겨우 / 마침내",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w010",
+      "level": "N2",
+      "written": "貢献",
+      "kana": "こうけん",
+      "meaning": "공헌 / 기여",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w011",
+      "level": "N2",
+      "written": "傾向",
+      "kana": "けいこう",
+      "meaning": "경향",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w012",
+      "level": "N2",
+      "written": "改善",
+      "kana": "かいぜん",
+      "meaning": "개선",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w157",
+      "level": "N2",
+      "written": "維持",
+      "kana": "いじ",
+      "meaning": "유지",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w158",
+      "level": "N2",
+      "written": "確保",
+      "kana": "かくほ",
+      "meaning": "확보",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w159",
+      "level": "N2",
+      "written": "実施",
+      "kana": "じっし",
+      "meaning": "실시",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w160",
+      "level": "N2",
+      "written": "対策",
+      "kana": "たいさく",
+      "meaning": "대책",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w161",
+      "level": "N2",
+      "written": "範囲",
+      "kana": "はんい",
+      "meaning": "범위",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w162",
+      "level": "N2",
+      "written": "基準",
+      "kana": "きじゅん",
+      "meaning": "기준",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w163",
+      "level": "N2",
+      "written": "傾く",
+      "kana": "かたむく",
+      "meaning": "기울다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w164",
+      "level": "N2",
+      "written": "頼る",
+      "kana": "たよる",
+      "meaning": "의지하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w165",
+      "level": "N2",
+      "written": "補う",
+      "kana": "おぎなう",
+      "meaning": "보충하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w166",
+      "level": "N2",
+      "written": "異なる",
+      "kana": "ことなる",
+      "meaning": "다르다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w167",
+      "level": "N2",
+      "written": "含む",
+      "kana": "ふくむ",
+      "meaning": "포함하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w168",
+      "level": "N2",
+      "written": "及ぼす",
+      "kana": "およぼす",
+      "meaning": "(영향을) 미치다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w169",
+      "level": "N2",
+      "written": "占める",
+      "kana": "しめる",
+      "meaning": "차지하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w170",
+      "level": "N2",
+      "written": "備える",
+      "kana": "そなえる",
+      "meaning": "대비하다 / 갖추다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w171",
+      "level": "N2",
+      "written": "抱える",
+      "kana": "かかえる",
+      "meaning": "안다 / 떠안다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w172",
+      "level": "N2",
+      "written": "訪れる",
+      "kana": "おとずれる",
+      "meaning": "방문하다 / 찾아오다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w173",
+      "level": "N2",
+      "written": "慎重",
+      "kana": "しんちょう",
+      "meaning": "신중",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w174",
+      "level": "N2",
+      "written": "適切",
+      "kana": "てきせつ",
+      "meaning": "적절",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w175",
+      "level": "N2",
+      "written": "明確",
+      "kana": "めいかく",
+      "meaning": "명확",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w176",
+      "level": "N2",
+      "written": "深刻",
+      "kana": "しんこく",
+      "meaning": "심각",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w177",
+      "level": "N2",
+      "written": "柔軟",
+      "kana": "じゅうなん",
+      "meaning": "유연",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w178",
+      "level": "N2",
+      "written": "率直",
+      "kana": "そっちょく",
+      "meaning": "솔직",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w179",
+      "level": "N2",
+      "written": "曖昧",
+      "kana": "あいまい",
+      "meaning": "애매",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w180",
+      "level": "N2",
+      "written": "懸命",
+      "kana": "けんめい",
+      "meaning": "힘껏 함 / 열심",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w181",
+      "level": "N2",
+      "written": "余裕",
+      "kana": "よゆう",
+      "meaning": "여유",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w182",
+      "level": "N2",
+      "written": "印象",
+      "kana": "いんしょう",
+      "meaning": "인상",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w183",
+      "level": "N2",
+      "written": "価値",
+      "kana": "かち",
+      "meaning": "가치",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w184",
+      "level": "N2",
+      "written": "資源",
+      "kana": "しげん",
+      "meaning": "자원",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w185",
+      "level": "N2",
+      "written": "需要",
+      "kana": "じゅよう",
+      "meaning": "수요",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w186",
+      "level": "N2",
+      "written": "供給",
+      "kana": "きょうきゅう",
+      "meaning": "공급",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w187",
+      "level": "N2",
+      "written": "分析",
+      "kana": "ぶんせき",
+      "meaning": "분석",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w188",
+      "level": "N2",
+      "written": "検討",
+      "kana": "けんとう",
+      "meaning": "검토",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w189",
+      "level": "N2",
+      "written": "承認",
+      "kana": "しょうにん",
+      "meaning": "승인",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w190",
+      "level": "N2",
+      "written": "要求",
+      "kana": "ようきゅう",
+      "meaning": "요구",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w191",
+      "level": "N2",
+      "written": "批判",
+      "kana": "ひはん",
+      "meaning": "비판",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w192",
+      "level": "N2",
+      "written": "主張",
+      "kana": "しゅちょう",
+      "meaning": "주장",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w193",
+      "level": "N2",
+      "written": "克服",
+      "kana": "こくふく",
+      "meaning": "극복",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w194",
+      "level": "N2",
+      "written": "獲得",
+      "kana": "かくとく",
+      "meaning": "획득",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w195",
+      "level": "N2",
+      "written": "拡大",
+      "kana": "かくだい",
+      "meaning": "확대",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w196",
+      "level": "N2",
+      "written": "縮小",
+      "kana": "しゅくしょう",
+      "meaning": "축소",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w197",
+      "level": "N2",
+      "written": "一致",
+      "kana": "いっち",
+      "meaning": "일치",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w198",
+      "level": "N2",
+      "written": "衝突",
+      "kana": "しょうとつ",
+      "meaning": "충돌",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w199",
+      "level": "N2",
+      "written": "怠ける",
+      "kana": "なまける",
+      "meaning": "게으름 피우다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w200",
+      "level": "N2",
+      "written": "憧れる",
+      "kana": "あこがれる",
+      "meaning": "동경하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w201",
+      "level": "N2",
+      "written": "改めて",
+      "kana": "あらためて",
+      "meaning": "다시 / 새삼",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w202",
+      "level": "N2",
+      "written": "いわゆる",
+      "kana": "いわゆる",
+      "meaning": "이른바",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w203",
+      "level": "N2",
+      "written": "さっぱり",
+      "kana": "さっぱり",
+      "meaning": "전혀 / 산뜻함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w013",
+      "level": "N1",
+      "written": "葛藤",
+      "kana": "かっとう",
+      "meaning": "갈등",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w014",
+      "level": "N1",
+      "written": "配慮",
+      "kana": "はいりょ",
+      "meaning": "배려",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w015",
+      "level": "N1",
+      "written": "打開",
+      "kana": "だかい",
+      "meaning": "타개 / 해결의 실마리를 엶",
+      "imageStatus": "ready"
+    },
+    {
+      "wordId": "w204",
+      "level": "N1",
+      "written": "懸念",
+      "kana": "けねん",
+      "meaning": "우려",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w205",
+      "level": "N1",
+      "written": "把握",
+      "kana": "はあく",
+      "meaning": "파악",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w206",
+      "level": "N1",
+      "written": "妥協",
+      "kana": "だきょう",
+      "meaning": "타협",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w207",
+      "level": "N1",
+      "written": "該当",
+      "kana": "がいとう",
+      "meaning": "해당",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w208",
+      "level": "N1",
+      "written": "抜本的",
+      "kana": "ばっぽんてき",
+      "meaning": "근본적",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w209",
+      "level": "N1",
+      "written": "顕著",
+      "kana": "けんちょ",
+      "meaning": "현저함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w210",
+      "level": "N1",
+      "written": "緻密",
+      "kana": "ちみつ",
+      "meaning": "치밀함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w211",
+      "level": "N1",
+      "written": "斬新",
+      "kana": "ざんしん",
+      "meaning": "참신함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w212",
+      "level": "N1",
+      "written": "頻繁",
+      "kana": "ひんぱん",
+      "meaning": "빈번함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w213",
+      "level": "N1",
+      "written": "円滑",
+      "kana": "えんかつ",
+      "meaning": "원활함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w214",
+      "level": "N1",
+      "written": "漠然",
+      "kana": "ばくぜん",
+      "meaning": "막연함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w215",
+      "level": "N1",
+      "written": "貫く",
+      "kana": "つらぬく",
+      "meaning": "관철하다 / 꿰뚫다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w216",
+      "level": "N1",
+      "written": "培う",
+      "kana": "つちかう",
+      "meaning": "기르다 / 배양하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w217",
+      "level": "N1",
+      "written": "損なう",
+      "kana": "そこなう",
+      "meaning": "해치다 / 손상하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w218",
+      "level": "N1",
+      "written": "促す",
+      "kana": "うながす",
+      "meaning": "재촉하다 / 촉진하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w219",
+      "level": "N1",
+      "written": "委ねる",
+      "kana": "ゆだねる",
+      "meaning": "맡기다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w220",
+      "level": "N1",
+      "written": "携わる",
+      "kana": "たずさわる",
+      "meaning": "종사하다 / 관여하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w221",
+      "level": "N1",
+      "written": "覆す",
+      "kana": "くつがえす",
+      "meaning": "뒤집다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w222",
+      "level": "N1",
+      "written": "賄う",
+      "kana": "まかなう",
+      "meaning": "조달하다 / 충당하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w223",
+      "level": "N1",
+      "written": "阻む",
+      "kana": "はばむ",
+      "meaning": "저지하다 / 가로막다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w224",
+      "level": "N1",
+      "written": "示唆",
+      "kana": "しさ",
+      "meaning": "시사",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w225",
+      "level": "N1",
+      "written": "是正",
+      "kana": "ぜせい",
+      "meaning": "시정",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w226",
+      "level": "N1",
+      "written": "踏襲",
+      "kana": "とうしゅう",
+      "meaning": "답습",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w227",
+      "level": "N1",
+      "written": "網羅",
+      "kana": "もうら",
+      "meaning": "망라",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w228",
+      "level": "N1",
+      "written": "模索",
+      "kana": "もさく",
+      "meaning": "모색",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w229",
+      "level": "N1",
+      "written": "逸脱",
+      "kana": "いつだつ",
+      "meaning": "일탈",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w230",
+      "level": "N1",
+      "written": "介入",
+      "kana": "かいにゅう",
+      "meaning": "개입",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w231",
+      "level": "N1",
+      "written": "拘束",
+      "kana": "こうそく",
+      "meaning": "구속",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w232",
+      "level": "N1",
+      "written": "奨励",
+      "kana": "しょうれい",
+      "meaning": "장려",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w233",
+      "level": "N1",
+      "written": "収束",
+      "kana": "しゅうそく",
+      "meaning": "수습 / 수렴",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w234",
+      "level": "N1",
+      "written": "均衡",
+      "kana": "きんこう",
+      "meaning": "균형",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w235",
+      "level": "N1",
+      "written": "弊害",
+      "kana": "へいがい",
+      "meaning": "폐해",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w236",
+      "level": "N1",
+      "written": "根拠",
+      "kana": "こんきょ",
+      "meaning": "근거",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w237",
+      "level": "N1",
+      "written": "概要",
+      "kana": "がいよう",
+      "meaning": "개요",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w238",
+      "level": "N1",
+      "written": "趣旨",
+      "kana": "しゅし",
+      "meaning": "취지",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w239",
+      "level": "N1",
+      "written": "兆し",
+      "kana": "きざし",
+      "meaning": "조짐 / 징후",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w240",
+      "level": "N1",
+      "written": "拍子",
+      "kana": "ひょうし",
+      "meaning": "박자 / 순간",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w241",
+      "level": "N1",
+      "written": "矛盾",
+      "kana": "むじゅん",
+      "meaning": "모순",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w242",
+      "level": "N1",
+      "written": "寛容",
+      "kana": "かんよう",
+      "meaning": "관용 / 너그러움",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w243",
+      "level": "N1",
+      "written": "謙虚",
+      "kana": "けんきょ",
+      "meaning": "겸허함",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w244",
+      "level": "N1",
+      "written": "潔い",
+      "kana": "いさぎよい",
+      "meaning": "깨끗하다 / 미련 없다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w245",
+      "level": "N1",
+      "written": "煩わしい",
+      "kana": "わずらわしい",
+      "meaning": "번거롭다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w246",
+      "level": "N1",
+      "written": "著しい",
+      "kana": "いちじるしい",
+      "meaning": "현저하다",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w247",
+      "level": "N1",
+      "written": "名残",
+      "kana": "なごり",
+      "meaning": "자취 / 여운",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w248",
+      "level": "N1",
+      "written": "あいにく",
+      "kana": "あいにく",
+      "meaning": "공교롭게도",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w249",
+      "level": "N1",
+      "written": "おびただしい",
+      "kana": "おびただしい",
+      "meaning": "엄청나다(수량)",
+      "imageStatus": "pending"
+    },
+    {
+      "wordId": "w250",
+      "level": "N1",
+      "written": "ひたすら",
+      "kana": "ひたすら",
+      "meaning": "오로지",
+      "imageStatus": "pending"
+    }
+  ]
+}

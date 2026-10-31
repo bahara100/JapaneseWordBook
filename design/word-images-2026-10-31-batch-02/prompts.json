@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-31",
+  "batch": 2,
+  "mode": "built-in image_gen",
+  "styleReference": "../art-direction-2026-10-29/assets/card-cat-v2.png",
+  "sharedPrompt": "Use case: illustration-story. Japanese-learning vocabulary flashcard spot illustration. Match the supplied reference's lightweight 2D Japanese stationery style: broad smooth matte shapes, softly rounded forms, minimal gentle shading, warm cream, sage green, forest-green details, muted terracotta/apricot accents and pale blue where needed. Friendly, polished, simple and readable at 96px. NOT photorealistic, not glossy 3D, no dense texture or realistic material detail. Use the supplied cat ONLY as a style reference; completely replace its subject with the requested subject. Human figures have simple adult proportions and small calm facial features, no oversized chibi heads. Center one compact coherent vignette, all important shapes fully visible, generous clear transparent margins. 4:3 landscape, 1448x1086 if possible, genuinely transparent alpha background. No background panel, circle, card frame, white sticker border, decorative confetti, brand logos, readable letters, words, labels, numerals, or watermark. Do not include a cat unless requested. ",
+  "jobs": [
+    {
+      "key": "water",
+      "id": "w016",
+      "level": "N5",
+      "written": "水",
+      "kana": "みず",
+      "meaning": "물",
+      "scene": "One simple clear drinking glass filled about three quarters with pale blue fresh water. Show the visible horizontal water surface and two very simple cream reflections so that the WATER is obvious. No ice cubes, fruit, straw, coaster or table, no droplets outside. Full glass visible.",
+      "alt": "맑은 물이 담긴 투명한 유리잔"
+    },
+    {
+      "key": "book",
+      "id": "w017",
+      "level": "N5",
+      "written": "本",
+      "kana": "ほん",
+      "meaning": "책",
+      "scene": "One closed, slightly thick hardcover book in a gentle three-quarter view. Warm terracotta blank cover, cream paper edges, small sage ribbon bookmark peeking out. Clean recognizable book silhouette, no title, no lines, no letters, no other objects.",
+      "alt": "책갈피가 살짝 보이는 한 권의 책"
+    },
+    {
+      "key": "friends",
+      "id": "w018",
+      "level": "N5",
+      "written": "友達",
+      "kana": "ともだち",
+      "meaning": "친구",
+      "scene": "Two young adult friends standing comfortably side by side, smiling and chatting, one lightly resting a hand on the other's shoulder. Both full figures visible, casual sage and terracotta clothes, relaxed friendly connection. No heart, no speech bubbles, no school or city backdrop.",
+      "alt": "나란히 서서 다정하게 이야기하는 두 사람"
+    },
+    {
+      "key": "teacher",
+      "id": "w019",
+      "level": "N5",
+      "written": "先生",
+      "kana": "せんせい",
+      "meaning": "선생님",
+      "scene": "One adult teacher standing beside a small freestanding plain forest-green chalkboard, holding a closed cream book in one hand and gesturing toward the board with the other hand. Sage cardigan, warm neutral clothes, calm teaching expression. Full body visible, board completely blank with no chalk marks, no letters or numbers, no classroom backdrop.",
+      "alt": "작은 칠판 옆에서 책을 들고 설명하는 사람"
+    },
+    {
+      "key": "student",
+      "id": "w020",
+      "level": "N5",
+      "written": "学生",
+      "kana": "がくせい",
+      "meaning": "학생",
+      "scene": "One young adult college student standing with a sage backpack on both shoulders, holding two simple closed books against their chest. Terracotta cardigan and cream trousers, friendly attentive expression, full body visible. No uniform badges, graduation cap, labels or campus background.",
+      "alt": "배낭을 메고 책을 안고 서 있는 사람"
+    },
+    {
+      "key": "train",
+      "id": "w021",
+      "level": "N5",
+      "written": "電車",
+      "kana": "でんしゃ",
+      "meaning": "전철",
+      "scene": "A compact modern electric commuter train, mint-sage and cream, shown in clear front three-quarter view with the front cabin and one carriage visible. Large simple dark windshield, a few plain windows, two doors, small wheels and a short section of parallel rails underneath. No signs, route text, numbers, logos, people or landscape.",
+      "alt": "짧은 선로 위에 놓인 초록빛 전철"
+    },
+    {
+      "key": "station",
+      "id": "w022",
+      "level": "N5",
+      "written": "駅",
+      "kana": "えき",
+      "meaning": "역",
+      "scene": "A small tidy railway station platform vignette with a simple sage canopy roof, a round clock with hands but NO numerals, and a pair of clear ticket gates at the entrance. A short rail line runs alongside the platform. The station infrastructure is the focus, no train, no people, no signs or lettering, no full city background. Whole compact station visible.",
+      "alt": "시계와 개찰구가 있는 작은 철도 승강장"
+    },
+    {
+      "key": "time",
+      "id": "w023",
+      "level": "N5",
+      "written": "時間",
+      "kana": "じかん",
+      "meaning": "시간",
+      "scene": "One simple round analog desk clock with a sage-green rim, cream face, two dark hands and small plain tick marks, resting on two small terracotta feet. No numerals, letters, text, digital display, alarm bells or other objects. A gentle three-quarter angle, full clock visible.",
+      "alt": "바늘 두 개가 있는 둥근 탁상시계"
+    },
+    {
+      "key": "weather",
+      "id": "w024",
+      "level": "N5",
+      "written": "天気",
+      "kana": "てんき",
+      "meaning": "날씨",
+      "scene": "A warm muted apricot sun partially emerging from behind one large softly rounded cream-and-pale-blue cloud. A few short broad sun rays, simple calm weather vignette. No face, no rain, no rainbow, no weather chart or scenic backdrop, no enclosing circle. Both sun and cloud silhouettes clearly visible.",
+      "alt": "부드러운 구름 뒤로 해가 비치는 모습"
+    },
+    {
+      "key": "rain",
+      "id": "w025",
+      "level": "N5",
+      "written": "雨",
+      "kana": "あめ",
+      "meaning": "비",
+      "scene": "One rounded muted blue-gray rain cloud with five large distinct pale-blue raindrops falling below it in a balanced compact grouping. Simple clearly readable rain symbol, broad soft shapes matching the reference. No face, no sun, no lightning, umbrella, ground or background panel.",
+      "alt": "회색 구름 아래로 빗방울이 떨어지는 모습"
+    },
+    {
+      "key": "dog",
+      "id": "w026",
+      "level": "N5",
+      "written": "犬",
+      "kana": "いぬ",
+      "meaning": "개",
+      "scene": "One friendly seated cream-and-caramel retriever-like dog with clearly FLOPPY ears, a rounded canine snout, dark small nose, sage collar and a gently curved tail beside its paws. Full ears, paws and tail visible. Broad simple fur color areas, no individual hairs or realistic fur texture, no toy, no tongue sticking far out. It must clearly be a DOG, not the reference cat.",
+      "alt": "늘어진 귀와 초록 목줄이 있는 앉은 동물"
+    },
+    {
+      "key": "fish",
+      "id": "w027",
+      "level": "N5",
+      "written": "魚",
+      "kana": "さかな",
+      "meaning": "생선, 물고기",
+      "scene": "One whole simple fish in clean side view, facing left. Muted sage-blue body with a pale cream belly, one small dark eye, a clear gill curve, a dorsal fin, two small fins and a tail. A few broad simple scale hints only, not a repeating dense pattern. No face smile, legs, plate, water, bubbles, hook or background.",
+      "alt": "지느러미와 꼬리가 보이는 한 마리의 물고기"
+    },
+    {
+      "key": "meat",
+      "id": "w028",
+      "level": "N5",
+      "written": "肉",
+      "kana": "にく",
+      "meaning": "고기",
+      "scene": "One simple uncooked steak cut seen from a gentle top three-quarter view, muted warm terracotta-red meat with a cream outer fat edge and at most two broad pale marbling lines. Clean food illustration, matte broad color shapes, no realistic wet texture, no blood or gore, no plate, utensils, herbs, labels or other food.",
+      "alt": "크림색 가장자리가 있는 붉은 고기 한 조각"
+    },
+    {
+      "key": "house",
+      "id": "w029",
+      "level": "N5",
+      "written": "家",
+      "kana": "いえ",
+      "meaning": "집",
+      "scene": "One small welcoming two-storey home with warm cream walls, a simple terracotta pitched roof, sage front door and four plain pale-blue windows. A tiny rounded shrub beside the door is enough. Gentle front three-quarter view, clear HOME silhouette, no clock or school features, no tiled roof detail, numbers, signs, path or full neighborhood.",
+      "alt": "붉은 지붕과 초록 문이 있는 아담한 주택"
+    },
+    {
+      "key": "room",
+      "id": "w030",
+      "level": "N5",
+      "written": "部屋",
+      "kana": "へや",
+      "meaning": "방",
+      "scene": "One compact cutaway view of a simple cozy room corner with two cream interior walls and a small pale wood floor base. Include one sage-covered single bed, a small cream desk with an unmarked closed book, a simple chair and one window with terracotta curtains. Minimal furnishings, clear room interior, lightly angled flat 2D perspective, no realistic 3D rendering, no wall text, pictures or outside scenery. The whole cutaway vignette is isolated on transparency.",
+      "alt": "침대와 책상, 창문이 놓인 아늑한 실내 공간"
+    }
+  ]
+}

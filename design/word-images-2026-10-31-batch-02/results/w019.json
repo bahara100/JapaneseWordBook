@@ -1,0 +1,15 @@
+{
+  "key": "teacher",
+  "id": "w019",
+  "level": "N5",
+  "written": "先生",
+  "kana": "せんせい",
+  "meaning": "선생님",
+  "scene": "One adult teacher standing beside a small freestanding plain forest-green chalkboard, holding a closed cream book in one hand and gesturing toward the board with the other hand. Sage cardigan, warm neutral clothes, calm teaching expression. Full body visible, board completely blank with no chalk marks, no letters or numbers, no classroom backdrop.",
+  "alt": "작은 칠판 옆에서 책을 들고 설명하는 사람",
+  "file": "../art-direction-2026-10-29/assets/card-teacher-v1.png",
+  "proposedMediaId": "img-teacher",
+  "proposedPublicPath": "media/images/card-teacher-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-3ca53860-da89-4715-b454-62d400b86026.png",
+  "generationMode": "built-in image_gen"
+}

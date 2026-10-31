@@ -1,0 +1,15 @@
+{
+  "key": "water",
+  "id": "w016",
+  "level": "N5",
+  "written": "水",
+  "kana": "みず",
+  "meaning": "물",
+  "scene": "One simple clear drinking glass filled about three quarters with pale blue fresh water. Show the visible horizontal water surface and two very simple cream reflections so that the WATER is obvious. No ice cubes, fruit, straw, coaster or table, no droplets outside. Full glass visible.",
+  "alt": "맑은 물이 담긴 투명한 유리잔",
+  "file": "../art-direction-2026-10-29/assets/card-water-v1.png",
+  "proposedMediaId": "img-water",
+  "proposedPublicPath": "media/images/card-water-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-f1c4b819-cc59-48b2-847f-8345b0cceac2.png",
+  "generationMode": "built-in image_gen"
+}

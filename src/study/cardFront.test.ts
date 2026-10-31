@@ -7,31 +7,35 @@ import { gradeTyped } from './grading';
 import { cardForWord } from './selection';
 
 const load = (level: string): LevelWords => JSON.parse(readFileSync(path.resolve(__dirname, `../../content/${level}/words.json`), 'utf8'));
-const n5 = load('n5');
-const card = (written: string) => cardForWord(n5, n5.words.find(w => w.written === written)!.id)!;
+const levels = ['n5', 'n4'].map(load);
+const card = (written: string) => {
+  const content = levels.find(l => l.words.some(w => w.written === written))!;
+  return cardForWord(content, content.words.find(w => w.written === written)!.id)!;
+};
 
 describe('frontStyle', () => {
   it('uses the picture when the card has one', () => {
     expect(frontStyle(card('猫'))).toBe('picture');
+    expect(frontStyle(card('水'))).toBe('picture');
   });
 
   it('shows the written word for kanji words without a picture', () => {
-    expect(frontStyle(card('水'))).toBe('reading');
-    expect(frontStyle(card('食べる'))).toBe('reading');
-    expect(frontStyle(card('お金'))).toBe('reading');
+    expect(frontStyle(card('経験'))).toBe('reading');
+    expect(frontStyle(card('集める'))).toBe('reading');
+    expect(frontStyle(card('間に合う'))).toBe('reading');
   });
 
   it('shows the meaning when the word is written only in kana', () => {
     expect(frontStyle(card('テレビ'))).toBe('meaning');
-    expect(frontStyle(cardForWord(load('n4'), load('n4').words.find(w => w.written === 'ほとんど')!.id)!)).toBe('meaning');
+    expect(frontStyle(card('ほとんど'))).toBe('meaning');
   });
 });
 
 describe('typedAnswerForms', () => {
   it('on a reading card, only the kana counts, since the kanji is on screen', () => {
-    const water = card('水');
-    expect(gradeTyped('みず', typedAnswerForms(water))).toBe('correct');
-    expect(gradeTyped('水', typedAnswerForms(water))).toBe('incorrect');
+    const experience = card('経験');
+    expect(gradeTyped('けいけん', typedAnswerForms(experience))).toBe('correct');
+    expect(gradeTyped('経験', typedAnswerForms(experience))).toBe('incorrect');
   });
 
   it('elsewhere the written form still counts', () => {

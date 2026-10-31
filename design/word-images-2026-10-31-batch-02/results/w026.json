@@ -1,0 +1,15 @@
+{
+  "key": "dog",
+  "id": "w026",
+  "level": "N5",
+  "written": "犬",
+  "kana": "いぬ",
+  "meaning": "개",
+  "scene": "One friendly seated cream-and-caramel retriever-like dog with clearly FLOPPY ears, a rounded canine snout, dark small nose, sage collar and a gently curved tail beside its paws. Full ears, paws and tail visible. Broad simple fur color areas, no individual hairs or realistic fur texture, no toy, no tongue sticking far out. It must clearly be a DOG, not the reference cat.",
+  "alt": "늘어진 귀와 초록 목줄이 있는 앉은 동물",
+  "file": "../art-direction-2026-10-29/assets/card-dog-v1.png",
+  "proposedMediaId": "img-dog",
+  "proposedPublicPath": "media/images/card-dog-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-337b7f4c-2521-430d-b326-ffb0f251a5b8.png",
+  "generationMode": "built-in image_gen"
+}

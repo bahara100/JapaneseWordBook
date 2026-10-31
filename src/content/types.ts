@@ -54,6 +54,7 @@ export interface CardPrompt {
    *  word written only in kana, its Korean meaning) and asks for the reading. */
   imageAssetId?: string;
   audioAssetId?: string;
+  /** A short line under the picture when the picture alone could mean more than one word (今日/明日). */
   situationHint?: string;
   acceptedWrittenForms: string[];
   acceptedKanaForms: string[];

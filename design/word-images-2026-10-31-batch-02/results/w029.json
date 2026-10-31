@@ -1,0 +1,15 @@
+{
+  "key": "house",
+  "id": "w029",
+  "level": "N5",
+  "written": "家",
+  "kana": "いえ",
+  "meaning": "집",
+  "scene": "One small welcoming two-storey home with warm cream walls, a simple terracotta pitched roof, sage front door and four plain pale-blue windows. A tiny rounded shrub beside the door is enough. Gentle front three-quarter view, clear HOME silhouette, no clock or school features, no tiled roof detail, numbers, signs, path or full neighborhood.",
+  "alt": "붉은 지붕과 초록 문이 있는 아담한 주택",
+  "file": "../art-direction-2026-10-29/assets/card-house-v1.png",
+  "proposedMediaId": "img-house",
+  "proposedPublicPath": "media/images/card-house-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-de3e065c-dded-44eb-83f5-5b67c2af8556.png",
+  "generationMode": "built-in image_gen"
+}

@@ -2206,6 +2206,7 @@
       "wordId": "w016",
       "senseId": "w016-s1",
       "readingId": "w016-r1",
+      "imageAssetId": "img-water",
       "acceptedWrittenForms": [
         "水"
       ],
@@ -2219,6 +2220,7 @@
       "wordId": "w017",
       "senseId": "w017-s1",
       "readingId": "w017-r1",
+      "imageAssetId": "img-book",
       "acceptedWrittenForms": [
         "本"
       ],
@@ -2232,6 +2234,7 @@
       "wordId": "w018",
       "senseId": "w018-s1",
       "readingId": "w018-r1",
+      "imageAssetId": "img-friends",
       "acceptedWrittenForms": [
         "友達"
       ],
@@ -2245,6 +2248,7 @@
       "wordId": "w019",
       "senseId": "w019-s1",
       "readingId": "w019-r1",
+      "imageAssetId": "img-teacher",
       "acceptedWrittenForms": [
         "先生"
       ],
@@ -2258,6 +2262,7 @@
       "wordId": "w020",
       "senseId": "w020-s1",
       "readingId": "w020-r1",
+      "imageAssetId": "img-student",
       "acceptedWrittenForms": [
         "学生"
       ],
@@ -2271,6 +2276,7 @@
       "wordId": "w021",
       "senseId": "w021-s1",
       "readingId": "w021-r1",
+      "imageAssetId": "img-train",
       "acceptedWrittenForms": [
         "電車"
       ],
@@ -2284,6 +2290,7 @@
       "wordId": "w022",
       "senseId": "w022-s1",
       "readingId": "w022-r1",
+      "imageAssetId": "img-station",
       "acceptedWrittenForms": [
         "駅"
       ],
@@ -2297,6 +2304,7 @@
       "wordId": "w023",
       "senseId": "w023-s1",
       "readingId": "w023-r1",
+      "imageAssetId": "img-time",
       "acceptedWrittenForms": [
         "時間"
       ],
@@ -2310,6 +2318,7 @@
       "wordId": "w024",
       "senseId": "w024-s1",
       "readingId": "w024-r1",
+      "imageAssetId": "img-weather",
       "acceptedWrittenForms": [
         "天気"
       ],
@@ -2323,6 +2332,7 @@
       "wordId": "w025",
       "senseId": "w025-s1",
       "readingId": "w025-r1",
+      "imageAssetId": "img-rain",
       "acceptedWrittenForms": [
         "雨"
       ],
@@ -2336,6 +2346,7 @@
       "wordId": "w026",
       "senseId": "w026-s1",
       "readingId": "w026-r1",
+      "imageAssetId": "img-dog",
       "acceptedWrittenForms": [
         "犬"
       ],
@@ -2349,6 +2360,7 @@
       "wordId": "w027",
       "senseId": "w027-s1",
       "readingId": "w027-r1",
+      "imageAssetId": "img-fish",
       "acceptedWrittenForms": [
         "魚"
       ],
@@ -2362,6 +2374,7 @@
       "wordId": "w028",
       "senseId": "w028-s1",
       "readingId": "w028-r1",
+      "imageAssetId": "img-meat",
       "acceptedWrittenForms": [
         "肉"
       ],
@@ -2375,6 +2388,7 @@
       "wordId": "w029",
       "senseId": "w029-s1",
       "readingId": "w029-r1",
+      "imageAssetId": "img-house",
       "acceptedWrittenForms": [
         "家"
       ],
@@ -2388,6 +2402,7 @@
       "wordId": "w030",
       "senseId": "w030-s1",
       "readingId": "w030-r1",
+      "imageAssetId": "img-room",
       "acceptedWrittenForms": [
         "部屋"
       ],
@@ -2401,6 +2416,8 @@
       "wordId": "w031",
       "senseId": "w031-s1",
       "readingId": "w031-r1",
+      "imageAssetId": "img-name",
+      "situationHint": "빈 이름표를 가리키고 있어요.",
       "acceptedWrittenForms": [
         "名前"
       ],
@@ -2414,6 +2431,7 @@
       "wordId": "w032",
       "senseId": "w032-s1",
       "readingId": "w032-r1",
+      "imageAssetId": "img-telephone",
       "acceptedWrittenForms": [
         "電話"
       ],
@@ -2427,6 +2445,7 @@
       "wordId": "w033",
       "senseId": "w033-s1",
       "readingId": "w033-r1",
+      "imageAssetId": "img-money",
       "acceptedWrittenForms": [
         "お金"
       ],
@@ -2440,6 +2459,7 @@
       "wordId": "w034",
       "senseId": "w034-s1",
       "readingId": "w034-r1",
+      "imageAssetId": "img-car",
       "acceptedWrittenForms": [
         "車"
       ],
@@ -2453,6 +2473,7 @@
       "wordId": "w035",
       "senseId": "w035-s1",
       "readingId": "w035-r1",
+      "imageAssetId": "img-road",
       "acceptedWrittenForms": [
         "道"
       ],
@@ -2466,6 +2487,7 @@
       "wordId": "w036",
       "senseId": "w036-s1",
       "readingId": "w036-r1",
+      "imageAssetId": "img-morning",
       "acceptedWrittenForms": [
         "朝"
       ],
@@ -2479,6 +2501,7 @@
       "wordId": "w037",
       "senseId": "w037-s1",
       "readingId": "w037-r1",
+      "imageAssetId": "img-night",
       "acceptedWrittenForms": [
         "夜"
       ],
@@ -2492,6 +2515,8 @@
       "wordId": "w038",
       "senseId": "w038-s1",
       "readingId": "w038-r1",
+      "imageAssetId": "img-today",
+      "situationHint": "달력에서 지금 표시된 날이에요.",
       "acceptedWrittenForms": [
         "今日"
       ],
@@ -2505,6 +2530,8 @@
       "wordId": "w039",
       "senseId": "w039-s1",
       "readingId": "w039-r1",
+      "imageAssetId": "img-tomorrow",
+      "situationHint": "달력에서 표시된 날의 다음 날이에요.",
       "acceptedWrittenForms": [
         "明日"
       ],
@@ -2518,6 +2545,7 @@
       "wordId": "w040",
       "senseId": "w040-s1",
       "readingId": "w040-r1",
+      "imageAssetId": "img-eat",
       "acceptedWrittenForms": [
         "食べる"
       ],
@@ -2531,6 +2559,7 @@
       "wordId": "w041",
       "senseId": "w041-s1",
       "readingId": "w041-r1",
+      "imageAssetId": "img-drink",
       "acceptedWrittenForms": [
         "飲む"
       ],
@@ -2544,6 +2573,8 @@
       "wordId": "w042",
       "senseId": "w042-s1",
       "readingId": "w042-r1",
+      "imageAssetId": "img-go",
+      "situationHint": "사람이 나에게서 멀어지고 있어요.",
       "acceptedWrittenForms": [
         "行く"
       ],
@@ -2557,6 +2588,8 @@
       "wordId": "w043",
       "senseId": "w043-s1",
       "readingId": "w043-r1",
+      "imageAssetId": "img-come",
+      "situationHint": "사람이 나에게 다가오고 있어요.",
       "acceptedWrittenForms": [
         "来る"
       ],
@@ -2570,6 +2603,7 @@
       "wordId": "w044",
       "senseId": "w044-s1",
       "readingId": "w044-r1",
+      "imageAssetId": "img-look",
       "acceptedWrittenForms": [
         "見る"
       ],
@@ -2583,6 +2617,7 @@
       "wordId": "w045",
       "senseId": "w045-s1",
       "readingId": "w045-r1",
+      "imageAssetId": "img-listen",
       "acceptedWrittenForms": [
         "聞く"
       ],
@@ -2841,6 +2876,336 @@
       "kind": "image",
       "path": "media/images/card-apple-v2.webp",
       "description": "잎과 줄기가 있는 붉은 과일",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-water",
+      "kind": "image",
+      "path": "media/images/card-water-v1.webp",
+      "description": "맑은 물이 담긴 투명한 유리잔",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-book",
+      "kind": "image",
+      "path": "media/images/card-book-v1.webp",
+      "description": "책갈피가 살짝 보이는 한 권의 책",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-friends",
+      "kind": "image",
+      "path": "media/images/card-friends-v1.webp",
+      "description": "나란히 서서 다정하게 이야기하는 두 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-teacher",
+      "kind": "image",
+      "path": "media/images/card-teacher-v1.webp",
+      "description": "작은 칠판 옆에서 책을 들고 설명하는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-student",
+      "kind": "image",
+      "path": "media/images/card-student-v1.webp",
+      "description": "배낭을 메고 책을 안고 서 있는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-train",
+      "kind": "image",
+      "path": "media/images/card-train-v1.webp",
+      "description": "짧은 선로 위에 놓인 초록빛 전철",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-station",
+      "kind": "image",
+      "path": "media/images/card-station-v1.webp",
+      "description": "시계와 개찰구가 있는 작은 철도 승강장",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-time",
+      "kind": "image",
+      "path": "media/images/card-time-v1.webp",
+      "description": "바늘 두 개가 있는 둥근 탁상시계",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-weather",
+      "kind": "image",
+      "path": "media/images/card-weather-v1.webp",
+      "description": "부드러운 구름 뒤로 해가 비치는 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-rain",
+      "kind": "image",
+      "path": "media/images/card-rain-v1.webp",
+      "description": "회색 구름 아래로 빗방울이 떨어지는 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-dog",
+      "kind": "image",
+      "path": "media/images/card-dog-v1.webp",
+      "description": "늘어진 귀와 초록 목줄이 있는 앉은 동물",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-fish",
+      "kind": "image",
+      "path": "media/images/card-fish-v1.webp",
+      "description": "지느러미와 꼬리가 보이는 한 마리의 물고기",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-meat",
+      "kind": "image",
+      "path": "media/images/card-meat-v1.webp",
+      "description": "크림색 가장자리가 있는 붉은 고기 한 조각",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-house",
+      "kind": "image",
+      "path": "media/images/card-house-v1.webp",
+      "description": "붉은 지붕과 초록 문이 있는 아담한 주택",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-room",
+      "kind": "image",
+      "path": "media/images/card-room-v1.webp",
+      "description": "침대와 책상, 창문이 놓인 아늑한 실내 공간",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-name",
+      "kind": "image",
+      "path": "media/images/card-name-v1.webp",
+      "description": "가슴의 빈 이름표를 손가락으로 가리키는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-telephone",
+      "kind": "image",
+      "path": "media/images/card-telephone-v1.webp",
+      "description": "수화기와 작은 버튼이 있는 초록색 전화기",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-money",
+      "kind": "image",
+      "path": "media/images/card-money-v1.webp",
+      "description": "지폐 두 장과 금빛 동전이 놓인 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-car",
+      "kind": "image",
+      "path": "media/images/card-car-v1.webp",
+      "description": "둥근 전조등과 두 바퀴가 보이는 초록색 자동차",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-road",
+      "kind": "image",
+      "path": "media/images/card-road-v1.webp",
+      "description": "풀 가장자리 사이로 완만하게 굽어진 길",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-morning",
+      "kind": "image",
+      "path": "media/images/card-morning-v1.webp",
+      "description": "낮은 언덕 너머로 해가 떠오르는 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-night",
+      "kind": "image",
+      "path": "media/images/card-night-v1.webp",
+      "description": "초승달과 별 아래 창문에 불이 켜진 작은 집",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-today",
+      "kind": "image",
+      "path": "media/images/card-today-v1.webp",
+      "description": "달력 가운데의 색칠된 한 칸을 손가락으로 짚는 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-tomorrow",
+      "kind": "image",
+      "path": "media/images/card-tomorrow-v1.webp",
+      "description": "달력의 한 칸에서 바로 다음 칸으로 화살표가 이어지는 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-eat",
+      "kind": "image",
+      "path": "media/images/card-eat-v1.webp",
+      "description": "그릇에서 집은 음식을 입으로 가져가는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-drink",
+      "kind": "image",
+      "path": "media/images/card-drink-v1.webp",
+      "description": "유리잔을 입에 대고 물을 마시는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-go",
+      "kind": "image",
+      "path": "media/images/card-go-v1.webp",
+      "description": "등을 보이며 앞쪽의 초록 문을 향해 걸어가는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-come",
+      "kind": "image",
+      "path": "media/images/card-come-v1.webp",
+      "description": "초록 문에서 나와 앞을 향해 다가오는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-look",
+      "kind": "image",
+      "path": "media/images/card-look-v1.webp",
+      "description": "작은 쌍안경을 두 눈에 대고 살펴보는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-listen",
+      "kind": "image",
+      "path": "media/images/card-listen-v1.webp",
+      "description": "작은 스피커 쪽으로 귀를 기울여 듣는 사람",
       "provenance": {
         "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
         "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",

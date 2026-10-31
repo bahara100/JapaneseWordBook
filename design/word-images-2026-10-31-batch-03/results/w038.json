@@ -1,0 +1,15 @@
+{
+  "key": "today",
+  "id": "w038",
+  "level": "N5",
+  "written": "今日",
+  "kana": "きょう",
+  "meaning": "오늘",
+  "scene": "One simple small cream desk calendar with sage binding, showing a clean 7-column by 3-row grid of blank date cells. A single cell near the center is filled soft terracotta. One adult hand points directly at that highlighted current cell, emphasizing the present day. NO numerals, weekday labels, letters, words, check marks or writing anywhere. No extra calendar pages or arrows. Entire calendar and pointing hand visible.",
+  "alt": "달력 가운데의 색칠된 한 칸을 손가락으로 짚는 모습",
+  "file": "../art-direction-2026-10-29/assets/card-today-v1.png",
+  "proposedMediaId": "img-today",
+  "proposedPublicPath": "media/images/card-today-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-801f2170-aaac-402a-899a-7f0d59de0d18.png",
+  "generationMode": "built-in image_gen"
+}

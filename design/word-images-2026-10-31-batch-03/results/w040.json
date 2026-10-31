@@ -1,0 +1,19 @@
+{
+  "key": "eat",
+  "id": "w040",
+  "level": "N5",
+  "written": "食べる",
+  "kana": "たべる",
+  "meaning": "먹다",
+  "scene": "One young adult seated at a tiny simple table, using chopsticks to bring a small bite of food from a cream bowl toward their mouth. The eating action is unmistakable, mouth gently open and attention on food. Sage top, terracotta bowl accent, simple rounded chair. Compact coherent full figure and table, no restaurant backdrop, labels or writing.",
+  "alt": "그릇에서 집은 음식을 입으로 가져가는 사람",
+  "file": "../art-direction-2026-10-29/assets/card-eat-v1.png",
+  "proposedMediaId": "img-eat",
+  "proposedPublicPath": "media/images/card-eat-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-3f6ddaea-bef9-4955-b712-f17d72f81338.png",
+  "generationMode": "built-in image_gen",
+  "actualPrompt": "Use case: illustration-story. Japanese-learning vocabulary flashcard spot illustration. Match the supplied reference's lightweight 2D Japanese stationery style: broad smooth matte shapes, softly rounded forms, minimal gentle shading, warm cream, sage green, forest-green details, muted terracotta/apricot accents and pale blue where needed. Friendly, polished, simple and readable at 96px. NOT photorealistic, not glossy 3D, no dense texture or realistic material detail. Use the supplied cat ONLY as a style reference; completely replace its subject with the requested subject. Human figures have simple adult proportions and small calm facial features, no oversized chibi heads. Center one compact coherent vignette, all important shapes fully visible, generous clear transparent margins. 4:3 landscape, 1448x1086 if possible, genuinely transparent alpha background. No background panel, circle, card frame, white sticker border, decorative confetti, brand logos, readable letters, words, labels, numerals, or watermark. Do not include a cat unless requested. \nSubject: One young adult seated at a tiny simple table, using chopsticks to bring a small bite of food from a cream bowl toward their mouth. The eating action is unmistakable, mouth gently open and attention on food. Sage top, terracotta bowl accent, simple rounded chair. Compact coherent full figure and table, no restaurant backdrop, labels or writing.",
+  "referenceImages": [
+    "C:/Japanese Word Book/design/art-direction-2026-10-29/assets/card-cat-v2.png"
+  ]
+}

@@ -186,6 +186,11 @@ export function validateContent(files: ContentFiles, mediaExists: (path: string)
           if (kind === 'image' && leaks.length) error(where, `그림 설명이 정답 "${leaks[0]}"를 드러내요.`);
         };
         checkAsset('imageAssetId', 'image');
+        if (p.situationHint !== undefined) {
+          if (!isText(p.situationHint)) error(where, 'situationHint가 비어 있어요.');
+          else if ([word.written, ...word.readings.values()].some(t => t && (p.situationHint as string).includes(t)))
+            error(where, '상황 힌트가 정답을 드러내요.');
+        }
         checkAsset('audioAssetId', 'audio');
         if (p.status !== 'draft' && p.status !== 'reviewed') error(where, 'status는 draft 또는 reviewed여야 해요.');
       });

@@ -1,0 +1,20 @@
+{
+  "key": "tomorrow",
+  "id": "w039",
+  "level": "N5",
+  "written": "明日",
+  "kana": "あした",
+  "meaning": "내일",
+  "scene": "One simple small cream desk calendar with sage binding, matching the same stationery style. Show a clean 7-column by 3-row grid of blank date cells. A central cell is filled pale sage for the current day and the cell IMMEDIATELY TO ITS RIGHT is filled soft terracotta for the following day. A short clear curved arrow goes from the sage cell to the adjacent terracotta cell, showing exactly one day forward. NO numerals, weekday labels, letters, words, check marks or writing anywhere. No hands, no extra calendar pages.",
+  "alt": "달력의 한 칸에서 바로 다음 칸으로 화살표가 이어지는 모습",
+  "file": "../art-direction-2026-10-29/assets/card-tomorrow-v1.png",
+  "proposedMediaId": "img-tomorrow",
+  "proposedPublicPath": "media/images/card-tomorrow-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-ce34422a-ad41-4170-a51f-56a0389ef148.png",
+  "generationMode": "built-in image_gen",
+  "actualPrompt": "Use case: illustration-story. Japanese-learning vocabulary flashcard spot illustration. Match the supplied reference's lightweight 2D Japanese stationery style: broad smooth matte shapes, softly rounded forms, minimal gentle shading, warm cream, sage green, forest-green details, muted terracotta/apricot accents and pale blue where needed. Friendly, polished, simple and readable at 96px. NOT photorealistic, not glossy 3D, no dense texture or realistic material detail. Use the supplied cat ONLY as a style reference; completely replace its subject with the requested subject. Human figures have simple adult proportions and small calm facial features, no oversized chibi heads. Center one compact coherent vignette, all important shapes fully visible, generous clear transparent margins. 4:3 landscape, 1448x1086 if possible, genuinely transparent alpha background. No background panel, circle, card frame, white sticker border, decorative confetti, brand logos, readable letters, words, labels, numerals, or watermark. Do not include a cat unless requested. \nSubject: One simple small cream desk calendar with sage binding, matching the same stationery style. Show a clean 7-column by 3-row grid of blank date cells. A central cell is filled pale sage for the current day and the cell IMMEDIATELY TO ITS RIGHT is filled soft terracotta for the following day. A short clear curved arrow goes from the sage cell to the adjacent terracotta cell, showing exactly one day forward. NO numerals, weekday labels, letters, words, check marks or writing anywhere. No hands, no extra calendar pages.\nImage 1 is the overall illustration STYLE reference. Image 2 is a supporting reference for the cream-and-sage calendar's design. Keep that simple calendar design but REMOVE the pointing hand and replace the single-cell emphasis with the adjacent-day arrow described above. Do not copy any hand into this image.",
+  "referenceImages": [
+    "C:/Japanese Word Book/design/art-direction-2026-10-29/assets/card-cat-v2.png",
+    "C:/Japanese Word Book/design/art-direction-2026-10-29/assets/card-today-v1.png"
+  ]
+}

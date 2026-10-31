@@ -1,0 +1,15 @@
+{
+  "key": "train",
+  "id": "w021",
+  "level": "N5",
+  "written": "電車",
+  "kana": "でんしゃ",
+  "meaning": "전철",
+  "scene": "A compact modern electric commuter train, mint-sage and cream, shown in clear front three-quarter view with the front cabin and one carriage visible. Large simple dark windshield, a few plain windows, two doors, small wheels and a short section of parallel rails underneath. No signs, route text, numbers, logos, people or landscape.",
+  "alt": "짧은 선로 위에 놓인 초록빛 전철",
+  "file": "../art-direction-2026-10-29/assets/card-train-v1.png",
+  "proposedMediaId": "img-train",
+  "proposedPublicPath": "media/images/card-train-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-47a7c04c-7e39-4dae-813b-0188fcbd8be4.png",
+  "generationMode": "built-in image_gen"
+}

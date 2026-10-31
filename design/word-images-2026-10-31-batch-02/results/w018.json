@@ -1,0 +1,15 @@
+{
+  "key": "friends",
+  "id": "w018",
+  "level": "N5",
+  "written": "友達",
+  "kana": "ともだち",
+  "meaning": "친구",
+  "scene": "Two young adult friends standing comfortably side by side, smiling and chatting, one lightly resting a hand on the other's shoulder. Both full figures visible, casual sage and terracotta clothes, relaxed friendly connection. No heart, no speech bubbles, no school or city backdrop.",
+  "alt": "나란히 서서 다정하게 이야기하는 두 사람",
+  "file": "../art-direction-2026-10-29/assets/card-friends-v1.png",
+  "proposedMediaId": "img-friends",
+  "proposedPublicPath": "media/images/card-friends-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-0b4322e9-c455-40a4-bf31-ad0de428a87b.png",
+  "generationMode": "built-in image_gen"
+}

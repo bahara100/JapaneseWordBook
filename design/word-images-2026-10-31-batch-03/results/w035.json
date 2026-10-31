@@ -1,0 +1,15 @@
+{
+  "key": "road",
+  "id": "w035",
+  "level": "N5",
+  "written": "道",
+  "kana": "みち",
+  "meaning": "길",
+  "scene": "One short gently winding S-shaped gray road or path, broad at the foreground and narrower toward the back, with a few simple cream center dashes and soft sage grassy edges. Two small rounded tufts at the sides are enough. No cars, people, road signs, lettering, buildings or full landscape. An isolated compact road vignette on transparency.",
+  "alt": "풀 가장자리 사이로 완만하게 굽어진 길",
+  "file": "../art-direction-2026-10-29/assets/card-road-v1.png",
+  "proposedMediaId": "img-road",
+  "proposedPublicPath": "media/images/card-road-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-4774b203-4188-4a49-bcd8-00af7057d874.png",
+  "generationMode": "built-in image_gen"
+}

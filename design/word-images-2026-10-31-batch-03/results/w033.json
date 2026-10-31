@@ -1,0 +1,15 @@
+{
+  "key": "money",
+  "id": "w033",
+  "level": "N5",
+  "written": "お金",
+  "kana": "おかね",
+  "meaning": "돈",
+  "scene": "Two simple overlapping sage-and-cream paper banknotes with a broad plain oval center motif and three warm gold coins in front. Generic fictional money shapes only, no realistic currency designs, portraits, numerals, currency signs, letters, text or logos. Compact centered grouping, clear banknote-and-coins silhouette.",
+  "alt": "지폐 두 장과 금빛 동전이 놓인 모습",
+  "file": "../art-direction-2026-10-29/assets/card-money-v1.png",
+  "proposedMediaId": "img-money",
+  "proposedPublicPath": "media/images/card-money-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-ec37163d-cc51-4db1-906a-9911f19d1d7d.png",
+  "generationMode": "built-in image_gen"
+}

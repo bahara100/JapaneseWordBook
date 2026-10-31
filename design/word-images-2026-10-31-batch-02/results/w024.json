@@ -1,0 +1,15 @@
+{
+  "key": "weather",
+  "id": "w024",
+  "level": "N5",
+  "written": "天気",
+  "kana": "てんき",
+  "meaning": "날씨",
+  "scene": "A warm muted apricot sun partially emerging from behind one large softly rounded cream-and-pale-blue cloud. A few short broad sun rays, simple calm weather vignette. No face, no rain, no rainbow, no weather chart or scenic backdrop, no enclosing circle. Both sun and cloud silhouettes clearly visible.",
+  "alt": "부드러운 구름 뒤로 해가 비치는 모습",
+  "file": "../art-direction-2026-10-29/assets/card-weather-v1.png",
+  "proposedMediaId": "img-weather",
+  "proposedPublicPath": "media/images/card-weather-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-626078cd-0ed6-4fce-8b5d-8ca2d9ba693c.png",
+  "generationMode": "built-in image_gen"
+}

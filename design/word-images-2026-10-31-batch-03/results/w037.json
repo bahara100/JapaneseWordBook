@@ -1,0 +1,15 @@
+{
+  "key": "night",
+  "id": "w037",
+  "level": "N5",
+  "written": "夜",
+  "kana": "よる",
+  "meaning": "밤",
+  "scene": "A soft cream crescent moon and three small muted gold stars above a tiny simple sage-and-cream house with one warm glowing window. A compact quiet night vignette, isolated on transparent background. No full dark sky panel, no realistic lighting, no faces, lettering or numerals.",
+  "alt": "초승달과 별 아래 창문에 불이 켜진 작은 집",
+  "file": "../art-direction-2026-10-29/assets/card-night-v1.png",
+  "proposedMediaId": "img-night",
+  "proposedPublicPath": "media/images/card-night-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-1af10a6e-6b44-4cde-9f7d-22d9791c4c30.png",
+  "generationMode": "built-in image_gen"
+}

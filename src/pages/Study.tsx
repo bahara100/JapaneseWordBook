@@ -117,6 +117,7 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
       <div className="card-front">
         <span className="caption">{style === 'picture' ? 'LOOK · THINK · SAY' : style === 'reading' ? 'READ · THINK · SAY' : 'MEANING · THINK · SAY'}</span>
         {style === 'picture' && image && <img className="illustration" src={mediaUrl(image.path)} alt={image.description} />}
+        {style === 'picture' && card.promptSnapshot.situationHint && <p className="situation-hint">{card.promptSnapshot.situationHint}</p>}
         {style === 'reading' && <p className="front-word" lang="ja">{card.wordSnapshot.written}</p>}
         {style === 'meaning' && <p className="front-meaning">{sense.korean.join(', ')}<small>{sense.partOfSpeech}</small></p>}
         <h2 className="card-question" tabIndex={-1}>

@@ -1,0 +1,15 @@
+{
+  "key": "rain",
+  "id": "w025",
+  "level": "N5",
+  "written": "雨",
+  "kana": "あめ",
+  "meaning": "비",
+  "scene": "One rounded muted blue-gray rain cloud with five large distinct pale-blue raindrops falling below it in a balanced compact grouping. Simple clearly readable rain symbol, broad soft shapes matching the reference. No face, no sun, no lightning, umbrella, ground or background panel.",
+  "alt": "회색 구름 아래로 빗방울이 떨어지는 모습",
+  "file": "../art-direction-2026-10-29/assets/card-rain-v1.png",
+  "proposedMediaId": "img-rain",
+  "proposedPublicPath": "media/images/card-rain-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-fcc18bd2-ed37-4b4f-8d52-49ce933214f0.png",
+  "generationMode": "built-in image_gen"
+}

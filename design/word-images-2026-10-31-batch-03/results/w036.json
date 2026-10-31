@@ -1,0 +1,15 @@
+{
+  "key": "morning",
+  "id": "w036",
+  "level": "N5",
+  "written": "朝",
+  "kana": "あさ",
+  "meaning": "아침",
+  "scene": "A warm apricot rising sun, only its upper half visible above two very low smooth sage hills, with five broad soft rays and a single small cream cloud near the horizon. A quiet fresh sunrise vignette, compact and isolated. No faces, people, clock, full sky rectangle, scenery backdrop, text or numerals.",
+  "alt": "낮은 언덕 너머로 해가 떠오르는 모습",
+  "file": "../art-direction-2026-10-29/assets/card-morning-v1.png",
+  "proposedMediaId": "img-morning",
+  "proposedPublicPath": "media/images/card-morning-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-cb2db170-163f-426b-aef8-04cda891a8c2.png",
+  "generationMode": "built-in image_gen"
+}

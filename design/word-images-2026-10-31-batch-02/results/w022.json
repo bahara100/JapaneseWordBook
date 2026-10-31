@@ -1,0 +1,15 @@
+{
+  "key": "station",
+  "id": "w022",
+  "level": "N5",
+  "written": "駅",
+  "kana": "えき",
+  "meaning": "역",
+  "scene": "A small tidy railway station platform vignette with a simple sage canopy roof, a round clock with hands but NO numerals, and a pair of clear ticket gates at the entrance. A short rail line runs alongside the platform. The station infrastructure is the focus, no train, no people, no signs or lettering, no full city background. Whole compact station visible.",
+  "alt": "시계와 개찰구가 있는 작은 철도 승강장",
+  "file": "../art-direction-2026-10-29/assets/card-station-v1.png",
+  "proposedMediaId": "img-station",
+  "proposedPublicPath": "media/images/card-station-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-9db1286c-7119-495f-a75f-6e8f4a37b3e0.png",
+  "generationMode": "built-in image_gen"
+}

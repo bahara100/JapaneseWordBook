@@ -1,0 +1,15 @@
+{
+  "key": "meat",
+  "id": "w028",
+  "level": "N5",
+  "written": "肉",
+  "kana": "にく",
+  "meaning": "고기",
+  "scene": "One simple uncooked steak cut seen from a gentle top three-quarter view, muted warm terracotta-red meat with a cream outer fat edge and at most two broad pale marbling lines. Clean food illustration, matte broad color shapes, no realistic wet texture, no blood or gore, no plate, utensils, herbs, labels or other food.",
+  "alt": "크림색 가장자리가 있는 붉은 고기 한 조각",
+  "file": "../art-direction-2026-10-29/assets/card-meat-v1.png",
+  "proposedMediaId": "img-meat",
+  "proposedPublicPath": "media/images/card-meat-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-cac669ea-ac73-4d79-a2a7-c77794e50353.png",
+  "generationMode": "built-in image_gen"
+}

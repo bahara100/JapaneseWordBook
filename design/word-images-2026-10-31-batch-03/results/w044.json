@@ -1,0 +1,15 @@
+{
+  "key": "look",
+  "id": "w044",
+  "level": "N5",
+  "written": "見る",
+  "kana": "みる",
+  "meaning": "보다",
+  "scene": "One young adult standing in a focused observing pose, holding a small pair of dark sage binoculars directly to both eyes with both hands and looking into the distance. Sage top and cream trousers, full body visible, slight forward lean. Binoculars are simple and readable. No scenery, bird, extra objects, lettering or words.",
+  "alt": "작은 쌍안경을 두 눈에 대고 살펴보는 사람",
+  "file": "../art-direction-2026-10-29/assets/card-look-v1.png",
+  "proposedMediaId": "img-look",
+  "proposedPublicPath": "media/images/card-look-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-195a175a-7d16-4d4f-9d3b-8314beadcd65.png",
+  "generationMode": "built-in image_gen"
+}

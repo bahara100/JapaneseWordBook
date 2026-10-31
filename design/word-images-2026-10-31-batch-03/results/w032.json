@@ -1,0 +1,15 @@
+{
+  "key": "telephone",
+  "id": "w032",
+  "level": "N5",
+  "written": "電話",
+  "kana": "でんわ",
+  "meaning": "전화",
+  "scene": "One compact sage-green landline telephone, cream base, dark-green curved handset resting in its cradle, a short simple coiled cord and a plain keypad of nine rounded buttons. The buttons have absolutely no numerals or symbols. Gentle three-quarter view, full telephone visible, no screen text, logo, table or backdrop.",
+  "alt": "수화기와 작은 버튼이 있는 초록색 전화기",
+  "file": "../art-direction-2026-10-29/assets/card-telephone-v1.png",
+  "proposedMediaId": "img-telephone",
+  "proposedPublicPath": "media/images/card-telephone-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-4baefe91-0bdb-4c75-8fd7-44062a238914.png",
+  "generationMode": "built-in image_gen"
+}

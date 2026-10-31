@@ -1,0 +1,15 @@
+{
+  "key": "student",
+  "id": "w020",
+  "level": "N5",
+  "written": "学生",
+  "kana": "がくせい",
+  "meaning": "학생",
+  "scene": "One young adult college student standing with a sage backpack on both shoulders, holding two simple closed books against their chest. Terracotta cardigan and cream trousers, friendly attentive expression, full body visible. No uniform badges, graduation cap, labels or campus background.",
+  "alt": "배낭을 메고 책을 안고 서 있는 사람",
+  "file": "../art-direction-2026-10-29/assets/card-student-v1.png",
+  "proposedMediaId": "img-student",
+  "proposedPublicPath": "media/images/card-student-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-7780a36d-fa8c-46ab-a449-9c213593cfbc.png",
+  "generationMode": "built-in image_gen"
+}

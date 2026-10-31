@@ -1,0 +1,15 @@
+{
+  "key": "time",
+  "id": "w023",
+  "level": "N5",
+  "written": "時間",
+  "kana": "じかん",
+  "meaning": "시간",
+  "scene": "One simple round analog desk clock with a sage-green rim, cream face, two dark hands and small plain tick marks, resting on two small terracotta feet. No numerals, letters, text, digital display, alarm bells or other objects. A gentle three-quarter angle, full clock visible.",
+  "alt": "바늘 두 개가 있는 둥근 탁상시계",
+  "file": "../art-direction-2026-10-29/assets/card-time-v1.png",
+  "proposedMediaId": "img-time",
+  "proposedPublicPath": "media/images/card-time-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-de4b7c80-9c67-4e53-a3c4-d94b19e52464.png",
+  "generationMode": "built-in image_gen"
+}

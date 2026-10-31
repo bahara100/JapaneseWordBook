@@ -1,0 +1,15 @@
+{
+  "key": "car",
+  "id": "w034",
+  "level": "N5",
+  "written": "車",
+  "kana": "くるま",
+  "meaning": "자동차, 차",
+  "scene": "One compact rounded sage-green passenger car with a cream roof in front three-quarter view. Simple pale-blue windshield and windows, two clearly visible wheels, plain round lamps and completely blank cream license plate. No driver or passengers, no road or scenery. The entire car and wheels fit comfortably inside the image.",
+  "alt": "둥근 전조등과 두 바퀴가 보이는 초록색 자동차",
+  "file": "../art-direction-2026-10-29/assets/card-car-v1.png",
+  "proposedMediaId": "img-car",
+  "proposedPublicPath": "media/images/card-car-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-b613880f-896d-4960-a5f6-0deaed343d8e.png",
+  "generationMode": "built-in image_gen"
+}

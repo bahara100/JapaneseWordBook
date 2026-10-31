@@ -1,0 +1,15 @@
+{
+  "key": "fish",
+  "id": "w027",
+  "level": "N5",
+  "written": "魚",
+  "kana": "さかな",
+  "meaning": "생선, 물고기",
+  "scene": "One whole simple fish in clean side view, facing left. Muted sage-blue body with a pale cream belly, one small dark eye, a clear gill curve, a dorsal fin, two small fins and a tail. A few broad simple scale hints only, not a repeating dense pattern. No face smile, legs, plate, water, bubbles, hook or background.",
+  "alt": "지느러미와 꼬리가 보이는 한 마리의 물고기",
+  "file": "../art-direction-2026-10-29/assets/card-fish-v1.png",
+  "proposedMediaId": "img-fish",
+  "proposedPublicPath": "media/images/card-fish-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-1d1ffa80-b625-485e-98b9-acbf3157734c.png",
+  "generationMode": "built-in image_gen"
+}

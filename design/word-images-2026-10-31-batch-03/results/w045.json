@@ -1,0 +1,15 @@
+{
+  "key": "listen",
+  "id": "w045",
+  "level": "N5",
+  "written": "聞く",
+  "kana": "きく",
+  "meaning": "듣다, 묻다",
+  "scene": "One young adult leaning slightly toward a small sage tabletop speaker to their left, cupping one hand behind an ear with a calm attentive expression. Two short broad curved sound-wave shapes between the speaker and the ear make the listening action clear. Terracotta cardigan and cream trousers, entire figure visible. No headphones, musical notes, question marks, letters, text or background.",
+  "alt": "작은 스피커 쪽으로 귀를 기울여 듣는 사람",
+  "file": "../art-direction-2026-10-29/assets/card-listen-v1.png",
+  "proposedMediaId": "img-listen",
+  "proposedPublicPath": "media/images/card-listen-v1.png",
+  "sourceGeneratedFile": "<사용자 PC>\\.codex\\generated_images\\01a18250-37f3-7330-9777-285aaa100a65\\exec-d9dd0005-42a5-4eba-8c91-89f58558e5e2.png",
+  "generationMode": "built-in image_gen"
+}
