@@ -87,3 +87,22 @@ a.grammar-row{color:inherit}
 .card-front .front-meaning{margin:30px 0 8px;color:var(--ink);font-size:clamp(26px,5vw,34px);font-weight:600;text-align:center;line-height:1.5}
 .card-front .front-meaning small{display:block;margin-top:4px;font-size:13px;font-weight:400;color:var(--muted)}
 .card-front .situation-hint{margin:-4px auto 10px;max-width:340px;padding:6px 12px;border-radius:999px;background:var(--soft);color:var(--green);font-size:13px;text-align:center}
+
+/* Songs (노래): a song's words and grammar, each linking to its page in the library. */
+.song-row span span{display:inline;margin:0}
+.pill .ui-icon{height:12px;width:12px}
+.song-detail h3{font-size:13px;margin:24px 0 8px;color:var(--muted)}
+.song-artist{margin:-4px 0 6px;color:var(--muted);font-size:14px}
+.song-items{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.song-items a{display:block;padding:12px 6px;border-bottom:1px solid var(--line);min-height:44px}
+.song-items a:hover{background:#eaf0e5}
+.song-item-main{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.song-item-main strong{font-size:19px;font-weight:500;overflow-wrap:anywhere}
+.song-item-main span{font-size:12px;color:var(--muted)}
+.song-item-meta{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-top:4px;font-size:12px;color:var(--muted)}
+.song-note{margin:20px 0 0}
+.song-links{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.song-links a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 13px;border:1px solid var(--line);border-radius:30px;font-size:13px;color:var(--green)}
+.song-links a:hover{background:#eaf0e5}
+.song-links .ui-icon{height:15px;width:15px}
+.detail-panel .songs-heading{font-size:13px;margin:24px 0 4px;color:var(--muted)}

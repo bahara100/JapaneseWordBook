@@ -1,6 +1,6 @@
 // Loads built content from <base>/content/. The manifest is small and loaded first;
 // each level's words and grammar load only when a screen asks for that level.
-import { SCHEMA_VERSION, type ContentManifest, type Level, type LevelGrammar, type LevelWords } from './types';
+import { SCHEMA_VERSION, type ContentManifest, type Level, type LevelGrammar, type LevelWords, type Song, type SongList } from './types';
 
 export interface LevelContent { manifest: ContentManifest; words: LevelWords; grammar: LevelGrammar }
 
@@ -59,8 +59,20 @@ export function loadLevel(level: Level): Promise<LevelContent> {
   });
 }
 
+const songFiles = new Map<string, Promise<Song[]>>();
+
+/** The songs words and grammar were picked from (content/songs.json). */
+export function loadSongs(): Promise<Song[]> {
+  return cached(songFiles, 'songs', async () => {
+    const manifest = await loadManifest();
+    if (!manifest.songsPath) return [];
+    return (await getJson<SongList>(manifest.songsPath)).songs;
+  });
+}
+
 /** For tests: forget everything loaded so far. */
 export function resetContentCache(): void {
   manifests.clear();
   levelFiles.clear();
+  songFiles.clear();
 }

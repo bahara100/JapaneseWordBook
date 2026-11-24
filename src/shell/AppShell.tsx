@@ -8,6 +8,7 @@ const NAV: { id: Section; icon: IconName; label: string; short: string }[] = [
   { id: 'study', icon: 'cards', label: '오늘의 학습', short: '학습' },
   { id: 'words', icon: 'book', label: '단어장', short: '단어' },
   { id: 'grammar', icon: 'grammar', label: '문법', short: '문법' },
+  { id: 'songs', icon: 'music', label: '노래', short: '노래' },
   { id: 'favorites', icon: 'star', label: '즐겨찾기', short: '보관함' },
 ];
 
@@ -16,6 +17,7 @@ const CONTEXT: Record<Section, string> = {
   study: '오늘의 학습',
   words: '단어 라이브러리',
   grammar: '문법 노트',
+  songs: '노래로 배우기',
   favorites: '나의 보관함',
   settings: '학습 설정',
   check: '이 기기 확인',
@@ -48,8 +50,8 @@ function StorageAlert() {
 export function AppShell({ route, children }: { route: Route; children: ReactNode }) {
   const main = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
-  // Opening a word or grammar detail is not a new page: the screen handles its own focus.
-  const key = route.name === 'words' || route.name === 'grammar' ? route.name : routeKey(route);
+  // Opening a word, grammar or song detail is not a new page: the screen handles its own focus.
+  const key = route.name === 'words' || route.name === 'grammar' || route.name === 'songs' ? route.name : routeKey(route);
 
   // After a navigation, start at the top and move focus to the page title.
   useEffect(() => {

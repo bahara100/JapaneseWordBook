@@ -9,7 +9,7 @@ describe('parseHash', () => {
   });
 
   it('reads each menu section', () => {
-    for (const name of ['home', 'study', 'words', 'grammar', 'favorites', 'settings', 'check']) {
+    for (const name of ['home', 'study', 'words', 'grammar', 'songs', 'favorites', 'settings', 'check']) {
       expect(parseHash(`#/${name}`)).toEqual({ name });
     }
   });
@@ -21,6 +21,7 @@ describe('parseHash', () => {
   it('reads word and grammar detail ids', () => {
     expect(parseHash('#/words/w001')).toEqual({ name: 'words', id: 'w001' });
     expect(parseHash('#/grammar/g%20one')).toEqual({ name: 'grammar', id: 'g one' });
+    expect(parseHash('#/songs/s001')).toEqual({ name: 'songs', id: 's001' });
   });
 
   it('rejects unknown paths and details on other sections', () => {
@@ -32,7 +33,7 @@ describe('parseHash', () => {
 
 describe('hrefFor', () => {
   it('round-trips through parseHash', () => {
-    for (const hash of ['#/home', '#/study', '#/words', '#/words/w001', '#/grammar/g%20one', '#/settings']) {
+    for (const hash of ['#/home', '#/study', '#/words', '#/words/w001', '#/grammar/g%20one', '#/songs', '#/songs/s001', '#/settings']) {
       expect(hrefFor(parseHash(hash))).toBe(hash);
     }
   });

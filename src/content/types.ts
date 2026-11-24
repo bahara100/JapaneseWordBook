@@ -76,6 +76,21 @@ export interface Grammar {
 export interface LevelWords { level: Level; words: Word[]; prompts: CardPrompt[]; media: MediaAsset[] }
 /** One level's grammar file: content/<level>/grammar.json. */
 export interface LevelGrammar { level: Level; grammar: Grammar[] }
+/**
+ * A song the words and grammar were picked from: content/songs.json. Only the title and artist are
+ * kept, never lyrics; the words and grammar themselves live in the level files (any level), so
+ * they show in the word library and grammar notes as well.
+ */
+export interface Song {
+  id: string;
+  title: string;
+  artist: string;
+  /** In the order they were picked from the song. */
+  wordIds: string[];
+  grammarIds: string[];
+  provenance: Provenance;
+}
+export interface SongList { songs: Song[] }
 export interface LevelSummary {
   wordsPath: string;
   grammarPath: string;
@@ -89,6 +104,8 @@ export interface ContentManifest {
   schemaVersion: number;
   contentVersion: string;
   levels: Record<Level, LevelSummary>;
+  songsPath: string;
+  songCount: number;
 }
 export type DailyTarget = 10 | 15 | 20;
 export type SpeechRate = 0.7 | 0.85 | 1;

@@ -10,6 +10,7 @@ import { useStorage } from '../storage/StorageProvider';
 import { useFavorites } from '../storage/useFavorites';
 import { cardForWord } from '../study/selection';
 import { useDailySession } from '../study/useDailySession';
+import { SongBadges } from '../songs/SongBadges';
 import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
 
@@ -68,6 +69,7 @@ function WordDetail({ word, library, favorites, headingRef }: {
           ))}
         </div>
       ))}
+      <SongBadges songs={library.songsOf.get(word.id)} what="단어" />
     </>
   );
 }
@@ -230,7 +232,7 @@ export function WordLibrary({ mode, routeId }: { mode: 'words' | 'favorites'; ro
           </div>
         </>
       ))}
-      <p className="bottom-note">지금은 수준별 3개, 모두 15개의 작성 예시 단어예요. 수준 분류와 내용은 공개 전 검수가 필요해요.</p>
+      <p className="bottom-note">지금 단어는 모두 검수 전 초안이에요. 수준 분류와 내용은 공개 전 검수가 필요해요.</p>
     </>
   );
 }

@@ -6,6 +6,8 @@ export type Route =
   | { name: 'study' }
   | { name: 'words'; id?: string }
   | { name: 'grammar'; id?: string }
+  /** Songs the words and grammar were picked from; the id opens one song. */
+  | { name: 'songs'; id?: string }
   | { name: 'favorites' }
   | { name: 'settings' }
   /** "이 기기 확인": what this device supports, for device checks (not in the menu). */
@@ -14,8 +16,8 @@ export type Route =
 
 export type Section = Exclude<Route['name'], 'not-found'>;
 
-const SECTIONS: Section[] = ['home', 'study', 'words', 'grammar', 'favorites', 'settings', 'check'];
-const WITH_DETAIL: Section[] = ['words', 'grammar'];
+const SECTIONS: Section[] = ['home', 'study', 'words', 'grammar', 'songs', 'favorites', 'settings', 'check'];
+const WITH_DETAIL: Section[] = ['words', 'grammar', 'songs'];
 
 export function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, '').replace(/\/+$/, '');
@@ -25,7 +27,7 @@ export function parseHash(hash: string): Route {
   if (!section || rest.length) return { name: 'not-found', path };
   if (second === undefined) return { name: section } as Route;
   if (!WITH_DETAIL.includes(section) || !second) return { name: 'not-found', path };
-  return { name: section as 'words' | 'grammar', id: decodeURIComponent(second) };
+  return { name: section as 'words' | 'grammar' | 'songs', id: decodeURIComponent(second) };
 }
 
 export function hrefFor(route: Route): string {

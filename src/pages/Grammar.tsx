@@ -1,23 +1,25 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { Icon } from '../art/icons';
-import { loadLevel } from '../content/loader';
-import { LEVEL_IDS, type Grammar as GrammarPoint, type Level } from '../content/types';
+import { loadLevel, loadSongs } from '../content/loader';
+import { LEVEL_IDS, type Grammar as GrammarPoint, type Level, type Song } from '../content/types';
 import { useLoaded } from '../content/useContent';
 import { LEVELS } from '../levels';
 import { buildGrammarIndex, search } from '../library/search';
 import { useIsPhone } from '../library/useIsPhone';
+import { SongBadges } from '../songs/SongBadges';
+import { linkSongs } from '../songs/songs';
 import { SpeakButton } from '../speech/SpeechProvider';
 import { PageTitle } from './PageTitle';
 
 async function loadGrammar() {
-  const levels = await Promise.all(LEVEL_IDS.map(loadLevel));
+  const [levels, songs] = await Promise.all([Promise.all(LEVEL_IDS.map(loadLevel)), loadSongs()]);
   const grammar = levels.flatMap(l => l.grammar.grammar);
-  return { grammar, index: buildGrammarIndex(grammar) };
+  return { grammar, index: buildGrammarIndex(grammar), songsOf: linkSongs(songs).ofGrammar };
 }
 
 /** Meaning → how it attaches → when to use it → examples → cautions (docs/02 §3). */
-function GrammarDetail({ point, all, headingRef }: {
-  point: GrammarPoint; all: GrammarPoint[]; headingRef: React.Ref<HTMLHeadingElement>;
+function GrammarDetail({ point, all, songs, headingRef }: {
+  point: GrammarPoint; all: GrammarPoint[]; songs: Song[] | undefined; headingRef: React.Ref<HTMLHeadingElement>;
 }) {
   // Related points are shown only when the data names them (docs/02: comparisons need reviewed data).
   const related = point.relatedGrammarIds.map(id => all.find(g => g.id === id)).filter(g => g !== undefined);
@@ -53,6 +55,7 @@ function GrammarDetail({ point, all, headingRef }: {
           </ul>
         </>
       )}
+      <SongBadges songs={songs} what="문법" />
     </>
   );
 }
@@ -86,7 +89,7 @@ export function Grammar({ routeId }: { routeId?: string }) {
   const detail = (point: GrammarPoint | undefined) => (
     <section className="detail-panel grammar-detail" aria-label="선택한 문법 상세">
       {data.status === 'ready' && (point
-        ? <GrammarDetail point={point} all={data.data.grammar} headingRef={detailHeading} />
+        ? <GrammarDetail point={point} all={data.data.grammar} songs={data.data.songsOf.get(point.id)} headingRef={detailHeading} />
         : (
           <div className="empty">
             <h2>찾는 문법이 없어요.</h2>
@@ -161,7 +164,7 @@ export function Grammar({ routeId }: { routeId?: string }) {
           </div>
         </>
       ))}
-      <p className="bottom-note">지금은 수준별 1개, 모두 5개의 작성 예시 문법이에요. 수준 분류와 해설은 공개 전 검수가 필요해요.</p>
+      <p className="bottom-note">지금 문법은 모두 검수 전 초안이에요. 수준 분류와 해설은 공개 전 검수가 필요해요.</p>
     </>
   );
 }

@@ -4,13 +4,14 @@ import { DeviceCheck } from './pages/DeviceCheck';
 import { Grammar } from './pages/Grammar';
 import { NotFound } from './pages/NotFound';
 import { Settings } from './pages/Settings';
+import { Songs } from './pages/Songs';
 import { Study } from './pages/Study';
 import { WordLibrary } from './pages/Words';
 import { parseHash, useHash, type Route } from './router';
 import { AppShell } from './shell/AppShell';
 
 const TITLES: Record<Route['name'], string> = {
-  home: '홈', study: '오늘의 학습', words: '단어장', grammar: '문법',
+  home: '홈', study: '오늘의 학습', words: '단어장', grammar: '문법', songs: '노래',
   favorites: '즐겨찾기', settings: '설정', check: '이 기기 확인', 'not-found': '없는 화면',
 };
 
@@ -24,6 +25,8 @@ function Page({ route }: { route: Route }) {
       return <WordLibrary mode="words" routeId={route.id} />;
     case 'grammar':
       return <Grammar routeId={route.id} />;
+    case 'songs':
+      return <Songs routeId={route.id} />;
     case 'favorites':
       return <WordLibrary key="favorites" mode="favorites" />;
     case 'settings':

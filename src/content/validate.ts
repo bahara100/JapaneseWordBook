@@ -4,11 +4,15 @@ import { LEVEL_IDS, type Level } from './types.ts';
 
 export interface Issue { file: string; where: string; message: string }
 export interface ValidationResult { errors: Issue[]; warnings: Issue[] }
-/** Parsed JSON of content/<level>/words.json and grammar.json, keyed by level. */
+/** Parsed JSON of content/<level>/words.json and grammar.json, keyed by level, and content/songs.json. */
 export interface ContentFiles {
   words: Partial<Record<Level, unknown>>;
   grammar: Partial<Record<Level, unknown>>;
+  /** Without a songs file there are simply no songs. */
+  songs?: unknown;
 }
+
+export const SONGS_FILE = 'content/songs.json';
 
 const KANA = /^[ぁ-ゖァ-ヺー]+$/;
 const KANA_TEXT = /^[ぁ-ゖァ-ヺー、。！？「」・…\s]+$/;
@@ -72,6 +76,7 @@ export function validateContent(files: ContentFiles, mediaExists: (path: string)
   };
 
   const grammarIds = new Set<string>();
+  const wordIds = new Set<string>();
   const related: { file: string; where: string; ids: unknown[]; self: string }[] = [];
   const mediaPaths = new Map<string, string>();
 
@@ -126,7 +131,7 @@ export function validateContent(files: ContentFiles, mediaExists: (path: string)
           senses.set(s.id as string, ids);
         });
         provenance(w.provenance, where);
-        if (ok) words.set(w.id as string, { readings, senses, written });
+        if (ok) { words.set(w.id as string, { readings, senses, written }); wordIds.add(w.id as string); }
       });
 
       const media = new Map<string, { kind: unknown; description: string }>();
@@ -224,6 +229,39 @@ export function validateContent(files: ContentFiles, mediaExists: (path: string)
     for (const id of r.ids) {
       if (id === r.self) error(r.where, '관련 문법에 자기 자신이 들어 있어요.');
       else if (typeof id !== 'string' || !grammarIds.has(id)) error(r.where, `relatedGrammarIds의 "${String(id)}"가 없는 문법이에요.`);
+    }
+  }
+
+  // ---- songs ----
+  if (files.songs !== undefined) {
+    file = SONGS_FILE;
+    const raw = files.songs;
+    if (!isObj(raw)) error('', 'JSON 객체가 아니에요.');
+    else {
+      const names = new Set<string>();
+      list(raw, 'songs', 'songs', 0).forEach((song, i) => {
+        const at = `songs[${i}]`;
+        if (!isObj(song)) { error(at, '노래 형식이 아니에요.'); return; }
+        const where = claim(song.id, at) ? `${at} ${song.id}` : at;
+        const title = text(song, 'title', where);
+        const artist = text(song, 'artist', where);
+        const name = `${title.trim()} / ${artist.trim()}`;
+        if (title && artist && names.has(name)) error(where, `같은 노래(${name})가 이미 있어요.`);
+        names.add(name);
+        const refs = (key: 'wordIds' | 'grammarIds', known: Set<string>, what: string) => {
+          const ids = list(song, key, where, 0);
+          const once = new Set<unknown>();
+          for (const id of ids) {
+            if (typeof id !== 'string' || !known.has(id)) error(where, `${key}의 "${String(id)}"는 없는 ${what}.`);
+            else if (once.has(id)) error(where, `${key}에 "${id}"가 두 번 나와요.`);
+            once.add(id);
+          }
+          return ids.length;
+        };
+        if (refs('wordIds', wordIds, '단어예요') + refs('grammarIds', grammarIds, '문법이에요') === 0)
+          error(where, '단어나 문법이 하나도 없는 노래예요.');
+        provenance(song.provenance, where);
+      });
     }
   }
   return { errors, warnings };

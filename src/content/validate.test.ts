@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { LEVEL_IDS } from './types';
-import { filePath, validateContent, type ContentFiles } from './validate';
+import { filePath, SONGS_FILE, validateContent, type ContentFiles } from './validate';
 
 const root = path.resolve(__dirname, '../..');
 const onDisk = (p: string) => existsSync(path.join(root, 'public', p));
@@ -14,6 +14,7 @@ function realFiles(): ContentFiles {
       files[kind][level] = JSON.parse(readFileSync(path.join(root, filePath(kind, level)), 'utf8'));
     }
   }
+  files.songs = JSON.parse(readFileSync(path.join(root, SONGS_FILE), 'utf8'));
   return files;
 }
 
@@ -88,5 +89,37 @@ describe('validateContent', () => {
       'w001: 학습 카드(prompts)가 없는 단어예요.',
       'img-cat: 어떤 카드도 쓰지 않는 매체예요.',
     ]);
+  });
+
+  describe('songs', () => {
+    const song = (change: Partial<Record<string, unknown>> = {}) => ({
+      id: 's001', title: '시험 노래', artist: '시험 가수', wordIds: ['w001', 'w004'], grammarIds: ['g001'],
+      provenance: { author: 'Grok(초안)', usageTerms: '곡 정보만', status: 'draft' }, ...change,
+    });
+    const check = (...songs: unknown[]) => {
+      const files = realFiles();
+      files.songs = { songs };
+      return validateContent(files, onDisk).errors.map(e => e.message);
+    };
+
+    it('accepts songs that point at words and grammar of any level', () => {
+      expect(check(song())).toEqual([]);
+    });
+
+    it('catches words and grammar that are not there', () => {
+      expect(check(song({ wordIds: ['w999'] }))).toContain('wordIds의 "w999"는 없는 단어예요.');
+      expect(check(song({ grammarIds: ['g999'] }))).toContain('grammarIds의 "g999"는 없는 문법이에요.');
+      expect(check(song({ wordIds: ['w001', 'w001'] }))).toContain('wordIds에 "w001"가 두 번 나와요.');
+    });
+
+    it('needs a title, an artist and at least one word or grammar point', () => {
+      expect(check(song({ title: '' }))).toContain('title가 비어 있어요.');
+      expect(check(song({ wordIds: [], grammarIds: [] }))).toContain('단어나 문법이 하나도 없는 노래예요.');
+    });
+
+    it('catches the same song twice and ids taken by a word', () => {
+      expect(check(song(), song({ id: 's002' }))).toContain('같은 노래(시험 노래 / 시험 가수)가 이미 있어요.');
+      expect(check(song({ id: 'w001' }))).toContainEqual(expect.stringContaining('id "w001"가 이미'));
+    });
   });
 });

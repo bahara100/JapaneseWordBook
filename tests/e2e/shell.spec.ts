@@ -5,6 +5,7 @@ const SECTIONS = [
   { hash: '#/study', heading: '오늘의 그림카드', menu: '학습' },
   { hash: '#/words', heading: '궁금한 단어를 찾아보세요.', menu: '단어' },
   { hash: '#/grammar', heading: '문법도, 문장 속에서.', menu: '문법' },
+  { hash: '#/songs', heading: '노래로 만나는 일본어.', menu: '노래' },
   { hash: '#/favorites', heading: '다시 만나고 싶은 단어.', menu: '보관함' },
 ];
 
@@ -38,13 +39,13 @@ test('settings opens from the top bar on every screen size', async ({ page }) =>
 test('menu moves between screens and focuses the new title', async ({ page }) => {
   await page.goto('#/home');
   for (const section of SECTIONS.slice(1)) {
-    const link = isPhone(page) ? section.menu : { '학습': '오늘의 학습', '단어': '단어장', '문법': '문법', '보관함': '즐겨찾기' }[section.menu]!;
+    const link = isPhone(page) ? section.menu : { '학습': '오늘의 학습', '단어': '단어장', '문법': '문법', '노래': '노래', '보관함': '즐겨찾기' }[section.menu]!;
     await menu(page).getByRole('link', { name: link, exact: true }).click();
     await expect(page).toHaveURL(new RegExp(`${section.hash}$`));
     await expect(page.getByRole('heading', { level: 1 })).toBeFocused();
   }
   await page.goBack();
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('문법도, 문장 속에서.');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('노래로 만나는 일본어.');
 });
 
 test('detail paths open directly', async ({ page }) => {

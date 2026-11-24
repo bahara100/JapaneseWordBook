@@ -1,12 +1,12 @@
 // Validates content/ and writes the files the app loads: public/content/manifest.json and
-// public/content/<level>/{words,grammar}.json. Any error stops here, before the app build.
+// public/content/<level>/{words,grammar}.json and public/content/songs.json. Any error stops here, before the app build.
 // Run: node tools/build-content.ts   (Node runs TypeScript directly by stripping types)
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { LEVEL_IDS, SCHEMA_VERSION, type ContentManifest, type Level, type LevelGrammar, type LevelSummary, type LevelWords } from '../src/content/types.ts';
-import { filePath, formatIssue, validateContent, type ContentFiles } from '../src/content/validate.ts';
+import { LEVEL_IDS, SCHEMA_VERSION, type ContentManifest, type Level, type LevelGrammar, type LevelSummary, type LevelWords, type SongList } from '../src/content/types.ts';
+import { filePath, formatIssue, SONGS_FILE, validateContent, type ContentFiles } from '../src/content/validate.ts';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = path.join(root, 'public', 'content');
@@ -23,6 +23,14 @@ for (const level of LEVEL_IDS) {
     } catch (e) {
       parseErrors.push(`${rel}: JSON을 읽지 못했어요 (${(e as Error).message})`);
     }
+  }
+}
+const songsFull = path.join(root, SONGS_FILE);
+if (existsSync(songsFull)) {
+  try {
+    files.songs = JSON.parse(readFileSync(songsFull, 'utf8'));
+  } catch (e) {
+    parseErrors.push(`${SONGS_FILE}: JSON을 읽지 못했어요 (${(e as Error).message})`);
   }
 }
 if (parseErrors.length) {
@@ -59,8 +67,15 @@ for (const level of LEVEL_IDS) {
     reviewedPromptCount: words.prompts.filter(p => p.status === 'reviewed').length,
   };
 }
-const manifest: ContentManifest = { schemaVersion: SCHEMA_VERSION, contentVersion: hash.digest('hex').slice(0, 12), levels };
+const songs = (files.songs as SongList | undefined) ?? { songs: [] };
+const songsOut = JSON.stringify(songs);
+writeFileSync(path.join(outDir, 'songs.json'), songsOut);
+hash.update(songsOut);
+const manifest: ContentManifest = {
+  schemaVersion: SCHEMA_VERSION, contentVersion: hash.digest('hex').slice(0, 12), levels,
+  songsPath: 'content/songs.json', songCount: songs.songs.length,
+};
 writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
 
 const total = Object.values(levels).reduce((n, l) => ({ w: n.w + l.wordCount, g: n.g + l.grammarCount }), { w: 0, g: 0 });
-console.log(`콘텐츠 ${manifest.contentVersion}: 단어 ${total.w}개, 문법 ${total.g}개, 주의 ${warnings.length}개 → public/content/`);
+console.log(`콘텐츠 ${manifest.contentVersion}: 단어 ${total.w}개, 문법 ${total.g}개, 노래 ${manifest.songCount}곡, 주의 ${warnings.length}개 → public/content/`);
