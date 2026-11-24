@@ -2164,6 +2164,92 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w273",
+      "level": "N1",
+      "curriculumOrder": 51,
+      "written": "放つ",
+      "readings": [
+        {
+          "id": "w273-r1",
+          "kana": "はなつ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w273-s1",
+          "korean": [
+            "놓아 주다",
+            "방출하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w273-r1"
+          ],
+          "examples": [
+            {
+              "id": "w273-s1-e1",
+              "japanese": "鳥を空に放った。",
+              "reading": "とりをそらにはなった。",
+              "korean": "새를 하늘로 놓아 주었다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w277",
+      "level": "N1",
+      "curriculumOrder": 52,
+      "written": "萎びる",
+      "readings": [
+        {
+          "id": "w277-r1",
+          "kana": "しなびる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w277-s1",
+          "korean": [
+            "시들다",
+            "쪼글쪼글해지다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w277-r1"
+          ],
+          "examples": [
+            {
+              "id": "w277-s1-e1",
+              "japanese": "野菜が冷蔵庫の中で萎びた。",
+              "reading": "やさいがれいぞうこのなかでしなびた。",
+              "korean": "채소가 냉장고 안에서 시들었다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -2817,6 +2903,32 @@
       ],
       "acceptedKanaForms": [
         "ひたすら"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w273-p1",
+      "wordId": "w273",
+      "senseId": "w273-s1",
+      "readingId": "w273-r1",
+      "acceptedWrittenForms": [
+        "放つ"
+      ],
+      "acceptedKanaForms": [
+        "はなつ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w277-p1",
+      "wordId": "w277",
+      "senseId": "w277-s1",
+      "readingId": "w277-r1",
+      "acceptedWrittenForms": [
+        "萎びる"
+      ],
+      "acceptedKanaForms": [
+        "しなびる"
       ],
       "status": "draft"
     }

@@ -17,6 +17,7 @@ const extraction = {
   source: { song: '시험 노래', artist: '시험 가수', extractedBy: 'Grok' },
   words: [
     { written: '猫', kana: 'ネコ', korean: ['고양이'], partOfSpeech: '명사', level: 'N5' },
+    { written: '林檎', kana: 'りんご', korean: ['사과'], partOfSpeech: '명사', level: 'N5' },
     { written: '星空', kana: 'ほしぞら', romaji: 'Hoshizora', korean: '별하늘, 밤하늘', partOfSpeech: '명사', level: 'n3',
       example: { japanese: '山の上で星空を見ました。', reading: 'やまのうえでほしぞらをみました。', korean: '산 위에서 별하늘을 봤어요.' } },
   ],
@@ -30,19 +31,26 @@ const extraction = {
 
 describe('importSong', () => {
   it('adds new words and grammar as drafts and links what is already there', () => {
-    const result = importSong(current(), extraction);
+    const before = current();
+    // New ids and the course order continue after the highest ones already there.
+    const next = (ids: string[], prefix: string) => `${prefix}${String(Math.max(...ids.map(id => Number(id.slice(1)))) + 1).padStart(3, '0')}`;
+    const w = next(LEVEL_IDS.flatMap(l => before.words[l].words.map(x => x.id)), 'w');
+    const g = next(LEVEL_IDS.flatMap(l => before.grammar[l].grammar.map(x => x.id)), 'g');
+    const order = Math.max(...before.words.N3.words.map(x => x.curriculumOrder)) + 1;
+    const result = importSong(before, extraction);
     if (!result.ok) throw new Error(result.problems.join('\n'));
     const { state, report } = result;
-    expect(report.linkedWords.map(w => w.written)).toEqual(['猫']); // katakana reading still matches ねこ
-    expect(report.addedWords.map(w => [w.id, w.level, w.written])).toEqual([['w251', 'N3', '星空']]);
-    expect(report.linkedGrammar.map(g => g.expression)).toEqual(['〜ながら']);
-    expect(report.addedGrammar.map(g => [g.id, g.level])).toEqual([['g006', 'N4']]);
-    expect(report.song).toMatchObject({ id: 's001', title: '시험 노래', wordIds: ['w001', 'w251'], grammarIds: ['g002', 'g006'] });
+    // A katakana reading still matches ねこ, and 林檎 is the word written りんご.
+    expect(report.linkedWords.map(x => x.written)).toEqual(['猫', 'りんご']);
+    expect(report.addedWords.map(x => [x.id, x.level, x.written])).toEqual([[w, 'N3', '星空']]);
+    expect(report.linkedGrammar.map(x => x.expression)).toEqual(['〜ながら']);
+    expect(report.addedGrammar.map(x => [x.id, x.level])).toEqual([[g, 'N4']]);
+    expect(report.song).toMatchObject({ id: 's001', title: '시험 노래', wordIds: ['w001', 'w003', w], grammarIds: ['g002', g] });
 
     const added = state.words.N3.words.at(-1)!;
-    expect(added).toMatchObject({ curriculumOrder: 51, readings: [{ kana: 'ほしぞら', romaji: 'hoshizora' }], provenance: { status: 'draft' } });
+    expect(added).toMatchObject({ curriculumOrder: order, readings: [{ kana: 'ほしぞら', romaji: 'hoshizora' }], provenance: { status: 'draft' } });
     expect(added.senses[0].korean).toEqual(['별하늘', '밤하늘']);
-    expect(state.words.N3.prompts.at(-1)).toMatchObject({ id: 'w251-p1', acceptedKanaForms: ['ほしぞら'], status: 'draft' });
+    expect(state.words.N3.prompts.at(-1)).toMatchObject({ id: `${w}-p1`, acceptedKanaForms: ['ほしぞら'], status: 'draft' });
     // The result passes the same checks as every build.
     const files = { words: state.words, grammar: state.grammar, songs: state.songs };
     expect(validateContent(files, p => existsSync(path.join(root, 'public', p))).errors).toEqual([]);
@@ -59,7 +67,7 @@ describe('importSong', () => {
     expect(again.report.songExisted).toBe(true);
     expect(again.state.songs.songs).toHaveLength(1);
     expect(again.report.addedWords).toHaveLength(0); // 夜 is already among the N5 words
-    expect(again.state.songs.songs[0].wordIds).toHaveLength(3);
+    expect(again.state.songs.songs[0].wordIds).toHaveLength(4);
   });
 
   it('explains what is missing instead of guessing', () => {

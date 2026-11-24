@@ -4,8 +4,11 @@ import { describe, expect, it } from 'vitest';
 import { LEVEL_IDS, type LevelGrammar } from '../content/types';
 import { buildGrammarIndex, search } from './search';
 
+// Written against the five original sample points; grammar picked from songs is added after them.
+const SAMPLE = new Set(['g001', 'g002', 'g003', 'g004', 'g005']);
 const grammar = LEVEL_IDS.flatMap(level =>
-  (JSON.parse(readFileSync(path.resolve(__dirname, `../../content/${level.toLowerCase()}/grammar.json`), 'utf8')) as LevelGrammar).grammar);
+  (JSON.parse(readFileSync(path.resolve(__dirname, `../../content/${level.toLowerCase()}/grammar.json`), 'utf8')) as LevelGrammar).grammar)
+  .filter(g => SAMPLE.has(g.id));
 const index = buildGrammarIndex(grammar);
 const ids = (query: string, level?: Parameters<typeof search>[2]) => search(index, query, level).map(g => g.id);
 

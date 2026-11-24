@@ -2157,6 +2157,262 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w257",
+      "level": "N2",
+      "curriculumOrder": 51,
+      "written": "何もかも",
+      "readings": [
+        {
+          "id": "w257-r1",
+          "kana": "なにもかも"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w257-s1",
+          "korean": [
+            "모든 것",
+            "죄다"
+          ],
+          "partOfSpeech": "대명사",
+          "readingIds": [
+            "w257-r1"
+          ],
+          "examples": [
+            {
+              "id": "w257-s1-e1",
+              "japanese": "部屋の中は何もかも新しい。",
+              "reading": "へやのなかはなにもかもあたらしい。",
+              "korean": "방 안은 모든 것이 새롭다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w260",
+      "level": "N2",
+      "curriculumOrder": 52,
+      "written": "裸足",
+      "readings": [
+        {
+          "id": "w260-r1",
+          "kana": "はだし"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w260-s1",
+          "korean": [
+            "맨발"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w260-r1"
+          ],
+          "examples": [
+            {
+              "id": "w260-s1-e1",
+              "japanese": "子どもが裸足で庭に出た。",
+              "reading": "こどもがはだしでにわにでた。",
+              "korean": "아이가 맨발로 마당에 나갔다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w269",
+      "level": "N2",
+      "curriculumOrder": 53,
+      "written": "辿る",
+      "readings": [
+        {
+          "id": "w269-r1",
+          "kana": "たどる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w269-s1",
+          "korean": [
+            "더듬어 따라가다",
+            "추적하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w269-r1"
+          ],
+          "examples": [
+            {
+              "id": "w269-s1-e1",
+              "japanese": "地図を辿って駅へ行った。",
+              "reading": "ちずをたどってえきへいった。",
+              "korean": "지도를 따라 역에 갔다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w271",
+      "level": "N2",
+      "curriculumOrder": 54,
+      "written": "錆びる",
+      "readings": [
+        {
+          "id": "w271-r1",
+          "kana": "さびる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w271-s1",
+          "korean": [
+            "녹슬다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w271-r1"
+          ],
+          "examples": [
+            {
+              "id": "w271-s1-e1",
+              "japanese": "古い自転車が錆びている。",
+              "reading": "ふるいじてんしゃがさびている。",
+              "korean": "오래된 자전거가 녹슬어 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w280",
+      "level": "N2",
+      "curriculumOrder": 55,
+      "written": "傷跡",
+      "readings": [
+        {
+          "id": "w280-r1",
+          "kana": "きずあと"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w280-s1",
+          "korean": [
+            "흉터",
+            "상처 자국"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w280-r1"
+          ],
+          "examples": [
+            {
+              "id": "w280-s1-e1",
+              "japanese": "ひざに小さな傷跡がある。",
+              "reading": "ひざにちいさなきずあとがある。",
+              "korean": "무릎에 작은 흉터가 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w281",
+      "level": "N2",
+      "curriculumOrder": 56,
+      "written": "この世",
+      "readings": [
+        {
+          "id": "w281-r1",
+          "kana": "このよ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w281-s1",
+          "korean": [
+            "이 세상",
+            "현세"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w281-r1"
+          ],
+          "examples": [
+            {
+              "id": "w281-s1-e1",
+              "japanese": "この世にはいろいろな人がいる。",
+              "reading": "このよにはいろいろなひとがいる。",
+              "korean": "이 세상에는 여러 사람이 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -2810,6 +3066,84 @@
       ],
       "acceptedKanaForms": [
         "さっぱり"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w257-p1",
+      "wordId": "w257",
+      "senseId": "w257-s1",
+      "readingId": "w257-r1",
+      "acceptedWrittenForms": [
+        "何もかも"
+      ],
+      "acceptedKanaForms": [
+        "なにもかも"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w260-p1",
+      "wordId": "w260",
+      "senseId": "w260-s1",
+      "readingId": "w260-r1",
+      "acceptedWrittenForms": [
+        "裸足"
+      ],
+      "acceptedKanaForms": [
+        "はだし"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w269-p1",
+      "wordId": "w269",
+      "senseId": "w269-s1",
+      "readingId": "w269-r1",
+      "acceptedWrittenForms": [
+        "辿る"
+      ],
+      "acceptedKanaForms": [
+        "たどる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w271-p1",
+      "wordId": "w271",
+      "senseId": "w271-s1",
+      "readingId": "w271-r1",
+      "acceptedWrittenForms": [
+        "錆びる"
+      ],
+      "acceptedKanaForms": [
+        "さびる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w280-p1",
+      "wordId": "w280",
+      "senseId": "w280-s1",
+      "readingId": "w280-r1",
+      "acceptedWrittenForms": [
+        "傷跡"
+      ],
+      "acceptedKanaForms": [
+        "きずあと"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w281-p1",
+      "wordId": "w281",
+      "senseId": "w281-s1",
+      "readingId": "w281-r1",
+      "acceptedWrittenForms": [
+        "この世"
+      ],
+      "acceptedKanaForms": [
+        "このよ"
       ],
       "status": "draft"
     }

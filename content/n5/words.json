@@ -2156,6 +2156,345 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w253",
+      "level": "N5",
+      "curriculumOrder": 51,
+      "written": "二人",
+      "readings": [
+        {
+          "id": "w253-r1",
+          "kana": "ふたり"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w253-s1",
+          "korean": [
+            "두 사람"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w253-r1"
+          ],
+          "examples": [
+            {
+              "id": "w253-s1-e1",
+              "japanese": "今日は二人で映画を見ます。",
+              "reading": "きょうはふたりでえいがをみます。",
+              "korean": "오늘은 둘이서 영화를 봅니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w254",
+      "level": "N5",
+      "curriculumOrder": 52,
+      "written": "少し",
+      "readings": [
+        {
+          "id": "w254-r1",
+          "kana": "すこし"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w254-s1",
+          "korean": [
+            "조금",
+            "살짝"
+          ],
+          "partOfSpeech": "부사",
+          "readingIds": [
+            "w254-r1"
+          ],
+          "examples": [
+            {
+              "id": "w254-s1-e1",
+              "japanese": "コーヒーが少し熱いです。",
+              "reading": "コーヒーがすこしあついです。",
+              "korean": "커피가 조금 뜨겁습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w256",
+      "level": "N5",
+      "curriculumOrder": 53,
+      "written": "さよなら",
+      "readings": [
+        {
+          "id": "w256-r1",
+          "kana": "さよなら"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w256-s1",
+          "korean": [
+            "안녕",
+            "작별"
+          ],
+          "partOfSpeech": "감동사",
+          "readingIds": [
+            "w256-r1"
+          ],
+          "examples": [
+            {
+              "id": "w256-s1-e1",
+              "japanese": "駅で友だちとさよならを言った。",
+              "reading": "えきでともだちとさよならをいった。",
+              "korean": "역에서 친구와 작별 인사를 했다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w261",
+      "level": "N5",
+      "curriculumOrder": 54,
+      "written": "歩く",
+      "readings": [
+        {
+          "id": "w261-r1",
+          "kana": "あるく"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w261-s1",
+          "korean": [
+            "걷다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w261-r1"
+          ],
+          "examples": [
+            {
+              "id": "w261-s1-e1",
+              "japanese": "駅まで歩いて行きます。",
+              "reading": "えきまであるいていきます。",
+              "korean": "역까지 걸어서 갑니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w266",
+      "level": "N5",
+      "curriculumOrder": 55,
+      "written": "お願い",
+      "readings": [
+        {
+          "id": "w266-r1",
+          "kana": "おねがい"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w266-s1",
+          "korean": [
+            "부탁"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w266-r1"
+          ],
+          "examples": [
+            {
+              "id": "w266-s1-e1",
+              "japanese": "一つお願いがあります。",
+              "reading": "ひとつおねがいがあります。",
+              "korean": "부탁이 하나 있습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w267",
+      "level": "N5",
+      "curriculumOrder": 56,
+      "written": "赤い",
+      "readings": [
+        {
+          "id": "w267-r1",
+          "kana": "あかい"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w267-s1",
+          "korean": [
+            "빨간",
+            "붉은"
+          ],
+          "partOfSpeech": "イ형용사",
+          "readingIds": [
+            "w267-r1"
+          ],
+          "examples": [
+            {
+              "id": "w267-s1-e1",
+              "japanese": "赤い花が咲いています。",
+              "reading": "あかいはながさいています。",
+              "korean": "빨간 꽃이 피어 있습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w270",
+      "level": "N5",
+      "curriculumOrder": 57,
+      "written": "会う",
+      "readings": [
+        {
+          "id": "w270-r1",
+          "kana": "あう"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w270-s1",
+          "korean": [
+            "만나다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w270-r1"
+          ],
+          "examples": [
+            {
+              "id": "w270-s1-e1",
+              "japanese": "明日、友だちと会います。",
+              "reading": "あした、ともだちとあいます。",
+              "korean": "내일 친구를 만납니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w272",
+      "level": "N5",
+      "curriculumOrder": 58,
+      "written": "プール",
+      "readings": [
+        {
+          "id": "w272-r1",
+          "kana": "プール"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w272-s1",
+          "korean": [
+            "수영장"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w272-r1"
+          ],
+          "examples": [
+            {
+              "id": "w272-s1-e1",
+              "japanese": "夏はよくプールで泳ぎます。",
+              "reading": "なつはよくプールでおよぎます。",
+              "korean": "여름에는 자주 수영장에서 수영합니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -2844,6 +3183,110 @@
       ],
       "acceptedKanaForms": [
         "テレビ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w253-p1",
+      "wordId": "w253",
+      "senseId": "w253-s1",
+      "readingId": "w253-r1",
+      "acceptedWrittenForms": [
+        "二人"
+      ],
+      "acceptedKanaForms": [
+        "ふたり"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w254-p1",
+      "wordId": "w254",
+      "senseId": "w254-s1",
+      "readingId": "w254-r1",
+      "acceptedWrittenForms": [
+        "少し"
+      ],
+      "acceptedKanaForms": [
+        "すこし"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w256-p1",
+      "wordId": "w256",
+      "senseId": "w256-s1",
+      "readingId": "w256-r1",
+      "acceptedWrittenForms": [
+        "さよなら"
+      ],
+      "acceptedKanaForms": [
+        "さよなら"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w261-p1",
+      "wordId": "w261",
+      "senseId": "w261-s1",
+      "readingId": "w261-r1",
+      "acceptedWrittenForms": [
+        "歩く"
+      ],
+      "acceptedKanaForms": [
+        "あるく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w266-p1",
+      "wordId": "w266",
+      "senseId": "w266-s1",
+      "readingId": "w266-r1",
+      "acceptedWrittenForms": [
+        "お願い"
+      ],
+      "acceptedKanaForms": [
+        "おねがい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w267-p1",
+      "wordId": "w267",
+      "senseId": "w267-s1",
+      "readingId": "w267-r1",
+      "acceptedWrittenForms": [
+        "赤い"
+      ],
+      "acceptedKanaForms": [
+        "あかい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w270-p1",
+      "wordId": "w270",
+      "senseId": "w270-s1",
+      "readingId": "w270-r1",
+      "acceptedWrittenForms": [
+        "会う"
+      ],
+      "acceptedKanaForms": [
+        "あう"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w272-p1",
+      "wordId": "w272",
+      "senseId": "w272-s1",
+      "readingId": "w272-r1",
+      "acceptedWrittenForms": [
+        "プール"
+      ],
+      "acceptedKanaForms": [
+        "プール"
       ],
       "status": "draft"
     }

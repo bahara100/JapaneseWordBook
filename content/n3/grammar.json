@@ -30,6 +30,99 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "g007",
+      "level": "N3",
+      "expression": "なんて",
+      "koreanMeaning": "~라니, 뭐랄까 (가볍게 치부하거나 자조)",
+      "connection": "문장 또는 명사 + なんて / 문두에서 감탄처럼 씀",
+      "explanation": "앞선 말이나 생각을 ‘그런 것’으로 받아, 가볍게 낮추거나 자조할 때 쓴다. 문두에서 ‘뭐랄까’ 하고 꺼내며 쓰기도 한다.",
+      "cautions": [
+        "부정적이거나 가볍게 보는 느낌이 강해서, 공손한 장면에서는 쓰기 어렵다.",
+        "예시의 など와 비슷해 보여도, なんて 쪽은 놀라움·경멸·자조 같은 감정이 더 뚜렷하다."
+      ],
+      "examples": [
+        {
+          "id": "g007-e1",
+          "japanese": "一人で行くなんて、さびしいよ。",
+          "reading": "ひとりでいくなんて、さびしいよ。",
+          "korean": "혼자 가다니, 외롭네.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g009",
+      "level": "N3",
+      "expression": "〜なきゃ",
+      "koreanMeaning": "~해야 한다, ~하지 않으면 안 된다",
+      "connection": "동사 ない형에서 ない→なきゃ (=なければ). 뒤에는 ならない/いけない가 자주 생략된다.",
+      "explanation": "なければならない의 구어 축약이다. 의무나 필요를 친한 말투로 말할 때 쓴다.",
+      "cautions": [
+        "구어체이므로 보고서나 공손한 대화에서는 なければなりません/なくてはいけません을 쓴다.",
+        "なきゃ 뒤에 ならない가 없어도 ‘해야 한다’는 뜻이 되는 일이 많다."
+      ],
+      "examples": [
+        {
+          "id": "g009-e1",
+          "japanese": "今日中に宿題をやらなきゃ。",
+          "reading": "きょうじゅうにしゅくだいをやらなきゃ。",
+          "korean": "오늘 안에 숙제를 해야 해.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g012",
+      "level": "N3",
+      "expression": "〜ごとに",
+      "koreanMeaning": "~마다, ~할 때마다",
+      "connection": "명사 또는 동사 사전형 + ごとに",
+      "explanation": "어떤 간격이나 일이 반복될 때마다 뒤의 일이 일어남을 나타낸다.",
+      "cautions": [
+        "동사에는 사전형을 붙인다 (会うごとに). た형에는 붙이지 않는다.",
+        "〜たびに와 뜻이 비슷한 경우가 많지만, 一時間ごとに처럼 ‘일정한 간격’에도 잘 쓴다."
+      ],
+      "examples": [
+        {
+          "id": "g012-e1",
+          "japanese": "ニュースは一時間ごとに変わる。",
+          "reading": "ニュースはいちじかんごとにかわる。",
+          "korean": "뉴스는 한 시간마다 바뀐다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ]
 }

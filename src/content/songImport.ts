@@ -85,7 +85,9 @@ export function importSong(current: ContentState, input: unknown, options: { dra
     const written = str(raw.written) || str(raw.kana);
     const kana = str(raw.kana);
     if (!written || !kana) { problems.push(`${where}: written과 kana가 필요해요.`); return; }
-    const found = allWords().find(w => same(w.written, written) && w.readings.some(r => sameKana(r.kana, kana)));
+    // Same reading, and the same spelling or one of them written in kana only (りんご = 林檎).
+    const found = allWords().find(w => w.readings.some(r => sameKana(r.kana, kana))
+      && (same(w.written, written) || sameKana(w.written, kana) || sameKana(written, kana)));
     if (found) {
       if (!wordIds.includes(found.id)) { wordIds.push(found.id); if (!report.addedWords.includes(found)) report.linkedWords.push(found); }
       return;

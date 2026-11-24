@@ -30,6 +30,226 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "g006",
+      "level": "N4",
+      "expression": "まるで〜みたいだ",
+      "koreanMeaning": "마치 ~같다, 꼭 ~인 것만 같다",
+      "connection": "まるで + 명사 / 동사·い형용사 보통형 / な형용사 어간 + みたいだ",
+      "explanation": "ようだ보다 구어적인 비유 표현이다. 앞의 まるで가 ‘꼭/마치’를 강조한다.",
+      "cautions": [
+        "みたいだ는 だ체이고, 정중체는 みたいです이다.",
+        "명사와 な형용사 뒤에는 だ 없이 바로 みたいだ를 붙인다.",
+        "딱딱한 말투에서는 〜のようだ를 쓰는 편이 자연스럽다."
+      ],
+      "examples": [
+        {
+          "id": "g006-e1",
+          "japanese": "彼の部屋はまるで図書館みたいだ。",
+          "reading": "かれのへやはまるでとしょかんみたいだ。",
+          "korean": "그의 방은 꼭 도서관 같다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g008",
+      "level": "N4",
+      "expression": "〜てしまう/〜てしまった",
+      "koreanMeaning": "(그만) ~해 버리다. 돌이킬 수 없음, 의도치 않음, 후회",
+      "connection": "동사 て형 + しまう (회화: てしまう→ちゃう, でしまう→じゃう)",
+      "explanation": "동작이 완전히 끝나 버렸거나, 의도치 않게·후회스럽게 일어났음을 나타낸다. 과거형은 てしまった이다.",
+      "cautions": [
+        "완료의 뜻만 있고 후회가 없는 경우도 있다.",
+        "회화의 ちゃう/じゃう는 친한 사이에서 쓰며, 공손한 자리에서는 てしまいます가 안전하다."
+      ],
+      "examples": [
+        {
+          "id": "g008-e1",
+          "japanese": "ケーキを全部食べてしまった。",
+          "reading": "ケーキをぜんぶたべてしまった。",
+          "korean": "케이크를 전부 먹어 버렸다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g011",
+      "level": "N4",
+      "expression": "〜まま",
+      "koreanMeaning": "~인 상태로, ~채로",
+      "connection": "명사+の / 동사 과거형 또는 ている / い형용사 + まま",
+      "explanation": "어떤 상태가 바뀌지 않은 채로 다음 동작이 일어남을 나타낸다.",
+      "cautions": [
+        "명사 뒤에는 のまま이다 (예: 靴のまま).",
+        "동사는 보통 과거형(着たまま)이나 ている를 쓴다. 사전형을 바로 붙이지 않는다."
+      ],
+      "examples": [
+        {
+          "id": "g011-e1",
+          "japanese": "電気をつけたまま寝てしまった。",
+          "reading": "でんきをつけたままねてしまった。",
+          "korean": "불을 켠 채로 잠들어 버렸다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g013",
+      "level": "N4",
+      "expression": "〜ていく",
+      "koreanMeaning": "(~하면서) 나아가다; 점점 ~되어 가다; 화자에게서 멀어지며 ~하다",
+      "connection": "동사 て형 + いく",
+      "explanation": "동작이 앞으로 계속되거나, 상태가 점점 변하거나, 사람·물건이 화자에게서 멀어지는 방향을 나타낸다.",
+      "cautions": [
+        "〜てくる는 화자 쪽으로 다가오는 방향이라 반대이다.",
+        "이동 동사 いく와 헷갈리기 쉬운데, 보조동사일 때는 변화·계속의 뜻도 있다."
+      ],
+      "examples": [
+        {
+          "id": "g013-e1",
+          "japanese": "これから寒くなっていく。",
+          "reading": "これからさむくなっていく。",
+          "korean": "이제부터 추워져 갈 것이다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g015",
+      "level": "N4",
+      "expression": "受け身（〜れる/〜られる）",
+      "koreanMeaning": "~아/어지다, (남에 의해) ~당하다",
+      "connection": "5단: ない형 어간 + れる (放つ→放たれる). 1단: 어간 + られる. 불규칙: する→される, 来る→来られる",
+      "explanation": "동작을 당하는 쪽을 주어로 내세운다. 누가 했는지는 に로 나타낸다.",
+      "cautions": [
+        "放つ는 타동사, 放たれる는 그 수동형이다.",
+        "する의 수동은 される이다.",
+        "雨에 降られた 같은 ‘피해의 수동’은 기본 수동보다 나중에 배우는 편이 좋다."
+      ],
+      "examples": [
+        {
+          "id": "g015-e1",
+          "japanese": "先生に名前を呼ばれた。",
+          "reading": "せんせいになまえをよばれた。",
+          "korean": "선생님에게 이름을 불렸다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g016",
+      "level": "N4",
+      "expression": "連体修飾",
+      "koreanMeaning": "~한/~하는 + 명사 (명사를 꾸미는 절)",
+      "connection": "보통형(과거·비과거, 긍정·부정)이 명사 바로 앞에 온다",
+      "explanation": "동사나 형용사의 보통형으로 뒤의 명사를 꾸민다. 한국어와 어순이 비슷하고, 꾸미는 절의 주어는 が로 나타내거나 생략된다.",
+      "cautions": [
+        "정중형(ます/です)은 명사 앞에 잘 쓰지 않고, 보통형을 쓴다.",
+        "과거면 た형 (読んだ本), 현재·습관이면 사전형 (読む本)을 쓴다.",
+        "가사나 회화에서는 조사가 생략되기도 하지만, 보통 문장에서는 생략하지 않는 편이 안전하다."
+      ],
+      "examples": [
+        {
+          "id": "g016-e1",
+          "japanese": "昨日読んだ本はおもしろかった。",
+          "reading": "きのうよんだほんはおもしろかった。",
+          "korean": "어제 읽은 책은 재미있었다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g017",
+      "level": "N4",
+      "expression": "〜おう/〜よう",
+      "koreanMeaning": "~자, ~어야지 (권유·의지)",
+      "connection": "5단 동사는 う단을 おう단으로 (満たす→満たそう, 行く→行こう). 1단은 어간+よう (見る→見よう). 불규칙: する→しよう, 来る→来よう",
+      "explanation": "권유(같이 ~하자)나 화자의 의지(~해야지)를 나타낸다. 정중체는 ましょう이다.",
+      "cautions": [
+        "5단은 う→おう, つ→とう, す→そう처럼 오단 모음만 바뀐다.",
+        "상대를 부드럽게 권할 때는 よ를 붙이기도 한다 (行こうよ)."
+      ],
+      "examples": [
+        {
+          "id": "g017-e1",
+          "japanese": "明日、一緒に映画を見よう。",
+          "reading": "あした、いっしょにえいがをみよう。",
+          "korean": "내일 같이 영화를 보자.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ]
 }

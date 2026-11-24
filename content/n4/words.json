@@ -2156,6 +2156,302 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w252",
+      "level": "N4",
+      "curriculumOrder": 51,
+      "written": "世界",
+      "readings": [
+        {
+          "id": "w252-r1",
+          "kana": "せかい"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w252-s1",
+          "korean": [
+            "세계",
+            "세상"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w252-r1"
+          ],
+          "examples": [
+            {
+              "id": "w252-s1-e1",
+              "japanese": "世界にはいろいろな国がある。",
+              "reading": "せかいにはいろいろなくにがある。",
+              "korean": "세계에는 여러 나라가 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w255",
+      "level": "N4",
+      "curriculumOrder": 52,
+      "written": "夢",
+      "readings": [
+        {
+          "id": "w255-r1",
+          "kana": "ゆめ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w255-s1",
+          "korean": [
+            "꿈"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w255-r1"
+          ],
+          "examples": [
+            {
+              "id": "w255-s1-e1",
+              "japanese": "ゆうべ、変な夢を見ました。",
+              "reading": "ゆうべ、へんなゆめをみました。",
+              "korean": "어젯밤, 이상한 꿈을 꿨습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w258",
+      "level": "N4",
+      "curriculumOrder": 53,
+      "written": "忘れる",
+      "readings": [
+        {
+          "id": "w258-r1",
+          "kana": "わすれる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w258-s1",
+          "korean": [
+            "잊다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w258-r1"
+          ],
+          "examples": [
+            {
+              "id": "w258-s1-e1",
+              "japanese": "宿題を忘れました。",
+              "reading": "しゅくだいをわすれました。",
+              "korean": "숙제를 잊었습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w265",
+      "level": "N4",
+      "curriculumOrder": 54,
+      "written": "落ちる",
+      "readings": [
+        {
+          "id": "w265-r1",
+          "kana": "おちる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w265-s1",
+          "korean": [
+            "떨어지다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w265-r1"
+          ],
+          "examples": [
+            {
+              "id": "w265-s1-e1",
+              "japanese": "ポケットからお金が落ちた。",
+              "reading": "ポケットからおかねがおちた。",
+              "korean": "주머니에서 돈이 떨어졌다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w276",
+      "level": "N4",
+      "curriculumOrder": 55,
+      "written": "隠す",
+      "readings": [
+        {
+          "id": "w276-r1",
+          "kana": "かくす"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w276-s1",
+          "korean": [
+            "숨기다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w276-r1"
+          ],
+          "examples": [
+            {
+              "id": "w276-s1-e1",
+              "japanese": "プレゼントを引き出しに隠した。",
+              "reading": "プレゼントをひきだしにかくした。",
+              "korean": "선물을 서랍에 숨겼다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w279",
+      "level": "N4",
+      "curriculumOrder": 56,
+      "written": "残る",
+      "readings": [
+        {
+          "id": "w279-r1",
+          "kana": "のこる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w279-s1",
+          "korean": [
+            "남다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w279-r1"
+          ],
+          "examples": [
+            {
+              "id": "w279-s1-e1",
+              "japanese": "まだ仕事が残っている。",
+              "reading": "まだしごとがのこっている。",
+              "korean": "아직 일이 남아 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w282",
+      "level": "N4",
+      "curriculumOrder": 57,
+      "written": "間違い",
+      "readings": [
+        {
+          "id": "w282-r1",
+          "kana": "まちがい"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w282-s1",
+          "korean": [
+            "잘못",
+            "실수"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w282-r1"
+          ],
+          "examples": [
+            {
+              "id": "w282-s1-e1",
+              "japanese": "答えに間違いがありました。",
+              "reading": "こたえにまちがいがありました。",
+              "korean": "답에 실수가 있었습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -2809,6 +3105,97 @@
       ],
       "acceptedKanaForms": [
         "ほとんど"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w252-p1",
+      "wordId": "w252",
+      "senseId": "w252-s1",
+      "readingId": "w252-r1",
+      "acceptedWrittenForms": [
+        "世界"
+      ],
+      "acceptedKanaForms": [
+        "せかい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w255-p1",
+      "wordId": "w255",
+      "senseId": "w255-s1",
+      "readingId": "w255-r1",
+      "acceptedWrittenForms": [
+        "夢"
+      ],
+      "acceptedKanaForms": [
+        "ゆめ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w258-p1",
+      "wordId": "w258",
+      "senseId": "w258-s1",
+      "readingId": "w258-r1",
+      "acceptedWrittenForms": [
+        "忘れる"
+      ],
+      "acceptedKanaForms": [
+        "わすれる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w265-p1",
+      "wordId": "w265",
+      "senseId": "w265-s1",
+      "readingId": "w265-r1",
+      "acceptedWrittenForms": [
+        "落ちる"
+      ],
+      "acceptedKanaForms": [
+        "おちる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w276-p1",
+      "wordId": "w276",
+      "senseId": "w276-s1",
+      "readingId": "w276-r1",
+      "acceptedWrittenForms": [
+        "隠す"
+      ],
+      "acceptedKanaForms": [
+        "かくす"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w279-p1",
+      "wordId": "w279",
+      "senseId": "w279-s1",
+      "readingId": "w279-r1",
+      "acceptedWrittenForms": [
+        "残る"
+      ],
+      "acceptedKanaForms": [
+        "のこる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w282-p1",
+      "wordId": "w282",
+      "senseId": "w282-s1",
+      "readingId": "w282-r1",
+      "acceptedWrittenForms": [
+        "間違い"
+      ],
+      "acceptedKanaForms": [
+        "まちがい"
       ],
       "status": "draft"
     }

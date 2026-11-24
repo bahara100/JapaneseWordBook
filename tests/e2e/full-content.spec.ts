@@ -4,14 +4,15 @@ import { expect, test, type Page } from '@playwright/test';
 const card = (page: Page) => page.getByRole('article');
 const list = (page: Page) => page.getByRole('list', { name: '단어 목록' });
 
-test('every level has 50 words, and the library and home show them', async ({ page }) => {
+test('every level has its words, and the library and home show them', async ({ page }) => {
   await page.goto('#/home');
-  await expect(page.getByText('준비된 N5 카드 50장 · 검수 전 초안 50장 포함')).toBeVisible();
+  await expect(page.getByText('준비된 N5 카드 58장 · 검수 전 초안 58장 포함')).toBeVisible();
   await page.goto('#/words');
-  await expect(page.getByText('250개의 단어')).toBeVisible();
-  for (const level of ['N5', 'N4', 'N3', 'N2', 'N1']) {
+  await expect(page.getByText('283개의 단어')).toBeVisible();
+  // 50 per level, plus the words picked from JANE DOE.
+  for (const [level, count] of [['N5', 58], ['N4', 57], ['N3', 60], ['N2', 56], ['N1', 52]] as const) {
     await page.getByLabel('학습 수준').selectOption(level);
-    await expect(page.getByText('50개의 단어')).toBeVisible();
+    await expect(page.getByText(`${count}개의 단어`)).toBeVisible();
   }
   await page.getByLabel('학습 수준').selectOption('all');
   await page.getByLabel('단어 검색').fill('kuukou');

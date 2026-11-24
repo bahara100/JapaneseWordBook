@@ -6,8 +6,9 @@ export { expect, type Page, type Route } from '@playwright/test';
 type Json = { [key: string]: any };
 
 /**
- * Most screen tests describe the original three sample words of each level (猫, 学校, りんご in N5).
- * This serves only those, so the scenarios stay small and fixed as real content grows.
+ * Most screen tests describe the original three sample words of each level (猫, 学校, りんご in N5)
+ * and the five original grammar points, with no songs. This serves only those, so the scenarios stay
+ * small and fixed as real content grows.
  * Tests of the full word list import from '@playwright/test' directly (full-content.spec.ts).
  */
 export const test = base.extend<{ sampleContent: void }>({
@@ -22,6 +23,14 @@ export const test = base.extend<{ sampleContent: void }>({
       data.prompts = data.prompts.filter((p: Json) => ids.has(p.wordId));
       await route.fulfill({ response, json: data });
     }));
+    const SAMPLE_GRAMMAR = new Set(['g001', 'g002', 'g003', 'g004', 'g005']);
+    await page.route('**/content/*/grammar.json', quietly(async route => {
+      const response = await route.fetch();
+      const data: Json = await response.json();
+      data.grammar = data.grammar.filter((g: Json) => SAMPLE_GRAMMAR.has(g.id));
+      await route.fulfill({ response, json: data });
+    }));
+    await page.route('**/content/songs.json', quietly(route => route.fulfill({ json: { songs: [] } })));
     await page.route('**/content/manifest.json', quietly(async route => {
       const response = await route.fetch();
       const manifest: Json = await response.json();

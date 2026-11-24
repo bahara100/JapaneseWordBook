@@ -30,6 +30,38 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "g014",
+      "level": "N5",
+      "expression": "〜に行く/〜に来る",
+      "koreanMeaning": "~하러 가다/오다",
+      "connection": "동사 ます형 어간(연용형) + に + 行く/来る",
+      "explanation": "이동의 목적을 나타낸다. ‘먹으러 가다’, ‘놀러 오다’처럼 목적 동작과 이동 동사를 잇는다.",
+      "cautions": [
+        "동사는 ます형 어간을 쓴다 (食べに, 会いに). 사전형이나 て형을 바로 넣지 않는다.",
+        "명사 + に行く도 가능하다 (買い物に行く).",
+        "来る/行く의 방향은 화자 기준이다."
+      ],
+      "examples": [
+        {
+          "id": "g014-e1",
+          "japanese": "昼ごはんを食べに行きます。",
+          "reading": "ひるごはんをたべにいきます。",
+          "korean": "점심을 먹으러 갑니다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ]
 }

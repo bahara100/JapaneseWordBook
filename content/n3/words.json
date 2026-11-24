@@ -2163,6 +2163,430 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
+    },
+    {
+      "id": "w251",
+      "level": "N3",
+      "curriculumOrder": 51,
+      "written": "まるで",
+      "readings": [
+        {
+          "id": "w251-r1",
+          "kana": "まるで"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w251-s1",
+          "korean": [
+            "마치",
+            "꼭"
+          ],
+          "partOfSpeech": "부사",
+          "readingIds": [
+            "w251-r1"
+          ],
+          "examples": [
+            {
+              "id": "w251-s1-e1",
+              "japanese": "この絵はまるで本物だ。",
+              "reading": "このえはまるでほんものだ。",
+              "korean": "이 그림은 꼭 진짜 같다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w259",
+      "level": "N3",
+      "curriculumOrder": 52,
+      "written": "硝子",
+      "readings": [
+        {
+          "id": "w259-r1",
+          "kana": "ガラス"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w259-s1",
+          "korean": [
+            "유리"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w259-r1"
+          ],
+          "examples": [
+            {
+              "id": "w259-s1-e1",
+              "japanese": "窓の硝子をきれいにした。",
+              "reading": "まどのガラスをきれいにした。",
+              "korean": "창유리를 깨끗이 닦았다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w262",
+      "level": "N3",
+      "curriculumOrder": 53,
+      "written": "痛む",
+      "readings": [
+        {
+          "id": "w262-r1",
+          "kana": "いたむ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w262-s1",
+          "korean": [
+            "아프다",
+            "쑤시다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w262-r1"
+          ],
+          "examples": [
+            {
+              "id": "w262-s1-e1",
+              "japanese": "昨日から歯が痛む。",
+              "reading": "きのうからはがいたむ。",
+              "korean": "어제부터 이가 아프다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w263",
+      "level": "N3",
+      "curriculumOrder": 54,
+      "written": "血",
+      "readings": [
+        {
+          "id": "w263-r1",
+          "kana": "ち"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w263-s1",
+          "korean": [
+            "피"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w263-r1"
+          ],
+          "examples": [
+            {
+              "id": "w263-s1-e1",
+              "japanese": "指を切って、少し血が出た。",
+              "reading": "ゆびをきって、すこしちがでた。",
+              "korean": "손가락을 베어서 피가 조금 났다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w264",
+      "level": "N3",
+      "curriculumOrder": 55,
+      "written": "流れる",
+      "readings": [
+        {
+          "id": "w264-r1",
+          "kana": "ながれる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w264-s1",
+          "korean": [
+            "흐르다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w264-r1"
+          ],
+          "examples": [
+            {
+              "id": "w264-s1-e1",
+              "japanese": "川の水がゆっくり流れる。",
+              "reading": "かわのみずがゆっくりながれる。",
+              "korean": "강의 물이 천천히 흐른다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w268",
+      "level": "N3",
+      "curriculumOrder": 56,
+      "written": "足跡",
+      "readings": [
+        {
+          "id": "w268-r1",
+          "kana": "あしあと"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w268-s1",
+          "korean": [
+            "발자국"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w268-r1"
+          ],
+          "examples": [
+            {
+              "id": "w268-s1-e1",
+              "japanese": "雪の上に犬の足跡がある。",
+              "reading": "ゆきのうえにいぬのあしあとがある。",
+              "korean": "눈 위에 개의 발자국이 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w274",
+      "level": "N3",
+      "curriculumOrder": 57,
+      "written": "金魚",
+      "readings": [
+        {
+          "id": "w274-r1",
+          "kana": "きんぎょ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w274-s1",
+          "korean": [
+            "금붕어"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w274-r1"
+          ],
+          "examples": [
+            {
+              "id": "w274-s1-e1",
+              "japanese": "店で小さな金魚を買った。",
+              "reading": "みせでちいさなきんぎょをかった。",
+              "korean": "가게에서 작은 금붕어를 샀다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w275",
+      "level": "N3",
+      "curriculumOrder": 58,
+      "written": "靴箱",
+      "readings": [
+        {
+          "id": "w275-r1",
+          "kana": "くつばこ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w275-s1",
+          "korean": [
+            "신발장"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w275-r1"
+          ],
+          "examples": [
+            {
+              "id": "w275-s1-e1",
+              "japanese": "靴を靴箱に入れました。",
+              "reading": "くつをくつばこにいれました。",
+              "korean": "신발을 신발장에 넣었습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w278",
+      "level": "N3",
+      "curriculumOrder": 59,
+      "written": "肌",
+      "readings": [
+        {
+          "id": "w278-r1",
+          "kana": "はだ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w278-s1",
+          "korean": [
+            "피부",
+            "살갗"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w278-r1"
+          ],
+          "examples": [
+            {
+              "id": "w278-s1-e1",
+              "japanese": "冬は肌が乾きやすい。",
+              "reading": "ふゆははだがかわきやすい。",
+              "korean": "겨울에는 피부가 건조해지기 쉽다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w283",
+      "level": "N3",
+      "curriculumOrder": 60,
+      "written": "満たす",
+      "readings": [
+        {
+          "id": "w283-r1",
+          "kana": "みたす"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w283-s1",
+          "korean": [
+            "채우다",
+            "가득 하게 하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w283-r1"
+          ],
+          "examples": [
+            {
+              "id": "w283-s1-e1",
+              "japanese": "コップに水を満たしました。",
+              "reading": "コップにみずをみたしました。",
+              "korean": "컵에 물을 채웠습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -2816,6 +3240,136 @@
       ],
       "acceptedKanaForms": [
         "ようやく"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w251-p1",
+      "wordId": "w251",
+      "senseId": "w251-s1",
+      "readingId": "w251-r1",
+      "acceptedWrittenForms": [
+        "まるで"
+      ],
+      "acceptedKanaForms": [
+        "まるで"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w259-p1",
+      "wordId": "w259",
+      "senseId": "w259-s1",
+      "readingId": "w259-r1",
+      "acceptedWrittenForms": [
+        "硝子"
+      ],
+      "acceptedKanaForms": [
+        "ガラス"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w262-p1",
+      "wordId": "w262",
+      "senseId": "w262-s1",
+      "readingId": "w262-r1",
+      "acceptedWrittenForms": [
+        "痛む"
+      ],
+      "acceptedKanaForms": [
+        "いたむ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w263-p1",
+      "wordId": "w263",
+      "senseId": "w263-s1",
+      "readingId": "w263-r1",
+      "acceptedWrittenForms": [
+        "血"
+      ],
+      "acceptedKanaForms": [
+        "ち"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w264-p1",
+      "wordId": "w264",
+      "senseId": "w264-s1",
+      "readingId": "w264-r1",
+      "acceptedWrittenForms": [
+        "流れる"
+      ],
+      "acceptedKanaForms": [
+        "ながれる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w268-p1",
+      "wordId": "w268",
+      "senseId": "w268-s1",
+      "readingId": "w268-r1",
+      "acceptedWrittenForms": [
+        "足跡"
+      ],
+      "acceptedKanaForms": [
+        "あしあと"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w274-p1",
+      "wordId": "w274",
+      "senseId": "w274-s1",
+      "readingId": "w274-r1",
+      "acceptedWrittenForms": [
+        "金魚"
+      ],
+      "acceptedKanaForms": [
+        "きんぎょ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w275-p1",
+      "wordId": "w275",
+      "senseId": "w275-s1",
+      "readingId": "w275-r1",
+      "acceptedWrittenForms": [
+        "靴箱"
+      ],
+      "acceptedKanaForms": [
+        "くつばこ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w278-p1",
+      "wordId": "w278",
+      "senseId": "w278-s1",
+      "readingId": "w278-r1",
+      "acceptedWrittenForms": [
+        "肌"
+      ],
+      "acceptedKanaForms": [
+        "はだ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w283-p1",
+      "wordId": "w283",
+      "senseId": "w283-s1",
+      "readingId": "w283-r1",
+      "acceptedWrittenForms": [
+        "満たす"
+      ],
+      "acceptedKanaForms": [
+        "みたす"
       ],
       "status": "draft"
     }

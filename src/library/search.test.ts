@@ -48,10 +48,10 @@ describe('word search', () => {
 
   it('searches the full word list too', () => {
     const full = buildIndex(allWords);
-    expect(allWords).toHaveLength(250);
+    expect(allWords.length).toBeGreaterThanOrEqual(250); // 50 per level, plus words from songs
     expect(searchWords(full, 'taberu').map(w => w.written)).toEqual(['食べる']);
     expect(searchWords(full, '공항').map(w => w.written)).toEqual(['空港']);
-    expect(searchWords(full, '', 'N1')).toHaveLength(50);
+    expect(searchWords(full, '', 'N1')).toHaveLength(allWords.filter(w => w.level === 'N1').length);
   });
 
   it('returns nothing for no match', () => {
