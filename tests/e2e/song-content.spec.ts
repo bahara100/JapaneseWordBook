@@ -6,7 +6,7 @@ test('JANE DOE lists its words and grammar, which also live in the library', asy
   const song = page.getByRole('region', { name: '선택한 노래 상세' });
   await expect(song.getByRole('heading', { name: 'JANE DOE' })).toBeVisible();
   await expect(song.getByRole('heading', { name: '이 노래의 단어 36개' })).toBeVisible();
-  await expect(song.getByRole('heading', { name: '이 노래의 문법 12개' })).toBeVisible();
+  await expect(song.getByRole('heading', { name: '이 노래의 문법 11개' })).toBeVisible();
   // りんご was already a word; the song links to it instead of adding 林檎 again.
   await song.getByRole('link', { name: /りんご/ }).click();
   await expect(page).toHaveURL(/#\/words\/w003$/);

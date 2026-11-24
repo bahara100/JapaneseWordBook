@@ -30,37 +30,6 @@
         "usageTerms": "프로젝트 자체 작성",
         "status": "draft"
       }
-    },
-    {
-      "id": "g010",
-      "level": "N2",
-      "expression": "何もかも",
-      "koreanMeaning": "모든 것, 죄다",
-      "connection": "대명사·부사처럼 문장에 직접 놓는다",
-      "explanation": "何も와 かも가 합쳐져 ‘무엇 하나 빠짐없이 전부’를 가리킨다.",
-      "cautions": [
-        "何も는 보통 부정문과 함께 쓰이지만, 何もかも는 긍정문에도 잘 쓴다.",
-        "何でも(무엇이든)와 달리, 이미 있는 ‘전부’를 가리키는 느낌이 강하다."
-      ],
-      "examples": [
-        {
-          "id": "g010-e1",
-          "japanese": "彼は何もかも知っている。",
-          "reading": "かれはなにもかもしっている。",
-          "korean": "그는 모든 것을 알고 있다.",
-          "provenance": {
-            "author": "Grok(노래에서 고른 초안)",
-            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
-            "status": "draft"
-          }
-        }
-      ],
-      "relatedGrammarIds": [],
-      "provenance": {
-        "author": "Grok(노래에서 고른 초안)",
-        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
-        "status": "draft"
-      }
     }
   ]
 }
