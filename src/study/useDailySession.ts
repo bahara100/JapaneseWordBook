@@ -2,7 +2,7 @@
 // is shown; if a save fails, the screen stays where it was and says so (docs/03 §4).
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { loadLevel } from '../content/loader';
-import type { AnswerAttempt, Outcome, SessionCard, StudySession } from '../content/types';
+import type { AnswerAttempt, LevelWords, Outcome, SessionCard, StudySession } from '../content/types';
 import { ConflictError, requestPersistence, type RecordStore, type SessionChange } from '../storage/records';
 import { effectiveTimeZone } from '../storage/settings';
 import { useStorage } from '../storage/StorageProvider';
@@ -11,6 +11,10 @@ import { scheduleReview } from './schedule';
 import { buildChoices, cardForWord, INCLUDE_DRAFTS, selectDailyCards } from './selection';
 import { matchSpoken } from './grading';
 import { answerCard, createDailySession, createFavoritesSession, createModeSession, createPracticeSession, endSession, hearDifferent, markHint, nextCard, recordTry, retryCard, type PracticeMode } from './session';
+
+/** Which card each word used in its last practice round, so a word with several cards takes turns. */
+const LAST_PRACTICE_CARDS = 'lastPracticeCards';
+type LastCards = Record<string, string>;
 
 export type Daily =
   | { status: 'loading' }
@@ -172,6 +176,22 @@ export function useDailySession() {
     await commit(createPracticeSession(daily, new Date(), `practice:${crypto.randomUUID()}`));
   };
 
+  /**
+   * Practice cards for these words. A word read more than one way (側: そば / がわ) has a card per
+   * reading; each round it uses the one after the card it used last time.
+   */
+  const practiceCards = async (words: { content: LevelWords; wordId: string }[]) => {
+    const last = ((await store?.getMeta(LAST_PRACTICE_CARDS).catch(() => undefined)) ?? {}) as LastCards;
+    return words.map(({ content, wordId }) => cardForWord(content, wordId, last[wordId])).filter(c => c !== undefined);
+  };
+  /** Once a round has started, its cards are the ones the next round moves on from. */
+  const rememberCards = async (cards: SessionCard[]) => {
+    if (!store) return;
+    const last = ((await store.getMeta(LAST_PRACTICE_CARDS).catch(() => undefined)) ?? {}) as LastCards;
+    for (const c of cards) last[c.wordSnapshot.id] = c.promptSnapshot.id;
+    await store.setMeta(LAST_PRACTICE_CARDS, last).catch(() => {});
+  };
+
   /** Starts studying chosen cards; an open practice round is closed first. Returns whether it started. */
   const studyFavorites = async (cards: SessionCard[]) => {
     if (!store) return false;
@@ -181,7 +201,9 @@ export function useDailySession() {
     const session = createFavoritesSession(cards, studyDate(now, timeZone), timeZone, now, `favorites:${crypto.randomUUID()}`);
     if (!session) return false;
     await commit(session);
-    return (await store.getSession(session.id)) !== undefined;
+    const started = (await store.getSession(session.id)) !== undefined;
+    if (started) await rememberCards(cards);
+    return started;
   };
 
   /** Starts a listening or repeat round over the chosen level's cards (up to 10, course order). */
@@ -194,7 +216,7 @@ export function useDailySession() {
       const order = new Map(content.words.map(w => [w.id, w.curriculumOrder]));
       const wordIds = [...new Set(content.prompts.filter(p => INCLUDE_DRAFTS || p.status === 'reviewed').map(p => p.wordId))]
         .sort((a, b) => (order.get(a) ?? 0) - (order.get(b) ?? 0)).slice(0, 10);
-      let cards = wordIds.map(id => cardForWord(content, id)).filter(c => c !== undefined);
+      let cards = await practiceCards(wordIds.map(wordId => ({ content, wordId })));
       if (mode === 'listening') {
         cards = cards.map(c => ({ ...c, choices: buildChoices(c, content.words) }));
         if (cards.some(c => (c.choices?.length ?? 0) < 2)) { setProblem('듣고 맞히기에는 뜻이 다른 단어가 2개 이상 필요해요.'); return; }
@@ -204,6 +226,7 @@ export function useDailySession() {
       if (open) await commit(endSession(open, new Date()));
       const now = new Date();
       await commit(createModeSession(cards, mode, settings.level, studyDate(now, timeZone), timeZone, now, `practice:${crypto.randomUUID()}`));
+      await rememberCards(cards);
     } catch (e) {
       setProblem(e instanceof Error ? e.message : '연습을 시작하지 못했어요.');
     }
@@ -226,5 +249,5 @@ export function useDailySession() {
 
   const today = studyDate(new Date(), timeZone);
   const state: Daily = !store || !loaded ? { status: 'loading' } : classify(daily, today);
-  return { daily: state, practice, finished, actions, start, practiceMissed, studyFavorites, startMode, tryRepeat, leavePractice, busy, problem, notice, today };
+  return { daily: state, practice, finished, actions, start, practiceMissed, practiceCards, studyFavorites, startMode, tryRepeat, leavePractice, busy, problem, notice, today };
 }

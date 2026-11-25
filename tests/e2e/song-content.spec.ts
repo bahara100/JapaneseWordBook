@@ -32,4 +32,13 @@ test('側 has two readings, each with its own meaning and card', async ({ page }
   await expect(card.locator('.front-word')).toHaveText('側');
   await expect(card.locator('.situation-hint')).toHaveText('뜻: 곁, 옆');
   await page.screenshot({ path: info.outputPath('side-card.png') });
+  // The next round takes the other card.
+  await page.getByRole('button', { name: '연습 그만하기' }).click();
+  await page.goto('#/favorites');
+  await page.getByRole('button', { name: '모은 단어 학습하기 →' }).click();
+  await expect(card.locator('.situation-hint')).toHaveText('뜻: 쪽, 편');
+  await card.getByRole('button', { name: '카드 뒤집어 정답 보기' }).click();
+  await expect(card.locator('.kana')).toHaveText('がわ');
+  await expect(card).toContainText('窓側の席に座りたいです。');
+  await page.screenshot({ path: info.outputPath('side-card-gawa.png') });
 });

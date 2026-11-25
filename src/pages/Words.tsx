@@ -8,7 +8,6 @@ import { useIsPhone } from '../library/useIsPhone';
 import { useLibrary, type Library } from '../library/useLibrary';
 import { useStorage } from '../storage/StorageProvider';
 import { useFavorites } from '../storage/useFavorites';
-import { cardForWord } from '../study/selection';
 import { useDailySession } from '../study/useDailySession';
 import { SongBadges } from '../songs/SongBadges';
 import { SpeakButton } from '../speech/SpeechProvider';
@@ -77,7 +76,7 @@ function WordDetail({ word, library, favorites, headingRef }: {
 export function WordLibrary({ mode, routeId }: { mode: 'words' | 'favorites'; routeId?: string }) {
   const library = useLibrary();
   const favorites = useFavorites();
-  const { studyFavorites, busy } = useDailySession();
+  const { practiceCards, studyFavorites, busy } = useDailySession();
   const isPhone = useIsPhone();
   const favoritesMode = mode === 'favorites';
   const [query, setQuery] = useState('');
@@ -125,7 +124,7 @@ export function WordLibrary({ mode, routeId }: { mode: 'words' | 'favorites'; ro
   const study = async () => {
     if (library.status !== 'ready') return;
     setStartProblem('');
-    const cards = results.map(w => cardForWord(library.data.contentOf.get(w.id)!, w.id)).filter(c => c !== undefined);
+    const cards = await practiceCards(results.map(w => ({ content: library.data.contentOf.get(w.id)!, wordId: w.id })));
     if (!cards.length) { setStartProblem('학습할 그림카드가 있는 단어가 없어요.'); return; }
     if (await studyFavorites(cards)) window.location.hash = '#/study';
     else setStartProblem('모아 학습을 시작하지 못했어요. 다시 눌러 주세요.');

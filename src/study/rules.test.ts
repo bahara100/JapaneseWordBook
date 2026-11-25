@@ -228,6 +228,18 @@ describe('favorites study', () => {
     expect(s).toMatchObject({ id: 'favorites:x', type: 'favorites', target: 2, status: 'active', revision: 0 });
     expect(createFavoritesSession([], '2026-10-29', 'Asia/Seoul', now, 'favorites:y')).toBeNull();
   });
+
+  it('takes turns between the cards of a word read more than one way', () => {
+    const n3: LevelWords = JSON.parse(readFileSync(path.resolve(__dirname, '../../content/n3/words.json'), 'utf8'));
+    const first = cardForWord(n3, 'w293')!;
+    expect(first.promptSnapshot.id).toBe('w293-p1'); // そば
+    const second = cardForWord(n3, 'w293', first.promptSnapshot.id)!;
+    expect(second.promptSnapshot.id).toBe('w293-p2'); // がわ
+    expect(cardForWord(n3, 'w293', second.promptSnapshot.id)!.promptSnapshot.id).toBe('w293-p1');
+    // A word with one card, or a card that is gone, starts from the first one.
+    expect(cardForWord(n5, 'w003', 'w003-p1')!.promptSnapshot.id).toBe('w003-p1');
+    expect(cardForWord(n3, 'w293', 'w293-p9')!.promptSnapshot.id).toBe('w293-p1');
+  });
 });
 
 describe('other practice modes', () => {

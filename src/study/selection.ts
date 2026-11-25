@@ -53,11 +53,16 @@ export function selectDailyCards({ target, content, progress, now, includeDrafts
   });
 }
 
-/** A study card for one word: its first prompt, with its picture if it has one. Used for practice. */
-export function cardForWord(content: LevelWords, wordId: string): SessionCard | undefined {
+/**
+ * A study card for one word, with its picture if it has one. Used for practice. A word read more
+ * than one way has a card per reading (側: そば / がわ); given the card the word used last time,
+ * this returns the next one, so rounds take turns. Without it (or if it is gone), the first card.
+ */
+export function cardForWord(content: LevelWords, wordId: string, after?: string): SessionCard | undefined {
   const word = content.words.find(w => w.id === wordId);
-  const prompt = content.prompts.find(p => p.wordId === wordId);
-  if (!word || !prompt) return undefined;
+  const prompts = content.prompts.filter(p => p.wordId === wordId);
+  if (!word || !prompts.length) return undefined;
+  const prompt = prompts[(prompts.findIndex(p => p.id === after) + 1) % prompts.length];
   const image = prompt.imageAssetId ? content.media.find(m => m.id === prompt.imageAssetId) : undefined;
   if (prompt.imageAssetId && !image) return undefined;
   return { promptSnapshot: prompt, wordSnapshot: word, mediaSnapshots: image ? [image] : [], kind: 'review', mode: 'picture', state: 'question' };
