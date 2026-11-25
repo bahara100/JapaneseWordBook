@@ -3054,6 +3054,7 @@
       "wordId": "w046",
       "senseId": "w046-s1",
       "readingId": "w046-r1",
+      "imageAssetId": "img-read",
       "acceptedWrittenForms": [
         "読む"
       ],
@@ -3067,6 +3068,7 @@
       "wordId": "w047",
       "senseId": "w047-s1",
       "readingId": "w047-r1",
+      "imageAssetId": "img-write",
       "acceptedWrittenForms": [
         "書く"
       ],
@@ -3080,6 +3082,7 @@
       "wordId": "w048",
       "senseId": "w048-s1",
       "readingId": "w048-r1",
+      "imageAssetId": "img-speak",
       "acceptedWrittenForms": [
         "話す"
       ],
@@ -3093,6 +3096,7 @@
       "wordId": "w049",
       "senseId": "w049-s1",
       "readingId": "w049-r1",
+      "imageAssetId": "img-buy",
       "acceptedWrittenForms": [
         "買う"
       ],
@@ -3106,6 +3110,7 @@
       "wordId": "w050",
       "senseId": "w050-s1",
       "readingId": "w050-r1",
+      "imageAssetId": "img-wake",
       "acceptedWrittenForms": [
         "起きる"
       ],
@@ -3119,6 +3124,7 @@
       "wordId": "w051",
       "senseId": "w051-s1",
       "readingId": "w051-r1",
+      "imageAssetId": "img-sleep",
       "acceptedWrittenForms": [
         "寝る"
       ],
@@ -3132,6 +3138,7 @@
       "wordId": "w052",
       "senseId": "w052-s1",
       "readingId": "w052-r1",
+      "imageAssetId": "img-big",
       "acceptedWrittenForms": [
         "大きい"
       ],
@@ -3145,6 +3152,7 @@
       "wordId": "w053",
       "senseId": "w053-s1",
       "readingId": "w053-r1",
+      "imageAssetId": "img-small",
       "acceptedWrittenForms": [
         "小さい"
       ],
@@ -3158,6 +3166,7 @@
       "wordId": "w054",
       "senseId": "w054-s1",
       "readingId": "w054-r1",
+      "imageAssetId": "img-new",
       "acceptedWrittenForms": [
         "新しい"
       ],
@@ -3171,6 +3180,7 @@
       "wordId": "w055",
       "senseId": "w055-s1",
       "readingId": "w055-r1",
+      "imageAssetId": "img-expensive",
       "acceptedWrittenForms": [
         "高い"
       ],
@@ -3184,6 +3194,7 @@
       "wordId": "w056",
       "senseId": "w056-s1",
       "readingId": "w056-r1",
+      "imageAssetId": "img-cheap",
       "acceptedWrittenForms": [
         "安い"
       ],
@@ -3197,6 +3208,7 @@
       "wordId": "w057",
       "senseId": "w057-s1",
       "readingId": "w057-r1",
+      "imageAssetId": "img-hot",
       "acceptedWrittenForms": [
         "暑い"
       ],
@@ -3210,6 +3222,7 @@
       "wordId": "w058",
       "senseId": "w058-s1",
       "readingId": "w058-r1",
+      "imageAssetId": "img-cold",
       "acceptedWrittenForms": [
         "寒い"
       ],
@@ -3223,6 +3236,7 @@
       "wordId": "w059",
       "senseId": "w059-s1",
       "readingId": "w059-r1",
+      "imageAssetId": "img-like",
       "acceptedWrittenForms": [
         "好き"
       ],
@@ -3759,6 +3773,160 @@
       "kind": "image",
       "path": "media/images/card-listen-v1.webp",
       "description": "작은 스피커 쪽으로 귀를 기울여 듣는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-read",
+      "kind": "image",
+      "path": "media/images/card-read-v1.webp",
+      "description": "펼친 책의 페이지를 집중해서 살펴보는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-write",
+      "kind": "image",
+      "path": "media/images/card-write-v2.webp",
+      "description": "책상 위 공책에 펜 끝을 대고 있는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-speak",
+      "kind": "image",
+      "path": "media/images/card-speak-v1.webp",
+      "description": "손짓을 하며 서로 마주 보고 이야기하는 두 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-buy",
+      "kind": "image",
+      "path": "media/images/card-buy-v1.webp",
+      "description": "작은 가게의 계산대에서 동전을 건네고 봉투를 받는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-wake",
+      "kind": "image",
+      "path": "media/images/card-wake-v1.webp",
+      "description": "이불을 허리까지 내리고 침대에 앉아 기지개를 켜는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-sleep",
+      "kind": "image",
+      "path": "media/images/card-sleep-v1.webp",
+      "description": "베개에 머리를 대고 이불을 덮은 채 눈을 감고 누운 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-big",
+      "kind": "image",
+      "path": "media/images/card-big-v1.webp",
+      "description": "크기가 다른 두 상자 중 오른쪽 상자가 화살표로 강조된 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-small",
+      "kind": "image",
+      "path": "media/images/card-small-v1.webp",
+      "description": "크기가 다른 두 상자 중 왼쪽 상자가 화살표로 강조된 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-new",
+      "kind": "image",
+      "path": "media/images/card-new-v1.webp",
+      "description": "깨끗한 운동화 한 켤레와 포장지가 남아 있는 열린 상자",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-expensive",
+      "kind": "image",
+      "path": "media/images/card-expensive-v1.webp",
+      "description": "빈 가격표가 달린 초록 가방 옆에 여러 동전 더미가 놓인 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-cheap",
+      "kind": "image",
+      "path": "media/images/card-cheap-v1.webp",
+      "description": "빈 가격표가 달린 초록 가방 옆에 동전 하나가 놓인 모습",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-hot",
+      "kind": "image",
+      "path": "media/images/card-hot-v1.webp",
+      "description": "반소매 차림으로 부채질하며 이마의 땀을 닦는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-cold",
+      "kind": "image",
+      "path": "media/images/card-cold-v1.webp",
+      "description": "두꺼운 외투와 목도리를 두르고 몸을 웅크린 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-like",
+      "kind": "image",
+      "path": "media/images/card-like-v1.webp",
+      "description": "책을 가슴에 안고 미소 짓는 사람과 작은 하트",
       "provenance": {
         "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
         "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
