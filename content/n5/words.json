@@ -3250,6 +3250,7 @@
       "wordId": "w060",
       "senseId": "w060-s1",
       "readingId": "w060-r1",
+      "imageAssetId": "img-energetic",
       "acceptedWrittenForms": [
         "元気"
       ],
@@ -3263,6 +3264,7 @@
       "wordId": "w061",
       "senseId": "w061-s1",
       "readingId": "w061-r1",
+      "imageAssetId": "img-quiet",
       "acceptedWrittenForms": [
         "静か"
       ],
@@ -3276,6 +3278,7 @@
       "wordId": "w062",
       "senseId": "w062-s1",
       "readingId": "w062-r1",
+      "imageAssetId": "img-television",
       "acceptedWrittenForms": [
         "テレビ"
       ],
@@ -3927,6 +3930,39 @@
       "kind": "image",
       "path": "media/images/card-like-v1.webp",
       "description": "책을 가슴에 안고 미소 짓는 사람과 작은 하트",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-energetic",
+      "kind": "image",
+      "path": "media/images/card-energetic-v1.webp",
+      "description": "밝게 웃으며 팔과 다리를 활기차게 움직이는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-quiet",
+      "kind": "image",
+      "path": "media/images/card-quiet-v1.webp",
+      "description": "입술 앞에 손가락을 세우고 차분한 표정을 짓는 사람",
+      "provenance": {
+        "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
+        "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "img-television",
+      "kind": "image",
+      "path": "media/images/card-television-v1.webp",
+      "description": "빈 화면의 텔레비전과 작은 리모컨",
       "provenance": {
         "author": "하루일본어 디자인(코덱스, 내장 ImageGen 생성)",
         "usageTerms": "프로젝트 자체 제작 이미지. 원본 PNG: design/art-direction-2026-10-29/assets/",

@@ -17,6 +17,7 @@ describe('frontStyle', () => {
   it('uses the picture when the card has one', () => {
     expect(frontStyle(card('猫'))).toBe('picture');
     expect(frontStyle(card('水'))).toBe('picture');
+    expect(frontStyle(card('テレビ'))).toBe('picture');
   });
 
   it('shows the written word for kanji words without a picture', () => {
@@ -26,7 +27,7 @@ describe('frontStyle', () => {
   });
 
   it('shows the meaning when the word is written only in kana', () => {
-    expect(frontStyle(card('テレビ'))).toBe('meaning');
+    expect(frontStyle(card('プール'))).toBe('meaning');
     expect(frontStyle(card('ほとんど'))).toBe('meaning');
   });
 });
@@ -64,6 +65,6 @@ describe('readingHint', () => {
 
   it('adds nothing to words with one reading', () => {
     expect(readingHint(card('経験'))).toBeUndefined();
-    expect(readingHint(card('テレビ'))).toBeUndefined();
+    expect(readingHint(card('プール'))).toBeUndefined();
   });
 });

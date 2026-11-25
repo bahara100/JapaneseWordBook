@@ -79,14 +79,14 @@ test('pictures that need context carry a short hint', async ({ page }, info) => 
 
 test('a word written only in kana shows its meaning instead', async ({ page }, info) => {
   await page.goto('#/words');
-  await page.getByLabel('단어 검색').fill('텔레비전');
-  await list(page).getByRole('button', { name: 'テレビ 즐겨찾기 추가' }).click();
-  await expect(list(page).getByRole('button', { name: 'テレビ 즐겨찾기 해제' })).toBeVisible();
+  await page.getByLabel('단어 검색').fill('수영장');
+  await list(page).getByRole('button', { name: 'プール 즐겨찾기 추가' }).click();
+  await expect(list(page).getByRole('button', { name: 'プール 즐겨찾기 해제' })).toBeVisible();
   await page.goto('#/favorites');
   await page.getByRole('button', { name: '모은 단어 학습하기 →' }).click();
-  await expect(card(page).locator('.front-meaning')).toContainText('텔레비전');
+  await expect(card(page).locator('.front-meaning')).toContainText('수영장');
   await expect(card(page).getByRole('heading', { name: '일본어로 뭐라고 할까요?' })).toBeVisible();
-  await expect(card(page)).not.toContainText('テレビ');
+  await expect(card(page)).not.toContainText('プール');
   await page.screenshot({ path: info.outputPath('meaning-card.png') });
 });
 
