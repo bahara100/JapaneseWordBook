@@ -2452,6 +2452,92 @@
         "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
         "status": "draft"
       }
+    },
+    {
+      "id": "w290",
+      "level": "N4",
+      "curriculumOrder": 58,
+      "written": "泳ぐ",
+      "readings": [
+        {
+          "id": "w290-r1",
+          "kana": "およぐ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w290-s1",
+          "korean": [
+            "헤엄치다",
+            "수영하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w290-r1"
+          ],
+          "examples": [
+            {
+              "id": "w290-s1-e1",
+              "japanese": "海で泳ぐのが好きです。",
+              "reading": "うみでおよぐのがすきです。",
+              "korean": "바다에서 수영하는 것이 좋습니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w292",
+      "level": "N4",
+      "curriculumOrder": 59,
+      "written": "ずっと",
+      "readings": [
+        {
+          "id": "w292-r1",
+          "kana": "ずっと"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w292-s1",
+          "korean": [
+            "계속",
+            "줄곧"
+          ],
+          "partOfSpeech": "부사",
+          "readingIds": [
+            "w292-r1"
+          ],
+          "examples": [
+            {
+              "id": "w292-s1-e1",
+              "japanese": "朝からずっと勉強している。",
+              "reading": "あさからずっとべんきょうしている。",
+              "korean": "아침부터 계속 공부하고 있다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -3196,6 +3282,32 @@
       ],
       "acceptedKanaForms": [
         "まちがい"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w290-p1",
+      "wordId": "w290",
+      "senseId": "w290-s1",
+      "readingId": "w290-r1",
+      "acceptedWrittenForms": [
+        "泳ぐ"
+      ],
+      "acceptedKanaForms": [
+        "およぐ"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w292-p1",
+      "wordId": "w292",
+      "senseId": "w292-s1",
+      "readingId": "w292-r1",
+      "acceptedWrittenForms": [
+        "ずっと"
+      ],
+      "acceptedKanaForms": [
+        "ずっと"
       ],
       "status": "draft"
     }

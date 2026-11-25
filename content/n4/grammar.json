@@ -250,6 +250,99 @@
         "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
         "status": "draft"
       }
+    },
+    {
+      "id": "g018",
+      "level": "N4",
+      "expression": "비유 (〜のように)",
+      "koreanMeaning": "~처럼, ~같이",
+      "connection": "명사 + のように / 동사 보통형 + ように",
+      "explanation": "어떤 모습이나 방식에 빗대는 비유 표현이다. みたいだ보다 조금 더 일반적인 비유이며, だ는 붙이지 않는다.",
+      "cautions": [
+        "명사 뒤에는 の가 필요하다 (犬のように). みたいだ는 명사에 の를 쓰지 않는다.",
+        "ように는 ‘~하도록’(목적·요청)의 뜻도 있으므로, 비유인지 맥락으로 구별한다."
+      ],
+      "examples": [
+        {
+          "id": "g018-e1",
+          "japanese": "彼女は風のように走った。",
+          "reading": "かのじょはかぜのようにはしった。",
+          "korean": "그녀는 바람처럼 달렸다.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g019",
+      "level": "N4",
+      "expression": "확인·의문 (〜の)",
+      "koreanMeaning": "~인 거야?, ~한 거야? (부드러운 확인·의문)",
+      "connection": "보통형 + の (정중체는 んですか / のですか)",
+      "explanation": "문말의 の가 설명을 구하거나 부드럽게 물을 때 쓰인다. だ체 의문문에서 자주 듣는다.",
+      "cautions": [
+        "な형용사·명사 뒤에는 な를 넣어 なの가 된다 (学生なの？).",
+        "공손한 자리에서는 の 대신 んですか／のですか를 쓴다."
+      ],
+      "examples": [
+        {
+          "id": "g019-e1",
+          "japanese": "もう宿題は終わったの？",
+          "reading": "もうしゅくだいはおわったの？",
+          "korean": "숙제는 이미 끝난 거야?",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "g022",
+      "level": "N4",
+      "expression": "구어 축약 (〜ている→〜てる)",
+      "koreanMeaning": "~하고 있다 (ている와 같음)",
+      "connection": "동사 て형 + いる에서 い를 줄여 てる",
+      "explanation": "見ている·している의 い가 떨어진 구어 형태다. 뜻은 ている와 같다.",
+      "cautions": [
+        "편지·발표처럼 딱딱한 문장에서는 ている를 그대로 쓴다.",
+        "てる는 ている의 축약이므로, て형 뒤에 る만 붙는 별개 활용이 아니다."
+      ],
+      "examples": [
+        {
+          "id": "g022-e1",
+          "japanese": "今、音楽を聞いてる。",
+          "reading": "いま、おんがくをきいてる。",
+          "korean": "지금 음악을 듣고 있어.",
+          "provenance": {
+            "author": "Grok(노래에서 고른 초안)",
+            "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+            "status": "draft"
+          }
+        }
+      ],
+      "relatedGrammarIds": [],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ]
 }

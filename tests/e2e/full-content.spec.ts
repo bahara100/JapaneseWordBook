@@ -6,11 +6,11 @@ const list = (page: Page) => page.getByRole('list', { name: '단어 목록' });
 
 test('every level has its words, and the library and home show them', async ({ page }) => {
   await page.goto('#/home');
-  await expect(page.getByText('준비된 N5 카드 58장 · 검수 전 초안 58장 포함')).toBeVisible();
+  await expect(page.getByText('준비된 N5 카드 60장 · 검수 전 초안 60장 포함')).toBeVisible();
   await page.goto('#/words');
-  await expect(page.getByText('283개의 단어')).toBeVisible();
+  await expect(page.getByText('294개의 단어')).toBeVisible();
   // 50 per level, plus the words picked from JANE DOE.
-  for (const [level, count] of [['N5', 58], ['N4', 57], ['N3', 60], ['N2', 56], ['N1', 52]] as const) {
+  for (const [level, count] of [['N5', 60], ['N4', 59], ['N3', 67], ['N2', 56], ['N1', 52]] as const) {
     await page.getByLabel('학습 수준').selectOption(level);
     await expect(page.getByText(`${count}개의 단어`)).toBeVisible();
   }

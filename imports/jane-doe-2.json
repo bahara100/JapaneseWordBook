@@ -1,0 +1,267 @@
+{
+  "source": {
+    "song": "JANE DOE",
+    "artist": "米津玄師, 宇多田ヒカル",
+    "extractedBy": "Grok",
+    "extractedAt": "2026-11-25"
+  },
+  "words": [
+    {
+      "written": "つま先",
+      "kana": "つまさき",
+      "korean": [
+        "발끝",
+        "발가락 끝"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "つま先が冷たい。",
+        "reading": "つまさきがつめたい。",
+        "korean": "발끝이 차갑다."
+      }
+    },
+    {
+      "written": "月明かり",
+      "kana": "つきあかり",
+      "korean": [
+        "달빛"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "月明かりで道がよく見える。",
+        "reading": "つきあかりでみちがよくみえる。",
+        "korean": "달빛 덕분에 길이 잘 보인다."
+      }
+    },
+    {
+      "written": "花束",
+      "kana": "はなたば",
+      "korean": [
+        "꽃다발"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "母に花束を渡した。",
+        "reading": "ははにはなたばをわたした。",
+        "korean": "어머니께 꽃다발을 건넸다."
+      }
+    },
+    {
+      "written": "香り",
+      "kana": "かおり",
+      "korean": [
+        "향기",
+        "(좋은) 냄새"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "この花はいい香りがする。",
+        "reading": "このはなはいいかおりがする。",
+        "korean": "이 꽃은 좋은 향기가 난다."
+      }
+    },
+    {
+      "written": "指",
+      "kana": "ゆび",
+      "korean": [
+        "손가락"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N5",
+      "example": {
+        "japanese": "指に指輪をはめた。",
+        "reading": "ゆびにゆびわをはめた。",
+        "korean": "손가락에 반지를 끼웠다."
+      }
+    },
+    {
+      "written": "触れる",
+      "kana": "ふれる",
+      "korean": [
+        "닿다",
+        "접촉하다"
+      ],
+      "partOfSpeech": "동사",
+      "level": "N3",
+      "example": {
+        "japanese": "手が氷に触れた。",
+        "reading": "てがこおりにふれた。",
+        "korean": "손이 얼음에 닿았다."
+      }
+    },
+    {
+      "written": "犬",
+      "kana": "いぬ",
+      "korean": [
+        "개"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N5",
+      "example": {
+        "japanese": "公園で犬が走っている。",
+        "reading": "こうえんでいぬがはしっている。",
+        "korean": "공원에서 개가 달리고 있다."
+      }
+    },
+    {
+      "written": "泳ぐ",
+      "kana": "およぐ",
+      "korean": [
+        "헤엄치다",
+        "수영하다"
+      ],
+      "partOfSpeech": "동사",
+      "level": "N4",
+      "example": {
+        "japanese": "海で泳ぐのが好きです。",
+        "reading": "うみでおよぐのがすきです。",
+        "korean": "바다에서 수영하는 것이 좋습니다."
+      }
+    },
+    {
+      "written": "迷子",
+      "kana": "まいご",
+      "korean": [
+        "미아",
+        "길 잃은 아이"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "デパートで子どもが迷子になった。",
+        "reading": "デパートでこどもがまいごになった。",
+        "korean": "백화점에서 아이가 미아가 되었다."
+      }
+    },
+    {
+      "written": "ずっと",
+      "kana": "ずっと",
+      "korean": [
+        "계속",
+        "줄곧"
+      ],
+      "partOfSpeech": "부사",
+      "level": "N4",
+      "example": {
+        "japanese": "朝からずっと勉強している。",
+        "reading": "あさからずっとべんきょうしている。",
+        "korean": "아침부터 계속 공부하고 있다."
+      }
+    },
+    {
+      "written": "側",
+      "kana": "そば",
+      "korean": [
+        "곁",
+        "옆"
+      ],
+      "partOfSpeech": "명사",
+      "level": "N3",
+      "example": {
+        "japanese": "母の側で本を読んだ。",
+        "reading": "ははのそばでほんをよんだ。",
+        "korean": "어머니 곁에서 책을 읽었다."
+      }
+    },
+    {
+      "written": "遊ぶ",
+      "kana": "あそぶ",
+      "korean": [
+        "놀다"
+      ],
+      "partOfSpeech": "동사",
+      "level": "N5",
+      "example": {
+        "japanese": "日曜日は友だちと遊びます。",
+        "reading": "にちようびはともだちとあそびます。",
+        "korean": "일요일에는 친구와 놉니다."
+      }
+    }
+  ],
+  "grammar": [
+    {
+      "expression": "비유 (〜のように)",
+      "koreanMeaning": "~처럼, ~같이",
+      "connection": "명사 + のように / 동사 보통형 + ように",
+      "explanation": "어떤 모습이나 방식에 빗대는 비유 표현이다. みたいだ보다 조금 더 일반적인 비유이며, だ는 붙이지 않는다.",
+      "cautions": [
+        "명사 뒤에는 の가 필요하다 (犬のように). みたいだ는 명사에 の를 쓰지 않는다.",
+        "ように는 ‘~하도록’(목적·요청)의 뜻도 있으므로, 비유인지 맥락으로 구별한다."
+      ],
+      "level": "N4",
+      "example": {
+        "japanese": "彼女は風のように走った。",
+        "reading": "かのじょはかぜのようにはしった。",
+        "korean": "그녀는 바람처럼 달렸다."
+      }
+    },
+    {
+      "expression": "확인·의문 (〜の)",
+      "koreanMeaning": "~인 거야?, ~한 거야? (부드러운 확인·의문)",
+      "connection": "보통형 + の (정중체는 んですか / のですか)",
+      "explanation": "문말의 の가 설명을 구하거나 부드럽게 물을 때 쓰인다. だ체 의문문에서 자주 듣는다.",
+      "cautions": [
+        "な형용사·명사 뒤에는 な를 넣어 なの가 된다 (学生なの？).",
+        "공손한 자리에서는 の 대신 んですか／のですか를 쓴다."
+      ],
+      "level": "N4",
+      "example": {
+        "japanese": "もう宿題は終わったの？",
+        "reading": "もうしゅくだいはおわったの？",
+        "korean": "숙제는 이미 끝난 거야?"
+      }
+    },
+    {
+      "expression": "강조·전달 (〜よ)",
+      "koreanMeaning": "~이야, ~다고 (알려 주거나 부드럽게 강조)",
+      "connection": "문장 끝에 よ",
+      "explanation": "상대가 모르는 정보나 안심을 전달할 때 쓴다. 질문에 대한 대답에 붙이면 다정하게 받아 주는 느낌이 된다.",
+      "cautions": [
+        "친한 말투라서 윗사람에게는 よ를 남발하지 않는 편이 안전하다.",
+        "부탁의 てよ와 구별한다. 여기 よ는 ‘있어 줘’가 아니라 ‘있어’라고 알려 주는 용법이다."
+      ],
+      "level": "N5",
+      "example": {
+        "japanese": "大丈夫だよ。",
+        "reading": "だいじょうぶだよ。",
+        "korean": "괜찮아."
+      }
+    },
+    {
+      "expression": "부탁 (〜て／〜てよ)",
+      "koreanMeaning": "~해 줘, ~해 줄래",
+      "connection": "동사 て형 (+ よ)",
+      "explanation": "て형은 가벼운 부탁이다. よ를 붙이면 친한 사이에서 감정을 실어 부탁한다. いる의 て형은 いて이다.",
+      "cautions": [
+        "공손한 부탁은 てください를 쓴다.",
+        "いて는 いる의 て형이다. 진행의 ていて와 혼동하지 않는다."
+      ],
+      "level": "N5",
+      "example": {
+        "japanese": "ちょっと待ってよ。",
+        "reading": "ちょっとまってよ。",
+        "korean": "잠깐 기다려 줘."
+      }
+    },
+    {
+      "expression": "구어 축약 (〜ている→〜てる)",
+      "koreanMeaning": "~하고 있다 (ている와 같음)",
+      "connection": "동사 て형 + いる에서 い를 줄여 てる",
+      "explanation": "見ている·している의 い가 떨어진 구어 형태다. 뜻은 ている와 같다.",
+      "cautions": [
+        "편지·발표처럼 딱딱한 문장에서는 ている를 그대로 쓴다.",
+        "てる는 ている의 축약이므로, て형 뒤에 る만 붙는 별개 활용이 아니다."
+      ],
+      "level": "N4",
+      "example": {
+        "japanese": "今、音楽を聞いてる。",
+        "reading": "いま、おんがくをきいてる。",
+        "korean": "지금 음악을 듣고 있어."
+      }
+    }
+  ]
+}

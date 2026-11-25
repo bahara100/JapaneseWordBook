@@ -2495,6 +2495,90 @@
         "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
         "status": "draft"
       }
+    },
+    {
+      "id": "w288",
+      "level": "N5",
+      "curriculumOrder": 59,
+      "written": "指",
+      "readings": [
+        {
+          "id": "w288-r1",
+          "kana": "ゆび"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w288-s1",
+          "korean": [
+            "손가락"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w288-r1"
+          ],
+          "examples": [
+            {
+              "id": "w288-s1-e1",
+              "japanese": "指に指輪をはめた。",
+              "reading": "ゆびにゆびわをはめた。",
+              "korean": "손가락에 반지를 끼웠다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w294",
+      "level": "N5",
+      "curriculumOrder": 60,
+      "written": "遊ぶ",
+      "readings": [
+        {
+          "id": "w294-r1",
+          "kana": "あそぶ"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w294-s1",
+          "korean": [
+            "놀다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w294-r1"
+          ],
+          "examples": [
+            {
+              "id": "w294-s1-e1",
+              "japanese": "日曜日は友だちと遊びます。",
+              "reading": "にちようびはともだちとあそびます。",
+              "korean": "일요일에는 친구와 놉니다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -3287,6 +3371,32 @@
       ],
       "acceptedKanaForms": [
         "プール"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w288-p1",
+      "wordId": "w288",
+      "senseId": "w288-s1",
+      "readingId": "w288-r1",
+      "acceptedWrittenForms": [
+        "指"
+      ],
+      "acceptedKanaForms": [
+        "ゆび"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w294-p1",
+      "wordId": "w294",
+      "senseId": "w294-s1",
+      "readingId": "w294-r1",
+      "acceptedWrittenForms": [
+        "遊ぶ"
+      ],
+      "acceptedKanaForms": [
+        "あそぶ"
       ],
       "status": "draft"
     }

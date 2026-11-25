@@ -2587,6 +2587,305 @@
         "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
         "status": "draft"
       }
+    },
+    {
+      "id": "w284",
+      "level": "N3",
+      "curriculumOrder": 61,
+      "written": "つま先",
+      "readings": [
+        {
+          "id": "w284-r1",
+          "kana": "つまさき"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w284-s1",
+          "korean": [
+            "발끝",
+            "발가락 끝"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w284-r1"
+          ],
+          "examples": [
+            {
+              "id": "w284-s1-e1",
+              "japanese": "つま先が冷たい。",
+              "reading": "つまさきがつめたい。",
+              "korean": "발끝이 차갑다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w285",
+      "level": "N3",
+      "curriculumOrder": 62,
+      "written": "月明かり",
+      "readings": [
+        {
+          "id": "w285-r1",
+          "kana": "つきあかり"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w285-s1",
+          "korean": [
+            "달빛"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w285-r1"
+          ],
+          "examples": [
+            {
+              "id": "w285-s1-e1",
+              "japanese": "月明かりで道がよく見える。",
+              "reading": "つきあかりでみちがよくみえる。",
+              "korean": "달빛 덕분에 길이 잘 보인다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w286",
+      "level": "N3",
+      "curriculumOrder": 63,
+      "written": "花束",
+      "readings": [
+        {
+          "id": "w286-r1",
+          "kana": "はなたば"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w286-s1",
+          "korean": [
+            "꽃다발"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w286-r1"
+          ],
+          "examples": [
+            {
+              "id": "w286-s1-e1",
+              "japanese": "母に花束を渡した。",
+              "reading": "ははにはなたばをわたした。",
+              "korean": "어머니께 꽃다발을 건넸다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w287",
+      "level": "N3",
+      "curriculumOrder": 64,
+      "written": "香り",
+      "readings": [
+        {
+          "id": "w287-r1",
+          "kana": "かおり"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w287-s1",
+          "korean": [
+            "향기",
+            "(좋은) 냄새"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w287-r1"
+          ],
+          "examples": [
+            {
+              "id": "w287-s1-e1",
+              "japanese": "この花はいい香りがする。",
+              "reading": "このはなはいいかおりがする。",
+              "korean": "이 꽃은 좋은 향기가 난다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w289",
+      "level": "N3",
+      "curriculumOrder": 65,
+      "written": "触れる",
+      "readings": [
+        {
+          "id": "w289-r1",
+          "kana": "ふれる"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w289-s1",
+          "korean": [
+            "닿다",
+            "접촉하다"
+          ],
+          "partOfSpeech": "동사",
+          "readingIds": [
+            "w289-r1"
+          ],
+          "examples": [
+            {
+              "id": "w289-s1-e1",
+              "japanese": "手が氷に触れた。",
+              "reading": "てがこおりにふれた。",
+              "korean": "손이 얼음에 닿았다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w291",
+      "level": "N3",
+      "curriculumOrder": 66,
+      "written": "迷子",
+      "readings": [
+        {
+          "id": "w291-r1",
+          "kana": "まいご"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w291-s1",
+          "korean": [
+            "미아",
+            "길 잃은 아이"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w291-r1"
+          ],
+          "examples": [
+            {
+              "id": "w291-s1-e1",
+              "japanese": "デパートで子どもが迷子になった。",
+              "reading": "デパートでこどもがまいごになった。",
+              "korean": "백화점에서 아이가 미아가 되었다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "w293",
+      "level": "N3",
+      "curriculumOrder": 67,
+      "written": "側",
+      "readings": [
+        {
+          "id": "w293-r1",
+          "kana": "そば"
+        }
+      ],
+      "senses": [
+        {
+          "id": "w293-s1",
+          "korean": [
+            "곁",
+            "옆"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w293-r1"
+          ],
+          "examples": [
+            {
+              "id": "w293-s1-e1",
+              "japanese": "母の側で本を読んだ。",
+              "reading": "ははのそばでほんをよんだ。",
+              "korean": "어머니 곁에서 책을 읽었다.",
+              "provenance": {
+                "author": "Grok(노래에서 고른 초안)",
+                "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        }
+      ],
+      "provenance": {
+        "author": "Grok(노래에서 고른 초안)",
+        "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+        "status": "draft"
+      }
     }
   ],
   "prompts": [
@@ -3370,6 +3669,97 @@
       ],
       "acceptedKanaForms": [
         "みたす"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w284-p1",
+      "wordId": "w284",
+      "senseId": "w284-s1",
+      "readingId": "w284-r1",
+      "acceptedWrittenForms": [
+        "つま先"
+      ],
+      "acceptedKanaForms": [
+        "つまさき"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w285-p1",
+      "wordId": "w285",
+      "senseId": "w285-s1",
+      "readingId": "w285-r1",
+      "acceptedWrittenForms": [
+        "月明かり"
+      ],
+      "acceptedKanaForms": [
+        "つきあかり"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w286-p1",
+      "wordId": "w286",
+      "senseId": "w286-s1",
+      "readingId": "w286-r1",
+      "acceptedWrittenForms": [
+        "花束"
+      ],
+      "acceptedKanaForms": [
+        "はなたば"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w287-p1",
+      "wordId": "w287",
+      "senseId": "w287-s1",
+      "readingId": "w287-r1",
+      "acceptedWrittenForms": [
+        "香り"
+      ],
+      "acceptedKanaForms": [
+        "かおり"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w289-p1",
+      "wordId": "w289",
+      "senseId": "w289-s1",
+      "readingId": "w289-r1",
+      "acceptedWrittenForms": [
+        "触れる"
+      ],
+      "acceptedKanaForms": [
+        "ふれる"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w291-p1",
+      "wordId": "w291",
+      "senseId": "w291-s1",
+      "readingId": "w291-r1",
+      "acceptedWrittenForms": [
+        "迷子"
+      ],
+      "acceptedKanaForms": [
+        "まいご"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w293-p1",
+      "wordId": "w293",
+      "senseId": "w293-s1",
+      "readingId": "w293-r1",
+      "acceptedWrittenForms": [
+        "側"
+      ],
+      "acceptedKanaForms": [
+        "そば"
       ],
       "status": "draft"
     }
