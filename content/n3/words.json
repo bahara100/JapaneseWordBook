@@ -2853,6 +2853,10 @@
         {
           "id": "w293-r1",
           "kana": "そば"
+        },
+        {
+          "id": "w293-r2",
+          "kana": "がわ"
         }
       ],
       "senses": [
@@ -2875,6 +2879,30 @@
               "provenance": {
                 "author": "Grok(노래에서 고른 초안)",
                 "usageTerms": "AI가 만든 초안 · 예문은 새로 지은 문장(가사 인용 없음)",
+                "status": "draft"
+              }
+            }
+          ]
+        },
+        {
+          "id": "w293-s2",
+          "korean": [
+            "쪽",
+            "편"
+          ],
+          "partOfSpeech": "명사",
+          "readingIds": [
+            "w293-r2"
+          ],
+          "examples": [
+            {
+              "id": "w293-s2-e1",
+              "japanese": "窓側の席に座りたいです。",
+              "reading": "まどがわのせきにすわりたいです。",
+              "korean": "창가 쪽 자리에 앉고 싶어요.",
+              "provenance": {
+                "author": "하루일본어 편집부(초안)",
+                "usageTerms": "프로젝트 자체 작성",
                 "status": "draft"
               }
             }
@@ -3760,6 +3788,19 @@
       ],
       "acceptedKanaForms": [
         "そば"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "w293-p2",
+      "wordId": "w293",
+      "senseId": "w293-s2",
+      "readingId": "w293-r2",
+      "acceptedWrittenForms": [
+        "側"
+      ],
+      "acceptedKanaForms": [
+        "がわ"
       ],
       "status": "draft"
     }

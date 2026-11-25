@@ -9,7 +9,7 @@ import { useStorage } from '../storage/StorageProvider';
 import { studyDate } from '../study/dates';
 import { useFavorites } from '../storage/useFavorites';
 import { gradeTyped } from '../study/grading';
-import { frontStyle, typedAnswerForms } from '../study/cardFront';
+import { frontStyle, readingHint, typedAnswerForms } from '../study/cardFront';
 import { KanaAnswer } from '../study/KanaAnswer';
 import { SpeakAnswer } from '../study/SpeakAnswer';
 import { ListeningFront, RepeatCard } from '../study/PracticeCards';
@@ -119,6 +119,7 @@ function CardFront({ card, actions, busy }: { card: SessionCard; actions: Sessio
         {style === 'picture' && image && <img className="illustration" src={mediaUrl(image.path)} alt={image.description} />}
         {style === 'picture' && card.promptSnapshot.situationHint && <p className="situation-hint">{card.promptSnapshot.situationHint}</p>}
         {style === 'reading' && <p className="front-word" lang="ja">{card.wordSnapshot.written}</p>}
+        {readingHint(card) && <p className="situation-hint">{readingHint(card)}</p>}
         {style === 'meaning' && <p className="front-meaning">{sense.korean.join(', ')}<small>{sense.partOfSpeech}</small></p>}
         <h2 className="card-question" tabIndex={-1}>
           {style === 'picture' ? '일본어로 무엇일까요?' : style === 'reading' ? '어떻게 읽을까요?' : '일본어로 뭐라고 할까요?'}
